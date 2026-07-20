@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "345683130305",
+    "project_id": "mediroute-33e0c",
+    "storage_bucket": "mediroute-33e0c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345683130305:android:a600fdcb358e6d13436140",
+        "android_client_info": {
+          "package_name": "com.mediroute.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "YOUR_FIREBASE_API_KEY_ANDROID"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
