@@ -57,7 +57,7 @@ jobs:
       - name: "Stage 3: Build Flutter Web"
         run: |
           REPO_NAME="${{ github.event.repository.name }}"
-          flutter build web --release --base-href "/${REPO_NAME}/" --web-renderer html
+          flutter build web --release --base-href "/${REPO_NAME}/"
           echo "Build completed. Output in build/web/"
           ls -la build/web/
 

@@ -38,6 +38,8 @@ def retry(max_retries: int = MAX_RETRIES, delay: int = RETRY_DELAY):
                         print(
                             f"[RETRY] {func.__name__} exhausted all {max_retries + 1} attempts"
                         )
-            raise last_exception
+            if last_exception is not None:
+                raise last_exception
+            raise RuntimeError(f"[RETRY] {func.__name__} failed without an explicit exception")
         return wrapper
     return decorator
