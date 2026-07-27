@@ -84,14 +84,17 @@ def verify_deployment(url: str = None, max_retries: int = 5, delay: int = 10) ->
     except Exception as e:
         results["checks"].append({"name": "title_check", "status": "FAIL", "detail": str(e)})
 
-    # Check 3: Flutter JS loads
+    # Check 3: Flutter Bootstrap JS loads
     try:
-        js_url = url.rstrip("/") + "/flutter.js"
+        js_url = url.rstrip("/") + "/flutter_bootstrap.js"
         resp = requests.get(js_url, timeout=30)
+        if resp.status_code != 200:
+            js_url = url.rstrip("/") + "/flutter.js"
+            resp = requests.get(js_url, timeout=30)
         if resp.status_code == 200:
-            results["checks"].append({"name": "flutter_js", "status": "PASS", "detail": f"flutter.js loaded ({len(resp.content)} bytes)"})
+            results["checks"].append({"name": "flutter_js", "status": "PASS", "detail": f"Flutter bootstrap loaded ({len(resp.content)} bytes)"})
         else:
-            results["checks"].append({"name": "flutter_js", "status": "WARN", "detail": f"flutter.js status {resp.status_code}"})
+            results["checks"].append({"name": "flutter_js", "status": "WARN", "detail": f"Flutter bootstrap status {resp.status_code}"})
     except Exception as e:
         results["checks"].append({"name": "flutter_js", "status": "WARN", "detail": str(e)})
 
