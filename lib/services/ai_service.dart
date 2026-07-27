@@ -3,7 +3,10 @@ import 'package:flutter/foundation.dart';
 
 /// AI-powered emergency assistant using Gemini.
 class AIService {
-  static const _apiKey = 'YOUR_GEMINI_API_KEY';
+  static const _apiKey = String.fromEnvironment(
+    'GEMINI_API_KEY',
+    defaultValue: '',
+  );
   late final GenerativeModel _model;
   ChatSession? _chatSession;
 

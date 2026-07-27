@@ -55,9 +55,15 @@ jobs:
 
       # ── Stage 3: Build Application ────────────────────────────────────
       - name: "Stage 3: Build Flutter Web"
+        env:
+          MAPS_API_KEY: ${{ secrets.MAPS_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           REPO_NAME="${{ github.event.repository.name }}"
-          flutter build web --release --base-href "/${REPO_NAME}/"
+          if [ -n "$MAPS_API_KEY" ]; then
+            sed -i "s/YOUR_GOOGLE_MAPS_API_KEY/${MAPS_API_KEY}/g" web/index.html
+          fi
+          flutter build web --release --base-href "/${REPO_NAME}/" --dart-define=GEMINI_API_KEY="${GEMINI_API_KEY}"
           cp build/web/index.html build/web/404.html
           echo "Build completed with 404.html fallback. Output in build/web/"
           ls -la build/web/
