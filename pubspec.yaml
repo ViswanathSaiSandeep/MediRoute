@@ -1,0 +1,66 @@
+name: mediroute
+description: "MediRoute - Community-based emergency medical response system"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Firebase
+  firebase_core: ^3.12.1
+  firebase_auth: ^5.5.4
+  cloud_firestore: ^5.6.7
+  firebase_messaging: ^15.2.5
+  firebase_storage: ^12.4.5
+
+  # Maps & Location
+  google_maps_flutter: ^2.10.1
+  geolocator: ^13.0.2
+  geoflutterfire_plus: ^0.0.30
+  geocoding: ^3.0.0
+
+  # State Management
+  flutter_riverpod: ^2.6.1
+
+  # Navigation
+  go_router: ^14.8.1
+
+  # UI & Animations
+  lottie: ^3.3.1
+  flutter_tts: ^4.2.0
+  google_fonts: ^6.2.1
+  url_launcher: ^6.3.1
+  shimmer: ^3.0.0
+
+  # Utilities
+  uuid: ^4.5.1
+  intl: ^0.19.0
+  shared_preferences: ^2.3.5
+  permission_handler: ^11.4.0
+
+  # AI
+  google_generative_ai: ^0.4.6
+
+  # HTTP calls
+  http: ^1.2.1
+
+  # Notifications
+  flutter_local_notifications: ^18.0.1
+
+  cupertino_icons: ^1.0.8
+  web: ^1.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/lottie/

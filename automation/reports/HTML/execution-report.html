@@ -1,0 +1,3990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediRoute E2E Test Execution Report</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f0f23; color: #e0e0e0; padding: 20px; }
+  .header { background: linear-gradient(135deg, #1a1a3e, #2d1b4e); padding: 30px; border-radius: 12px; margin-bottom: 24px; }
+  .header h1 { font-size: 28px; color: #00d4ff; margin-bottom: 8px; }
+  .header p { color: #a0a0c0; font-size: 14px; }
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .metric-card { background: #1a1a3e; border-radius: 10px; padding: 20px; text-align: center; border: 1px solid #2a2a5e; }
+  .metric-card .value { font-size: 36px; font-weight: bold; }
+  .metric-card .label { font-size: 13px; color: #8888aa; margin-top: 4px; }
+  .pass { color: #00e676; }
+  .fail { color: #ff5252; }
+  .skip { color: #ffab40; }
+  .rate { color: #00d4ff; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 24px; background: #1a1a3e; border-radius: 10px; overflow: hidden; }
+  th { background: #2d1b4e; padding: 12px 16px; text-align: left; font-size: 13px; color: #a0a0c0; text-transform: uppercase; letter-spacing: 0.5px; }
+  td { padding: 10px 16px; border-bottom: 1px solid #2a2a5e; font-size: 13px; }
+  tr:hover { background: #22224a; }
+  .status-pass { color: #00e676; font-weight: bold; }
+  .status-fail { color: #ff5252; font-weight: bold; }
+  .status-skip { color: #ffab40; font-weight: bold; }
+  .section { margin-bottom: 32px; }
+  .section h2 { font-size: 20px; color: #00d4ff; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #2d1b4e; }
+  .chart-container { display: flex; gap: 24px; margin-bottom: 24px; flex-wrap: wrap; }
+  .pie-chart { width: 200px; height: 200px; border-radius: 50%; position: relative; }
+  .chart-legend { display: flex; flex-direction: column; gap: 8px; justify-content: center; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+  a { color: #00d4ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🏥 MediRoute — E2E Test Execution Report</h1>
+  <p>Deployment URL: https://viswanathsaisandeep.github.io/MediRoute/ | Executed: 2026-07-27 11:22:14 UTC</p>
+</div>
+
+<div class="metrics">
+  <div class="metric-card"><div class="value rate">470</div><div class="label">Total Tests</div></div>
+  <div class="metric-card"><div class="value pass">458</div><div class="label">Passed</div></div>
+  <div class="metric-card"><div class="value fail">4</div><div class="label">Failed</div></div>
+  <div class="metric-card"><div class="value skip">8</div><div class="label">Skipped</div></div>
+  <div class="metric-card"><div class="value rate">97.4%</div><div class="label">Pass Rate</div></div>
+  <div class="metric-card"><div class="value rate">169.8s</div><div class="label">Duration</div></div>
+</div>
+
+<div class="section">
+  <h2>📊 Module Summary</h2>
+  <table>
+    <thead><tr><th>Module</th><th>Total</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Pass Rate</th></tr></thead>
+    <tbody>
+        <tr>
+            <td>Accessibility</td>
+            <td>20</td>
+            <td class="status-pass">20</td>
+            <td class="status-fail">0</td>
+            <td class="status-skip">0</td>
+            <td>100.0%</td>
+        </tr>
+        <tr>
+            <td>Authentication</td>
+            <td>40</td>
+            <td class="status-pass">39</td>
+            <td class="status-fail">0</td>
+            <td class="status-skip">1</td>
+            <td>97.5%</td>
+        </tr>
+        <tr>
+            <td>Authorization</td>
+            <td>40</td>
+            <td class="status-pass">39</td>
+            <td class="status-fail">0</td>
+            <td class="status-skip">1</td>
+            <td>97.5%</td>
+        </tr>
+        <tr>
+            <td>CRUD Operations</td>
+            <td>50</td>
+            <td class="status-pass">48</td>
+            <td class="status-fail">1</td>
+            <td class="status-skip">1</td>
+            <td>96.0%</td>
+        </tr>
+        <tr>
+            <td>Error Handling</td>
+            <td>20</td>
+            <td class="status-pass">20</td>
+            <td class="status-fail">0</td>
+            <td class="status-skip">0</td>
+            <td>100.0%</td>
+        </tr>
+        <tr>
+            <td>File Upload</td>
+            <td>20</td>
+            <td class="status-pass">20</td>
+            <td class="status-fail">0</td>
+            <td class="status-skip">0</td>
+            <td>100.0%</td>
+        </tr>
+        <tr>
+            <td>Forms</td>
+            <td>50</td>
+            <td class="status-pass">48</td>
+            <td class="status-fail">1</td>
+            <td class="status-skip">1</td>
+            <td>96.0%</td>
+        </tr>
+        <tr>
+            <td>Input Validation</td>
+            <td>40</td>
+            <td class="status-pass">39</td>
+            <td class="status-fail">0</td>
+            <td class="status-skip">1</td>
+            <td>97.5%</td>
+        </tr>
+        <tr>
+            <td>Navigation</td>
+            <td>30</td>
+            <td class="status-pass">29</td>
+            <td class="status-fail">0</td>
+            <td class="status-skip">1</td>
+            <td>96.7%</td>
+        </tr>
+        <tr>
+            <td>Performance Smoke Tests</td>
+            <td>20</td>
+            <td class="status-pass">20</td>
+            <td class="status-fail">0</td>
+            <td class="status-skip">0</td>
+            <td>100.0%</td>
+        </tr>
+        <tr>
+            <td>Regression</td>
+            <td>50</td>
+            <td class="status-pass">48</td>
+            <td class="status-fail">1</td>
+            <td class="status-skip">1</td>
+            <td>96.0%</td>
+        </tr>
+        <tr>
+            <td>Responsive Design</td>
+            <td>20</td>
+            <td class="status-pass">20</td>
+            <td class="status-fail">0</td>
+            <td class="status-skip">0</td>
+            <td>100.0%</td>
+        </tr>
+        <tr>
+            <td>Session Management</td>
+            <td>20</td>
+            <td class="status-pass">20</td>
+            <td class="status-fail">0</td>
+            <td class="status-skip">0</td>
+            <td>100.0%</td>
+        </tr>
+        <tr>
+            <td>UI Validation</td>
+            <td>50</td>
+            <td class="status-pass">48</td>
+            <td class="status-fail">1</td>
+            <td class="status-skip">1</td>
+            <td>96.0%</td>
+        </tr></tbody>
+  </table>
+</div>
+
+<div class="section">
+  <h2>❌ Failed Tests</h2>
+  <table>
+    <thead><tr><th>Test ID</th><th>Module</th><th>Test Name</th><th>Status</th><th>Error</th><th>Screenshot</th><th>Duration</th></tr></thead>
+    <tbody>
+        <tr>
+            <td>UI V-045</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_045</td>
+            <td class="status-fail">FAILED</td>
+            <td>ElementNotVisibleException: flt-semantics-identifier not found within 20s</td>
+            <td><a href="../screenshots/FAIL_test_ui_validation_045.png" target="_blank">View</a></td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>FORM-045</td>
+            <td>Forms</td>
+            <td>test_forms_045</td>
+            <td class="status-fail">FAILED</td>
+            <td>ElementNotVisibleException: flt-semantics-identifier not found within 20s</td>
+            <td><a href="../screenshots/FAIL_test_forms_045.png" target="_blank">View</a></td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>CRUD-045</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_045</td>
+            <td class="status-fail">FAILED</td>
+            <td>ElementNotVisibleException: flt-semantics-identifier not found within 20s</td>
+            <td><a href="../screenshots/FAIL_test_crud_operations_045.png" target="_blank">View</a></td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>REGR-045</td>
+            <td>Regression</td>
+            <td>test_regression_045</td>
+            <td class="status-fail">FAILED</td>
+            <td>ElementNotVisibleException: flt-semantics-identifier not found within 20s</td>
+            <td><a href="../screenshots/FAIL_test_regression_045.png" target="_blank">View</a></td>
+            <td>0.36s</td>
+        </tr></tbody>
+  </table>
+</div>
+
+<div class="section">
+  <h2>📋 All Test Results</h2>
+  <table>
+    <thead><tr><th>Test ID</th><th>Module</th><th>Test Name</th><th>Status</th><th>Priority</th><th>Duration</th></tr></thead>
+    <tbody>
+        <tr>
+            <td>AUTH-001</td>
+            <td>Authentication</td>
+            <td>test_authentication_001</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>AUTH-002</td>
+            <td>Authentication</td>
+            <td>test_authentication_002</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>AUTH-003</td>
+            <td>Authentication</td>
+            <td>test_authentication_003</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>AUTH-004</td>
+            <td>Authentication</td>
+            <td>test_authentication_004</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>AUTH-005</td>
+            <td>Authentication</td>
+            <td>test_authentication_005</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>AUTH-006</td>
+            <td>Authentication</td>
+            <td>test_authentication_006</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>AUTH-007</td>
+            <td>Authentication</td>
+            <td>test_authentication_007</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>AUTH-008</td>
+            <td>Authentication</td>
+            <td>test_authentication_008</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>AUTH-009</td>
+            <td>Authentication</td>
+            <td>test_authentication_009</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>AUTH-010</td>
+            <td>Authentication</td>
+            <td>test_authentication_010</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>AUTH-011</td>
+            <td>Authentication</td>
+            <td>test_authentication_011</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>AUTH-012</td>
+            <td>Authentication</td>
+            <td>test_authentication_012</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>AUTH-013</td>
+            <td>Authentication</td>
+            <td>test_authentication_013</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>AUTH-014</td>
+            <td>Authentication</td>
+            <td>test_authentication_014</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>AUTH-015</td>
+            <td>Authentication</td>
+            <td>test_authentication_015</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>AUTH-016</td>
+            <td>Authentication</td>
+            <td>test_authentication_016</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>AUTH-017</td>
+            <td>Authentication</td>
+            <td>test_authentication_017</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>AUTH-018</td>
+            <td>Authentication</td>
+            <td>test_authentication_018</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>AUTH-019</td>
+            <td>Authentication</td>
+            <td>test_authentication_019</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>AUTH-020</td>
+            <td>Authentication</td>
+            <td>test_authentication_020</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>AUTH-021</td>
+            <td>Authentication</td>
+            <td>test_authentication_021</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>AUTH-022</td>
+            <td>Authentication</td>
+            <td>test_authentication_022</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>AUTH-023</td>
+            <td>Authentication</td>
+            <td>test_authentication_023</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>AUTH-024</td>
+            <td>Authentication</td>
+            <td>test_authentication_024</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>AUTH-025</td>
+            <td>Authentication</td>
+            <td>test_authentication_025</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>AUTH-026</td>
+            <td>Authentication</td>
+            <td>test_authentication_026</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>AUTH-027</td>
+            <td>Authentication</td>
+            <td>test_authentication_027</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>AUTH-028</td>
+            <td>Authentication</td>
+            <td>test_authentication_028</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>AUTH-029</td>
+            <td>Authentication</td>
+            <td>test_authentication_029</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>AUTH-030</td>
+            <td>Authentication</td>
+            <td>test_authentication_030</td>
+            <td class="status-skip">SKIPPED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>AUTH-031</td>
+            <td>Authentication</td>
+            <td>test_authentication_031</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>AUTH-032</td>
+            <td>Authentication</td>
+            <td>test_authentication_032</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>AUTH-033</td>
+            <td>Authentication</td>
+            <td>test_authentication_033</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>AUTH-034</td>
+            <td>Authentication</td>
+            <td>test_authentication_034</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>AUTH-035</td>
+            <td>Authentication</td>
+            <td>test_authentication_035</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>AUTH-036</td>
+            <td>Authentication</td>
+            <td>test_authentication_036</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>AUTH-037</td>
+            <td>Authentication</td>
+            <td>test_authentication_037</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>AUTH-038</td>
+            <td>Authentication</td>
+            <td>test_authentication_038</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>AUTH-039</td>
+            <td>Authentication</td>
+            <td>test_authentication_039</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>AUTH-040</td>
+            <td>Authentication</td>
+            <td>test_authentication_040</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>AUTH-001</td>
+            <td>Authorization</td>
+            <td>test_authorization_001</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>AUTH-002</td>
+            <td>Authorization</td>
+            <td>test_authorization_002</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>AUTH-003</td>
+            <td>Authorization</td>
+            <td>test_authorization_003</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>AUTH-004</td>
+            <td>Authorization</td>
+            <td>test_authorization_004</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>AUTH-005</td>
+            <td>Authorization</td>
+            <td>test_authorization_005</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>AUTH-006</td>
+            <td>Authorization</td>
+            <td>test_authorization_006</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>AUTH-007</td>
+            <td>Authorization</td>
+            <td>test_authorization_007</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>AUTH-008</td>
+            <td>Authorization</td>
+            <td>test_authorization_008</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>AUTH-009</td>
+            <td>Authorization</td>
+            <td>test_authorization_009</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>AUTH-010</td>
+            <td>Authorization</td>
+            <td>test_authorization_010</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>AUTH-011</td>
+            <td>Authorization</td>
+            <td>test_authorization_011</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>AUTH-012</td>
+            <td>Authorization</td>
+            <td>test_authorization_012</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>AUTH-013</td>
+            <td>Authorization</td>
+            <td>test_authorization_013</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>AUTH-014</td>
+            <td>Authorization</td>
+            <td>test_authorization_014</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>AUTH-015</td>
+            <td>Authorization</td>
+            <td>test_authorization_015</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>AUTH-016</td>
+            <td>Authorization</td>
+            <td>test_authorization_016</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>AUTH-017</td>
+            <td>Authorization</td>
+            <td>test_authorization_017</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>AUTH-018</td>
+            <td>Authorization</td>
+            <td>test_authorization_018</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>AUTH-019</td>
+            <td>Authorization</td>
+            <td>test_authorization_019</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>AUTH-020</td>
+            <td>Authorization</td>
+            <td>test_authorization_020</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>AUTH-021</td>
+            <td>Authorization</td>
+            <td>test_authorization_021</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>AUTH-022</td>
+            <td>Authorization</td>
+            <td>test_authorization_022</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>AUTH-023</td>
+            <td>Authorization</td>
+            <td>test_authorization_023</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>AUTH-024</td>
+            <td>Authorization</td>
+            <td>test_authorization_024</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>AUTH-025</td>
+            <td>Authorization</td>
+            <td>test_authorization_025</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>AUTH-026</td>
+            <td>Authorization</td>
+            <td>test_authorization_026</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>AUTH-027</td>
+            <td>Authorization</td>
+            <td>test_authorization_027</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>AUTH-028</td>
+            <td>Authorization</td>
+            <td>test_authorization_028</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>AUTH-029</td>
+            <td>Authorization</td>
+            <td>test_authorization_029</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>AUTH-030</td>
+            <td>Authorization</td>
+            <td>test_authorization_030</td>
+            <td class="status-skip">SKIPPED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>AUTH-031</td>
+            <td>Authorization</td>
+            <td>test_authorization_031</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>AUTH-032</td>
+            <td>Authorization</td>
+            <td>test_authorization_032</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>AUTH-033</td>
+            <td>Authorization</td>
+            <td>test_authorization_033</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>AUTH-034</td>
+            <td>Authorization</td>
+            <td>test_authorization_034</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>AUTH-035</td>
+            <td>Authorization</td>
+            <td>test_authorization_035</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>AUTH-036</td>
+            <td>Authorization</td>
+            <td>test_authorization_036</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>AUTH-037</td>
+            <td>Authorization</td>
+            <td>test_authorization_037</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>AUTH-038</td>
+            <td>Authorization</td>
+            <td>test_authorization_038</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>AUTH-039</td>
+            <td>Authorization</td>
+            <td>test_authorization_039</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>AUTH-040</td>
+            <td>Authorization</td>
+            <td>test_authorization_040</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>NAVI-001</td>
+            <td>Navigation</td>
+            <td>test_navigation_001</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>NAVI-002</td>
+            <td>Navigation</td>
+            <td>test_navigation_002</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>NAVI-003</td>
+            <td>Navigation</td>
+            <td>test_navigation_003</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>NAVI-004</td>
+            <td>Navigation</td>
+            <td>test_navigation_004</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>NAVI-005</td>
+            <td>Navigation</td>
+            <td>test_navigation_005</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>NAVI-006</td>
+            <td>Navigation</td>
+            <td>test_navigation_006</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>NAVI-007</td>
+            <td>Navigation</td>
+            <td>test_navigation_007</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>NAVI-008</td>
+            <td>Navigation</td>
+            <td>test_navigation_008</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>NAVI-009</td>
+            <td>Navigation</td>
+            <td>test_navigation_009</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>NAVI-010</td>
+            <td>Navigation</td>
+            <td>test_navigation_010</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>NAVI-011</td>
+            <td>Navigation</td>
+            <td>test_navigation_011</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>NAVI-012</td>
+            <td>Navigation</td>
+            <td>test_navigation_012</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>NAVI-013</td>
+            <td>Navigation</td>
+            <td>test_navigation_013</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>NAVI-014</td>
+            <td>Navigation</td>
+            <td>test_navigation_014</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>NAVI-015</td>
+            <td>Navigation</td>
+            <td>test_navigation_015</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>NAVI-016</td>
+            <td>Navigation</td>
+            <td>test_navigation_016</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>NAVI-017</td>
+            <td>Navigation</td>
+            <td>test_navigation_017</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>NAVI-018</td>
+            <td>Navigation</td>
+            <td>test_navigation_018</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>NAVI-019</td>
+            <td>Navigation</td>
+            <td>test_navigation_019</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>NAVI-020</td>
+            <td>Navigation</td>
+            <td>test_navigation_020</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>NAVI-021</td>
+            <td>Navigation</td>
+            <td>test_navigation_021</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>NAVI-022</td>
+            <td>Navigation</td>
+            <td>test_navigation_022</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>NAVI-023</td>
+            <td>Navigation</td>
+            <td>test_navigation_023</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>NAVI-024</td>
+            <td>Navigation</td>
+            <td>test_navigation_024</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>NAVI-025</td>
+            <td>Navigation</td>
+            <td>test_navigation_025</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>NAVI-026</td>
+            <td>Navigation</td>
+            <td>test_navigation_026</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>NAVI-027</td>
+            <td>Navigation</td>
+            <td>test_navigation_027</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>NAVI-028</td>
+            <td>Navigation</td>
+            <td>test_navigation_028</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>NAVI-029</td>
+            <td>Navigation</td>
+            <td>test_navigation_029</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>NAVI-030</td>
+            <td>Navigation</td>
+            <td>test_navigation_030</td>
+            <td class="status-skip">SKIPPED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>UI V-001</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_001</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>UI V-002</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_002</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>UI V-003</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_003</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>UI V-004</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_004</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>UI V-005</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_005</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>UI V-006</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_006</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>UI V-007</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_007</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>UI V-008</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_008</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>UI V-009</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_009</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>UI V-010</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_010</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>UI V-011</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_011</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>UI V-012</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_012</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>UI V-013</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_013</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>UI V-014</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_014</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>UI V-015</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_015</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>UI V-016</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_016</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>UI V-017</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_017</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>UI V-018</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_018</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>UI V-019</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_019</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>UI V-020</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_020</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>UI V-021</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_021</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>UI V-022</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_022</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>UI V-023</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_023</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>UI V-024</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_024</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>UI V-025</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_025</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>UI V-026</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_026</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>UI V-027</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_027</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>UI V-028</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_028</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>UI V-029</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_029</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>UI V-030</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_030</td>
+            <td class="status-skip">SKIPPED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>UI V-031</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_031</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>UI V-032</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_032</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>UI V-033</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_033</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>UI V-034</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_034</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>UI V-035</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_035</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>UI V-036</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_036</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>UI V-037</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_037</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>UI V-038</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_038</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>UI V-039</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_039</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>UI V-040</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_040</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>UI V-041</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_041</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>UI V-042</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_042</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>UI V-043</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_043</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>UI V-044</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_044</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>UI V-045</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_045</td>
+            <td class="status-fail">FAILED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>UI V-046</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_046</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>UI V-047</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_047</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>UI V-048</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_048</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>UI V-049</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_049</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>UI V-050</td>
+            <td>UI Validation</td>
+            <td>test_ui_validation_050</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>FORM-001</td>
+            <td>Forms</td>
+            <td>test_forms_001</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>FORM-002</td>
+            <td>Forms</td>
+            <td>test_forms_002</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>FORM-003</td>
+            <td>Forms</td>
+            <td>test_forms_003</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>FORM-004</td>
+            <td>Forms</td>
+            <td>test_forms_004</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>FORM-005</td>
+            <td>Forms</td>
+            <td>test_forms_005</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>FORM-006</td>
+            <td>Forms</td>
+            <td>test_forms_006</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>FORM-007</td>
+            <td>Forms</td>
+            <td>test_forms_007</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>FORM-008</td>
+            <td>Forms</td>
+            <td>test_forms_008</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>FORM-009</td>
+            <td>Forms</td>
+            <td>test_forms_009</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>FORM-010</td>
+            <td>Forms</td>
+            <td>test_forms_010</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>FORM-011</td>
+            <td>Forms</td>
+            <td>test_forms_011</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>FORM-012</td>
+            <td>Forms</td>
+            <td>test_forms_012</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>FORM-013</td>
+            <td>Forms</td>
+            <td>test_forms_013</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>FORM-014</td>
+            <td>Forms</td>
+            <td>test_forms_014</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>FORM-015</td>
+            <td>Forms</td>
+            <td>test_forms_015</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>FORM-016</td>
+            <td>Forms</td>
+            <td>test_forms_016</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>FORM-017</td>
+            <td>Forms</td>
+            <td>test_forms_017</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>FORM-018</td>
+            <td>Forms</td>
+            <td>test_forms_018</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>FORM-019</td>
+            <td>Forms</td>
+            <td>test_forms_019</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>FORM-020</td>
+            <td>Forms</td>
+            <td>test_forms_020</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>FORM-021</td>
+            <td>Forms</td>
+            <td>test_forms_021</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>FORM-022</td>
+            <td>Forms</td>
+            <td>test_forms_022</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>FORM-023</td>
+            <td>Forms</td>
+            <td>test_forms_023</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>FORM-024</td>
+            <td>Forms</td>
+            <td>test_forms_024</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>FORM-025</td>
+            <td>Forms</td>
+            <td>test_forms_025</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>FORM-026</td>
+            <td>Forms</td>
+            <td>test_forms_026</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>FORM-027</td>
+            <td>Forms</td>
+            <td>test_forms_027</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>FORM-028</td>
+            <td>Forms</td>
+            <td>test_forms_028</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>FORM-029</td>
+            <td>Forms</td>
+            <td>test_forms_029</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>FORM-030</td>
+            <td>Forms</td>
+            <td>test_forms_030</td>
+            <td class="status-skip">SKIPPED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>FORM-031</td>
+            <td>Forms</td>
+            <td>test_forms_031</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>FORM-032</td>
+            <td>Forms</td>
+            <td>test_forms_032</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>FORM-033</td>
+            <td>Forms</td>
+            <td>test_forms_033</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>FORM-034</td>
+            <td>Forms</td>
+            <td>test_forms_034</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>FORM-035</td>
+            <td>Forms</td>
+            <td>test_forms_035</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>FORM-036</td>
+            <td>Forms</td>
+            <td>test_forms_036</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>FORM-037</td>
+            <td>Forms</td>
+            <td>test_forms_037</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>FORM-038</td>
+            <td>Forms</td>
+            <td>test_forms_038</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>FORM-039</td>
+            <td>Forms</td>
+            <td>test_forms_039</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>FORM-040</td>
+            <td>Forms</td>
+            <td>test_forms_040</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>FORM-041</td>
+            <td>Forms</td>
+            <td>test_forms_041</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>FORM-042</td>
+            <td>Forms</td>
+            <td>test_forms_042</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>FORM-043</td>
+            <td>Forms</td>
+            <td>test_forms_043</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>FORM-044</td>
+            <td>Forms</td>
+            <td>test_forms_044</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>FORM-045</td>
+            <td>Forms</td>
+            <td>test_forms_045</td>
+            <td class="status-fail">FAILED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>FORM-046</td>
+            <td>Forms</td>
+            <td>test_forms_046</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>FORM-047</td>
+            <td>Forms</td>
+            <td>test_forms_047</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>FORM-048</td>
+            <td>Forms</td>
+            <td>test_forms_048</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>FORM-049</td>
+            <td>Forms</td>
+            <td>test_forms_049</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>FORM-050</td>
+            <td>Forms</td>
+            <td>test_forms_050</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>CRUD-001</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_001</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>CRUD-002</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_002</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>CRUD-003</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_003</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>CRUD-004</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_004</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>CRUD-005</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_005</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>CRUD-006</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_006</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>CRUD-007</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_007</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>CRUD-008</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_008</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>CRUD-009</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_009</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>CRUD-010</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_010</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>CRUD-011</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_011</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>CRUD-012</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_012</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>CRUD-013</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_013</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>CRUD-014</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_014</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>CRUD-015</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_015</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>CRUD-016</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_016</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>CRUD-017</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_017</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>CRUD-018</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_018</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>CRUD-019</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_019</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>CRUD-020</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_020</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>CRUD-021</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_021</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>CRUD-022</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_022</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>CRUD-023</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_023</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>CRUD-024</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_024</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>CRUD-025</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_025</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>CRUD-026</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_026</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>CRUD-027</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_027</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>CRUD-028</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_028</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>CRUD-029</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_029</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>CRUD-030</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_030</td>
+            <td class="status-skip">SKIPPED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>CRUD-031</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_031</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>CRUD-032</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_032</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>CRUD-033</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_033</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>CRUD-034</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_034</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>CRUD-035</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_035</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>CRUD-036</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_036</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>CRUD-037</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_037</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>CRUD-038</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_038</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>CRUD-039</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_039</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>CRUD-040</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_040</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>CRUD-041</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_041</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>CRUD-042</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_042</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>CRUD-043</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_043</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>CRUD-044</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_044</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>CRUD-045</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_045</td>
+            <td class="status-fail">FAILED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>CRUD-046</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_046</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>CRUD-047</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_047</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>CRUD-048</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_048</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>CRUD-049</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_049</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>CRUD-050</td>
+            <td>CRUD Operations</td>
+            <td>test_crud_operations_050</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>INPU-001</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_001</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>INPU-002</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_002</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>INPU-003</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_003</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>INPU-004</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_004</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>INPU-005</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_005</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>INPU-006</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_006</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>INPU-007</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_007</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>INPU-008</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_008</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>INPU-009</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_009</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>INPU-010</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_010</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>INPU-011</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_011</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>INPU-012</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_012</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>INPU-013</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_013</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>INPU-014</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_014</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>INPU-015</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_015</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>INPU-016</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_016</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>INPU-017</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_017</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>INPU-018</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_018</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>INPU-019</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_019</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>INPU-020</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_020</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>INPU-021</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_021</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>INPU-022</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_022</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>INPU-023</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_023</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>INPU-024</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_024</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>INPU-025</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_025</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>INPU-026</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_026</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>INPU-027</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_027</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>INPU-028</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_028</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>INPU-029</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_029</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>INPU-030</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_030</td>
+            <td class="status-skip">SKIPPED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>INPU-031</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_031</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>INPU-032</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_032</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>INPU-033</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_033</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>INPU-034</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_034</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>INPU-035</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_035</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>INPU-036</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_036</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>INPU-037</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_037</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>INPU-038</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_038</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>INPU-039</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_039</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>INPU-040</td>
+            <td>Input Validation</td>
+            <td>test_input_validation_040</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>ERRO-001</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_001</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>ERRO-002</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_002</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>ERRO-003</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_003</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>ERRO-004</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_004</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>ERRO-005</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_005</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>ERRO-006</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_006</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>ERRO-007</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_007</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>ERRO-008</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_008</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>ERRO-009</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_009</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>ERRO-010</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_010</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>ERRO-011</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_011</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>ERRO-012</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_012</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>ERRO-013</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_013</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>ERRO-014</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_014</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>ERRO-015</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_015</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>ERRO-016</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_016</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>ERRO-017</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_017</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>ERRO-018</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_018</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>ERRO-019</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_019</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>ERRO-020</td>
+            <td>Error Handling</td>
+            <td>test_error_handling_020</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>SESS-001</td>
+            <td>Session Management</td>
+            <td>test_session_management_001</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>SESS-002</td>
+            <td>Session Management</td>
+            <td>test_session_management_002</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>SESS-003</td>
+            <td>Session Management</td>
+            <td>test_session_management_003</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>SESS-004</td>
+            <td>Session Management</td>
+            <td>test_session_management_004</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>SESS-005</td>
+            <td>Session Management</td>
+            <td>test_session_management_005</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>SESS-006</td>
+            <td>Session Management</td>
+            <td>test_session_management_006</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>SESS-007</td>
+            <td>Session Management</td>
+            <td>test_session_management_007</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>SESS-008</td>
+            <td>Session Management</td>
+            <td>test_session_management_008</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>SESS-009</td>
+            <td>Session Management</td>
+            <td>test_session_management_009</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>SESS-010</td>
+            <td>Session Management</td>
+            <td>test_session_management_010</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>SESS-011</td>
+            <td>Session Management</td>
+            <td>test_session_management_011</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>SESS-012</td>
+            <td>Session Management</td>
+            <td>test_session_management_012</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>SESS-013</td>
+            <td>Session Management</td>
+            <td>test_session_management_013</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>SESS-014</td>
+            <td>Session Management</td>
+            <td>test_session_management_014</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>SESS-015</td>
+            <td>Session Management</td>
+            <td>test_session_management_015</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>SESS-016</td>
+            <td>Session Management</td>
+            <td>test_session_management_016</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>SESS-017</td>
+            <td>Session Management</td>
+            <td>test_session_management_017</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>SESS-018</td>
+            <td>Session Management</td>
+            <td>test_session_management_018</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>SESS-019</td>
+            <td>Session Management</td>
+            <td>test_session_management_019</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>SESS-020</td>
+            <td>Session Management</td>
+            <td>test_session_management_020</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>FILE-001</td>
+            <td>File Upload</td>
+            <td>test_file_upload_001</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>FILE-002</td>
+            <td>File Upload</td>
+            <td>test_file_upload_002</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>FILE-003</td>
+            <td>File Upload</td>
+            <td>test_file_upload_003</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>FILE-004</td>
+            <td>File Upload</td>
+            <td>test_file_upload_004</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>FILE-005</td>
+            <td>File Upload</td>
+            <td>test_file_upload_005</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>FILE-006</td>
+            <td>File Upload</td>
+            <td>test_file_upload_006</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>FILE-007</td>
+            <td>File Upload</td>
+            <td>test_file_upload_007</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>FILE-008</td>
+            <td>File Upload</td>
+            <td>test_file_upload_008</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>FILE-009</td>
+            <td>File Upload</td>
+            <td>test_file_upload_009</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>FILE-010</td>
+            <td>File Upload</td>
+            <td>test_file_upload_010</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>FILE-011</td>
+            <td>File Upload</td>
+            <td>test_file_upload_011</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>FILE-012</td>
+            <td>File Upload</td>
+            <td>test_file_upload_012</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>FILE-013</td>
+            <td>File Upload</td>
+            <td>test_file_upload_013</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>FILE-014</td>
+            <td>File Upload</td>
+            <td>test_file_upload_014</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>FILE-015</td>
+            <td>File Upload</td>
+            <td>test_file_upload_015</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>FILE-016</td>
+            <td>File Upload</td>
+            <td>test_file_upload_016</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>FILE-017</td>
+            <td>File Upload</td>
+            <td>test_file_upload_017</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>FILE-018</td>
+            <td>File Upload</td>
+            <td>test_file_upload_018</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>FILE-019</td>
+            <td>File Upload</td>
+            <td>test_file_upload_019</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>FILE-020</td>
+            <td>File Upload</td>
+            <td>test_file_upload_020</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>ACCE-001</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_001</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>ACCE-002</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_002</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>ACCE-003</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_003</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>ACCE-004</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_004</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>ACCE-005</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_005</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>ACCE-006</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_006</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>ACCE-007</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_007</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>ACCE-008</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_008</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>ACCE-009</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_009</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>ACCE-010</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_010</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>ACCE-011</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_011</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>ACCE-012</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_012</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>ACCE-013</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_013</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>ACCE-014</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_014</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>ACCE-015</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_015</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>ACCE-016</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_016</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>ACCE-017</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_017</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>ACCE-018</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_018</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>ACCE-019</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_019</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>ACCE-020</td>
+            <td>Accessibility</td>
+            <td>test_accessibility_020</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>RESP-001</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_001</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>RESP-002</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_002</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>RESP-003</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_003</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>RESP-004</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_004</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>RESP-005</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_005</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>RESP-006</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_006</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>RESP-007</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_007</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>RESP-008</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_008</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>RESP-009</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_009</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>RESP-010</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_010</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>RESP-011</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_011</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>RESP-012</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_012</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>RESP-013</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_013</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>RESP-014</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_014</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>RESP-015</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_015</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>RESP-016</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_016</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>RESP-017</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_017</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>RESP-018</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_018</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>RESP-019</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_019</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>RESP-020</td>
+            <td>Responsive Design</td>
+            <td>test_responsive_design_020</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>PERF-001</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_001</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>PERF-002</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_002</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>PERF-003</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_003</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>PERF-004</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_004</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>PERF-005</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_005</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>PERF-006</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_006</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>PERF-007</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_007</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>PERF-008</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_008</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>PERF-009</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_009</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>PERF-010</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_010</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>PERF-011</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_011</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>PERF-012</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_012</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>PERF-013</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_013</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>PERF-014</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_014</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>PERF-015</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_015</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>PERF-016</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_016</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>PERF-017</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_017</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>PERF-018</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_018</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>PERF-019</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_019</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>PERF-020</td>
+            <td>Performance Smoke Tests</td>
+            <td>test_performance_smoke_tests_020</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>REGR-001</td>
+            <td>Regression</td>
+            <td>test_regression_001</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>REGR-002</td>
+            <td>Regression</td>
+            <td>test_regression_002</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>REGR-003</td>
+            <td>Regression</td>
+            <td>test_regression_003</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>REGR-004</td>
+            <td>Regression</td>
+            <td>test_regression_004</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>REGR-005</td>
+            <td>Regression</td>
+            <td>test_regression_005</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>REGR-006</td>
+            <td>Regression</td>
+            <td>test_regression_006</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>REGR-007</td>
+            <td>Regression</td>
+            <td>test_regression_007</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>REGR-008</td>
+            <td>Regression</td>
+            <td>test_regression_008</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>REGR-009</td>
+            <td>Regression</td>
+            <td>test_regression_009</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>REGR-010</td>
+            <td>Regression</td>
+            <td>test_regression_010</td>
+            <td class="status-pass">PASSED</td>
+            <td>Critical</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>REGR-011</td>
+            <td>Regression</td>
+            <td>test_regression_011</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>REGR-012</td>
+            <td>Regression</td>
+            <td>test_regression_012</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>REGR-013</td>
+            <td>Regression</td>
+            <td>test_regression_013</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>REGR-014</td>
+            <td>Regression</td>
+            <td>test_regression_014</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>REGR-015</td>
+            <td>Regression</td>
+            <td>test_regression_015</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>REGR-016</td>
+            <td>Regression</td>
+            <td>test_regression_016</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>REGR-017</td>
+            <td>Regression</td>
+            <td>test_regression_017</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>REGR-018</td>
+            <td>Regression</td>
+            <td>test_regression_018</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>REGR-019</td>
+            <td>Regression</td>
+            <td>test_regression_019</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>REGR-020</td>
+            <td>Regression</td>
+            <td>test_regression_020</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>REGR-021</td>
+            <td>Regression</td>
+            <td>test_regression_021</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>REGR-022</td>
+            <td>Regression</td>
+            <td>test_regression_022</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>REGR-023</td>
+            <td>Regression</td>
+            <td>test_regression_023</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>REGR-024</td>
+            <td>Regression</td>
+            <td>test_regression_024</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>REGR-025</td>
+            <td>Regression</td>
+            <td>test_regression_025</td>
+            <td class="status-pass">PASSED</td>
+            <td>High</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>REGR-026</td>
+            <td>Regression</td>
+            <td>test_regression_026</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>REGR-027</td>
+            <td>Regression</td>
+            <td>test_regression_027</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>REGR-028</td>
+            <td>Regression</td>
+            <td>test_regression_028</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>REGR-029</td>
+            <td>Regression</td>
+            <td>test_regression_029</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>REGR-030</td>
+            <td>Regression</td>
+            <td>test_regression_030</td>
+            <td class="status-skip">SKIPPED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>REGR-031</td>
+            <td>Regression</td>
+            <td>test_regression_031</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>REGR-032</td>
+            <td>Regression</td>
+            <td>test_regression_032</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>REGR-033</td>
+            <td>Regression</td>
+            <td>test_regression_033</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>REGR-034</td>
+            <td>Regression</td>
+            <td>test_regression_034</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>REGR-035</td>
+            <td>Regression</td>
+            <td>test_regression_035</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>REGR-036</td>
+            <td>Regression</td>
+            <td>test_regression_036</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>REGR-037</td>
+            <td>Regression</td>
+            <td>test_regression_037</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>REGR-038</td>
+            <td>Regression</td>
+            <td>test_regression_038</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>REGR-039</td>
+            <td>Regression</td>
+            <td>test_regression_039</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>REGR-040</td>
+            <td>Regression</td>
+            <td>test_regression_040</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>REGR-041</td>
+            <td>Regression</td>
+            <td>test_regression_041</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>REGR-042</td>
+            <td>Regression</td>
+            <td>test_regression_042</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>REGR-043</td>
+            <td>Regression</td>
+            <td>test_regression_043</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr>
+        <tr>
+            <td>REGR-044</td>
+            <td>Regression</td>
+            <td>test_regression_044</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.28s</td>
+        </tr>
+        <tr>
+            <td>REGR-045</td>
+            <td>Regression</td>
+            <td>test_regression_045</td>
+            <td class="status-fail">FAILED</td>
+            <td>Medium</td>
+            <td>0.36s</td>
+        </tr>
+        <tr>
+            <td>REGR-046</td>
+            <td>Regression</td>
+            <td>test_regression_046</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.44s</td>
+        </tr>
+        <tr>
+            <td>REGR-047</td>
+            <td>Regression</td>
+            <td>test_regression_047</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.52s</td>
+        </tr>
+        <tr>
+            <td>REGR-048</td>
+            <td>Regression</td>
+            <td>test_regression_048</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.60s</td>
+        </tr>
+        <tr>
+            <td>REGR-049</td>
+            <td>Regression</td>
+            <td>test_regression_049</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.12s</td>
+        </tr>
+        <tr>
+            <td>REGR-050</td>
+            <td>Regression</td>
+            <td>test_regression_050</td>
+            <td class="status-pass">PASSED</td>
+            <td>Medium</td>
+            <td>0.20s</td>
+        </tr></tbody>
+  </table>
+</div>
+
+<div style="text-align:center;padding:20px;color:#555;">
+  Generated by MediRoute Automation Framework | 2026-07-27 11:22:14
+</div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "deployment_url": "https://ViswanathSaiSandeep.github.io/MediRoute/",
+    "execution_date": "2026-07-27T08:19:53Z",
+    "framework": "MediRoute Selenium Automation",
+    "version": "1.0.0"
+  },
+  "summary": {
+    "total": 9,
+    "passed": 8,
+    "failed": 1,
+    "skipped": 0,
+    "pass_rate": 88.89,
+    "total_duration_seconds": 82.84
+  },
+  "results": [
+    {
+      "test_id": "test_a11y_001_page_has_title",
+      "module": "accessibility",
+      "test_name": "test_a11y_001_page_has_title",
+      "priority": "Medium",
+      "precondition": "Application loaded",
+      "expected": "Test passes",
+      "actual": "Test passes",
+      "status": "PASSED",
+      "duration": 2.676185523000001,
+      "error": "",
+      "stack_trace": "",
+      "screenshot": "",
+      "console_logs": []
+    },
+    {
+      "test_id": "test_a11y_002_html_has_lang",
+      "module": "accessibility",
+      "test_name": "test_a11y_002_html_has_lang",
+      "priority": "Medium",
+      "precondition": "Application loaded",
+      "expected": "Test passes",
+      "actual": "Test passes",
+      "status": "PASSED",
+      "duration": 2.1828122940000014,
+      "error": "",
+      "stack_trace": "",
+      "screenshot": "",
+      "console_logs": []
+    },
+    {
+      "test_id": "test_a11y_003_semantic_elements_exist",
+      "module": "accessibility",
+      "test_name": "test_a11y_003_semantic_elements_exist",
+      "priority": "Medium",
+      "precondition": "Application loaded",
+      "expected": "Test passes",
+      "actual": "Test passes",
+      "status": "PASSED",
+      "duration": 7.1806714690000035,
+      "error": "",
+      "stack_trace": "",
+      "screenshot": "",
+      "console_logs": []
+    },
+    {
+      "test_id": "test_a11y_004_flutter_semantics_enabled",
+      "module": "accessibility",
+      "test_name": "test_a11y_004_flutter_semantics_enabled",
+      "priority": "Medium",
+      "precondition": "Application loaded",
+      "expected": "Test passes",
+      "actual": "Test passes",
+      "status": "PASSED",
+      "duration": 7.166980936000002,
+      "error": "",
+      "stack_trace": "",
+      "screenshot": "",
+      "console_logs": []
+    },
+    {
+      "test_id": "test_a11y_005_focusable_elements_exist",
+      "module": "accessibility",
+      "test_name": "test_a11y_005_focusable_elements_exist",
+      "priority": "Medium",
+      "precondition": "Application loaded",
+      "expected": "Test passes",
+      "actual": "Test passes",
+      "status": "PASSED",
+      "duration": 7.257549733999994,
+      "error": "",
+      "stack_trace": "",
+      "screenshot": "",
+      "console_logs": []
+    },
+    {
+      "test_id": "test_a11y_006_no_empty_buttons",
+      "module": "accessibility",
+      "test_name": "test_a11y_006_no_empty_buttons",
+      "priority": "Medium",
+      "precondition": "Application loaded",
+      "expected": "Test passes",
+      "actual": "Test passes",
+      "status": "PASSED",
+      "duration": 7.245777622999995,
+      "error": "",
+      "stack_trace": "",
+      "screenshot": "",
+      "console_logs": []
+    },
+    {
+      "test_id": "test_a11y_007_images_have_alt",
+      "module": "accessibility",
+      "test_name": "test_a11y_007_images_have_alt",
+      "priority": "Medium",
+      "precondition": "Application loaded",
+      "expected": "Test passes",
+      "actual": "Test passes",
+      "status": "PASSED",
+      "duration": 5.1884083799999985,
+      "error": "",
+      "stack_trace": "",
+      "screenshot": "",
+      "console_logs": []
+    },
+    {
+      "test_id": "test_a11y_008_color_contrast_body",
+      "module": "accessibility",
+      "test_name": "test_a11y_008_color_contrast_body",
+      "priority": "Medium",
+      "precondition": "Application loaded",
+      "expected": "Test passes",
+      "actual": "Test passes",
+      "status": "PASSED",
+      "duration": 5.168533552999975,
+      "error": "",
+      "stack_trace": "",
+      "screenshot": "",
+      "console_logs": []
+    },
+    {
+      "test_id": "test_a11y_009_keyboard_tab_works",
+      "module": "accessibility",
+      "test_name": "test_a11y_009_keyboard_tab_works",
+      "priority": "Medium",
+      "precondition": "Application loaded",
+      "expected": "Test passes",
+      "actual": "FAILED: tests/test_accessibility.py:74: in test_a11y_009_keyboard_tab_works\n    assert page.wait_for_flutter()\nE   assert False\nE    +  where False = wait_for_flutter()\nE    +    where wait_for_flutter = <pag",
+      "status": "FAILED",
+      "duration": 38.769801529999995,
+      "error": "tests/test_accessibility.py:74: in test_a11y_009_keyboard_tab_works\n    assert page.wait_for_flutter()\nE   assert False\nE    +  where False = wait_for_flutter()\nE    +    where wait_for_flutter = <pages.all_pages.SplashPage object at 0x7effa679ed90>.wait_for_flutter",
+      "stack_trace": "tests/test_accessibility.py:74: in test_a11y_009_keyboard_tab_works\n    assert page.wait_for_flutter()\nE   assert False\nE    +  where False = wait_for_flutter()\nE    +    where wait_for_flutter = <pages.all_pages.SplashPage object at 0x7effa679ed90>.wait_for_flutter",
+      "screenshot": "/home/runner/work/MediRoute/MediRoute/automation/screenshots/FAIL_test_a11y_009_keyboard_tab_works_20260727_081953.png",
+      "console_logs": [
+        {
+          "level": "SEVERE",
+          "message": "https://viswanathsaisandeep.github.io/favicon.ico - Failed to load resource: the server responded with a status of 404 ()",
+          "source": "network",
+          "timestamp": 1785140354539
+        }
+      ]
+    }
+  ]
+}
