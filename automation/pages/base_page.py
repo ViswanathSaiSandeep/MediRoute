@@ -38,6 +38,10 @@ class BasePage:
         self.driver.get(url)
         self.wait_for_page_ready()
 
+    def navigate(self, path: str = ""):
+        """Alias for navigate_to."""
+        self.navigate_to(path)
+
     def navigate_to_route(self, route_name: str):
         """Navigate to a named route using the ROUTES config."""
         from config.settings import ROUTES
