@@ -92,9 +92,9 @@ jobs:
           echo "Deployment wait complete."
 
   # ═══════════════════════════════════════════════════════════════════════
-  # JOB 2: Verify, Test & Report
+  # JOB 2: Selenium E2E — Verify, Test & Report
   # ═══════════════════════════════════════════════════════════════════════
-  test-and-report:
+  selenium-e2e-test:
     needs: build-and-deploy
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
@@ -136,7 +136,7 @@ jobs:
           "
 
       # ── Stage 8: Run Selenium E2E Tests ───────────────────────────────
-      - name: "Stage 8: Run Selenium E2E Tests"
+      - name: "Stage 8: Run Selenium E2E Tests (Full Suite)"
         env:
           HEADLESS: "true"
           BASE_URL: ${{ env.BASE_URL }}
@@ -151,14 +151,14 @@ jobs:
             -v \
             --tb=short \
             --no-header \
-            -x \
+            --timeout=120 \
             --rootdir=. \
             2>&1 | tee test_output.log || true
 
           echo "Tests completed."
 
       # ── Stages 9-10: Generate Reports ─────────────────────────────────
-      - name: "Stage 9-10: Generate Reports"
+      - name: "Stage 9-10: Generate All Reports"
         if: always()
         run: |
           cd automation
@@ -214,11 +214,11 @@ jobs:
           "
 
       # ── Stage 11: Upload Artifacts ────────────────────────────────────
-      - name: "Stage 11: Upload Test Reports"
+      - name: "Stage 11: Upload Selenium Test Reports"
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: mediroute-e2e-test-reports
+          name: selenium-e2e-test-reports
           path: |
             automation/reports/
             automation/screenshots/
@@ -237,8 +237,38 @@ jobs:
             echo "Test execution may not have completed." >> $GITHUB_STEP_SUMMARY
           fi
 
-      # ── Stage 13: Store Historical Results ────────────────────────────
-      - name: "Stage 13: Store Historical Results"
+      # ── Stage 13: Evaluate Pass/Fail Threshold ────────────────────────
+      - name: "Stage 13: Evaluate Pass/Fail Threshold"
+        if: always()
+        run: |
+          cd automation
+          python -c "
+          import json, sys, os
+          results_path = os.path.join('reports', 'execution-results.json')
+          if not os.path.exists(results_path):
+              print('No results file found, skipping threshold check.')
+              sys.exit(0)
+          with open(results_path) as f:
+              data = json.load(f)
+          s = data.get('summary', {})
+          total = s.get('total', 0)
+          passed = s.get('passed', 0)
+          failed = s.get('failed', 0)
+          if total == 0:
+              print('No tests executed.')
+              sys.exit(0)
+          pass_rate = passed / total * 100
+          critical_fail_rate = failed / total * 100
+          print(f'Pass Rate: {pass_rate:.1f}% | Failed: {failed}/{total} ({critical_fail_rate:.1f}%)')
+          if pass_rate < 95 and critical_fail_rate > 5:
+              print('❌ WORKFLOW FAILED: Pass rate below 95% and critical failures exceed 5%')
+              sys.exit(1)
+          else:
+              print('✅ WORKFLOW PASSED: Within acceptable thresholds')
+          "
+
+      # ── Stage 14: Store Historical Results ────────────────────────────
+      - name: "Stage 14: Store Historical Results"
         if: always() && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         run: |
           RESULTS_FILE="automation/reports/execution-results.json"
@@ -250,12 +280,113 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
 
+            git stash --include-untracked || true
             git fetch origin test-history || true
             git checkout test-history 2>/dev/null || git checkout --orphan test-history
 
             mkdir -p results
             cp "$TMP_FILE" "results/results_${TIMESTAMP}.json"
             git add results/ || true
-            git commit -m "Test results ${TIMESTAMP} [ci skip]" || true
+            git commit -m "Selenium results ${TIMESTAMP} [ci skip]" || true
             git push origin test-history || true
+          fi
+
+  # ═══════════════════════════════════════════════════════════════════════
+  # JOB 3: Appium Android E2E Tests
+  # ═══════════════════════════════════════════════════════════════════════
+  appium-android-test:
+    needs: build-and-deploy
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    env:
+      BASE_URL: ${{ needs.build-and-deploy.outputs.deploy_url }}
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+
+      - name: "Setup Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: "Setup Java (for Appium)"
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: "Setup Android SDK"
+        uses: android-actions/setup-android@v3
+
+      - name: "Install Appium & Dependencies"
+        run: |
+          npm install -g appium
+          appium driver install uiautomator2
+          pip install -r automation/appium/requirements.txt
+
+      - name: "Enable KVM for Android Emulator"
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: "Create & Start Android Emulator"
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: Nexus 6
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
+          disable-animations: true
+          script: |
+            echo "Emulator started successfully"
+            adb devices
+            adb shell getprop ro.build.version.release
+
+            # Start Appium server in background
+            appium --address 127.0.0.1 --port 4723 --relaxed-security &
+            sleep 10
+
+            # Run Appium tests
+            cd automation/appium
+            python -m pytest tests/ \
+              -v \
+              --tb=short \
+              --no-header \
+              --timeout=180 \
+              --rootdir=. \
+              2>&1 | tee appium_test_output.log || true
+
+            echo "Appium tests completed."
+
+            # Generate reports
+            python -c "
+            import sys, os
+            sys.path.insert(0, '.')
+            from utils.appium_report_generator import generate_all_appium_reports
+            generate_all_appium_reports()
+            print('Appium reports generated.')
+            "
+
+      - name: "Upload Appium Test Reports"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: appium-android-test-reports
+          path: |
+            automation/appium/reports/
+            automation/appium/screenshots/
+            automation/appium/logs/
+          retention-days: 30
+
+      - name: "Publish Appium Summary"
+        if: always()
+        run: |
+          SUMMARY_FILE="automation/appium/reports/summary.md"
+          if [ -f "$SUMMARY_FILE" ]; then
+            echo "## 📱 Appium Android Test Results" >> $GITHUB_STEP_SUMMARY
+            cat "$SUMMARY_FILE" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "## ⚠️ No Appium test summary available" >> $GITHUB_STEP_SUMMARY
           fi
