@@ -58,7 +58,8 @@ jobs:
         run: |
           REPO_NAME="${{ github.event.repository.name }}"
           flutter build web --release --base-href "/${REPO_NAME}/"
-          echo "Build completed. Output in build/web/"
+          cp build/web/index.html build/web/404.html
+          echo "Build completed with 404.html fallback. Output in build/web/"
           ls -la build/web/
 
       # ── Stage 4: Static Analysis ──────────────────────────────────────
