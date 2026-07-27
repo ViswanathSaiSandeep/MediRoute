@@ -145,7 +145,6 @@ jobs:
             -v \
             --tb=short \
             --no-header \
-            --timeout=120 \
             -x \
             --rootdir=. \
             2>&1 | tee test_output.log || true
@@ -238,26 +237,19 @@ jobs:
         run: |
           RESULTS_FILE="automation/reports/execution-results.json"
           if [ -f "$RESULTS_FILE" ]; then
-            HISTORY_DIR="test-history"
-            mkdir -p $HISTORY_DIR
             TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-            cp "$RESULTS_FILE" "$HISTORY_DIR/results_${TIMESTAMP}.json"
+            TMP_FILE="/tmp/results_${TIMESTAMP}.json"
+            cp "$RESULTS_FILE" "$TMP_FILE"
 
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
 
-            # Store in test-history branch
-            git stash --include-untracked || true
             git fetch origin test-history || true
             git checkout test-history 2>/dev/null || git checkout --orphan test-history
 
             mkdir -p results
-            cp "$HISTORY_DIR/results_${TIMESTAMP}.json" "results/results_${TIMESTAMP}.json"
+            cp "$TMP_FILE" "results/results_${TIMESTAMP}.json"
             git add results/ || true
-            git commit -m "Test results ${TIMESTAMP}" || true
+            git commit -m "Test results ${TIMESTAMP} [ci skip]" || true
             git push origin test-history || true
-
-            # Return to original branch
-            git checkout - || true
-            git stash pop || true
           fi
