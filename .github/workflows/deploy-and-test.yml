@@ -1,0 +1,263 @@
+name: Deploy & E2E Test (Live GitHub Pages)
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: 'Override BASE_URL for testing'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  actions: read
+
+concurrency:
+  group: "pages-${{ github.ref }}"
+  cancel-in-progress: false
+
+env:
+  FLUTTER_VERSION: '3.32.0'
+  BASE_URL: ${{ github.event.inputs.base_url || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}
+
+jobs:
+  # ═══════════════════════════════════════════════════════════════════════
+  # JOB 1: Build & Deploy to GitHub Pages
+  # ═══════════════════════════════════════════════════════════════════════
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    outputs:
+      deploy_url: ${{ env.BASE_URL }}
+    steps:
+      # ── Stage 1: Repository Checkout ──────────────────────────────────
+      - name: "Stage 1: Checkout Repository"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ── Stage 2: Install Dependencies ─────────────────────────────────
+      - name: "Stage 2: Setup Flutter"
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: stable
+
+      - name: "Stage 2: Flutter Doctor"
+        run: flutter doctor -v
+
+      - name: "Stage 2: Install Flutter Dependencies"
+        run: flutter pub get
+
+      # ── Stage 3: Build Application ────────────────────────────────────
+      - name: "Stage 3: Build Flutter Web"
+        run: |
+          REPO_NAME="${{ github.event.repository.name }}"
+          flutter build web --release --base-href "/${REPO_NAME}/" --web-renderer html
+          echo "Build completed. Output in build/web/"
+          ls -la build/web/
+
+      # ── Stage 4: Static Analysis ──────────────────────────────────────
+      - name: "Stage 4: Flutter Analyze"
+        run: flutter analyze --no-fatal-infos || true
+
+      # ── Stage 5: Deploy to GitHub Pages ───────────────────────────────
+      - name: "Stage 5: Deploy to GitHub Pages"
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
+          publish_branch: gh-pages
+          force_orphan: true
+          commit_message: "Deploy MediRoute to GitHub Pages [ci skip]"
+
+      # ── Stage 6: Wait for Deployment ──────────────────────────────────
+      - name: "Stage 6: Wait for GitHub Pages Deployment"
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: |
+          echo "Waiting 90 seconds for GitHub Pages CDN propagation..."
+          sleep 90
+          echo "Deployment wait complete."
+
+  # ═══════════════════════════════════════════════════════════════════════
+  # JOB 2: Verify, Test & Report
+  # ═══════════════════════════════════════════════════════════════════════
+  test-and-report:
+    needs: build-and-deploy
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    env:
+      BASE_URL: ${{ needs.build-and-deploy.outputs.deploy_url }}
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+
+      # ── Stage 7: Deployment Verification ──────────────────────────────
+      - name: "Stage 7: Setup Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: "Stage 7: Install Python Dependencies"
+        run: pip install -r automation/requirements.txt
+
+      - name: "Stage 7: Install Chrome"
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+
+      - name: "Stage 7: Install ChromeDriver"
+        uses: nanasess/setup-chromedriver@v2
+
+      - name: "Stage 7: Verify Deployment"
+        run: |
+          cd automation
+          python -c "
+          import sys; sys.path.insert(0, '.')
+          from utils.verify_deployment import verify_deployment
+          result = verify_deployment('${{ env.BASE_URL }}')
+          print(f'Status: {result[\"status\"]}')
+          for c in result['checks']:
+              print(f'  {c[\"name\"]}: {c[\"status\"]} - {c[\"detail\"]}')
+          if result['status'] == 'FAIL':
+              sys.exit(1)
+          "
+
+      # ── Stage 8: Run Selenium E2E Tests ───────────────────────────────
+      - name: "Stage 8: Run Selenium E2E Tests"
+        env:
+          HEADLESS: "true"
+          BASE_URL: ${{ env.BASE_URL }}
+          DISPLAY: ":99"
+        run: |
+          # Start virtual display
+          sudo apt-get install -y xvfb
+          Xvfb :99 -screen 0 1920x1080x24 &
+
+          cd automation
+          python -m pytest tests/ \
+            -v \
+            --tb=short \
+            --no-header \
+            --timeout=120 \
+            -x \
+            --rootdir=. \
+            2>&1 | tee test_output.log || true
+
+          echo "Tests completed."
+
+      # ── Stages 9-10: Generate Reports ─────────────────────────────────
+      - name: "Stage 9-10: Generate Reports"
+        if: always()
+        run: |
+          cd automation
+          python -c "
+          import sys, os, json, time
+          sys.path.insert(0, '.')
+          from config.settings import REPORTS_DIR, SCREENSHOTS_DIR
+          os.makedirs(REPORTS_DIR, exist_ok=True)
+
+          # Check if results were generated by conftest
+          results_path = os.path.join(REPORTS_DIR, 'execution-results.json')
+          if os.path.exists(results_path):
+              print('Reports already generated by conftest hooks.')
+          else:
+              print('Generating fallback reports from test output...')
+              # Parse pytest output for basic results
+              results = []
+              if os.path.exists('test_output.log'):
+                  with open('test_output.log') as f:
+                      for line in f:
+                          if ' PASSED' in line or ' FAILED' in line or ' SKIPPED' in line:
+                              parts = line.strip().split('::')
+                              if len(parts) >= 2:
+                                  status = 'PASSED' if 'PASSED' in line else 'FAILED' if 'FAILED' in line else 'SKIPPED'
+                                  test_name = parts[-1].split(' ')[0] if parts else 'unknown'
+                                  module = parts[0].split('/')[-1].replace('test_','').replace('.py','') if parts else 'unknown'
+                                  results.append({
+                                      'test_id': test_name.upper().replace('TEST_',''),
+                                      'module': module.replace('_',' ').title(),
+                                      'test_name': test_name,
+                                      'status': status,
+                                      'duration': 1.0,
+                                      'priority': 'Medium',
+                                      'error': '',
+                                      'precondition': 'App loaded',
+                                      'expected': 'Test passes',
+                                      'actual': status,
+                                  })
+
+              if results:
+                  from utils.report_generator import generate_html_report, generate_dashboard
+                  from utils.excel_generator import generate_all_excel_reports
+                  from utils.summary_generator import generate_summary_md, generate_json_results
+                  summary = {'total': len(results)}
+                  generate_html_report(results, summary)
+                  generate_dashboard(results, summary)
+                  generate_all_excel_reports(results)
+                  generate_summary_md(results)
+                  generate_json_results(results, summary)
+                  print(f'Generated reports for {len(results)} test results.')
+              else:
+                  print('No test results found.')
+          "
+
+      # ── Stage 11: Upload Artifacts ────────────────────────────────────
+      - name: "Stage 11: Upload Test Reports"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mediroute-e2e-test-reports
+          path: |
+            automation/reports/
+            automation/screenshots/
+            automation/logs/
+          retention-days: 30
+
+      # ── Stage 12: Publish GitHub Summary ──────────────────────────────
+      - name: "Stage 12: Publish Summary"
+        if: always()
+        run: |
+          SUMMARY_FILE="automation/reports/summary.md"
+          if [ -f "$SUMMARY_FILE" ]; then
+            cat "$SUMMARY_FILE" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "## ⚠️ No test summary available" >> $GITHUB_STEP_SUMMARY
+            echo "Test execution may not have completed." >> $GITHUB_STEP_SUMMARY
+          fi
+
+      # ── Stage 13: Store Historical Results ────────────────────────────
+      - name: "Stage 13: Store Historical Results"
+        if: always() && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+        run: |
+          RESULTS_FILE="automation/reports/execution-results.json"
+          if [ -f "$RESULTS_FILE" ]; then
+            HISTORY_DIR="test-history"
+            mkdir -p $HISTORY_DIR
+            TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+            cp "$RESULTS_FILE" "$HISTORY_DIR/results_${TIMESTAMP}.json"
+
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+
+            # Store in test-history branch
+            git stash --include-untracked || true
+            git fetch origin test-history || true
+            git checkout test-history 2>/dev/null || git checkout --orphan test-history
+
+            mkdir -p results
+            cp "$HISTORY_DIR/results_${TIMESTAMP}.json" "results/results_${TIMESTAMP}.json"
+            git add results/ || true
+            git commit -m "Test results ${TIMESTAMP}" || true
+            git push origin test-history || true
+
+            # Return to original branch
+            git checkout - || true
+            git stash pop || true
+          fi
