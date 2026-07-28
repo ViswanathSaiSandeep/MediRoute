@@ -79,8 +79,8 @@ jobs:
       - name: "Wait for GitHub Pages CDN Propagation"
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: |
-          echo "Waiting 90 seconds for GitHub Pages CDN propagation..."
-          sleep 90
+          echo "Waiting 60 seconds for GitHub Pages CDN propagation..."
+          sleep 60
 
   # ═══════════════════════════════════════════════════════════════════════════
   # 🌐 Selenium — Website Tests (300)
@@ -132,8 +132,8 @@ jobs:
           sudo apt-get install -y xvfb
           Xvfb :99 -screen 0 1920x1080x24 &
           cd automation
-          python -m pytest tests/ -n 4 \
-            -v --tb=short --no-header --timeout=120 --rootdir=. \
+          python -m pytest tests/ -n 8 \
+            -v --tb=short --no-header --timeout=60 --rootdir=. \
             2>&1 | tee test_output.log || true
 
       - name: "Upload Selenium Reports"
@@ -176,43 +176,15 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: "Setup Java"
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '17'
+      - name: "Install Dependencies"
+        run: pip install -r automation/requirements.txt openpyxl
 
-      - name: "Setup Android SDK"
-        uses: android-actions/setup-android@v3
-
-      - name: "Install Appium & Dependencies"
+      - name: "Run Appium E2E Test Suite"
         run: |
-          npm install -g appium
-          appium driver install uiautomator2
-          pip install -r automation/appium/requirements.txt
-
-      - name: "Enable KVM"
-        run: |
-          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
-          sudo udevadm control --reload-rules
-          sudo udevadm trigger --name-match=kvm
-
-      - name: "Run Appium Tests on Emulator"
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 34
-          target: google_apis
-          arch: x86_64
-          profile: Nexus 6
-          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
-          disable-animations: true
-          script: |
-            echo "Emulator started"
-            adb devices
-            appium --address 127.0.0.1 --port 4723 --relaxed-security &
-            sleep 10
-            python -m pytest automation/appium/tests/ -v --tb=short --no-header --timeout=180 --rootdir=automation/appium 2>&1 | tee automation/appium/appium_test_output.log || true
-            python -c "import sys, os; sys.path.insert(0, 'automation/appium'); from utils.appium_report_generator import generate_all_appium_reports; generate_all_appium_reports(); print('Appium reports generated.')"
+          cd automation
+          python -m pytest appium/tests/ -n 8 \
+            -v --tb=short --no-header --timeout=120 --rootdir=appium \
+            2>&1 | tee appium_test_output.log || true
 
       - name: "Upload Appium Reports"
         if: always()
