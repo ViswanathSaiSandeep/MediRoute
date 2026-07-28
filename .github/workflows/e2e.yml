@@ -181,10 +181,7 @@ jobs:
 
       - name: "Run Appium E2E Test Suite"
         run: |
-          cd automation
-          python -m pytest appium/tests/ -n 8 \
-            -v --tb=short --no-header --timeout=120 --rootdir=appium \
-            2>&1 | tee appium_test_output.log || true
+          python automation/appium/run_appium_tests.py
 
       - name: "Upload Appium Reports"
         if: always()
