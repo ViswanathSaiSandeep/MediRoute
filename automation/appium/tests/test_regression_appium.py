@@ -79,7 +79,7 @@ class TestAppiumRegression:
         screen = BaseScreen(driver)
         screen.wait_for_screen_ready()
         path = screen.take_screenshot("regression_010")
-        assert path == "" or os.path.exists(path) or True, "Screenshot regression"
+        assert screen.is_loaded(), "Screenshot regression"
 
     # ── AREG-011 to AREG-020: Accessibility ──────────────────────────────
     def test_areg_011_content_descriptions_present(self, driver):

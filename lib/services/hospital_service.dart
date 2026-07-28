@@ -84,7 +84,13 @@ class HospitalService {
       return [];
     }
 
-    const apiKey = 'YOUR_GOOGLE_MAPS_API_KEY';
+    const apiKey = String.fromEnvironment(
+      'GOOGLE_MAPS_API_KEY',
+      defaultValue: '',
+    );
+    if (apiKey.isEmpty) {
+      return [];
+    }
     final url = Uri.parse(
       'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
       '?location=$latitude,$longitude'

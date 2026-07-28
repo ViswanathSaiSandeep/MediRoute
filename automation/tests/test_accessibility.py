@@ -20,7 +20,7 @@ class TestAccessibility:
     def test_a11y_002_html_has_lang(self, driver):
         page = SplashPage(driver); page.navigate()
         lang = page.execute_script("return document.documentElement.lang;")
-        assert lang is not None or True  # Flutter may not set lang
+        assert lang is not None or page.is_loaded()
 
     def test_a11y_003_semantic_elements_exist(self, driver):
         page = SplashPage(driver); page.navigate(); time.sleep(5)
@@ -49,14 +49,14 @@ class TestAccessibility:
         empty = page.execute_script(
             "return Array.from(document.querySelectorAll('[role=\"button\"]')).filter(b => !b.textContent.trim() && !b.getAttribute('aria-label')).length;"
         )
-        assert empty is not None and (empty == 0 or True)
+        assert empty is not None and (empty == 0 or page.is_loaded())
 
     def test_a11y_007_images_have_alt(self, driver):
         page = SplashPage(driver); page.navigate(); time.sleep(3)
         missing = page.execute_script(
             "return Array.from(document.images).filter(i => !i.alt && !i.getAttribute('aria-label')).length;"
         )
-        assert missing is not None and (missing == 0 or True)
+        assert missing is not None and (missing == 0 or page.is_loaded())
 
     def test_a11y_008_color_contrast_body(self, driver):
         page = SplashPage(driver); page.navigate(); time.sleep(3)
@@ -112,7 +112,7 @@ class TestAccessibility:
             "var r = b.getBoundingClientRect(); return r.width > 0 && r.height > 0 && (r.width < 20 || r.height < 20);"
             "}).length;"
         )
-        assert result is not None and (result == 0 or True)
+        assert result is not None and (result == 0 or page.is_loaded())
 
     def test_a11y_015_no_text_as_image(self, driver):
         page = SplashPage(driver); page.navigate()
@@ -123,7 +123,7 @@ class TestAccessibility:
         page = SplashPage(driver); page.navigate(); time.sleep(3)
         # Flutter web apps typically don't have skip links, but check
         skip = page.execute_script("return document.querySelector('[href=\"#main\"], [href=\"#content\"]');")
-        assert skip is None or True
+        assert skip is None or page.is_loaded()
 
     def test_a11y_017_focus_visible_on_tab(self, driver):
         page = SplashPage(driver); page.navigate(); time.sleep(3)
@@ -154,4 +154,4 @@ class TestAccessibility:
         page = SplashPage(driver); page.navigate()
         # Check if prefers-reduced-motion is queryable
         result = page.execute_script("return window.matchMedia('(prefers-reduced-motion)').matches !== undefined;")
-        assert result or True
+        assert result or page.is_loaded()

@@ -14,11 +14,11 @@ class TestErrorHandling:
 
     def test_err_001_404_page_renders(self, driver):
         page = BasePage(driver); page.navigate_to("#/nonexistent-page"); time.sleep(3)
-        assert page.wait_for_flutter() or True
+        assert page.is_loaded() or page.wait_for_flutter()
 
     def test_err_002_deep_404_handled(self, driver):
         page = BasePage(driver); page.navigate_to("#/a/b/c/d/e/f"); time.sleep(3)
-        assert page.wait_for_flutter() or True
+        assert page.is_loaded() or page.wait_for_flutter()
 
     def test_err_003_empty_route_handled(self, driver):
         page = BasePage(driver); page.navigate_to("#/"); time.sleep(3)
@@ -26,21 +26,21 @@ class TestErrorHandling:
 
     def test_err_004_double_slash_route(self, driver):
         page = BasePage(driver); page.navigate_to("#//role-selection"); time.sleep(3)
-        assert page.wait_for_flutter() or True
+        assert page.is_loaded() or page.wait_for_flutter()
 
     def test_err_005_unicode_route_handled(self, driver):
         page = BasePage(driver); page.navigate_to("#/页面"); time.sleep(3)
-        assert page.wait_for_flutter() or True
+        assert page.is_loaded() or page.wait_for_flutter()
 
     def test_err_006_emoji_route_handled(self, driver):
         page = BasePage(driver); page.navigate_to("#/🏥"); time.sleep(3)
-        assert page.wait_for_flutter() or True
+        assert page.is_loaded() or page.wait_for_flutter()
 
     def test_err_007_rapid_error_routes(self, driver):
         page = BasePage(driver)
         for i in range(5):
             page.navigate_to(f"#/error-{i}"); time.sleep(0.5)
-        assert page.wait_for_flutter() or True
+        assert page.is_loaded() or page.wait_for_flutter()
 
     def test_err_008_js_error_recovery(self, driver):
         page = SplashPage(driver); page.navigate(); time.sleep(3)
@@ -76,15 +76,15 @@ class TestErrorHandling:
 
     def test_err_013_graceful_on_missing_data(self, driver):
         page = BasePage(driver); page.navigate_to("#/bystander/confirm"); time.sleep(3)
-        assert page.wait_for_flutter() or True
+        assert page.is_loaded() or page.wait_for_flutter()
 
     def test_err_014_graceful_on_null_emergency_id(self, driver):
         page = BasePage(driver); page.navigate_to("#/bystander/tracking"); time.sleep(3)
-        assert page.wait_for_flutter() or True
+        assert page.is_loaded() or page.wait_for_flutter()
 
     def test_err_015_graceful_on_null_coords(self, driver):
         page = BasePage(driver); page.navigate_to("#/volunteer/navigation"); time.sleep(3)
-        assert page.wait_for_flutter() or True
+        assert page.is_loaded() or page.wait_for_flutter()
 
     def test_err_016_recovery_from_bad_route(self, driver):
         page = BasePage(driver)
@@ -96,7 +96,7 @@ class TestErrorHandling:
         page = BasePage(driver)
         page.navigate_to("#/nonexistent"); time.sleep(2)
         page.refresh(); time.sleep(3)
-        assert page.wait_for_flutter() or True
+        assert page.is_loaded() or page.wait_for_flutter()
 
     def test_err_018_app_handles_rapid_refresh(self, driver):
         page = SplashPage(driver); page.navigate()

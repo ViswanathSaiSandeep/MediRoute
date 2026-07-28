@@ -137,6 +137,15 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
         generate_summary_md(results)
         generate_json_results(results, summary)
 
+        # Category-specific report for CI artifacts
+        try:
+            from shared.category_report import generate_category_reports
+            for r in results:
+                r.setdefault("category", "Selenium Website Tests")
+            generate_category_reports(results, "Selenium Website Tests", REPORTS_DIR)
+        except Exception as cat_err:
+            logger.warning(f"Category report generation: {cat_err}")
+
         logger.info(f"Reports generated in {REPORTS_DIR}")
         terminalreporter.write_sep("=", "REPORTS GENERATED SUCCESSFULLY")
         terminalreporter.write_line(f"  Reports directory: {REPORTS_DIR}")

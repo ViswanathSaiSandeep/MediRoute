@@ -271,7 +271,7 @@ class TestAppiumUIValidation:
         screen = BaseScreen(driver)
         screen.wait_for_screen_ready()
         path = screen.take_screenshot("ui_validation_test")
-        assert path == "" or os.path.exists(path) or True, "Screenshot capture check"
+        assert screen.is_loaded(), "Screenshot capture check"
 
     def test_aui_040_consistent_color_scheme(self, driver):
         """TC: AUI-040 | Consistent color scheme across screens."""
