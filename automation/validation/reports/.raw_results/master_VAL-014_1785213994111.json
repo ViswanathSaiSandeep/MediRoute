@@ -1,0 +1,1 @@
+{"test_id": "VAL-014", "module": "Input Validation", "test_name": "val_phone_invalid_14", "priority": "Medium", "precondition": "Validation rules loaded", "expected": "Pattern '' validated for phone_invalid", "actual": "Pattern '' validated for phone_invalid", "status": "PASSED", "duration": 0.0006245000040507875, "error": "", "stack_trace": "", "category": "Validation Tests"}

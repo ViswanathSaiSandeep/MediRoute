@@ -1,0 +1,1 @@
+{"test_id": "VAL-183", "module": "URL Validation", "test_name": "val_url_trailing_slash", "priority": "High", "precondition": "BASE_URL configured", "expected": "URL passes trailing_slash validation", "actual": "URL passes trailing_slash validation", "status": "PASSED", "duration": 0.0005585999970207922, "error": "", "stack_trace": "", "category": "Validation Tests"}

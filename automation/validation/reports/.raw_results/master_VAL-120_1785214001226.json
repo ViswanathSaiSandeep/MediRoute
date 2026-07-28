@@ -1,0 +1,1 @@
+{"test_id": "VAL-120", "module": "Route Validation", "test_name": "val_route_profile_format", "priority": "Medium", "precondition": "Routes configured", "expected": "Route /profile passes format validation", "actual": "Route /profile passes format validation", "status": "PASSED", "duration": 0.0005571000001509674, "error": "", "stack_trace": "", "category": "Validation Tests"}

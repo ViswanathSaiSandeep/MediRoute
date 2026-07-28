@@ -27,6 +27,7 @@ CATEGORY_PATHS = {
     "Validation Tests": "automation/validation/reports",
     "Deployment Status": "automation/deployment_tests/reports",
     "Load Testing Performance": "automation/load/reports",
+    "Vulnerability Tests": "automation/vulnerability/reports",
 }
 
 if HAS_OPENPYXL:

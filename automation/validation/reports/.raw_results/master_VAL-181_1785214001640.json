@@ -1,0 +1,1 @@
+{"test_id": "VAL-181", "module": "URL Validation", "test_name": "val_url_valid_path", "priority": "High", "precondition": "BASE_URL configured", "expected": "URL passes valid_path validation", "actual": "URL passes valid_path validation", "status": "PASSED", "duration": 0.0007134999978006817, "error": "", "stack_trace": "", "category": "Validation Tests"}

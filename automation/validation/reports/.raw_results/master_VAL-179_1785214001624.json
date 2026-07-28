@@ -1,0 +1,1 @@
+{"test_id": "VAL-179", "module": "URL Validation", "test_name": "val_url_https_scheme", "priority": "High", "precondition": "BASE_URL configured", "expected": "URL passes https_scheme validation", "actual": "URL passes https_scheme validation", "status": "PASSED", "duration": 0.00037789999623782933, "error": "", "stack_trace": "", "category": "Validation Tests"}

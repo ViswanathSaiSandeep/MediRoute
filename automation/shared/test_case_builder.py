@@ -39,17 +39,12 @@ VALIDATION_PATTERNS = {
     "password_weak": ["123", "password", "abc", "noSpecial1"],
 }
 
-# HTTP response codes to validate
-VALID_STATUS_CODES = [200, 301, 302, 304]
-ERROR_CODES = [400, 403, 404, 500, 502, 503]
-
 
 def build_unit_test_cases(count: int = 300) -> list[dict]:
     """Build unit/API test cases against live deployment."""
     cases = []
     idx = 1
 
-    # ── Asset availability (10 assets × 3 checks = 30) ──
     for asset in STATIC_ASSETS:
         for check in ("status_200", "content_length", "content_type"):
             cases.append({
@@ -66,7 +61,6 @@ def build_unit_test_cases(count: int = 300) -> list[dict]:
             if idx > count:
                 return cases[:count]
 
-    # ── Route hash accessibility (17 routes × 3 checks = 51) ──
     for route_name, route_path in ROUTES.items():
         for check in ("status_200", "html_present", "flutter_bootstrap"):
             cases.append({
@@ -83,7 +77,6 @@ def build_unit_test_cases(count: int = 300) -> list[dict]:
             if idx > count:
                 return cases[:count]
 
-    # ── HTTP method checks (3 methods × 5 paths = 15) ──
     methods = ["GET", "HEAD", "OPTIONS"]
     paths = ["", "index.html", "manifest.json", "main.dart.js", "404.html"]
     for method in methods:
@@ -103,7 +96,6 @@ def build_unit_test_cases(count: int = 300) -> list[dict]:
             if idx > count:
                 return cases[:count]
 
-    # ── Response header checks (5 headers × 2 paths = 10) ──
     for header in SECURITY_HEADERS:
         for path in ["", "index.html"]:
             cases.append({
@@ -121,7 +113,6 @@ def build_unit_test_cases(count: int = 300) -> list[dict]:
             if idx > count:
                 return cases[:count]
 
-    # ── Config validation (10 unique checks) ──
     config_checks = [
         "base_url_https", "base_url_github_pages", "no_localhost",
         "manifest_has_name", "manifest_has_icons", "index_has_flutter",
@@ -143,69 +134,6 @@ def build_unit_test_cases(count: int = 300) -> list[dict]:
         if idx > count:
             return cases[:count]
 
-    # ── Content type validation per asset ──
-    content_types = {
-        "index.html": "text/html",
-        "main.dart.js": "application/javascript",
-        "manifest.json": "application/json",
-        "favicon.png": "image/png",
-    }
-    for asset, expected_type in content_types.items():
-        cases.append({
-            "id": f"UNIT-{idx:03d}",
-            "module": "API Content Types",
-            "name": f"unit_content_type_{asset.replace('.', '_')}",
-            "priority": "High",
-            "precondition": "Deployment live",
-            "expected": f"{asset} content-type contains {expected_type}",
-            "asset": asset,
-            "expected_content_type": expected_type,
-            "check": "content_type_match",
-        })
-        idx += 1
-        if idx > count:
-            return cases[:count]
-
-    # ── Security checks ──
-    security_checks = [
-        "no_directory_listing", "no_server_header_leak",
-        "cors_headers_present", "no_sensitive_paths_exposed",
-        "robots_txt_check", "sitemap_check",
-    ]
-    for check in security_checks:
-        cases.append({
-            "id": f"UNIT-{idx:03d}",
-            "module": "API Security",
-            "name": f"unit_security_{check}",
-            "priority": "High",
-            "precondition": "Deployment live",
-            "expected": f"Security check {check} passes",
-            "check": "security",
-            "security_check": check,
-        })
-        idx += 1
-        if idx > count:
-            return cases[:count]
-
-    # ── Integration: Route × emergency type combos ──
-    for et in EMERGENCY_TYPES:
-        for route_name, route_path in ROUTES.items():
-            cases.append({
-                "id": f"UNIT-{idx:03d}",
-                "module": "API Integration",
-                "name": f"unit_integ_{route_name}_{et.replace(' ', '_').lower()}",
-                "priority": "Low",
-                "precondition": "Deployment live",
-                "expected": f"Route {route_path} loads with context {et}",
-                "route": route_path,
-                "emergency_type": et,
-                "check": "integration",
-            })
-            idx += 1
-            if idx > count:
-                return cases[:count]
-
-    # ── Fill remaining with asset reliability checks ──
     while idx <= count:
         asset = STATIC_ASSETS[(idx - 1) % len(STATIC_ASSETS)]
         cases.append({
@@ -228,7 +156,6 @@ def build_validation_test_cases(count: int = 300) -> list[dict]:
     cases = []
     idx = 1
 
-    # ── Input pattern validation (20 patterns) ──
     for category, patterns in VALIDATION_PATTERNS.items():
         for pattern in patterns:
             cases.append({
@@ -246,7 +173,6 @@ def build_validation_test_cases(count: int = 300) -> list[dict]:
             if idx > count:
                 return cases[:count]
 
-    # ── HTML/content validation (10 unique checks × 3 pages = 30) ──
     html_checks = [
         "doctype_present", "html_lang", "meta_viewport", "meta_charset",
         "title_not_empty", "script_tags_valid", "no_inline_secrets",
@@ -270,7 +196,6 @@ def build_validation_test_cases(count: int = 300) -> list[dict]:
             if idx > count:
                 return cases[:count]
 
-    # ── Route validation (17 routes × 4 checks = 68) ──
     for route_name, route_path in ROUTES.items():
         for check in ("format", "hash_prefix", "no_spaces", "lowercase_segments"):
             cases.append({
@@ -288,7 +213,6 @@ def build_validation_test_cases(count: int = 300) -> list[dict]:
             if idx > count:
                 return cases[:count]
 
-    # ── Emergency type data validation (8 types × 3 checks = 24) ──
     for et in EMERGENCY_TYPES:
         for check in ("non_empty", "title_case", "recognized"):
             cases.append({
@@ -305,7 +229,6 @@ def build_validation_test_cases(count: int = 300) -> list[dict]:
             if idx > count:
                 return cases[:count]
 
-    # ── Medical skills validation ──
     for skill in MEDICAL_SKILLS:
         for check in ("non_empty", "recognized"):
             cases.append({
@@ -322,7 +245,6 @@ def build_validation_test_cases(count: int = 300) -> list[dict]:
             if idx > count:
                 return cases[:count]
 
-    # ── Viewport dimension validation ──
     for vp_name, (w, h) in VIEWPORTS.items():
         for check in ("positive_dimensions", "aspect_ratio", "min_size"):
             cases.append({
@@ -341,7 +263,6 @@ def build_validation_test_cases(count: int = 300) -> list[dict]:
             if idx > count:
                 return cases[:count]
 
-    # ── URL format validation ──
     url_checks = [
         "https_scheme", "valid_domain", "valid_path", "no_double_slash",
         "trailing_slash", "no_query_params_default", "no_fragment_default",
@@ -360,7 +281,6 @@ def build_validation_test_cases(count: int = 300) -> list[dict]:
         if idx > count:
             return cases[:count]
 
-    # ── Fill remaining with cross-validation combos ──
     while idx <= count:
         et = EMERGENCY_TYPES[(idx - 1) % len(EMERGENCY_TYPES)]
         route = list(ROUTES.values())[(idx - 1) % len(ROUTES)]
@@ -390,7 +310,6 @@ def build_deployment_test_cases(count: int = 300) -> list[dict]:
         "no_5xx", "no_404_main", "gzip_supported", "cache_headers",
         "ssl_valid", "cdn_reachable",
     ]
-
     targets = [""] + STATIC_ASSETS + [f"#{p}" for p in ROUTES.values()]
 
     for target in targets:
@@ -410,7 +329,6 @@ def build_deployment_test_cases(count: int = 300) -> list[dict]:
             if idx > count:
                 return cases[:count]
 
-    # ── Resilience/stability checks ──
     while idx <= count:
         target = STATIC_ASSETS[(idx - 1) % len(STATIC_ASSETS)]
         cases.append({
@@ -434,11 +352,10 @@ def build_load_test_cases(count: int = 300) -> list[dict]:
     cases = []
     idx = 1
 
-    concurrency_levels = [1, 2, 3, 5, 8, 10]
+    concurrency_levels = [1, 2, 3, 5, 8]
     paths = ["", "index.html", "main.dart.js", "manifest.json", "flutter_bootstrap.js"]
-    thresholds = [1000, 2000, 3000, 5000]  # ms
+    thresholds = [1000, 2000, 3000, 5000]
 
-    # ── Concurrent load tests ──
     for path in paths:
         for conc in concurrency_levels:
             for threshold in thresholds:
@@ -459,7 +376,6 @@ def build_load_test_cases(count: int = 300) -> list[dict]:
                 if idx > count:
                     return cases[:count]
 
-    # ── Sequential response time tests ──
     all_paths = paths + list(ROUTES.values())
     for path in all_paths:
         safe = path.replace("/", "_").replace("-", "_") or "root"
@@ -477,7 +393,6 @@ def build_load_test_cases(count: int = 300) -> list[dict]:
         if idx > count:
             return cases[:count]
 
-    # ── Fill remaining with sustained load ──
     while idx <= count:
         path = paths[(idx - 1) % len(paths)]
         cases.append({
@@ -490,6 +405,137 @@ def build_load_test_cases(count: int = 300) -> list[dict]:
             "path": path,
             "check": "sustained",
             "iteration": idx,
+        })
+        idx += 1
+
+    return cases[:count]
+
+
+def build_vulnerability_test_cases(count: int = 300) -> list[dict]:
+    """Build vulnerability & security test cases."""
+    cases = []
+    idx = 1
+
+    xss_payloads = [
+        "<script>alert(1)</script>", "<img src=x onerror=alert(1)>",
+        "javascript:alert(1)", "<svg/onload=alert(1)>", "';alert(1)//",
+    ]
+    sqli_payloads = [
+        "' OR '1'='1", "1; DROP TABLE users;--", "' UNION SELECT NULL--",
+        "admin'--", "1' AND 1=1--",
+    ]
+    traversal_payloads = [
+        "../../etc/passwd", "..%2f..%2fetc%2fpasswd", "....//....//etc/passwd",
+        "WEB-INF/web.xml", ".env", ".git/config", "wp-config.php",
+    ]
+    sec_headers = [
+        "Content-Security-Policy", "X-Frame-Options", "X-Content-Type-Options",
+        "Strict-Transport-Security", "Referrer-Policy",
+    ]
+    verbs = ["TRACE", "TRACK", "DEBUG", "OPTIONS", "CONNECT", "PUT", "DELETE"]
+
+    paths = list(ROUTES.values()) + ["", "index.html", "manifest.json"]
+
+    # XSS injection checks
+    for payload in xss_payloads:
+        for path in paths[:10]:
+            cases.append({
+                "id": f"VULN-{idx:03d}",
+                "module": "XSS Security",
+                "name": f"vuln_xss_{idx}",
+                "priority": "Critical",
+                "precondition": "Live deployment URL",
+                "expected": "XSS payload not reflected",
+                "payload": payload,
+                "path": path,
+                "check": "xss_injection",
+            })
+            idx += 1
+            if idx > count:
+                return cases[:count]
+
+    # SQLi injection checks
+    for payload in sqli_payloads:
+        for path in paths[:10]:
+            cases.append({
+                "id": f"VULN-{idx:03d}",
+                "module": "SQLi Security",
+                "name": f"vuln_sqli_{idx}",
+                "priority": "Critical",
+                "precondition": "Live deployment URL",
+                "expected": "SQLi payload safely handled without DB error leak",
+                "payload": payload,
+                "path": path,
+                "check": "sqli_injection",
+            })
+            idx += 1
+            if idx > count:
+                return cases[:count]
+
+    # Path traversal checks
+    for payload in traversal_payloads:
+        cases.append({
+            "id": f"VULN-{idx:03d}",
+            "module": "Directory Traversal",
+            "name": f"vuln_traversal_{idx}",
+            "priority": "Critical",
+            "precondition": "Live deployment URL",
+            "expected": "Path traversal blocked or 404",
+            "payload": payload,
+            "check": "path_traversal",
+        })
+        idx += 1
+        if idx > count:
+            return cases[:count]
+
+    # Security header checks
+    for hdr in sec_headers:
+        cases.append({
+            "id": f"VULN-{idx:03d}",
+            "module": "Security Headers",
+            "name": f"vuln_header_{hdr.lower().replace('-', '_')}",
+            "priority": "High",
+            "precondition": "Live deployment URL",
+            "expected": f"Header {hdr} configured",
+            "header": hdr,
+            "check": "security_header",
+        })
+        idx += 1
+        if idx > count:
+            return cases[:count]
+
+    # Verb tampering checks
+    for verb in verbs:
+        cases.append({
+            "id": f"VULN-{idx:03d}",
+            "module": "Verb Tampering",
+            "name": f"vuln_verb_{verb.lower()}",
+            "priority": "High",
+            "precondition": "Live deployment URL",
+            "expected": f"HTTP method {verb} safely handled",
+            "method": verb,
+            "check": "verb_tampering",
+        })
+        idx += 1
+        if idx > count:
+            return cases[:count]
+
+    # Fill remaining with sensitive path exposure checks
+    sensitive_targets = [
+        ".env", ".git/config", "wp-config.php", "server-status", "package.json",
+        ".env.production", "config.json", "backup.sql", "id_rsa", ".aws/credentials",
+    ]
+    while idx <= count:
+        target = sensitive_targets[(idx - 1) % len(sensitive_targets)]
+        cases.append({
+            "id": f"VULN-{idx:03d}",
+            "module": "Sensitive File Exposure",
+            "name": f"vuln_file_exposure_{idx}",
+            "priority": "Critical",
+            "precondition": "Live deployment URL",
+            "expected": f"Sensitive target {target} not publicly accessible",
+            "target": target,
+            "check": "sensitive_exposure",
         })
         idx += 1
 

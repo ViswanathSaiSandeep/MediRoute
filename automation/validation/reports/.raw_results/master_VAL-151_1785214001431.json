@@ -1,0 +1,1 @@
+{"test_id": "VAL-151", "module": "Data Validation", "test_name": "val_skill_first_aid_recognized", "priority": "Medium", "precondition": "Test data loaded", "expected": "Skill 'First Aid' passes recognized", "actual": "Skill 'First Aid' passes recognized", "status": "PASSED", "duration": 0.0004667000030167401, "error": "", "stack_trace": "", "category": "Validation Tests"}
