@@ -27,7 +27,7 @@ class TestUIValidation:
         """TC: UI-002 | Verify Flutter canvas element is rendered."""
         page = SplashPage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         has_canvas = page.is_element_visible(By.TAG_NAME, "canvas", timeout=10)
         has_flutter = page.is_element_visible(By.CSS_SELECTOR, "flutter-view, flt-glass-pane", timeout=5)
         assert has_canvas or has_flutter or page.is_loaded(), "No Flutter rendering found"
@@ -44,7 +44,7 @@ class TestUIValidation:
         """TC: UI-004 | Verify page is not blank/white."""
         page = SplashPage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         source = page.get_page_source()
         assert len(source) > 1000, f"Page appears blank ({len(source)} chars)"
 
@@ -109,7 +109,7 @@ class TestUIValidation:
         """TC: UI-012 | Verify 'MediRoute' text appears in the page."""
         page = SplashPage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         assert page.is_text_present("MediRoute") or "MediRoute" in page.get_page_title(), "MediRoute text not found"
 
     def test_ui_013_role_selection_has_cards(self, driver):
@@ -159,7 +159,7 @@ class TestUIValidation:
         """TC: UI-019 | Verify no critical JavaScript errors."""
         page = SplashPage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         errors = page.get_console_errors()
         critical = [e for e in errors if "Uncaught" in str(e.get("message", "")) and "TypeError" in str(e.get("message", ""))]
         assert len(critical) == 0, f"JS errors: {critical[:3]}"
@@ -168,7 +168,7 @@ class TestUIValidation:
         """TC: UI-020 | Verify document readyState is 'complete'."""
         page = SplashPage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         state = page.execute_script("return document.readyState;")
         assert state == "complete", f"readyState: {state}"
 
@@ -230,7 +230,7 @@ class TestUIValidation:
         """TC: UI-028 | Capture splash page screenshot for evidence."""
         page = SplashPage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         path = page.take_screenshot("splash_page")
         assert path and os.path.exists(path), "Splash screenshot failed"
 
@@ -238,7 +238,7 @@ class TestUIValidation:
         """TC: UI-029 | Capture role selection screenshot."""
         page = RoleSelectionPage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         path = page.take_screenshot("role_selection")
         assert path and os.path.exists(path), "Role selection screenshot failed"
 
@@ -246,7 +246,7 @@ class TestUIValidation:
         """TC: UI-030 | Capture bystander auth screenshot."""
         page = BystanderAuthPage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         path = page.take_screenshot("bystander_auth")
         assert path and os.path.exists(path), "Auth screenshot failed"
 
@@ -254,7 +254,7 @@ class TestUIValidation:
         """TC: UI-031 | Capture hospital registration screenshot."""
         page = HospitalRegisterPage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         path = page.take_screenshot("hospital_register")
         assert path and os.path.exists(path), "Hospital register screenshot failed"
 
@@ -262,7 +262,7 @@ class TestUIValidation:
         """TC: UI-032 | Capture volunteer registration screenshot."""
         page = VolunteerRegisterPage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         path = page.take_screenshot("volunteer_register")
         assert path and os.path.exists(path), "Volunteer register screenshot failed"
 
@@ -270,7 +270,7 @@ class TestUIValidation:
         """TC: UI-033 | Capture bystander home screenshot."""
         page = BystanderHomePage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         path = page.take_screenshot("bystander_home")
         assert path and os.path.exists(path), "Bystander home screenshot failed"
 
@@ -290,7 +290,7 @@ class TestUIValidation:
         page = SplashPage(driver)
         page.set_viewport(320, 568)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         assert page.wait_for_flutter(), "App failed at 320px viewport"
 
     def test_ui_036_maximum_viewport_renders(self, driver):
@@ -298,7 +298,7 @@ class TestUIValidation:
         page = SplashPage(driver)
         page.set_viewport(2560, 1440)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         assert page.wait_for_flutter(), "App failed at 2560px viewport"
 
     def test_ui_037_theme_consistency_across_pages(self, driver):
@@ -317,7 +317,7 @@ class TestUIValidation:
         """TC: UI-038 | Verify text content is not cut off."""
         page = SplashPage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         overflow = page.execute_script(
             "return Array.from(document.querySelectorAll('*')).filter(e => "
             "getComputedStyle(e).overflow === 'hidden' && e.scrollWidth > e.clientWidth + 50).length;"
@@ -336,7 +336,7 @@ class TestUIValidation:
         """TC: UI-040 | Verify DOM tree has substantial content."""
         page = SplashPage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         nodes = page.execute_script("return document.querySelectorAll('*').length;")
         assert nodes and nodes > 10, f"DOM tree too small: {nodes} nodes"
 
@@ -344,7 +344,7 @@ class TestUIValidation:
         """TC: UI-041 | Verify flutter-view custom element exists."""
         page = SplashPage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         exists = page.execute_script(
             "return document.querySelector('flutter-view') !== null || "
             "document.querySelector('flt-glass-pane') !== null || "
@@ -356,7 +356,7 @@ class TestUIValidation:
         """TC: UI-042 | Verify no error messages visible on splash."""
         page = SplashPage(driver)
         page.navigate()
-        time.sleep(5)
+        time.sleep(0.5)
         text = page.execute_script("return document.body.innerText || '';")
         assert "error" not in (text or "").lower()[:200] or "MediRoute" in (text or ""), "Error message visible"
 
@@ -416,6 +416,6 @@ class TestUIValidation:
         page = SplashPage(driver)
         page.navigate()
         page.execute_script("window.__testErrors = []; window.onerror = function(m) { window.__testErrors.push(m); };")
-        time.sleep(5)
+        time.sleep(0.5)
         errors = page.execute_script("return window.__testErrors || [];")
         assert len(errors or []) == 0, f"Window errors: {errors}"
