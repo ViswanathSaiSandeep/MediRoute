@@ -1,0 +1,1482 @@
+﻿2026-07-28T04:17:37.1597530Z ##[group]Run sudo apt-get install -y xvfb
+2026-07-28T04:17:37.1597902Z [36;1msudo apt-get install -y xvfb[0m
+2026-07-28T04:17:37.1598186Z [36;1mXvfb :99 -screen 0 1920x1080x24 &[0m
+2026-07-28T04:17:37.1598461Z [36;1mcd automation[0m
+2026-07-28T04:17:37.1598695Z [36;1mpython -m pytest tests/ -n 4 \[0m
+2026-07-28T04:17:37.1599032Z [36;1m  -v --tb=short --no-header --timeout=120 --rootdir=. \[0m
+2026-07-28T04:17:37.1599388Z [36;1m  2>&1 | tee test_output.log || true[0m
+2026-07-28T04:17:37.1643681Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:17:37.1643935Z env:
+2026-07-28T04:17:37.1644118Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:37.1644699Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:37.1645115Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:37.1645546Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:37.1645987Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:37.1646390Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:37.1646774Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:37.1647160Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:37.1647495Z   HEADLESS: true
+2026-07-28T04:17:37.1647690Z   DISPLAY: :99
+2026-07-28T04:17:37.1647877Z ##[endgroup]
+2026-07-28T04:17:39.2552325Z Reading package lists...
+2026-07-28T04:17:39.4547543Z Building dependency tree...
+2026-07-28T04:17:39.4558369Z Reading state information...
+2026-07-28T04:17:39.6381492Z xvfb is already the newest version (2:21.1.12-1ubuntu1.6).
+2026-07-28T04:17:39.6382285Z 0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+2026-07-28T04:17:39.9885196Z The XKEYBOARD keymap compiler (xkbcomp) reports:
+2026-07-28T04:17:39.9886030Z > Warning:          Could not resolve keysym XF86CameraAccessEnable
+2026-07-28T04:17:39.9886845Z > Warning:          Could not resolve keysym XF86CameraAccessDisable
+2026-07-28T04:17:39.9887611Z > Warning:          Could not resolve keysym XF86CameraAccessToggle
+2026-07-28T04:17:39.9888320Z > Warning:          Could not resolve keysym XF86NextElement
+2026-07-28T04:17:39.9889004Z > Warning:          Could not resolve keysym XF86PreviousElement
+2026-07-28T04:17:39.9889727Z > Warning:          Could not resolve keysym XF86AutopilotEngageToggle
+2026-07-28T04:17:39.9890457Z > Warning:          Could not resolve keysym XF86MarkWaypoint
+2026-07-28T04:17:39.9891086Z > Warning:          Could not resolve keysym XF86Sos
+2026-07-28T04:17:39.9891679Z > Warning:          Could not resolve keysym XF86NavChart
+2026-07-28T04:17:39.9892314Z > Warning:          Could not resolve keysym XF86FishingChart
+2026-07-28T04:17:39.9892997Z > Warning:          Could not resolve keysym XF86SingleRangeRadar
+2026-07-28T04:17:39.9893693Z > Warning:          Could not resolve keysym XF86DualRangeRadar
+2026-07-28T04:17:39.9894595Z > Warning:          Could not resolve keysym XF86RadarOverlay
+2026-07-28T04:17:39.9895302Z > Warning:          Could not resolve keysym XF86TraditionalSonar
+2026-07-28T04:17:39.9895997Z > Warning:          Could not resolve keysym XF86ClearvuSonar
+2026-07-28T04:17:39.9896649Z > Warning:          Could not resolve keysym XF86SidevuSonar
+2026-07-28T04:17:39.9897266Z > Warning:          Could not resolve keysym XF86NavInfo
+2026-07-28T04:17:39.9897879Z Errors from xkbcomp are not fatal to the X server
+2026-07-28T04:17:41.4140504Z ============================= test session starts ==============================
+2026-07-28T04:17:41.4142751Z created: 4/4 workers
+2026-07-28T04:17:41.4146631Z 4 workers [470 items]
+2026-07-28T04:17:41.4154823Z 
+2026-07-28T04:17:41.4163733Z scheduling tests via LoadScheduling
+2026-07-28T04:17:41.4173976Z 
+2026-07-28T04:17:41.4201385Z tests/test_authorization.py::TestAuthorization::test_authz_028_fragment_injection_handled 
+2026-07-28T04:17:41.4202850Z tests/test_accessibility.py::TestAccessibility::test_a11y_001_page_has_title 
+2026-07-28T04:17:41.4204281Z tests/test_authentication.py::TestAuthentication::test_auth_010_flutter_engine_initializes 
+2026-07-28T04:17:52.1356561Z tests/test_authentication.py::TestAuthentication::test_auth_039_no_auth_bypass_via_url 
+2026-07-28T04:17:52.2296002Z [gw1] [  0%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_010_flutter_engine_initializes 
+2026-07-28T04:17:53.0432194Z tests/test_authentication.py::TestAuthentication::test_auth_011_role_selection_accessible 
+2026-07-28T04:17:53.1274183Z [gw0] [  0%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_001_page_has_title 
+2026-07-28T04:17:53.5280691Z tests/test_accessibility.py::TestAccessibility::test_a11y_002_html_has_lang 
+2026-07-28T04:17:53.6496104Z [gw3] [  0%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_028_fragment_injection_handled 
+2026-07-28T04:17:54.6062756Z tests/test_authorization.py::TestAuthorization::test_authz_029_query_param_injection 
+2026-07-28T04:17:54.7925720Z [gw2] [  0%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_039_no_auth_bypass_via_url 
+2026-07-28T04:17:58.8295680Z tests/test_authentication.py::TestAuthentication::test_auth_040_multiple_auth_attempts 
+2026-07-28T04:17:58.9028445Z [gw0] [  1%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_002_html_has_lang 
+2026-07-28T04:17:59.0351423Z tests/test_accessibility.py::TestAccessibility::test_a11y_003_semantic_elements_exist 
+2026-07-28T04:17:59.1167712Z [gw1] [  1%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_011_role_selection_accessible 
+2026-07-28T04:18:01.8675831Z tests/test_authentication.py::TestAuthentication::test_auth_012_bystander_role_visible 
+2026-07-28T04:18:01.9475963Z [gw3] [  1%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_029_query_param_injection 
+2026-07-28T04:18:05.6534890Z tests/test_authorization.py::TestAuthorization::test_authz_030_double_encoding_handled 
+2026-07-28T04:18:05.7182514Z [gw1] [  1%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_012_bystander_role_visible 
+2026-07-28T04:18:08.1310118Z tests/test_authentication.py::TestAuthentication::test_auth_013_volunteer_role_visible 
+2026-07-28T04:18:08.1970437Z [gw3] [  1%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_030_double_encoding_handled 
+2026-07-28T04:18:08.4115737Z tests/test_authorization.py::TestAuthorization::test_authz_031_concurrent_route_access 
+2026-07-28T04:18:08.5376094Z [gw0] [  2%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_003_semantic_elements_exist 
+2026-07-28T04:18:08.5541396Z tests/test_accessibility.py::TestAccessibility::test_a11y_004_flutter_semantics_enabled 
+2026-07-28T04:18:08.6945933Z [gw2] [  2%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_040_multiple_auth_attempts 
+2026-07-28T04:18:10.9305991Z tests/test_authorization.py::TestAuthorization::test_authz_001_splash_publicly_accessible 
+2026-07-28T04:18:11.0606177Z [gw1] [  2%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_013_volunteer_role_visible 
+2026-07-28T04:18:17.6118401Z tests/test_authentication.py::TestAuthentication::test_auth_014_hospital_role_visible 
+2026-07-28T04:18:17.6748262Z [gw0] [  2%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_004_flutter_semantics_enabled 
+2026-07-28T04:18:17.8828770Z tests/test_accessibility.py::TestAccessibility::test_a11y_005_focusable_elements_exist 
+2026-07-28T04:18:17.9654956Z [gw2] [  2%] PASSED tests/test_authorization.py::TestAuthorization::test_authz_001_splash_publicly_accessible 
+2026-07-28T04:18:18.5696595Z tests/test_authorization.py::TestAuthorization::test_authz_002_role_selection_accessible 
+2026-07-28T04:18:18.6947847Z [gw1] [  3%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_014_hospital_role_visible 
+2026-07-28T04:18:23.0156235Z tests/test_authentication.py::TestAuthentication::test_auth_015_role_selection_has_three_options 
+2026-07-28T04:18:23.1108809Z [gw1] [  3%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_015_role_selection_has_three_options 
+2026-07-28T04:18:24.4005938Z tests/test_authentication.py::TestAuthentication::test_auth_016_bystander_auth_page_loads 
+2026-07-28T04:18:24.5067515Z [gw2] [  3%] PASSED tests/test_authorization.py::TestAuthorization::test_authz_002_role_selection_accessible 
+2026-07-28T04:18:26.2459069Z tests/test_authorization.py::TestAuthorization::test_authz_003_bystander_home_requires_context 
+2026-07-28T04:18:26.3465846Z [gw3] [  3%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_031_concurrent_route_access 
+2026-07-28T04:18:26.7642279Z tests/test_authorization.py::TestAuthorization::test_authz_032_refresh_preserves_route 
+2026-07-28T04:18:26.8938390Z [gw0] [  4%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_005_focusable_elements_exist 
+2026-07-28T04:18:29.1673894Z tests/test_accessibility.py::TestAccessibility::test_a11y_006_no_empty_buttons 
+2026-07-28T04:18:29.3227159Z [gw1] [  4%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_016_bystander_auth_page_loads 
+2026-07-28T04:18:31.7143674Z tests/test_authentication.py::TestAuthentication::test_auth_017_hospital_register_page_loads 
+2026-07-28T04:18:31.7901115Z [gw2] [  4%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_003_bystander_home_requires_context 
+2026-07-28T04:18:35.9613256Z tests/test_authorization.py::TestAuthorization::test_authz_004_hospital_dashboard_protected 
+2026-07-28T04:18:36.0330246Z [gw1] [  4%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_017_hospital_register_page_loads 
+2026-07-28T04:18:36.0576573Z tests/test_authentication.py::TestAuthentication::test_auth_018_volunteer_register_page_loads 
+2026-07-28T04:18:36.1271156Z [gw0] [  4%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_006_no_empty_buttons 
+2026-07-28T04:18:39.1240193Z tests/test_accessibility.py::TestAccessibility::test_a11y_007_images_have_alt 
+2026-07-28T04:18:39.1358058Z [gw2] [  5%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_004_hospital_dashboard_protected 
+2026-07-28T04:18:39.2025827Z [gw3] [  5%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_032_refresh_preserves_route 
+2026-07-28T04:18:39.2345647Z tests/test_authorization.py::TestAuthorization::test_authz_005_volunteer_dashboard_protected 
+2026-07-28T04:18:41.5195778Z tests/test_authorization.py::TestAuthorization::test_authz_033_open_new_tab_same_route 
+2026-07-28T04:18:41.6845823Z [gw1] [  5%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_018_volunteer_register_page_loads 
+2026-07-28T04:18:42.8361945Z tests/test_authentication.py::TestAuthentication::test_auth_019_auth_page_url_correct 
+2026-07-28T04:18:42.9884297Z [gw0] [  5%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_007_images_have_alt 
+2026-07-28T04:18:46.5779283Z tests/test_accessibility.py::TestAccessibility::test_a11y_008_color_contrast_body 
+2026-07-28T04:18:46.6205891Z [gw3] [  5%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_033_open_new_tab_same_route 
+2026-07-28T04:18:46.6683967Z [gw2] [  6%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_005_volunteer_dashboard_protected 
+2026-07-28T04:18:46.6906551Z tests/test_authorization.py::TestAuthorization::test_authz_034_case_sensitive_routes 
+2026-07-28T04:18:46.7266664Z [gw1] [  6%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_019_auth_page_url_correct 
+2026-07-28T04:18:46.7807059Z tests/test_authorization.py::TestAuthorization::test_authz_006_bystander_confirm_needs_data 
+2026-07-28T04:18:50.5581339Z tests/test_authentication.py::TestAuthentication::test_auth_020_role_selection_url_correct 
+2026-07-28T04:18:50.6961884Z [gw0] [  6%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_008_color_contrast_body 
+2026-07-28T04:18:53.6992614Z tests/test_accessibility.py::TestAccessibility::test_a11y_009_keyboard_tab_works 
+2026-07-28T04:18:53.7755867Z [gw3] [  6%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_034_case_sensitive_routes 
+2026-07-28T04:18:54.3866206Z tests/test_authorization.py::TestAuthorization::test_authz_035_trailing_slash_handled 
+2026-07-28T04:18:54.4969453Z [gw1] [  7%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_020_role_selection_url_correct 
+2026-07-28T04:18:54.6552682Z tests/test_authentication.py::TestAuthentication::test_auth_021_auth_form_present 
+2026-07-28T04:18:54.7843835Z [gw2] [  7%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_006_bystander_confirm_needs_data 
+2026-07-28T04:19:00.4373610Z tests/test_authorization.py::TestAuthorization::test_authz_007_first_aid_needs_context 
+2026-07-28T04:19:00.5000814Z [gw3] [  7%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_035_trailing_slash_handled 
+2026-07-28T04:19:00.7993570Z tests/test_authorization.py::TestAuthorization::test_authz_036_empty_hash_handled 
+2026-07-28T04:19:00.8849600Z [gw0] [  7%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_009_keyboard_tab_works 
+2026-07-28T04:19:01.4716214Z tests/test_accessibility.py::TestAccessibility::test_a11y_010_escape_key_handled 
+2026-07-28T04:19:01.5776191Z [gw1] [  7%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_021_auth_form_present 
+2026-07-28T04:19:02.5314914Z tests/test_authentication.py::TestAuthentication::test_auth_022_phone_field_present 
+2026-07-28T04:19:02.6546715Z [gw2] [  8%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_007_first_aid_needs_context 
+2026-07-28T04:19:06.8830952Z tests/test_authorization.py::TestAuthorization::test_authz_008_tracking_needs_emergency_id 
+2026-07-28T04:19:06.9586329Z [gw3] [  8%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_036_empty_hash_handled 
+2026-07-28T04:19:08.4941503Z tests/test_authorization.py::TestAuthorization::test_authz_037_special_chars_in_route 
+2026-07-28T04:19:08.5649569Z [gw1] [  8%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_022_phone_field_present 
+2026-07-28T04:19:10.7032299Z tests/test_authentication.py::TestAuthentication::test_auth_023_login_button_present 
+2026-07-28T04:19:10.7732070Z [gw2] [  8%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_008_tracking_needs_emergency_id 
+2026-07-28T04:19:12.1761866Z tests/test_authorization.py::TestAuthorization::test_authz_009_hospital_alert_needs_context 
+2026-07-28T04:19:12.2563288Z [gw0] [  8%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_010_escape_key_handled 
+2026-07-28T04:19:12.6065921Z tests/test_accessibility.py::TestAccessibility::test_a11y_011_enter_key_handled 
+2026-07-28T04:19:12.7353452Z [gw3] [  9%] PASSED tests/test_authorization.py::TestAuthorization::test_authz_037_special_chars_in_route 
+2026-07-28T04:19:13.9605027Z tests/test_authorization.py::TestAuthorization::test_authz_038_null_bytes_in_route 
+2026-07-28T04:19:14.0505759Z [gw1] [  9%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_023_login_button_present 
+2026-07-28T04:19:17.2285757Z tests/test_authentication.py::TestAuthentication::test_auth_024_empty_phone_validation 
+2026-07-28T04:19:17.3096018Z [gw2] [  9%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_009_hospital_alert_needs_context 
+2026-07-28T04:19:19.4309417Z tests/test_authorization.py::TestAuthorization::test_authz_010_volunteer_alert_needs_data 
+2026-07-28T04:19:19.4956217Z [gw3] [  9%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_038_null_bytes_in_route 
+2026-07-28T04:19:20.3532972Z tests/test_authorization.py::TestAuthorization::test_authz_039_very_long_route 
+2026-07-28T04:19:20.4217382Z [gw0] [ 10%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_011_enter_key_handled 
+2026-07-28T04:19:20.4646533Z [gw1] [ 10%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_024_empty_phone_validation 
+2026-07-28T04:19:20.5196522Z tests/test_accessibility.py::TestAccessibility::test_a11y_012_no_autoplaying_media 
+2026-07-28T04:19:24.3612972Z tests/test_authentication.py::TestAuthentication::test_auth_025_invalid_phone_format 
+2026-07-28T04:19:24.4568422Z [gw2] [ 10%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_010_volunteer_alert_needs_data 
+2026-07-28T04:19:25.3526552Z tests/test_authorization.py::TestAuthorization::test_authz_011_volunteer_nav_needs_coords 
+2026-07-28T04:19:25.4405803Z [gw3] [ 10%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_039_very_long_route 
+2026-07-28T04:19:26.8519199Z tests/test_authorization.py::TestAuthorization::test_authz_040_data_uri_blocked 
+2026-07-28T04:19:26.9486026Z [gw1] [ 10%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_025_invalid_phone_format 
+2026-07-28T04:19:27.9123745Z tests/test_authentication.py::TestAuthentication::test_auth_026_special_chars_in_phone 
+2026-07-28T04:19:28.0041948Z [gw0] [ 11%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_012_no_autoplaying_media 
+2026-07-28T04:19:31.4648353Z tests/test_accessibility.py::TestAccessibility::test_a11y_013_text_resizable 
+2026-07-28T04:19:31.5333549Z [gw2] [ 11%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_011_volunteer_nav_needs_coords 
+2026-07-28T04:19:32.1876437Z tests/test_authorization.py::TestAuthorization::test_authz_012_case_completion_needs_id 
+2026-07-28T04:19:32.3141585Z [gw3] [ 11%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_040_data_uri_blocked 
+2026-07-28T04:19:33.6095839Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_001_bystander_home_loads 
+2026-07-28T04:19:33.7668565Z [gw1] [ 11%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_026_special_chars_in_phone 
+2026-07-28T04:19:36.2335709Z tests/test_authentication.py::TestAuthentication::test_auth_027_sql_injection_in_auth 
+2026-07-28T04:19:36.3088313Z [gw0] [ 11%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_013_text_resizable 
+2026-07-28T04:19:38.9958261Z tests/test_accessibility.py::TestAccessibility::test_a11y_014_touch_targets_reasonable 
+2026-07-28T04:19:39.0809850Z [gw3] [ 12%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_001_bystander_home_loads 
+2026-07-28T04:19:39.8730445Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_002_emergency_page_renders 
+2026-07-28T04:19:39.9755881Z [gw1] [ 12%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_027_sql_injection_in_auth 
+2026-07-28T04:19:40.2775798Z tests/test_authentication.py::TestAuthentication::test_auth_028_xss_in_auth_field 
+2026-07-28T04:19:40.3841300Z [gw2] [ 12%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_012_case_completion_needs_id 
+2026-07-28T04:19:44.0580929Z tests/test_authorization.py::TestAuthorization::test_authz_013_history_page_access 
+2026-07-28T04:19:44.1438084Z [gw3] [ 12%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_002_emergency_page_renders 
+2026-07-28T04:19:44.8429899Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_003_emergency_confirm_loads 
+2026-07-28T04:19:44.9118857Z [gw1] [ 12%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_028_xss_in_auth_field 
+2026-07-28T04:19:46.8090387Z tests/test_authentication.py::TestAuthentication::test_auth_029_unicode_in_auth 
+2026-07-28T04:19:46.8723378Z [gw2] [ 13%] PASSED tests/test_authorization.py::TestAuthorization::test_authz_013_history_page_access 
+2026-07-28T04:19:47.0967772Z tests/test_authorization.py::TestAuthorization::test_authz_014_profile_page_access 
+2026-07-28T04:19:47.1758828Z [gw0] [ 13%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_014_touch_targets_reasonable 
+2026-07-28T04:19:50.3433623Z tests/test_accessibility.py::TestAccessibility::test_a11y_015_no_text_as_image 
+2026-07-28T04:19:50.4247059Z [gw1] [ 13%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_029_unicode_in_auth 
+2026-07-28T04:19:50.5073669Z tests/test_authentication.py::TestAuthentication::test_auth_030_long_input_in_auth 
+2026-07-28T04:19:50.6130131Z [gw3] [ 13%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_003_emergency_confirm_loads 
+2026-07-28T04:19:51.5535735Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_004_first_aid_page_loads 
+2026-07-28T04:19:51.7185755Z [gw0] [ 14%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_015_no_text_as_image 
+2026-07-28T04:19:52.4945768Z tests/test_accessibility.py::TestAccessibility::test_a11y_016_skip_link_check 
+2026-07-28T04:19:52.6476467Z [gw2] [ 14%] PASSED tests/test_authorization.py::TestAuthorization::test_authz_014_profile_page_access 
+2026-07-28T04:19:56.7897485Z tests/test_authorization.py::TestAuthorization::test_authz_015_hospital_register_accessible 
+2026-07-28T04:19:56.8688738Z [gw1] [ 14%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_030_long_input_in_auth 
+2026-07-28T04:19:58.0762259Z tests/test_authentication.py::TestAuthentication::test_auth_031_no_sensitive_data_in_url 
+2026-07-28T04:19:58.1693737Z [gw3] [ 14%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_004_first_aid_page_loads 
+2026-07-28T04:19:59.1006220Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_005_tracking_page_loads 
+2026-07-28T04:19:59.1836384Z [gw0] [ 14%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_016_skip_link_check 
+2026-07-28T04:19:59.2735911Z tests/test_accessibility.py::TestAccessibility::test_a11y_017_focus_visible_on_tab 
+2026-07-28T04:19:59.3756557Z [gw2] [ 15%] PASSED tests/test_authorization.py::TestAuthorization::test_authz_015_hospital_register_accessible 
+2026-07-28T04:20:00.8930566Z tests/test_authorization.py::TestAuthorization::test_authz_016_volunteer_register_accessible 
+2026-07-28T04:20:01.0180620Z [gw1] [ 15%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_031_no_sensitive_data_in_url 
+2026-07-28T04:20:05.1855376Z tests/test_authentication.py::TestAuthentication::test_auth_032_page_source_no_credentials 
+2026-07-28T04:20:05.2913992Z [gw3] [ 15%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_005_tracking_page_loads 
+2026-07-28T04:20:06.0323850Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_006_hospital_alert_loads 
+2026-07-28T04:20:06.2146611Z [gw2] [ 15%] PASSED tests/test_authorization.py::TestAuthorization::test_authz_016_volunteer_register_accessible 
+2026-07-28T04:20:06.9317329Z tests/test_authorization.py::TestAuthorization::test_authz_017_bystander_auth_accessible 
+2026-07-28T04:20:07.0316039Z [gw1] [ 15%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_032_page_source_no_credentials 
+2026-07-28T04:20:09.1946366Z tests/test_authentication.py::TestAuthentication::test_auth_033_https_enforced 
+2026-07-28T04:20:09.2761007Z [gw0] [ 16%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_017_focus_visible_on_tab 
+2026-07-28T04:20:12.3615807Z tests/test_accessibility.py::TestAccessibility::test_a11y_018_heading_structure 
+2026-07-28T04:20:12.4370306Z [gw1] [ 16%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_033_https_enforced 
+2026-07-28T04:20:13.0018211Z tests/test_authentication.py::TestAuthentication::test_auth_034_no_mixed_content 
+2026-07-28T04:20:13.0986259Z [gw2] [ 16%] PASSED tests/test_authorization.py::TestAuthorization::test_authz_017_bystander_auth_accessible 
+2026-07-28T04:20:13.1037619Z [gw3] [ 16%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_006_hospital_alert_loads 
+2026-07-28T04:20:13.2677886Z tests/test_authorization.py::TestAuthorization::test_authz_018_hospital_map_accessible 
+2026-07-28T04:20:18.8116688Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_007_hospital_map_loads 
+2026-07-28T04:20:18.8857887Z [gw0] [ 17%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_018_heading_structure 
+2026-07-28T04:20:19.5572209Z tests/test_accessibility.py::TestAccessibility::test_a11y_019_link_text_descriptive 
+2026-07-28T04:20:19.6376301Z [gw1] [ 17%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_034_no_mixed_content 
+2026-07-28T04:20:20.9316608Z tests/test_authentication.py::TestAuthentication::test_auth_035_cache_control_headers 
+2026-07-28T04:20:21.0385811Z [gw3] [ 17%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_007_hospital_map_loads 
+2026-07-28T04:20:22.5712592Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_008_emergency_home_screenshot 
+2026-07-28T04:20:22.7737145Z [gw2] [ 17%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_018_hospital_map_accessible 
+2026-07-28T04:20:26.1087267Z tests/test_authorization.py::TestAuthorization::test_authz_019_nonexistent_route_handled 
+2026-07-28T04:20:26.1986030Z [gw0] [ 17%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_019_link_text_descriptive 
+2026-07-28T04:20:26.9089294Z tests/test_accessibility.py::TestAccessibility::test_a11y_020_animation_respects_prefers 
+2026-07-28T04:20:27.0072572Z [gw1] [ 18%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_035_cache_control_headers 
+2026-07-28T04:20:29.4571140Z tests/test_authentication.py::TestAuthentication::test_auth_036_session_storage_available 
+2026-07-28T04:20:29.5372102Z [gw3] [ 18%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_008_emergency_home_screenshot 
+2026-07-28T04:20:30.5369692Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_009_emergency_home_dom 
+2026-07-28T04:20:30.6365892Z [gw2] [ 18%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_019_nonexistent_route_handled 
+2026-07-28T04:20:31.8468914Z tests/test_authorization.py::TestAuthorization::test_authz_020_admin_route_not_exposed 
+2026-07-28T04:20:32.0177769Z [gw0] [ 18%] PASSED tests/test_accessibility.py::TestAccessibility::test_a11y_020_animation_respects_prefers 
+2026-07-28T04:20:32.4323745Z tests/test_authentication.py::TestAuthentication::test_auth_001_app_loads_successfully 
+2026-07-28T04:20:32.5201691Z [gw1] [ 18%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_036_session_storage_available 
+2026-07-28T04:20:37.4175408Z tests/test_authentication.py::TestAuthentication::test_auth_037_local_storage_available 
+2026-07-28T04:20:37.5006976Z [gw3] [ 19%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_009_emergency_home_dom 
+2026-07-28T04:20:38.4365857Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_010_emergency_home_no_errors 
+2026-07-28T04:20:38.5408973Z [gw1] [ 19%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_037_local_storage_available 
+2026-07-28T04:20:38.8597869Z tests/test_authentication.py::TestAuthentication::test_auth_038_cookies_settable 
+2026-07-28T04:20:38.9609038Z [gw2] [ 19%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_020_admin_route_not_exposed 
+2026-07-28T04:20:40.1348605Z tests/test_authorization.py::TestAuthorization::test_authz_021_api_route_not_exposed 
+2026-07-28T04:20:40.2468531Z [gw0] [ 19%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_001_app_loads_successfully 
+2026-07-28T04:20:44.0702825Z tests/test_authentication.py::TestAuthentication::test_auth_002_splash_screen_renders 
+2026-07-28T04:20:44.1526418Z [gw1] [ 20%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_038_cookies_settable 
+2026-07-28T04:20:45.2006864Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_017_hospital_dashboard_flutter 
+2026-07-28T04:20:45.3023035Z [gw3] [ 20%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_010_emergency_home_no_errors 
+2026-07-28T04:20:45.9945982Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_011_emergency_flow_sequence 
+2026-07-28T04:20:46.1260712Z [gw2] [ 20%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_021_api_route_not_exposed 
+2026-07-28T04:20:46.1427342Z tests/test_authorization.py::TestAuthorization::test_authz_022_debug_route_not_exposed 
+2026-07-28T04:20:46.2444905Z [gw0] [ 20%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_002_splash_screen_renders 
+2026-07-28T04:20:48.5926221Z tests/test_authentication.py::TestAuthentication::test_auth_003_page_title_is_mediroute 
+2026-07-28T04:20:48.6843916Z [gw1] [ 20%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_017_hospital_dashboard_flutter 
+2026-07-28T04:20:51.8375787Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_018_hospital_dashboard_screenshot 
+2026-07-28T04:20:51.9211607Z [gw0] [ 21%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_003_page_title_is_mediroute 
+2026-07-28T04:20:53.0117423Z tests/test_authentication.py::TestAuthentication::test_auth_004_splash_has_branding 
+2026-07-28T04:20:53.1096559Z [gw2] [ 21%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_022_debug_route_not_exposed 
+2026-07-28T04:20:55.9336556Z tests/test_authorization.py::TestAuthorization::test_authz_023_config_route_not_exposed 
+2026-07-28T04:20:55.9966068Z [gw0] [ 21%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_004_splash_has_branding 
+2026-07-28T04:20:56.0772827Z tests/test_authentication.py::TestAuthentication::test_auth_005_splash_transitions 
+2026-07-28T04:20:56.1469023Z [gw1] [ 21%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_018_hospital_dashboard_screenshot 
+2026-07-28T04:20:58.7003629Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_019_hospital_dashboard_dom 
+2026-07-28T04:20:58.8022747Z [gw2] [ 21%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_023_config_route_not_exposed 
+2026-07-28T04:21:01.4975610Z tests/test_authorization.py::TestAuthorization::test_authz_024_direct_firestore_not_exposed 
+2026-07-28T04:21:01.6269794Z [gw3] [ 22%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_011_emergency_flow_sequence 
+2026-07-28T04:21:02.8242404Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_012_emergency_tracking_flow 
+2026-07-28T04:21:02.9158702Z [gw1] [ 22%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_019_hospital_dashboard_dom 
+2026-07-28T04:21:03.2261934Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_020_hospital_register_loads 
+2026-07-28T04:21:03.3428776Z [gw2] [ 22%] PASSED tests/test_authorization.py::TestAuthorization::test_authz_024_direct_firestore_not_exposed 
+2026-07-28T04:21:06.7158451Z tests/test_authorization.py::TestAuthorization::test_authz_025_api_keys_not_in_source 
+2026-07-28T04:21:06.8468225Z [gw0] [ 22%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_005_splash_transitions 
+2026-07-28T04:21:07.6654830Z tests/test_authentication.py::TestAuthentication::test_auth_006_no_console_errors_on_load 
+2026-07-28T04:21:07.7525947Z [gw2] [ 22%] PASSED tests/test_authorization.py::TestAuthorization::test_authz_025_api_keys_not_in_source 
+2026-07-28T04:21:08.5827991Z tests/test_authorization.py::TestAuthorization::test_authz_026_multiple_role_routes_isolated 
+2026-07-28T04:21:08.7047904Z [gw3] [ 23%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_012_emergency_tracking_flow 
+2026-07-28T04:21:09.0555931Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_013_emergency_hospital_alert_flow 
+2026-07-28T04:21:09.1896061Z [gw1] [ 23%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_020_hospital_register_loads 
+2026-07-28T04:21:13.5743191Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_021_hospital_register_flutter 
+2026-07-28T04:21:13.6777014Z [gw0] [ 23%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_006_no_console_errors_on_load 
+2026-07-28T04:21:13.9986231Z tests/test_authentication.py::TestAuthentication::test_auth_007_page_load_under_timeout 
+2026-07-28T04:21:14.1223487Z [gw1] [ 23%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_021_hospital_register_flutter 
+2026-07-28T04:21:16.9695859Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_022_hospital_register_to_dashboard 
+2026-07-28T04:21:17.0469677Z [gw3] [ 24%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_013_emergency_hospital_alert_flow 
+2026-07-28T04:21:18.1742092Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_014_emergency_confirm_screenshot 
+2026-07-28T04:21:18.2898517Z [gw0] [ 24%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_007_page_load_under_timeout 
+2026-07-28T04:21:18.8753432Z tests/test_authentication.py::TestAuthentication::test_auth_008_base_url_is_https 
+2026-07-28T04:21:18.9366269Z [gw0] [ 24%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_008_base_url_is_https 
+2026-07-28T04:21:19.4275378Z tests/test_authentication.py::TestAuthentication::test_auth_009_url_is_github_pages 
+2026-07-28T04:21:19.4465975Z [gw0] [ 24%] PASSED tests/test_authentication.py::TestAuthentication::test_auth_009_url_is_github_pages 
+2026-07-28T04:21:19.5065482Z [gw2] [ 24%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_026_multiple_role_routes_isolated 
+2026-07-28T04:21:19.5291461Z tests/test_error_handling.py::TestErrorHandling::test_err_010_no_unhandled_promise_rejections 
+2026-07-28T04:21:24.1207324Z tests/test_authorization.py::TestAuthorization::test_authz_027_back_nav_after_auth_route 
+2026-07-28T04:21:24.1894782Z [gw3] [ 25%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_014_emergency_confirm_screenshot 
+2026-07-28T04:21:25.7596242Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_015_first_aid_screenshot 
+2026-07-28T04:21:25.8458851Z [gw1] [ 25%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_022_hospital_register_to_dashboard 
+2026-07-28T04:21:28.6493020Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_023_hospital_dashboard_no_errors 
+2026-07-28T04:21:28.7116301Z [gw0] [ 25%] PASSED tests/test_error_handling.py::TestErrorHandling::test_err_010_no_unhandled_promise_rejections 
+2026-07-28T04:21:30.8141322Z tests/test_error_handling.py::TestErrorHandling::test_err_011_error_page_no_stack_trace 
+2026-07-28T04:21:30.8769814Z [gw3] [ 25%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_015_first_aid_screenshot 
+2026-07-28T04:21:32.4295642Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_016_hospital_dashboard_loads 
+2026-07-28T04:21:32.5173306Z [gw1] [ 25%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_023_hospital_dashboard_no_errors 
+2026-07-28T04:21:32.5725369Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_024_hospital_dashboard_refresh 
+2026-07-28T04:21:32.6485967Z [gw2] [ 26%] FAILED tests/test_authorization.py::TestAuthorization::test_authz_027_back_nav_after_auth_route 
+2026-07-28T04:21:34.7475451Z tests/test_forms.py::TestForms::test_form_007_auth_page_title 
+2026-07-28T04:21:34.8605725Z [gw0] [ 26%] PASSED tests/test_error_handling.py::TestErrorHandling::test_err_011_error_page_no_stack_trace 
+2026-07-28T04:21:36.0845970Z tests/test_error_handling.py::TestErrorHandling::test_err_012_error_page_no_debug_info 
+2026-07-28T04:21:36.1568256Z [gw3] [ 26%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_016_hospital_dashboard_loads 
+2026-07-28T04:21:36.6427066Z tests/test_forms.py::TestForms::test_form_040_volunteer_no_overflow 
+2026-07-28T04:21:36.7411582Z [gw2] [ 26%] PASSED tests/test_forms.py::TestForms::test_form_007_auth_page_title 
+2026-07-28T04:21:41.9703349Z tests/test_forms.py::TestForms::test_form_008_auth_dom_not_empty 
+2026-07-28T04:21:42.0328655Z [gw0] [ 27%] PASSED tests/test_error_handling.py::TestErrorHandling::test_err_012_error_page_no_debug_info 
+2026-07-28T04:21:43.3875904Z tests/test_error_handling.py::TestErrorHandling::test_err_013_graceful_on_missing_data 
+2026-07-28T04:21:43.4701957Z [gw3] [ 27%] PASSED tests/test_forms.py::TestForms::test_form_040_volunteer_no_overflow 
+2026-07-28T04:21:43.8208361Z tests/test_forms.py::TestForms::test_form_041_volunteer_back_nav 
+2026-07-28T04:21:43.9306170Z [gw2] [ 27%] PASSED tests/test_forms.py::TestForms::test_form_008_auth_dom_not_empty 
+2026-07-28T04:21:44.1730891Z tests/test_forms.py::TestForms::test_form_009_auth_body_has_children 
+2026-07-28T04:21:44.2826122Z [gw1] [ 27%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_024_hospital_dashboard_refresh 
+2026-07-28T04:21:48.1310489Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_025_hospital_page_source 
+2026-07-28T04:21:48.1930318Z [gw0] [ 27%] FAILED tests/test_error_handling.py::TestErrorHandling::test_err_013_graceful_on_missing_data 
+2026-07-28T04:21:48.3661897Z tests/test_error_handling.py::TestErrorHandling::test_err_014_graceful_on_null_emergency_id 
+2026-07-28T04:21:48.4380150Z [gw1] [ 28%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_025_hospital_page_source 
+2026-07-28T04:21:51.0482168Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_026_hospital_register_screenshot 
+2026-07-28T04:21:51.1290989Z [gw2] [ 28%] PASSED tests/test_forms.py::TestForms::test_form_009_auth_body_has_children 
+2026-07-28T04:21:54.8881753Z tests/test_forms.py::TestForms::test_form_010_auth_no_horizontal_scroll 
+2026-07-28T04:21:54.9515010Z [gw0] [ 28%] FAILED tests/test_error_handling.py::TestErrorHandling::test_err_014_graceful_on_null_emergency_id 
+2026-07-28T04:21:55.0505540Z tests/test_error_handling.py::TestErrorHandling::test_err_015_graceful_on_null_coords 
+2026-07-28T04:21:55.1331760Z [gw1] [ 28%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_026_hospital_register_screenshot 
+2026-07-28T04:21:56.3145954Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_027_hospital_dashboard_back_nav 
+2026-07-28T04:21:56.4135421Z [gw3] [ 28%] PASSED tests/test_forms.py::TestForms::test_form_041_volunteer_back_nav 
+2026-07-28T04:21:57.5226853Z tests/test_forms.py::TestForms::test_form_042_volunteer_title 
+2026-07-28T04:21:57.6856220Z [gw2] [ 29%] PASSED tests/test_forms.py::TestForms::test_form_010_auth_no_horizontal_scroll 
+2026-07-28T04:22:00.4495801Z tests/test_forms.py::TestForms::test_form_011_auth_loads_under_30s 
+2026-07-28T04:22:00.5303452Z [gw3] [ 29%] PASSED tests/test_forms.py::TestForms::test_form_042_volunteer_title 
+2026-07-28T04:22:01.9322460Z tests/test_forms.py::TestForms::test_form_043_volunteer_body_content 
+2026-07-28T04:22:02.0157552Z [gw0] [ 29%] FAILED tests/test_error_handling.py::TestErrorHandling::test_err_015_graceful_on_null_coords 
+2026-07-28T04:22:02.4121660Z tests/test_error_handling.py::TestErrorHandling::test_err_016_recovery_from_bad_route 
+2026-07-28T04:22:02.5485912Z [gw2] [ 29%] PASSED tests/test_forms.py::TestForms::test_form_011_auth_loads_under_30s 
+2026-07-28T04:22:07.4326164Z tests/test_forms.py::TestForms::test_form_012_auth_refresh_stable 
+2026-07-28T04:22:07.4937464Z [gw3] [ 30%] PASSED tests/test_forms.py::TestForms::test_form_043_volunteer_body_content 
+2026-07-28T04:22:08.2789695Z tests/test_forms.py::TestForms::test_form_044_volunteer_canvas 
+2026-07-28T04:22:08.3795195Z [gw1] [ 30%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_027_hospital_dashboard_back_nav 
+2026-07-28T04:22:13.8425356Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_028_hospital_dashboard_canvas 
+2026-07-28T04:22:13.9052054Z [gw2] [ 30%] PASSED tests/test_forms.py::TestForms::test_form_012_auth_refresh_stable 
+2026-07-28T04:22:15.1031106Z tests/test_forms.py::TestForms::test_form_013_auth_back_nav_works 
+2026-07-28T04:22:15.1902242Z [gw0] [ 30%] PASSED tests/test_error_handling.py::TestErrorHandling::test_err_016_recovery_from_bad_route 
+2026-07-28T04:22:25.6835613Z tests/test_error_handling.py::TestErrorHandling::test_err_017_recovery_after_refresh_error 
+2026-07-28T04:22:25.7475527Z [gw2] [ 30%] PASSED tests/test_forms.py::TestForms::test_form_013_auth_back_nav_works 
+2026-07-28T04:22:25.8155973Z tests/test_forms.py::TestForms::test_form_014_auth_canvas_present 
+2026-07-28T04:22:25.8918770Z [gw0] [ 31%] FAILED tests/test_error_handling.py::TestErrorHandling::test_err_017_recovery_after_refresh_error 
+2026-07-28T04:22:28.9693568Z tests/test_error_handling.py::TestErrorHandling::test_err_018_app_handles_rapid_refresh 
+2026-07-28T04:22:29.0589076Z [gw3] [ 31%] PASSED tests/test_forms.py::TestForms::test_form_044_volunteer_canvas 
+2026-07-28T04:22:30.1165855Z tests/test_forms.py::TestForms::test_form_045_volunteer_no_placeholder 
+2026-07-28T04:22:30.2195900Z [gw1] [ 31%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_028_hospital_dashboard_canvas 
+2026-07-28T04:22:34.1991672Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_029_hospital_register_fast_load 
+2026-07-28T04:22:34.2655389Z [gw3] [ 31%] PASSED tests/test_forms.py::TestForms::test_form_045_volunteer_no_placeholder 
+2026-07-28T04:22:34.2950701Z tests/test_forms.py::TestForms::test_form_046_all_forms_render_flutter 
+2026-07-28T04:22:34.3761581Z [gw1] [ 31%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_029_hospital_register_fast_load 
+2026-07-28T04:22:41.7965825Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_030_hospital_dashboard_body 
+2026-07-28T04:22:41.8598760Z [gw1] [ 32%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_030_hospital_dashboard_body 
+2026-07-28T04:22:43.3713221Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_031_volunteer_dashboard_loads 
+2026-07-28T04:22:43.4390541Z [gw0] [ 32%] PASSED tests/test_error_handling.py::TestErrorHandling::test_err_018_app_handles_rapid_refresh 
+2026-07-28T04:22:44.3579971Z tests/test_error_handling.py::TestErrorHandling::test_err_019_error_page_screenshot 
+2026-07-28T04:22:44.4495891Z [gw2] [ 32%] PASSED tests/test_forms.py::TestForms::test_form_014_auth_canvas_present 
+2026-07-28T04:22:46.9293107Z tests/test_forms.py::TestForms::test_form_015_auth_no_placeholder_text 
+2026-07-28T04:22:47.0224726Z [gw1] [ 32%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_031_volunteer_dashboard_loads 
+2026-07-28T04:22:47.9343172Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_032_volunteer_dashboard_flutter 
+2026-07-28T04:22:48.0050547Z [gw2] [ 32%] PASSED tests/test_forms.py::TestForms::test_form_015_auth_no_placeholder_text 
+2026-07-28T04:22:50.1396007Z tests/test_forms.py::TestForms::test_form_016_hospital_form_renders 
+2026-07-28T04:22:50.2082785Z [gw0] [ 33%] PASSED tests/test_error_handling.py::TestErrorHandling::test_err_019_error_page_screenshot 
+2026-07-28T04:22:50.5886339Z tests/test_error_handling.py::TestErrorHandling::test_err_020_no_server_errors_in_source 
+2026-07-28T04:22:50.6799986Z [gw1] [ 33%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_032_volunteer_dashboard_flutter 
+2026-07-28T04:22:52.3596818Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_033_volunteer_dashboard_screenshot 
+2026-07-28T04:22:52.4853135Z [gw3] [ 33%] PASSED tests/test_forms.py::TestForms::test_form_046_all_forms_render_flutter 
+2026-07-28T04:22:53.3875764Z tests/test_forms.py::TestForms::test_form_047_form_pages_load_sequentially 
+2026-07-28T04:22:53.5275458Z [gw2] [ 33%] PASSED tests/test_forms.py::TestForms::test_form_016_hospital_form_renders 
+2026-07-28T04:22:54.6945761Z tests/test_forms.py::TestForms::test_form_017_hospital_flutter_init 
+2026-07-28T04:22:54.8415053Z [gw0] [ 34%] PASSED tests/test_error_handling.py::TestErrorHandling::test_err_020_no_server_errors_in_source 
+2026-07-28T04:22:57.3806242Z tests/test_file_upload.py::TestFileUpload::test_upload_001_profile_page_loads 
+2026-07-28T04:22:57.4612845Z [gw1] [ 34%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_033_volunteer_dashboard_screenshot 
+2026-07-28T04:22:58.3388395Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_034_volunteer_dashboard_dom 
+2026-07-28T04:22:58.4517516Z [gw2] [ 34%] PASSED tests/test_forms.py::TestForms::test_form_017_hospital_flutter_init 
+2026-07-28T04:23:00.9117615Z tests/test_forms.py::TestForms::test_form_018_hospital_page_content 
+2026-07-28T04:23:00.9929768Z [gw0] [ 34%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_001_profile_page_loads 
+2026-07-28T04:23:02.3345414Z tests/test_file_upload.py::TestFileUpload::test_upload_002_profile_flutter_ready 
+2026-07-28T04:23:02.3992866Z [gw2] [ 34%] PASSED tests/test_forms.py::TestForms::test_form_018_hospital_page_content 
+2026-07-28T04:23:04.5096809Z tests/test_forms.py::TestForms::test_form_019_hospital_screenshot 
+2026-07-28T04:23:04.5165893Z [gw0] [ 35%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_002_profile_flutter_ready 
+2026-07-28T04:23:04.6246489Z [gw1] [ 35%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_034_volunteer_dashboard_dom 
+2026-07-28T04:23:04.6395616Z tests/test_file_upload.py::TestFileUpload::test_upload_003_profile_screenshot 
+2026-07-28T04:23:08.7398959Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_035_volunteer_register_loads 
+2026-07-28T04:23:08.8105886Z [gw3] [ 35%] PASSED tests/test_forms.py::TestForms::test_form_047_form_pages_load_sequentially 
+2026-07-28T04:23:08.8703360Z tests/test_forms.py::TestForms::test_form_048_form_pages_no_crash_on_rapid_switch 
+2026-07-28T04:23:08.9422580Z [gw2] [ 35%] PASSED tests/test_forms.py::TestForms::test_form_019_hospital_screenshot 
+2026-07-28T04:23:10.9228895Z tests/test_forms.py::TestForms::test_form_020_hospital_dom_nodes 
+2026-07-28T04:23:11.0126336Z [gw1] [ 35%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_035_volunteer_register_loads 
+2026-07-28T04:23:11.7673342Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_036_volunteer_register_flutter 
+2026-07-28T04:23:11.8561065Z [gw0] [ 36%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_003_profile_screenshot 
+2026-07-28T04:23:14.9935426Z tests/test_file_upload.py::TestFileUpload::test_upload_004_profile_dom_content 
+2026-07-28T04:23:15.0569207Z [gw1] [ 36%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_036_volunteer_register_flutter 
+2026-07-28T04:23:15.4409217Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_037_volunteer_alert_loads 
+2026-07-28T04:23:15.5108115Z [gw2] [ 36%] PASSED tests/test_forms.py::TestForms::test_form_020_hospital_dom_nodes 
+2026-07-28T04:23:18.7163173Z tests/test_forms.py::TestForms::test_form_021_hospital_no_js_errors 
+2026-07-28T04:23:18.7849393Z [gw0] [ 36%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_004_profile_dom_content 
+2026-07-28T04:23:21.6410911Z tests/test_file_upload.py::TestFileUpload::test_upload_005_volunteer_register_loads 
+2026-07-28T04:23:21.7085651Z [gw1] [ 37%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_037_volunteer_alert_loads 
+2026-07-28T04:23:22.1699357Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_038_volunteer_navigation_loads 
+2026-07-28T04:23:22.2565692Z [gw2] [ 37%] PASSED tests/test_forms.py::TestForms::test_form_021_hospital_no_js_errors 
+2026-07-28T04:23:24.2765629Z tests/test_forms.py::TestForms::test_form_022_hospital_loads_fast 
+2026-07-28T04:23:24.3554603Z [gw0] [ 37%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_005_volunteer_register_loads 
+2026-07-28T04:23:25.8176271Z tests/test_file_upload.py::TestFileUpload::test_upload_006_volunteer_register_flutter 
+2026-07-28T04:23:25.8898664Z [gw2] [ 37%] PASSED tests/test_forms.py::TestForms::test_form_022_hospital_loads_fast 
+2026-07-28T04:23:28.2516308Z tests/test_forms.py::TestForms::test_form_023_hospital_refresh_stable 
+2026-07-28T04:23:28.2846114Z [gw3] [ 37%] PASSED tests/test_forms.py::TestForms::test_form_048_form_pages_no_crash_on_rapid_switch 
+2026-07-28T04:23:28.3421032Z [gw1] [ 38%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_038_volunteer_navigation_loads 
+2026-07-28T04:23:28.3552774Z tests/test_forms.py::TestForms::test_form_049_form_screenshots_all_captured 
+2026-07-28T04:23:28.4144057Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_039_volunteer_complete_loads 
+2026-07-28T04:23:28.4925873Z [gw0] [ 38%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_006_volunteer_register_flutter 
+2026-07-28T04:23:34.7930235Z tests/test_file_upload.py::TestFileUpload::test_upload_007_hospital_register_loads 
+2026-07-28T04:23:34.8550073Z [gw0] [ 38%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_007_hospital_register_loads 
+2026-07-28T04:23:35.5290081Z tests/test_file_upload.py::TestFileUpload::test_upload_008_hospital_register_flutter 
+2026-07-28T04:23:35.6443888Z [gw1] [ 38%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_039_volunteer_complete_loads 
+2026-07-28T04:23:37.1985540Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_040_volunteer_flow_sequence 
+2026-07-28T04:23:37.2779172Z [gw2] [ 38%] PASSED tests/test_forms.py::TestForms::test_form_023_hospital_refresh_stable 
+2026-07-28T04:23:38.4155547Z tests/test_forms.py::TestForms::test_form_024_hospital_url_valid 
+2026-07-28T04:23:38.4995864Z [gw0] [ 39%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_008_hospital_register_flutter 
+2026-07-28T04:23:41.2265743Z tests/test_file_upload.py::TestFileUpload::test_upload_009_file_api_available 
+2026-07-28T04:23:41.2987817Z [gw2] [ 39%] PASSED tests/test_forms.py::TestForms::test_form_024_hospital_url_valid 
+2026-07-28T04:23:43.0234726Z tests/test_forms.py::TestForms::test_form_025_hospital_no_overflow 
+2026-07-28T04:23:43.1247046Z [gw0] [ 39%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_009_file_api_available 
+2026-07-28T04:23:47.1654602Z tests/test_file_upload.py::TestFileUpload::test_upload_010_filereader_api_available 
+2026-07-28T04:23:47.2271873Z [gw0] [ 39%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_010_filereader_api_available 
+2026-07-28T04:23:47.9605946Z tests/test_file_upload.py::TestFileUpload::test_upload_011_blob_api_available 
+2026-07-28T04:23:48.0595850Z [gw3] [ 40%] PASSED tests/test_forms.py::TestForms::test_form_049_form_screenshots_all_captured 
+2026-07-28T04:23:48.8385982Z tests/test_forms.py::TestForms::test_form_050_all_forms_have_title 
+2026-07-28T04:23:48.9752778Z [gw2] [ 40%] PASSED tests/test_forms.py::TestForms::test_form_025_hospital_no_overflow 
+2026-07-28T04:23:51.9841666Z tests/test_forms.py::TestForms::test_form_026_hospital_back_nav 
+2026-07-28T04:23:52.0926881Z [gw0] [ 40%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_011_blob_api_available 
+2026-07-28T04:23:52.5615875Z tests/test_file_upload.py::TestFileUpload::test_upload_012_formdata_api_available 
+2026-07-28T04:23:52.7285927Z [gw1] [ 40%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_040_volunteer_flow_sequence 
+2026-07-28T04:23:56.9734811Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_041_volunteer_dashboard_no_errors 
+2026-07-28T04:23:57.0412844Z [gw0] [ 40%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_012_formdata_api_available 
+2026-07-28T04:23:59.8339298Z tests/test_file_upload.py::TestFileUpload::test_upload_013_input_file_creatable 
+2026-07-28T04:23:59.9116390Z [gw1] [ 41%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_041_volunteer_dashboard_no_errors 
+2026-07-28T04:24:01.0934065Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_042_volunteer_dashboard_refresh 
+2026-07-28T04:24:01.1976716Z [gw0] [ 41%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_013_input_file_creatable 
+2026-07-28T04:24:03.2416729Z tests/test_file_upload.py::TestFileUpload::test_upload_014_accept_attribute_works 
+2026-07-28T04:24:03.3221120Z [gw2] [ 41%] PASSED tests/test_forms.py::TestForms::test_form_026_hospital_back_nav 
+2026-07-28T04:24:04.5959598Z tests/test_forms.py::TestForms::test_form_027_hospital_title 
+2026-07-28T04:24:04.6992859Z [gw3] [ 41%] PASSED tests/test_forms.py::TestForms::test_form_050_all_forms_have_title 
+2026-07-28T04:24:06.9115905Z tests/test_input_validation.py::TestInputValidation::test_input_001_empty_string_handled 
+2026-07-28T04:24:07.0500810Z [gw0] [ 41%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_014_accept_attribute_works 
+2026-07-28T04:24:08.0996017Z tests/test_file_upload.py::TestFileUpload::test_upload_015_max_size_check_possible 
+2026-07-28T04:24:08.2269558Z [gw2] [ 42%] PASSED tests/test_forms.py::TestForms::test_form_027_hospital_title 
+2026-07-28T04:24:11.6765531Z tests/test_forms.py::TestForms::test_form_028_hospital_body_content 
+2026-07-28T04:24:11.8152162Z [gw1] [ 42%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_042_volunteer_dashboard_refresh 
+2026-07-28T04:24:12.6102866Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_043_volunteer_register_screenshot 
+2026-07-28T04:24:12.7673252Z [gw3] [ 42%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_001_empty_string_handled 
+2026-07-28T04:24:13.2886836Z tests/test_input_validation.py::TestInputValidation::test_input_002_whitespace_only_handled 
+2026-07-28T04:24:13.3801841Z [gw0] [ 42%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_015_max_size_check_possible 
+2026-07-28T04:24:15.6645847Z tests/test_file_upload.py::TestFileUpload::test_upload_016_profile_page_no_errors 
+2026-07-28T04:24:15.8016329Z [gw2] [ 42%] PASSED tests/test_forms.py::TestForms::test_form_028_hospital_body_content 
+2026-07-28T04:24:18.8044789Z tests/test_forms.py::TestForms::test_form_029_hospital_canvas 
+2026-07-28T04:24:18.8664845Z [gw3] [ 43%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_002_whitespace_only_handled 
+2026-07-28T04:24:19.3130053Z tests/test_input_validation.py::TestInputValidation::test_input_003_special_chars_handled 
+2026-07-28T04:24:19.4038419Z [gw1] [ 43%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_043_volunteer_register_screenshot 
+2026-07-28T04:24:20.5556494Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_044_volunteer_dashboard_back_nav 
+2026-07-28T04:24:20.6428158Z [gw0] [ 43%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_016_profile_page_no_errors 
+2026-07-28T04:24:22.3240136Z tests/test_file_upload.py::TestFileUpload::test_upload_017_profile_refresh_stable 
+2026-07-28T04:24:22.3926022Z [gw3] [ 43%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_003_special_chars_handled 
+2026-07-28T04:24:25.9256817Z tests/test_input_validation.py::TestInputValidation::test_input_004_sql_injection_prevented 
+2026-07-28T04:24:25.9875368Z [gw3] [ 44%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_004_sql_injection_prevented 
+2026-07-28T04:24:29.5483431Z tests/test_input_validation.py::TestInputValidation::test_input_005_xss_payload_prevented 
+2026-07-28T04:24:29.6105769Z [gw3] [ 44%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_005_xss_payload_prevented 
+2026-07-28T04:24:31.6580674Z tests/test_input_validation.py::TestInputValidation::test_input_006_html_injection_prevented 
+2026-07-28T04:24:31.7449504Z [gw0] [ 44%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_017_profile_refresh_stable 
+2026-07-28T04:24:31.9246506Z tests/test_file_upload.py::TestFileUpload::test_upload_018_profile_back_nav 
+2026-07-28T04:24:32.1035111Z [gw1] [ 44%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_044_volunteer_dashboard_back_nav 
+2026-07-28T04:24:34.4388367Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_045_volunteer_dashboard_canvas 
+2026-07-28T04:24:34.5464770Z [gw3] [ 44%] FAILED tests/test_input_validation.py::TestInputValidation::test_input_006_html_injection_prevented 
+2026-07-28T04:24:36.5387958Z tests/test_input_validation.py::TestInputValidation::test_input_007_unicode_chars_handled 
+2026-07-28T04:24:36.6277422Z [gw2] [ 45%] PASSED tests/test_forms.py::TestForms::test_form_029_hospital_canvas 
+2026-07-28T04:24:39.2962675Z tests/test_forms.py::TestForms::test_form_030_hospital_no_placeholder 
+2026-07-28T04:24:39.3677823Z [gw3] [ 45%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_007_unicode_chars_handled 
+2026-07-28T04:24:40.3893582Z tests/test_input_validation.py::TestInputValidation::test_input_008_emoji_input_handled 
+2026-07-28T04:24:40.4519731Z [gw2] [ 45%] PASSED tests/test_forms.py::TestForms::test_form_030_hospital_no_placeholder 
+2026-07-28T04:24:43.1434668Z tests/test_forms.py::TestForms::test_form_031_volunteer_form_renders 
+2026-07-28T04:24:43.2575004Z [gw3] [ 45%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_008_emoji_input_handled 
+2026-07-28T04:24:45.2832436Z tests/test_input_validation.py::TestInputValidation::test_input_009_very_long_string_handled 
+2026-07-28T04:24:45.3612296Z [gw0] [ 45%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_018_profile_back_nav 
+2026-07-28T04:24:46.0785748Z tests/test_file_upload.py::TestFileUpload::test_upload_019_url_createobjecturl_available 
+2026-07-28T04:24:46.1637033Z [gw2] [ 46%] PASSED tests/test_forms.py::TestForms::test_form_031_volunteer_form_renders 
+2026-07-28T04:24:49.3078925Z tests/test_forms.py::TestForms::test_form_032_volunteer_flutter_init 
+2026-07-28T04:24:49.3704974Z [gw0] [ 46%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_019_url_createobjecturl_available 
+2026-07-28T04:24:49.5016310Z tests/test_file_upload.py::TestFileUpload::test_upload_020_file_upload_cleanup 
+2026-07-28T04:24:49.5855048Z [gw3] [ 46%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_009_very_long_string_handled 
+2026-07-28T04:24:49.6416841Z tests/test_input_validation.py::TestInputValidation::test_input_010_negative_numbers_handled 
+2026-07-28T04:24:49.7576055Z [gw2] [ 46%] PASSED tests/test_forms.py::TestForms::test_form_032_volunteer_flutter_init 
+2026-07-28T04:24:53.7425754Z tests/test_forms.py::TestForms::test_form_033_volunteer_page_content 
+2026-07-28T04:24:53.9315451Z [gw1] [ 47%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_045_volunteer_dashboard_canvas 
+2026-07-28T04:24:53.9815826Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_046_history_page_loads 
+2026-07-28T04:24:54.0746229Z [gw2] [ 47%] PASSED tests/test_forms.py::TestForms::test_form_033_volunteer_page_content 
+2026-07-28T04:24:56.8456431Z tests/test_forms.py::TestForms::test_form_034_volunteer_screenshot 
+2026-07-28T04:24:56.9401363Z [gw3] [ 47%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_010_negative_numbers_handled 
+2026-07-28T04:24:57.7705857Z tests/test_input_validation.py::TestInputValidation::test_input_011_zero_value_handled 
+2026-07-28T04:24:57.9251912Z [gw0] [ 47%] PASSED tests/test_file_upload.py::TestFileUpload::test_upload_020_file_upload_cleanup 
+2026-07-28T04:25:00.6321387Z tests/test_forms.py::TestForms::test_form_001_auth_form_renders 
+2026-07-28T04:25:00.7325562Z [gw1] [ 47%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_046_history_page_loads 
+2026-07-28T04:25:01.8755631Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_047_profile_page_loads 
+2026-07-28T04:25:01.9705495Z [gw2] [ 48%] PASSED tests/test_forms.py::TestForms::test_form_034_volunteer_screenshot 
+2026-07-28T04:25:03.6925923Z tests/test_forms.py::TestForms::test_form_035_volunteer_dom_nodes 
+2026-07-28T04:25:03.7629926Z [gw0] [ 48%] PASSED tests/test_forms.py::TestForms::test_form_001_auth_form_renders 
+2026-07-28T04:25:03.9855876Z tests/test_forms.py::TestForms::test_form_002_auth_page_has_content 
+2026-07-28T04:25:04.1046090Z [gw3] [ 48%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_011_zero_value_handled 
+2026-07-28T04:25:06.8642439Z tests/test_input_validation.py::TestInputValidation::test_input_012_max_int_handled 
+2026-07-28T04:25:06.9465764Z [gw1] [ 48%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_047_profile_page_loads 
+2026-07-28T04:25:08.3560212Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_048_history_screenshot 
+2026-07-28T04:25:08.4287588Z [gw0] [ 48%] PASSED tests/test_forms.py::TestForms::test_form_002_auth_page_has_content 
+2026-07-28T04:25:09.3906313Z tests/test_forms.py::TestForms::test_form_003_auth_flutter_init 
+2026-07-28T04:25:09.5160507Z [gw2] [ 49%] PASSED tests/test_forms.py::TestForms::test_form_035_volunteer_dom_nodes 
+2026-07-28T04:25:11.3541954Z tests/test_forms.py::TestForms::test_form_036_volunteer_no_js_errors 
+2026-07-28T04:25:11.4189356Z [gw3] [ 49%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_012_max_int_handled 
+2026-07-28T04:25:12.7485679Z tests/test_input_validation.py::TestInputValidation::test_input_013_float_values_handled 
+2026-07-28T04:25:12.8361969Z [gw0] [ 49%] PASSED tests/test_forms.py::TestForms::test_form_003_auth_flutter_init 
+2026-07-28T04:25:13.9366057Z tests/test_forms.py::TestForms::test_form_004_auth_screenshot 
+2026-07-28T04:25:14.0216442Z [gw1] [ 49%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_048_history_screenshot 
+2026-07-28T04:25:17.1175203Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_049_profile_screenshot 
+2026-07-28T04:25:17.2211014Z [gw2] [ 50%] PASSED tests/test_forms.py::TestForms::test_form_036_volunteer_no_js_errors 
+2026-07-28T04:25:18.3710320Z tests/test_forms.py::TestForms::test_form_037_volunteer_loads_fast 
+2026-07-28T04:25:18.4413730Z [gw3] [ 50%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_013_float_values_handled 
+2026-07-28T04:25:20.0300539Z tests/test_input_validation.py::TestInputValidation::test_input_014_null_byte_injection 
+2026-07-28T04:25:20.1138092Z [gw0] [ 50%] PASSED tests/test_forms.py::TestForms::test_form_004_auth_screenshot 
+2026-07-28T04:25:21.0417789Z tests/test_forms.py::TestForms::test_form_005_auth_url_correct 
+2026-07-28T04:25:21.1077156Z [gw1] [ 50%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_049_profile_screenshot 
+2026-07-28T04:25:21.2972166Z tests/test_crud_operations.py::TestCRUDOperations::test_crud_050_history_to_profile_nav 
+2026-07-28T04:25:21.4024625Z [gw2] [ 50%] PASSED tests/test_forms.py::TestForms::test_form_037_volunteer_loads_fast 
+2026-07-28T04:25:23.8277103Z tests/test_forms.py::TestForms::test_form_038_volunteer_refresh_stable 
+2026-07-28T04:25:23.9121593Z [gw3] [ 51%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_014_null_byte_injection 
+2026-07-28T04:25:25.9838787Z tests/test_input_validation.py::TestInputValidation::test_input_015_crlf_injection 
+2026-07-28T04:25:26.0450605Z [gw0] [ 51%] PASSED tests/test_forms.py::TestForms::test_form_005_auth_url_correct 
+2026-07-28T04:25:29.2385043Z tests/test_forms.py::TestForms::test_form_006_auth_no_console_errors 
+2026-07-28T04:25:29.3015355Z [gw3] [ 51%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_015_crlf_injection 
+2026-07-28T04:25:31.9688129Z tests/test_input_validation.py::TestInputValidation::test_input_016_url_encoding_handled 
+2026-07-28T04:25:32.0326368Z [gw1] [ 51%] PASSED tests/test_crud_operations.py::TestCRUDOperations::test_crud_050_history_to_profile_nav 
+2026-07-28T04:25:32.0599903Z tests/test_error_handling.py::TestErrorHandling::test_err_001_404_page_renders 
+2026-07-28T04:25:32.1340044Z [gw0] [ 51%] PASSED tests/test_forms.py::TestForms::test_form_006_auth_no_console_errors 
+2026-07-28T04:25:32.6266585Z tests/test_input_validation.py::TestInputValidation::test_input_019_dot_dot_slash_prevented 
+2026-07-28T04:25:32.7909247Z [gw2] [ 52%] PASSED tests/test_forms.py::TestForms::test_form_038_volunteer_refresh_stable 
+2026-07-28T04:25:34.3599743Z tests/test_forms.py::TestForms::test_form_039_volunteer_url_valid 
+2026-07-28T04:25:34.5404604Z [gw3] [ 52%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_016_url_encoding_handled 
+2026-07-28T04:25:36.9489762Z tests/test_input_validation.py::TestInputValidation::test_input_017_double_url_encoding 
+2026-07-28T04:25:37.0100040Z [gw2] [ 52%] PASSED tests/test_forms.py::TestForms::test_form_039_volunteer_url_valid 
+2026-07-28T04:25:38.1678693Z tests/test_navigation.py::TestNavigation::test_nav_004_role_to_volunteer_register 
+2026-07-28T04:25:38.2349075Z [gw0] [ 52%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_019_dot_dot_slash_prevented 
+2026-07-28T04:25:38.8893677Z tests/test_input_validation.py::TestInputValidation::test_input_020_pipe_char_handled 
+2026-07-28T04:25:38.9840194Z [gw1] [ 52%] FAILED tests/test_error_handling.py::TestErrorHandling::test_err_001_404_page_renders 
+2026-07-28T04:25:40.2805317Z tests/test_error_handling.py::TestErrorHandling::test_err_002_deep_404_handled 
+2026-07-28T04:25:40.3687081Z [gw3] [ 53%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_017_double_url_encoding 
+2026-07-28T04:25:43.0063934Z tests/test_input_validation.py::TestInputValidation::test_input_018_backslash_handling 
+2026-07-28T04:25:43.0684958Z [gw2] [ 53%] PASSED tests/test_navigation.py::TestNavigation::test_nav_004_role_to_volunteer_register 
+2026-07-28T04:25:43.9225557Z tests/test_navigation.py::TestNavigation::test_nav_005_browser_back_button 
+2026-07-28T04:25:43.9850603Z [gw0] [ 53%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_020_pipe_char_handled 
+2026-07-28T04:25:45.9075474Z tests/test_input_validation.py::TestInputValidation::test_input_021_semicolon_handled 
+2026-07-28T04:25:45.9888271Z [gw3] [ 53%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_018_backslash_handling 
+2026-07-28T04:25:46.0216494Z [gw1] [ 54%] FAILED tests/test_error_handling.py::TestErrorHandling::test_err_002_deep_404_handled 
+2026-07-28T04:25:46.1176122Z tests/test_navigation.py::TestNavigation::test_nav_026_sequential_bystander_flow 
+2026-07-28T04:25:49.4975804Z tests/test_error_handling.py::TestErrorHandling::test_err_003_empty_route_handled 
+2026-07-28T04:25:49.5776890Z [gw0] [ 54%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_021_semicolon_handled 
+2026-07-28T04:25:53.3539027Z tests/test_input_validation.py::TestInputValidation::test_input_022_ampersand_handled 
+2026-07-28T04:25:53.4151383Z [gw1] [ 54%] PASSED tests/test_error_handling.py::TestErrorHandling::test_err_003_empty_route_handled 
+2026-07-28T04:25:55.0965546Z tests/test_error_handling.py::TestErrorHandling::test_err_004_double_slash_route 
+2026-07-28T04:25:55.1610120Z [gw2] [ 54%] PASSED tests/test_navigation.py::TestNavigation::test_nav_005_browser_back_button 
+2026-07-28T04:25:55.7541364Z tests/test_navigation.py::TestNavigation::test_nav_006_browser_forward_button 
+2026-07-28T04:25:55.8645746Z [gw0] [ 54%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_022_ampersand_handled 
+2026-07-28T04:25:59.5043501Z tests/test_input_validation.py::TestInputValidation::test_input_023_angle_brackets_handled 
+2026-07-28T04:25:59.5737596Z [gw1] [ 55%] FAILED tests/test_error_handling.py::TestErrorHandling::test_err_004_double_slash_route 
+2026-07-28T04:26:02.1696909Z tests/test_error_handling.py::TestErrorHandling::test_err_005_unicode_route_handled 
+2026-07-28T04:26:02.2365812Z [gw0] [ 55%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_023_angle_brackets_handled 
+2026-07-28T04:26:06.1721826Z tests/test_input_validation.py::TestInputValidation::test_input_024_curly_braces_handled 
+2026-07-28T04:26:06.2457489Z [gw3] [ 55%] PASSED tests/test_navigation.py::TestNavigation::test_nav_026_sequential_bystander_flow 
+2026-07-28T04:26:06.3343504Z tests/test_navigation.py::TestNavigation::test_nav_027_sequential_volunteer_flow 
+2026-07-28T04:26:06.4085840Z [gw1] [ 55%] FAILED tests/test_error_handling.py::TestErrorHandling::test_err_005_unicode_route_handled 
+2026-07-28T04:26:07.6911062Z tests/test_error_handling.py::TestErrorHandling::test_err_006_emoji_route_handled 
+2026-07-28T04:26:07.7872864Z [gw0] [ 55%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_024_curly_braces_handled 
+2026-07-28T04:26:08.8355856Z tests/test_input_validation.py::TestInputValidation::test_input_025_square_brackets_handled 
+2026-07-28T04:26:08.9445875Z [gw2] [ 56%] PASSED tests/test_navigation.py::TestNavigation::test_nav_006_browser_forward_button 
+2026-07-28T04:26:13.2917494Z tests/test_navigation.py::TestNavigation::test_nav_007_deep_link_splash 
+2026-07-28T04:26:13.3744700Z [gw1] [ 56%] FAILED tests/test_error_handling.py::TestErrorHandling::test_err_006_emoji_route_handled 
+2026-07-28T04:26:14.5743219Z tests/test_error_handling.py::TestErrorHandling::test_err_007_rapid_error_routes 
+2026-07-28T04:26:14.6537225Z [gw0] [ 56%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_025_square_brackets_handled 
+2026-07-28T04:26:16.2038983Z tests/test_input_validation.py::TestInputValidation::test_input_026_single_quote_handled 
+2026-07-28T04:26:16.2664883Z [gw2] [ 56%] PASSED tests/test_navigation.py::TestNavigation::test_nav_007_deep_link_splash 
+2026-07-28T04:26:20.6929314Z tests/test_navigation.py::TestNavigation::test_nav_008_deep_link_bystander_home 
+2026-07-28T04:26:20.7590081Z [gw0] [ 57%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_026_single_quote_handled 
+2026-07-28T04:26:23.0361593Z tests/test_input_validation.py::TestInputValidation::test_input_027_double_quote_handled 
+2026-07-28T04:26:23.1310728Z [gw2] [ 57%] PASSED tests/test_navigation.py::TestNavigation::test_nav_008_deep_link_bystander_home 
+2026-07-28T04:26:26.3749731Z tests/test_navigation.py::TestNavigation::test_nav_009_deep_link_hospital_dashboard 
+2026-07-28T04:26:26.4440996Z [gw0] [ 57%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_027_double_quote_handled 
+2026-07-28T04:26:26.4465386Z tests/test_input_validation.py::TestInputValidation::test_input_028_hash_in_hash_handled 
+2026-07-28T04:26:26.5354661Z [gw3] [ 57%] PASSED tests/test_navigation.py::TestNavigation::test_nav_027_sequential_volunteer_flow 
+2026-07-28T04:26:28.6134898Z tests/test_navigation.py::TestNavigation::test_nav_028_sequential_hospital_flow 
+2026-07-28T04:26:28.6974887Z [gw1] [ 57%] FAILED tests/test_error_handling.py::TestErrorHandling::test_err_007_rapid_error_routes 
+2026-07-28T04:26:29.3801648Z tests/test_error_handling.py::TestErrorHandling::test_err_008_js_error_recovery 
+2026-07-28T04:26:29.4759845Z [gw2] [ 58%] PASSED tests/test_navigation.py::TestNavigation::test_nav_009_deep_link_hospital_dashboard 
+2026-07-28T04:26:32.0278975Z tests/test_navigation.py::TestNavigation::test_nav_010_deep_link_volunteer_dashboard 
+2026-07-28T04:26:32.1489525Z [gw0] [ 58%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_028_hash_in_hash_handled 
+2026-07-28T04:26:36.5952111Z tests/test_input_validation.py::TestInputValidation::test_input_029_question_mark_handled 
+2026-07-28T04:26:36.6610603Z [gw2] [ 58%] PASSED tests/test_navigation.py::TestNavigation::test_nav_010_deep_link_volunteer_dashboard 
+2026-07-28T04:26:38.4892890Z tests/test_navigation.py::TestNavigation::test_nav_011_deep_link_history 
+2026-07-28T04:26:38.5591405Z [gw0] [ 58%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_029_question_mark_handled 
+2026-07-28T04:26:40.6334798Z tests/test_input_validation.py::TestInputValidation::test_input_030_at_sign_handled 
+2026-07-28T04:26:40.6952325Z [gw1] [ 58%] PASSED tests/test_error_handling.py::TestErrorHandling::test_err_008_js_error_recovery 
+2026-07-28T04:26:42.8533603Z tests/test_error_handling.py::TestErrorHandling::test_err_009_console_error_count 
+2026-07-28T04:26:42.9219413Z [gw2] [ 59%] PASSED tests/test_navigation.py::TestNavigation::test_nav_011_deep_link_history 
+2026-07-28T04:26:43.8141542Z tests/test_navigation.py::TestNavigation::test_nav_012_deep_link_profile 
+2026-07-28T04:26:43.9602103Z [gw0] [ 59%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_030_at_sign_handled 
+2026-07-28T04:26:46.7230271Z tests/test_input_validation.py::TestInputValidation::test_input_031_space_in_url_handled 
+2026-07-28T04:26:46.8074598Z [gw3] [ 59%] PASSED tests/test_navigation.py::TestNavigation::test_nav_028_sequential_hospital_flow 
+2026-07-28T04:26:48.7425200Z tests/test_navigation.py::TestNavigation::test_nav_029_cross_role_navigation 
+2026-07-28T04:26:48.8042814Z [gw1] [ 59%] PASSED tests/test_error_handling.py::TestErrorHandling::test_err_009_console_error_count 
+2026-07-28T04:26:49.9496984Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_015_cache_headers_present 
+2026-07-28T04:26:50.0182996Z [gw2] [ 60%] PASSED tests/test_navigation.py::TestNavigation::test_nav_012_deep_link_profile 
+2026-07-28T04:26:50.2049604Z tests/test_navigation.py::TestNavigation::test_nav_013_page_refresh_stability 
+2026-07-28T04:26:50.3286961Z [gw0] [ 60%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_031_space_in_url_handled 
+2026-07-28T04:26:54.8432109Z tests/test_input_validation.py::TestInputValidation::test_input_032_tab_char_handled 
+2026-07-28T04:26:54.9049613Z [gw1] [ 60%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_015_cache_headers_present 
+2026-07-28T04:26:56.9577315Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_016_connection_info 
+2026-07-28T04:26:57.0465931Z [gw0] [ 60%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_032_tab_char_handled 
+2026-07-28T04:26:58.6576508Z tests/test_input_validation.py::TestInputValidation::test_input_033_newline_in_url 
+2026-07-28T04:26:58.7819653Z [gw1] [ 60%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_016_connection_info 
+2026-07-28T04:27:01.5971981Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_017_compressed_resources 
+2026-07-28T04:27:01.6835579Z [gw3] [ 61%] PASSED tests/test_navigation.py::TestNavigation::test_nav_029_cross_role_navigation 
+2026-07-28T04:27:03.0454095Z tests/test_navigation.py::TestNavigation::test_nav_030_return_to_splash_from_deep 
+2026-07-28T04:27:03.1445622Z [gw0] [ 61%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_033_newline_in_url 
+2026-07-28T04:27:03.1545657Z [gw2] [ 61%] PASSED tests/test_navigation.py::TestNavigation::test_nav_013_page_refresh_stability 
+2026-07-28T04:27:03.2983569Z tests/test_input_validation.py::TestInputValidation::test_input_034_javascript_uri_blocked 
+2026-07-28T04:27:07.6053336Z tests/test_navigation.py::TestNavigation::test_nav_014_rapid_navigation 
+2026-07-28T04:27:07.7055615Z [gw1] [ 61%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_017_compressed_resources 
+2026-07-28T04:27:10.5283434Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_018_redirect_count 
+2026-07-28T04:27:10.6755860Z [gw0] [ 61%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_034_javascript_uri_blocked 
+2026-07-28T04:27:15.0586958Z tests/test_input_validation.py::TestInputValidation::test_input_035_data_uri_blocked 
+2026-07-28T04:27:15.1224259Z [gw3] [ 62%] PASSED tests/test_navigation.py::TestNavigation::test_nav_030_return_to_splash_from_deep 
+2026-07-28T04:27:15.4500607Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_001_page_load_time 
+2026-07-28T04:27:15.5307436Z [gw1] [ 62%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_018_redirect_count 
+2026-07-28T04:27:16.7549946Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_019_dns_lookup_time 
+2026-07-28T04:27:16.8555866Z [gw0] [ 62%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_035_data_uri_blocked 
+2026-07-28T04:27:21.0788155Z tests/test_input_validation.py::TestInputValidation::test_input_036_valid_email_format_check 
+2026-07-28T04:27:21.2680019Z [gw2] [ 62%] PASSED tests/test_navigation.py::TestNavigation::test_nav_014_rapid_navigation 
+2026-07-28T04:27:22.7642530Z tests/test_navigation.py::TestNavigation::test_nav_015_all_defined_routes_reachable 
+2026-07-28T04:27:22.8385967Z [gw1] [ 62%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_019_dns_lookup_time 
+2026-07-28T04:27:24.0710626Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_020_tcp_connect_time 
+2026-07-28T04:27:24.1717875Z [gw3] [ 63%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_001_page_load_time 
+2026-07-28T04:27:24.3145755Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_002_dom_ready_time 
+2026-07-28T04:27:24.3938866Z [gw0] [ 63%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_036_valid_email_format_check 
+2026-07-28T04:27:30.3805879Z tests/test_input_validation.py::TestInputValidation::test_input_037_invalid_email_formats 
+2026-07-28T04:27:30.4841488Z [gw1] [ 63%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_020_tcp_connect_time 
+2026-07-28T04:27:32.0105294Z tests/test_regression.py::TestRegression::test_reg_001_full_bystander_flow 
+2026-07-28T04:27:32.1111733Z [gw3] [ 63%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_002_dom_ready_time 
+2026-07-28T04:27:32.5947677Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_003_resource_count 
+2026-07-28T04:27:32.7046234Z [gw0] [ 64%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_037_invalid_email_formats 
+2026-07-28T04:27:40.4246228Z tests/test_input_validation.py::TestInputValidation::test_input_038_valid_phone_formats 
+2026-07-28T04:27:40.4908386Z [gw0] [ 64%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_038_valid_phone_formats 
+2026-07-28T04:27:41.2906220Z tests/test_input_validation.py::TestInputValidation::test_input_039_invalid_phone_formats 
+2026-07-28T04:27:41.3825779Z [gw3] [ 64%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_003_resource_count 
+2026-07-28T04:27:47.0478895Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_004_total_transfer_size 
+2026-07-28T04:27:47.1414016Z [gw0] [ 64%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_039_invalid_phone_formats 
+2026-07-28T04:27:50.7815640Z tests/test_input_validation.py::TestInputValidation::test_input_040_boundary_numbers_defined 
+2026-07-28T04:27:50.8595850Z [gw3] [ 64%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_004_total_transfer_size 
+2026-07-28T04:27:51.0660868Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_005_js_bundle_loads 
+2026-07-28T04:27:51.2321541Z [gw1] [ 65%] PASSED tests/test_regression.py::TestRegression::test_reg_001_full_bystander_flow 
+2026-07-28T04:27:53.8246472Z tests/test_regression.py::TestRegression::test_reg_002_full_volunteer_flow 
+2026-07-28T04:27:53.9247652Z [gw0] [ 65%] PASSED tests/test_input_validation.py::TestInputValidation::test_input_040_boundary_numbers_defined 
+2026-07-28T04:28:00.5459520Z tests/test_navigation.py::TestNavigation::test_nav_001_home_to_role_selection 
+2026-07-28T04:28:00.6128258Z [gw3] [ 65%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_005_js_bundle_loads 
+2026-07-28T04:28:06.4642921Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_006_flutter_js_loads 
+2026-07-28T04:28:06.5283942Z [gw0] [ 65%] PASSED tests/test_navigation.py::TestNavigation::test_nav_001_home_to_role_selection 
+2026-07-28T04:28:09.0149618Z tests/test_navigation.py::TestNavigation::test_nav_002_role_to_bystander_auth 
+2026-07-28T04:28:09.0833867Z [gw3] [ 65%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_006_flutter_js_loads 
+2026-07-28T04:28:12.3044868Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_007_navigation_timing_available 
+2026-07-28T04:28:12.4062186Z [gw1] [ 66%] PASSED tests/test_regression.py::TestRegression::test_reg_002_full_volunteer_flow 
+2026-07-28T04:28:12.4120291Z tests/test_regression.py::TestRegression::test_reg_003_full_hospital_flow 
+2026-07-28T04:28:12.4795107Z [gw3] [ 66%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_007_navigation_timing_available 
+2026-07-28T04:28:13.0940937Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_008_first_paint_time 
+2026-07-28T04:28:13.2305677Z [gw0] [ 66%] PASSED tests/test_navigation.py::TestNavigation::test_nav_002_role_to_bystander_auth 
+2026-07-28T04:28:20.3983255Z tests/test_navigation.py::TestNavigation::test_nav_003_role_to_hospital_register 
+2026-07-28T04:28:20.4609788Z [gw0] [ 66%] PASSED tests/test_navigation.py::TestNavigation::test_nav_003_role_to_hospital_register 
+2026-07-28T04:28:21.4655457Z tests/test_regression.py::TestRegression::test_reg_012_volunteer_all_pages 
+2026-07-28T04:28:21.5311793Z [gw3] [ 67%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_008_first_paint_time 
+2026-07-28T04:28:30.6235209Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_009_memory_usage_check 
+2026-07-28T04:28:30.6912631Z [gw3] [ 67%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_009_memory_usage_check 
+2026-07-28T04:28:32.2395119Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_010_role_selection_load_time 
+2026-07-28T04:28:32.3778277Z [gw1] [ 67%] PASSED tests/test_regression.py::TestRegression::test_reg_003_full_hospital_flow 
+2026-07-28T04:28:36.6927170Z tests/test_regression.py::TestRegression::test_reg_004_splash_to_all_roles 
+2026-07-28T04:28:36.7649047Z [gw3] [ 67%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_010_role_selection_load_time 
+2026-07-28T04:28:42.7380719Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_011_auth_page_load_time 
+2026-07-28T04:28:42.8045853Z [gw3] [ 67%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_011_auth_page_load_time 
+2026-07-28T04:28:44.9618331Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_012_hospital_register_load_time 
+2026-07-28T04:28:45.0540883Z [gw0] [ 68%] PASSED tests/test_regression.py::TestRegression::test_reg_012_volunteer_all_pages 
+2026-07-28T04:28:47.8390385Z tests/test_regression.py::TestRegression::test_reg_013_hospital_all_pages 
+2026-07-28T04:28:47.9057749Z [gw3] [ 68%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_012_hospital_register_load_time 
+2026-07-28T04:28:50.6758841Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_013_volunteer_register_load_time 
+2026-07-28T04:28:50.7973857Z [gw2] [ 68%] PASSED tests/test_navigation.py::TestNavigation::test_nav_015_all_defined_routes_reachable 
+2026-07-28T04:28:53.0633692Z tests/test_navigation.py::TestNavigation::test_nav_016_404_error_page_shows 
+2026-07-28T04:28:53.0821248Z [gw1] [ 68%] PASSED tests/test_regression.py::TestRegression::test_reg_004_splash_to_all_roles 
+2026-07-28T04:28:53.1368472Z [gw3] [ 68%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_013_volunteer_register_load_time 
+2026-07-28T04:28:53.1522215Z tests/test_regression.py::TestRegression::test_reg_005_all_routes_accessible 
+2026-07-28T04:28:55.2326639Z tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_014_no_long_tasks 
+2026-07-28T04:28:55.3139055Z [gw0] [ 69%] PASSED tests/test_regression.py::TestRegression::test_reg_013_hospital_all_pages 
+2026-07-28T04:28:56.9775435Z tests/test_regression.py::TestRegression::test_reg_014_shared_pages 
+2026-07-28T04:28:57.1115056Z [gw2] [ 69%] PASSED tests/test_navigation.py::TestNavigation::test_nav_016_404_error_page_shows 
+2026-07-28T04:29:04.5688115Z tests/test_navigation.py::TestNavigation::test_nav_017_url_hash_routing_works 
+2026-07-28T04:29:04.6314231Z [gw3] [ 69%] PASSED tests/test_performance_smoke.py::TestPerformanceSmoke::test_perf_014_no_long_tasks 
+2026-07-28T04:29:04.8345921Z tests/test_regression.py::TestRegression::test_reg_027_triple_refresh_stable 
+2026-07-28T04:29:04.9192234Z [gw2] [ 69%] PASSED tests/test_navigation.py::TestNavigation::test_nav_017_url_hash_routing_works 
+2026-07-28T04:29:06.2495719Z tests/test_navigation.py::TestNavigation::test_nav_018_navigate_to_bystander_hospitals 
+2026-07-28T04:29:06.3727940Z [gw0] [ 70%] PASSED tests/test_regression.py::TestRegression::test_reg_014_shared_pages 
+2026-07-28T04:29:12.1506880Z tests/test_regression.py::TestRegression::test_reg_015_localstorage_across_nav 
+2026-07-28T04:29:12.2764916Z [gw2] [ 70%] PASSED tests/test_navigation.py::TestNavigation::test_nav_018_navigate_to_bystander_hospitals 
+2026-07-28T04:29:16.8203795Z tests/test_navigation.py::TestNavigation::test_nav_019_navigate_to_volunteer_alert 
+2026-07-28T04:29:16.9146925Z [gw0] [ 70%] PASSED tests/test_regression.py::TestRegression::test_reg_015_localstorage_across_nav 
+2026-07-28T04:29:19.4907878Z tests/test_regression.py::TestRegression::test_reg_016_no_memory_leaks_rapid_nav 
+2026-07-28T04:29:19.5847324Z [gw2] [ 70%] PASSED tests/test_navigation.py::TestNavigation::test_nav_019_navigate_to_volunteer_alert 
+2026-07-28T04:29:22.2215576Z tests/test_navigation.py::TestNavigation::test_nav_020_navigate_to_volunteer_nav 
+2026-07-28T04:29:22.3387989Z [gw3] [ 70%] PASSED tests/test_regression.py::TestRegression::test_reg_027_triple_refresh_stable 
+2026-07-28T04:29:26.6737851Z tests/test_regression.py::TestRegression::test_reg_028_navigate_and_back_rapid 
+2026-07-28T04:29:26.7575945Z [gw2] [ 71%] PASSED tests/test_navigation.py::TestNavigation::test_nav_020_navigate_to_volunteer_nav 
+2026-07-28T04:29:33.3305582Z tests/test_navigation.py::TestNavigation::test_nav_021_navigate_to_case_completion 
+2026-07-28T04:29:33.4186569Z [gw2] [ 71%] PASSED tests/test_navigation.py::TestNavigation::test_nav_021_navigate_to_case_completion 
+2026-07-28T04:29:40.3228468Z tests/test_navigation.py::TestNavigation::test_nav_022_navigate_to_bystander_confirm 
+2026-07-28T04:29:40.3852859Z [gw2] [ 71%] PASSED tests/test_navigation.py::TestNavigation::test_nav_022_navigate_to_bystander_confirm 
+2026-07-28T04:29:44.9887970Z tests/test_navigation.py::TestNavigation::test_nav_023_navigate_to_first_aid 
+2026-07-28T04:29:45.0676908Z [gw3] [ 71%] PASSED tests/test_regression.py::TestRegression::test_reg_028_navigate_and_back_rapid 
+2026-07-28T04:29:47.1565889Z tests/test_regression.py::TestRegression::test_reg_029_all_routes_return_flutter 
+2026-07-28T04:29:47.2538634Z [gw2] [ 71%] PASSED tests/test_navigation.py::TestNavigation::test_nav_023_navigate_to_first_aid 
+2026-07-28T04:29:54.1655788Z tests/test_navigation.py::TestNavigation::test_nav_024_navigate_to_tracking 
+2026-07-28T04:29:54.2315037Z [gw2] [ 72%] PASSED tests/test_navigation.py::TestNavigation::test_nav_024_navigate_to_tracking 
+2026-07-28T04:29:58.8732474Z tests/test_navigation.py::TestNavigation::test_nav_025_navigate_to_hospital_alert 
+2026-07-28T04:29:58.9679653Z [gw0] [ 72%] PASSED tests/test_regression.py::TestRegression::test_reg_016_no_memory_leaks_rapid_nav 
+2026-07-28T04:30:00.7605744Z tests/test_regression.py::TestRegression::test_reg_017_console_errors_stable 
+2026-07-28T04:30:00.8613900Z [gw2] [ 72%] PASSED tests/test_navigation.py::TestNavigation::test_nav_025_navigate_to_hospital_alert 
+2026-07-28T04:30:05.1745904Z tests/test_regression.py::TestRegression::test_reg_040_no_infinite_redirects 
+2026-07-28T04:30:05.2586764Z [gw2] [ 72%] PASSED tests/test_regression.py::TestRegression::test_reg_040_no_infinite_redirects 
+2026-07-28T04:30:08.1975983Z tests/test_regression.py::TestRegression::test_reg_041_complete_bystander_emergency_flow 
+2026-07-28T04:30:08.2787048Z [gw0] [ 72%] PASSED tests/test_regression.py::TestRegression::test_reg_017_console_errors_stable 
+2026-07-28T04:30:19.4009280Z tests/test_regression.py::TestRegression::test_reg_018_page_source_not_empty 
+2026-07-28T04:30:19.5109074Z [gw1] [ 73%] PASSED tests/test_regression.py::TestRegression::test_reg_005_all_routes_accessible 
+2026-07-28T04:30:23.1025746Z tests/test_regression.py::TestRegression::test_reg_006_app_title_consistent 
+2026-07-28T04:30:23.2028498Z [gw0] [ 73%] PASSED tests/test_regression.py::TestRegression::test_reg_018_page_source_not_empty 
+2026-07-28T04:30:33.0902988Z tests/test_regression.py::TestRegression::test_reg_019_dom_nodes_reasonable 
+2026-07-28T04:30:33.1681846Z [gw3] [ 73%] PASSED tests/test_regression.py::TestRegression::test_reg_029_all_routes_return_flutter 
+2026-07-28T04:30:33.5059669Z tests/test_regression.py::TestRegression::test_reg_030_error_routes_dont_crash 
+2026-07-28T04:30:33.5859714Z [gw0] [ 73%] PASSED tests/test_regression.py::TestRegression::test_reg_019_dom_nodes_reasonable 
+2026-07-28T04:30:34.4861684Z tests/test_regression.py::TestRegression::test_reg_020_viewport_meta_on_all_pages 
+2026-07-28T04:30:34.5744821Z [gw2] [ 74%] PASSED tests/test_regression.py::TestRegression::test_reg_041_complete_bystander_emergency_flow 
+2026-07-28T04:30:34.6635729Z [gw1] [ 74%] PASSED tests/test_regression.py::TestRegression::test_reg_006_app_title_consistent 
+2026-07-28T04:30:34.6896568Z tests/test_regression.py::TestRegression::test_reg_042_complete_volunteer_response_flow 
+2026-07-28T04:30:44.7604921Z tests/test_regression.py::TestRegression::test_reg_007_no_crashes_on_rapid_nav 
+2026-07-28T04:30:44.8229671Z [gw0] [ 74%] PASSED tests/test_regression.py::TestRegression::test_reg_020_viewport_meta_on_all_pages 
+2026-07-28T04:30:47.6191878Z tests/test_regression.py::TestRegression::test_reg_021_https_on_all_pages 
+2026-07-28T04:30:47.8371369Z [gw3] [ 74%] PASSED tests/test_regression.py::TestRegression::test_reg_030_error_routes_dont_crash 
+2026-07-28T04:30:59.4816513Z tests/test_regression.py::TestRegression::test_reg_031_special_route_chars 
+2026-07-28T04:30:59.5631797Z [gw0] [ 74%] PASSED tests/test_regression.py::TestRegression::test_reg_021_https_on_all_pages 
+2026-07-28T04:31:03.1886777Z tests/test_regression.py::TestRegression::test_reg_022_no_mixed_content 
+2026-07-28T04:31:03.2814628Z [gw3] [ 75%] PASSED tests/test_regression.py::TestRegression::test_reg_031_special_route_chars 
+2026-07-28T04:31:06.2043271Z tests/test_regression.py::TestRegression::test_reg_032_unicode_routes 
+2026-07-28T04:31:06.2798442Z [gw2] [ 75%] PASSED tests/test_regression.py::TestRegression::test_reg_042_complete_volunteer_response_flow 
+2026-07-28T04:31:07.6601293Z tests/test_regression.py::TestRegression::test_reg_043_complete_hospital_flow 
+2026-07-28T04:31:07.7444026Z [gw0] [ 75%] PASSED tests/test_regression.py::TestRegression::test_reg_022_no_mixed_content 
+2026-07-28T04:31:09.1339564Z tests/test_regression.py::TestRegression::test_reg_023_favicon_loads 
+2026-07-28T04:31:09.2115871Z [gw3] [ 75%] PASSED tests/test_regression.py::TestRegression::test_reg_032_unicode_routes 
+2026-07-28T04:31:11.0139618Z tests/test_regression.py::TestRegression::test_reg_033_empty_hash 
+2026-07-28T04:31:11.1889268Z [gw1] [ 75%] PASSED tests/test_regression.py::TestRegression::test_reg_007_no_crashes_on_rapid_nav 
+2026-07-28T04:31:11.8577343Z tests/test_regression.py::TestRegression::test_reg_008_back_forward_cycle 
+2026-07-28T04:31:11.9876616Z [gw0] [ 76%] PASSED tests/test_regression.py::TestRegression::test_reg_023_favicon_loads 
+2026-07-28T04:31:16.6161079Z tests/test_regression.py::TestRegression::test_reg_024_manifest_referenced 
+2026-07-28T04:31:16.7608276Z [gw0] [ 76%] PASSED tests/test_regression.py::TestRegression::test_reg_024_manifest_referenced 
+2026-07-28T04:31:16.9607986Z tests/test_regression.py::TestRegression::test_reg_025_flutter_bootstrap_referenced 
+2026-07-28T04:31:17.0631694Z [gw3] [ 76%] PASSED tests/test_regression.py::TestRegression::test_reg_033_empty_hash 
+2026-07-28T04:31:21.2447902Z tests/test_regression.py::TestRegression::test_reg_034_root_without_hash 
+2026-07-28T04:31:21.3214582Z [gw0] [ 76%] PASSED tests/test_regression.py::TestRegression::test_reg_025_flutter_bootstrap_referenced 
+2026-07-28T04:31:24.5305443Z tests/test_regression.py::TestRegression::test_reg_026_double_navigation_stable 
+2026-07-28T04:31:24.5932630Z [gw3] [ 77%] PASSED tests/test_regression.py::TestRegression::test_reg_034_root_without_hash 
+2026-07-28T04:31:24.6132386Z tests/test_regression.py::TestRegression::test_reg_035_large_viewport_all_pages 
+2026-07-28T04:31:24.6981803Z [gw2] [ 77%] PASSED tests/test_regression.py::TestRegression::test_reg_043_complete_hospital_flow 
+2026-07-28T04:31:30.2569663Z tests/test_regression.py::TestRegression::test_reg_044_all_shared_pages 
+2026-07-28T04:31:30.3579141Z [gw1] [ 77%] PASSED tests/test_regression.py::TestRegression::test_reg_008_back_forward_cycle 
+2026-07-28T04:31:30.4137245Z tests/test_regression.py::TestRegression::test_reg_009_refresh_all_pages 
+2026-07-28T04:31:30.5076599Z [gw0] [ 77%] PASSED tests/test_regression.py::TestRegression::test_reg_026_double_navigation_stable 
+2026-07-28T04:31:34.7386323Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_001_mobile_320_renders 
+2026-07-28T04:31:34.8281079Z [gw3] [ 77%] PASSED tests/test_regression.py::TestRegression::test_reg_035_large_viewport_all_pages 
+2026-07-28T04:31:35.7484117Z tests/test_regression.py::TestRegression::test_reg_036_small_viewport_all_pages 
+2026-07-28T04:31:35.8749716Z [gw2] [ 78%] PASSED tests/test_regression.py::TestRegression::test_reg_044_all_shared_pages 
+2026-07-28T04:31:39.3340185Z tests/test_regression.py::TestRegression::test_reg_045_final_screenshot_splash 
+2026-07-28T04:31:39.4364592Z [gw0] [ 78%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_001_mobile_320_renders 
+2026-07-28T04:31:45.4379344Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_002_mobile_375_renders 
+2026-07-28T04:31:45.4982525Z [gw2] [ 78%] PASSED tests/test_regression.py::TestRegression::test_reg_045_final_screenshot_splash 
+2026-07-28T04:31:45.5019246Z [gw3] [ 78%] PASSED tests/test_regression.py::TestRegression::test_reg_036_small_viewport_all_pages 
+2026-07-28T04:31:45.5668368Z tests/test_regression.py::TestRegression::test_reg_046_final_screenshot_roles 
+2026-07-28T04:31:48.6126565Z tests/test_regression.py::TestRegression::test_reg_037_storage_not_leaking 
+2026-07-28T04:31:48.7026383Z [gw0] [ 78%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_002_mobile_375_renders 
+2026-07-28T04:31:51.8073772Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_003_mobile_414_renders 
+2026-07-28T04:31:51.8796042Z [gw3] [ 79%] PASSED tests/test_regression.py::TestRegression::test_reg_037_storage_not_leaking 
+2026-07-28T04:31:54.0340268Z tests/test_regression.py::TestRegression::test_reg_038_session_cleanup 
+2026-07-28T04:31:54.1241021Z [gw2] [ 79%] PASSED tests/test_regression.py::TestRegression::test_reg_046_final_screenshot_roles 
+2026-07-28T04:31:56.3599268Z tests/test_regression.py::TestRegression::test_reg_047_final_screenshot_auth 
+2026-07-28T04:31:56.4356675Z [gw3] [ 79%] PASSED tests/test_regression.py::TestRegression::test_reg_038_session_cleanup 
+2026-07-28T04:31:57.3642795Z tests/test_regression.py::TestRegression::test_reg_039_performance_stable 
+2026-07-28T04:31:57.4525903Z [gw0] [ 79%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_003_mobile_414_renders 
+2026-07-28T04:32:01.9221791Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_004_tablet_768_renders 
+2026-07-28T04:32:02.0271222Z [gw1] [ 80%] PASSED tests/test_regression.py::TestRegression::test_reg_009_refresh_all_pages 
+2026-07-28T04:32:02.9390437Z tests/test_regression.py::TestRegression::test_reg_010_screenshot_all_key_pages 
+2026-07-28T04:32:03.0385505Z [gw2] [ 80%] PASSED tests/test_regression.py::TestRegression::test_reg_047_final_screenshot_auth 
+2026-07-28T04:32:05.0693918Z tests/test_regression.py::TestRegression::test_reg_048_final_no_critical_errors 
+2026-07-28T04:32:05.1557112Z [gw3] [ 80%] PASSED tests/test_regression.py::TestRegression::test_reg_039_performance_stable 
+2026-07-28T04:32:05.9681918Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_011_mobile_screenshot 
+2026-07-28T04:32:06.0608004Z [gw0] [ 80%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_004_tablet_768_renders 
+2026-07-28T04:32:11.6317289Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_005_laptop_1366_renders 
+2026-07-28T04:32:11.7038232Z [gw2] [ 80%] PASSED tests/test_regression.py::TestRegression::test_reg_048_final_no_critical_errors 
+2026-07-28T04:32:15.1780456Z tests/test_regression.py::TestRegression::test_reg_049_final_page_renders_content 
+2026-07-28T04:32:15.2791213Z [gw3] [ 81%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_011_mobile_screenshot 
+2026-07-28T04:32:15.8259699Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_012_tablet_screenshot 
+2026-07-28T04:32:15.9299838Z [gw0] [ 81%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_005_laptop_1366_renders 
+2026-07-28T04:32:20.1006423Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_006_desktop_1920_renders 
+2026-07-28T04:32:20.2117780Z [gw1] [ 81%] PASSED tests/test_regression.py::TestRegression::test_reg_010_screenshot_all_key_pages 
+2026-07-28T04:32:20.2437544Z [gw2] [ 81%] PASSED tests/test_regression.py::TestRegression::test_reg_049_final_page_renders_content 
+2026-07-28T04:32:20.3440148Z tests/test_regression.py::TestRegression::test_reg_011_bystander_emergency_pages 
+2026-07-28T04:32:24.4749078Z tests/test_regression.py::TestRegression::test_reg_050_final_cleanup 
+2026-07-28T04:32:24.5875707Z [gw3] [ 81%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_012_tablet_screenshot 
+2026-07-28T04:32:24.9772164Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_013_desktop_screenshot 
+2026-07-28T04:32:25.1279456Z [gw0] [ 82%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_006_desktop_1920_renders 
+2026-07-28T04:32:27.9990937Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_007_wide_2560_renders 
+2026-07-28T04:32:28.0736021Z [gw2] [ 82%] PASSED tests/test_regression.py::TestRegression::test_reg_050_final_cleanup 
+2026-07-28T04:32:33.5822642Z tests/test_session_management.py::TestSessionManagement::test_session_007_localstorage_clearable 
+2026-07-28T04:32:33.6464193Z [gw2] [ 82%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_007_localstorage_clearable 
+2026-07-28T04:32:34.4551099Z tests/test_session_management.py::TestSessionManagement::test_session_008_sessionstorage_clearable 
+2026-07-28T04:32:34.5196567Z [gw3] [ 82%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_013_desktop_screenshot 
+2026-07-28T04:32:34.6388794Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_014_resize_mobile_to_desktop 
+2026-07-28T04:32:34.7365396Z [gw0] [ 82%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_007_wide_2560_renders 
+2026-07-28T04:32:39.3262025Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_008_mobile_no_horizontal_scroll 
+2026-07-28T04:32:39.4168486Z [gw2] [ 83%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_008_sessionstorage_clearable 
+2026-07-28T04:32:43.8934963Z tests/test_session_management.py::TestSessionManagement::test_session_009_localstorage_quota 
+2026-07-28T04:32:43.9606392Z [gw2] [ 83%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_009_localstorage_quota 
+2026-07-28T04:32:44.0582422Z tests/test_session_management.py::TestSessionManagement::test_session_010_history_length_tracks 
+2026-07-28T04:32:44.1519494Z [gw0] [ 83%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_008_mobile_no_horizontal_scroll 
+2026-07-28T04:32:44.7550011Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_009_tablet_no_horizontal_scroll 
+2026-07-28T04:32:44.8785907Z [gw3] [ 83%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_014_resize_mobile_to_desktop 
+2026-07-28T04:32:51.5458502Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_015_resize_desktop_to_mobile 
+2026-07-28T04:32:51.6347764Z [gw1] [ 84%] PASSED tests/test_regression.py::TestRegression::test_reg_011_bystander_emergency_pages 
+2026-07-28T04:32:53.8118696Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_020_all_viewports_cycle 
+2026-07-28T04:32:53.8827617Z [gw0] [ 84%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_009_tablet_no_horizontal_scroll 
+2026-07-28T04:32:54.6439860Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_010_desktop_no_horizontal_scroll 
+2026-07-28T04:32:54.7430572Z [gw2] [ 84%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_010_history_length_tracks 
+2026-07-28T04:32:55.5625927Z tests/test_session_management.py::TestSessionManagement::test_session_011_back_forward_cache 
+2026-07-28T04:32:55.7226586Z [gw3] [ 84%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_015_resize_desktop_to_mobile 
+2026-07-28T04:33:02.9807527Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_016_landscape_mode 
+2026-07-28T04:33:03.0489855Z [gw0] [ 84%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_010_desktop_no_horizontal_scroll 
+2026-07-28T04:33:05.4826670Z tests/test_session_management.py::TestSessionManagement::test_session_014_performance_api_available 
+2026-07-28T04:33:05.5846172Z [gw3] [ 85%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_016_landscape_mode 
+2026-07-28T04:33:07.1235812Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_017_role_selection_mobile 
+2026-07-28T04:33:07.2025837Z [gw0] [ 85%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_014_performance_api_available 
+2026-07-28T04:33:07.9563229Z tests/test_session_management.py::TestSessionManagement::test_session_015_indexeddb_available 
+2026-07-28T04:33:08.1612689Z [gw2] [ 85%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_011_back_forward_cache 
+2026-07-28T04:33:13.1712106Z tests/test_session_management.py::TestSessionManagement::test_session_012_window_name_accessible 
+2026-07-28T04:33:13.1917671Z [gw0] [ 85%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_015_indexeddb_available 
+2026-07-28T04:33:13.2697033Z [gw2] [ 85%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_012_window_name_accessible 
+2026-07-28T04:33:13.3315805Z tests/test_session_management.py::TestSessionManagement::test_session_016_service_worker_api 
+2026-07-28T04:33:16.6575960Z tests/test_session_management.py::TestSessionManagement::test_session_013_page_visibility_api 
+2026-07-28T04:33:16.7379741Z [gw3] [ 86%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_017_role_selection_mobile 
+2026-07-28T04:33:18.5725908Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_018_role_selection_desktop 
+2026-07-28T04:33:18.6885520Z [gw0] [ 86%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_016_service_worker_api 
+2026-07-28T04:33:18.9276017Z tests/test_session_management.py::TestSessionManagement::test_session_017_multiple_localstorage_keys 
+2026-07-28T04:33:19.0516046Z [gw2] [ 86%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_013_page_visibility_api 
+2026-07-28T04:33:25.4895275Z tests/test_session_management.py::TestSessionManagement::test_session_020_cleanup_test_data 
+2026-07-28T04:33:25.5747062Z [gw2] [ 86%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_020_cleanup_test_data 
+2026-07-28T04:33:26.5980448Z tests/test_ui_validation.py::TestUIValidation::test_ui_001_page_renders_content 
+2026-07-28T04:33:26.6736986Z [gw1] [ 87%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_020_all_viewports_cycle 
+2026-07-28T04:33:26.6974288Z [gw0] [ 87%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_017_multiple_localstorage_keys 
+2026-07-28T04:33:26.7676994Z tests/test_session_management.py::TestSessionManagement::test_session_001_localstorage_works 
+2026-07-28T04:33:28.4936399Z tests/test_session_management.py::TestSessionManagement::test_session_018_json_in_localstorage 
+2026-07-28T04:33:28.6052284Z [gw3] [ 87%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_018_role_selection_desktop 
+2026-07-28T04:33:32.8652295Z tests/test_responsive_design.py::TestResponsiveDesign::test_resp_019_auth_page_mobile 
+2026-07-28T04:33:32.9595153Z [gw2] [ 87%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_001_page_renders_content 
+2026-07-28T04:33:33.8932544Z tests/test_ui_validation.py::TestUIValidation::test_ui_002_canvas_element_present 
+2026-07-28T04:33:33.9901982Z [gw0] [ 87%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_018_json_in_localstorage 
+2026-07-28T04:33:34.4489691Z tests/test_session_management.py::TestSessionManagement::test_session_019_localstorage_unicode 
+2026-07-28T04:33:34.5541118Z [gw1] [ 88%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_001_localstorage_works 
+2026-07-28T04:33:40.3408522Z tests/test_session_management.py::TestSessionManagement::test_session_002_sessionstorage_works 
+2026-07-28T04:33:40.4143182Z [gw1] [ 88%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_002_sessionstorage_works 
+2026-07-28T04:33:40.4381947Z tests/test_session_management.py::TestSessionManagement::test_session_003_cookies_enabled 
+2026-07-28T04:33:40.5040486Z [gw0] [ 88%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_019_localstorage_unicode 
+2026-07-28T04:33:40.9489903Z tests/test_ui_validation.py::TestUIValidation::test_ui_009_html_lang_attribute 
+2026-07-28T04:33:41.0308449Z [gw3] [ 88%] PASSED tests/test_responsive_design.py::TestResponsiveDesign::test_resp_019_auth_page_mobile 
+2026-07-28T04:33:45.2692149Z tests/test_ui_validation.py::TestUIValidation::test_ui_005_no_broken_images 
+2026-07-28T04:33:45.3477035Z [gw1] [ 88%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_003_cookies_enabled 
+2026-07-28T04:33:45.5684297Z tests/test_session_management.py::TestSessionManagement::test_session_004_localstorage_persists_across_nav 
+2026-07-28T04:33:45.7258119Z [gw0] [ 89%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_009_html_lang_attribute 
+2026-07-28T04:33:48.3419601Z tests/test_ui_validation.py::TestUIValidation::test_ui_010_no_horizontal_scroll 
+2026-07-28T04:33:48.4186854Z [gw3] [ 89%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_005_no_broken_images 
+2026-07-28T04:33:52.3530036Z tests/test_ui_validation.py::TestUIValidation::test_ui_006_favicon_present 
+2026-07-28T04:33:52.5165711Z [gw2] [ 89%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_002_canvas_element_present 
+2026-07-28T04:33:52.7759976Z tests/test_ui_validation.py::TestUIValidation::test_ui_003_dark_theme_applied 
+2026-07-28T04:33:52.8785923Z [gw3] [ 89%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_006_favicon_present 
+2026-07-28T04:33:52.9305920Z tests/test_ui_validation.py::TestUIValidation::test_ui_007_viewport_meta_present 
+2026-07-28T04:33:53.0499840Z [gw0] [ 90%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_010_no_horizontal_scroll 
+2026-07-28T04:33:56.0808422Z tests/test_ui_validation.py::TestUIValidation::test_ui_011_page_height_reasonable 
+2026-07-28T04:33:56.2320154Z [gw1] [ 90%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_004_localstorage_persists_across_nav 
+2026-07-28T04:33:57.6306168Z tests/test_session_management.py::TestSessionManagement::test_session_005_sessionstorage_persists_in_tab 
+2026-07-28T04:33:57.7679660Z [gw3] [ 90%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_007_viewport_meta_present 
+2026-07-28T04:33:59.7392805Z tests/test_ui_validation.py::TestUIValidation::test_ui_008_charset_utf8 
+2026-07-28T04:33:59.8545012Z [gw2] [ 90%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_003_dark_theme_applied 
+2026-07-28T04:34:00.0324728Z tests/test_ui_validation.py::TestUIValidation::test_ui_004_page_not_blank 
+2026-07-28T04:34:00.1219973Z [gw0] [ 90%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_011_page_height_reasonable 
+2026-07-28T04:34:03.9418759Z tests/test_ui_validation.py::TestUIValidation::test_ui_012_mediroute_text_in_page 
+2026-07-28T04:34:04.0606213Z [gw3] [ 91%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_008_charset_utf8 
+2026-07-28T04:34:08.1282675Z tests/test_ui_validation.py::TestUIValidation::test_ui_013_role_selection_has_cards 
+2026-07-28T04:34:08.1915573Z [gw1] [ 91%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_005_sessionstorage_persists_in_tab 
+2026-07-28T04:34:09.8135875Z tests/test_session_management.py::TestSessionManagement::test_session_006_localstorage_survives_refresh 
+2026-07-28T04:34:09.8770142Z [gw2] [ 91%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_004_page_not_blank 
+2026-07-28T04:34:10.1391501Z tests/test_ui_validation.py::TestUIValidation::test_ui_016_volunteer_register_has_fields 
+2026-07-28T04:34:10.2446628Z [gw0] [ 91%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_012_mediroute_text_in_page 
+2026-07-28T04:34:13.3657016Z tests/test_ui_validation.py::TestUIValidation::test_ui_019_no_javascript_errors 
+2026-07-28T04:34:13.4539967Z [gw3] [ 91%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_013_role_selection_has_cards 
+2026-07-28T04:34:17.3323796Z tests/test_ui_validation.py::TestUIValidation::test_ui_014_auth_page_has_form_elements 
+2026-07-28T04:34:17.4100207Z [gw1] [ 92%] PASSED tests/test_session_management.py::TestSessionManagement::test_session_006_localstorage_survives_refresh 
+2026-07-28T04:34:19.1338927Z tests/test_ui_validation.py::TestUIValidation::test_ui_022_no_lorem_ipsum 
+2026-07-28T04:34:19.2088555Z [gw2] [ 92%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_016_volunteer_register_has_fields 
+2026-07-28T04:34:19.5389542Z tests/test_ui_validation.py::TestUIValidation::test_ui_017_screenshot_captures_content 
+2026-07-28T04:34:19.6867791Z [gw0] [ 92%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_019_no_javascript_errors 
+2026-07-28T04:34:20.9668171Z tests/test_ui_validation.py::TestUIValidation::test_ui_020_document_ready_state_complete 
+2026-07-28T04:34:21.0670739Z [gw1] [ 92%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_022_no_lorem_ipsum 
+2026-07-28T04:34:22.9595778Z tests/test_ui_validation.py::TestUIValidation::test_ui_023_no_todo_comments 
+2026-07-28T04:34:23.0508006Z [gw3] [ 92%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_014_auth_page_has_form_elements 
+2026-07-28T04:34:26.9537738Z tests/test_ui_validation.py::TestUIValidation::test_ui_015_hospital_register_has_fields 
+2026-07-28T04:34:27.0892356Z [gw2] [ 93%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_017_screenshot_captures_content 
+2026-07-28T04:34:27.0946532Z tests/test_ui_validation.py::TestUIValidation::test_ui_018_page_title_not_empty 
+2026-07-28T04:34:27.1811561Z [gw1] [ 93%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_023_no_todo_comments 
+2026-07-28T04:34:29.0397147Z tests/test_ui_validation.py::TestUIValidation::test_ui_024_manifest_has_app_name 
+2026-07-28T04:34:29.1667110Z [gw0] [ 93%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_020_document_ready_state_complete 
+2026-07-28T04:34:31.8216047Z tests/test_ui_validation.py::TestUIValidation::test_ui_021_body_has_content 
+2026-07-28T04:34:31.8667617Z [gw1] [ 93%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_024_manifest_has_app_name 
+2026-07-28T04:34:31.9095466Z [gw2] [ 94%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_018_page_title_not_empty 
+2026-07-28T04:34:31.9535875Z tests/test_ui_validation.py::TestUIValidation::test_ui_025_service_worker_registered 
+2026-07-28T04:34:33.0299287Z tests/test_ui_validation.py::TestUIValidation::test_ui_028_splash_page_screenshot 
+2026-07-28T04:34:33.2242848Z [gw3] [ 94%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_015_hospital_register_has_fields 
+2026-07-28T04:34:36.3698392Z tests/test_ui_validation.py::TestUIValidation::test_ui_026_flutter_js_loaded 
+2026-07-28T04:34:36.5340270Z [gw0] [ 94%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_021_body_has_content 
+2026-07-28T04:34:37.9127323Z tests/test_ui_validation.py::TestUIValidation::test_ui_029_role_selection_screenshot 
+2026-07-28T04:34:38.0717625Z [gw1] [ 94%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_025_service_worker_registered 
+2026-07-28T04:34:39.1113663Z tests/test_ui_validation.py::TestUIValidation::test_ui_030_bystander_auth_screenshot 
+2026-07-28T04:34:39.2776273Z [gw3] [ 94%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_026_flutter_js_loaded 
+2026-07-28T04:34:41.5075969Z tests/test_ui_validation.py::TestUIValidation::test_ui_027_no_debug_banner 
+2026-07-28T04:34:41.5981920Z [gw2] [ 95%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_028_splash_page_screenshot 
+2026-07-28T04:34:46.5135206Z tests/test_ui_validation.py::TestUIValidation::test_ui_031_hospital_register_screenshot 
+2026-07-28T04:34:46.5760485Z [gw0] [ 95%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_029_role_selection_screenshot 
+2026-07-28T04:34:47.7722120Z tests/test_ui_validation.py::TestUIValidation::test_ui_032_volunteer_register_screenshot 
+2026-07-28T04:34:47.8392491Z [gw1] [ 95%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_030_bystander_auth_screenshot 
+2026-07-28T04:34:48.7497568Z tests/test_ui_validation.py::TestUIValidation::test_ui_033_bystander_home_screenshot 
+2026-07-28T04:34:48.8757899Z [gw3] [ 95%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_027_no_debug_banner 
+2026-07-28T04:34:50.3809036Z tests/test_ui_validation.py::TestUIValidation::test_ui_034_window_resize_no_crash 
+2026-07-28T04:34:50.4785857Z [gw2] [ 95%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_031_hospital_register_screenshot 
+2026-07-28T04:34:54.7355645Z tests/test_ui_validation.py::TestUIValidation::test_ui_035_minimum_viewport_renders 
+2026-07-28T04:34:54.8163212Z [gw0] [ 96%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_032_volunteer_register_screenshot 
+2026-07-28T04:34:56.5588758Z tests/test_ui_validation.py::TestUIValidation::test_ui_036_maximum_viewport_renders 
+2026-07-28T04:34:56.6282539Z [gw1] [ 96%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_033_bystander_home_screenshot 
+2026-07-28T04:34:59.5621388Z tests/test_ui_validation.py::TestUIValidation::test_ui_037_theme_consistency_across_pages 
+2026-07-28T04:34:59.6581858Z [gw3] [ 96%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_034_window_resize_no_crash 
+2026-07-28T04:34:59.7091565Z [gw2] [ 96%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_035_minimum_viewport_renders 
+2026-07-28T04:34:59.7935702Z tests/test_ui_validation.py::TestUIValidation::test_ui_038_text_is_readable 
+2026-07-28T04:35:03.6816204Z tests/test_ui_validation.py::TestUIValidation::test_ui_039_css_loads_properly 
+2026-07-28T04:35:03.7595337Z [gw0] [ 97%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_036_maximum_viewport_renders 
+2026-07-28T04:35:07.3600030Z tests/test_ui_validation.py::TestUIValidation::test_ui_040_dom_tree_not_empty 
+2026-07-28T04:35:07.4258133Z [gw2] [ 97%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_039_css_loads_properly 
+2026-07-28T04:35:09.6365430Z tests/test_ui_validation.py::TestUIValidation::test_ui_043_app_not_in_debug_mode 
+2026-07-28T04:35:09.7487110Z [gw3] [ 97%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_038_text_is_readable 
+2026-07-28T04:35:11.7383734Z tests/test_ui_validation.py::TestUIValidation::test_ui_042_no_visible_error_messages 
+2026-07-28T04:35:11.8050483Z [gw2] [ 97%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_043_app_not_in_debug_mode 
+2026-07-28T04:35:13.2935593Z tests/test_ui_validation.py::TestUIValidation::test_ui_045_apple_meta_tags 
+2026-07-28T04:35:13.3965803Z [gw0] [ 97%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_040_dom_tree_not_empty 
+2026-07-28T04:35:14.1657332Z tests/test_ui_validation.py::TestUIValidation::test_ui_044_meta_description_present 
+2026-07-28T04:35:14.3334274Z [gw1] [ 98%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_037_theme_consistency_across_pages 
+2026-07-28T04:35:15.9257478Z tests/test_ui_validation.py::TestUIValidation::test_ui_041_flutter_view_element 
+2026-07-28T04:35:16.0166265Z [gw2] [ 98%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_045_apple_meta_tags 
+2026-07-28T04:35:18.8756413Z tests/test_ui_validation.py::TestUIValidation::test_ui_047_base_href_set 
+2026-07-28T04:35:18.9663276Z [gw3] [ 98%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_042_no_visible_error_messages 
+2026-07-28T04:35:18.9816159Z tests/test_ui_validation.py::TestUIValidation::test_ui_046_manifest_link_present 
+2026-07-28T04:35:19.1056191Z [gw0] [ 98%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_044_meta_description_present 
+2026-07-28T04:35:21.6022718Z tests/test_ui_validation.py::TestUIValidation::test_ui_048_icon_192_referenced 
+2026-07-28T04:35:21.7211497Z [gw2] [ 98%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_047_base_href_set 
+2026-07-28T04:35:23.9065715Z tests/test_ui_validation.py::TestUIValidation::test_ui_050_window_onerror_not_triggered 
+2026-07-28T04:35:23.9955724Z [gw1] [ 99%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_041_flutter_view_element 
+2026-07-28T04:35:24.6195517Z tests/test_ui_validation.py::TestUIValidation::test_ui_049_page_encoding_correct 
+2026-07-28T04:35:24.9065968Z [gw0] [ 99%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_048_icon_192_referenced 
+2026-07-28T04:35:28.5684909Z [gw3] [ 99%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_046_manifest_link_present 
+2026-07-28T04:35:31.4994151Z [gw1] [ 99%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_049_page_encoding_correct 
+2026-07-28T04:35:31.5470109Z The XKEYBOARD keymap compiler (xkbcomp) reports:
+2026-07-28T04:35:31.5470814Z > Warning:          Could not resolve keysym XF86CameraAccessEnable
+2026-07-28T04:35:31.5471264Z > Warning:          Could not resolve keysym XF86CameraAccessDisable
+2026-07-28T04:35:31.5471710Z > Warning:          Could not resolve keysym XF86CameraAccessToggle
+2026-07-28T04:35:31.5472092Z > Warning:          Could not resolve keysym XF86NextElement
+2026-07-28T04:35:31.5472470Z > Warning:          Could not resolve keysym XF86PreviousElement
+2026-07-28T04:35:31.5472876Z > Warning:          Could not resolve keysym XF86AutopilotEngageToggle
+2026-07-28T04:35:31.5473278Z > Warning:          Could not resolve keysym XF86MarkWaypoint
+2026-07-28T04:35:31.5473642Z > Warning:          Could not resolve keysym XF86Sos
+2026-07-28T04:35:31.5473974Z > Warning:          Could not resolve keysym XF86NavChart
+2026-07-28T04:35:31.5475760Z > Warning:          Could not resolve keysym XF86FishingChart
+2026-07-28T04:35:31.5476234Z > Warning:          Could not resolve keysym XF86SingleRangeRadar
+2026-07-28T04:35:31.5476653Z > Warning:          Could not resolve keysym XF86DualRangeRadar
+2026-07-28T04:35:31.5477037Z > Warning:          Could not resolve keysym XF86RadarOverlay
+2026-07-28T04:35:31.5477422Z > Warning:          Could not resolve keysym XF86TraditionalSonar
+2026-07-28T04:35:31.5477792Z > Warning:          Could not resolve keysym XF86ClearvuSonar
+2026-07-28T04:35:31.5478300Z > Warning:          Could not resolve keysym XF86SidevuSonar
+2026-07-28T04:35:31.5478902Z > Warning:          Could not resolve keysym XF86NavInfo
+2026-07-28T04:35:31.5479459Z Errors from xkbcomp are not fatal to the X server
+2026-07-28T04:35:32.0926484Z [gw2] [100%] PASSED tests/test_ui_validation.py::TestUIValidation::test_ui_050_window_onerror_not_triggered 
+2026-07-28T04:35:32.0927420Z 
+2026-07-28T04:35:32.0927626Z =================================== FAILURES ===================================
+2026-07-28T04:35:32.0928384Z _________ TestAuthorization.test_authz_028_fragment_injection_handled __________
+2026-07-28T04:35:32.0929063Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.0929680Z tests/test_authorization.py:216: in test_authz_028_fragment_injection_handled
+2026-07-28T04:35:32.0930338Z     assert page.is_loaded() or page.wait_for_flutter(), "Fragment injection not handled"
+2026-07-28T04:35:32.0930837Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.0931200Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.0931734Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.0932577Z 2026-07-28 04:17:47 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/../../etc/passwd
+2026-07-28T04:35:32.0933357Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.0934092Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/../../etc/passwd
+2026-07-28T04:35:32.0935715Z ____________ TestAuthorization.test_authz_029_query_param_injection ____________
+2026-07-28T04:35:32.0936343Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.0937088Z tests/test_authorization.py:223: in test_authz_029_query_param_injection
+2026-07-28T04:35:32.0937702Z     assert page.is_loaded() or page.wait_for_flutter(), "Query injection not handled"
+2026-07-28T04:35:32.0938173Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.0938534Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.0939062Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.0939842Z 2026-07-28 04:17:54 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/?admin=true#/
+2026-07-28T04:35:32.0940622Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.0941343Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/?admin=true#/
+2026-07-28T04:35:32.0942045Z ___________ TestAuthorization.test_authz_030_double_encoding_handled ___________
+2026-07-28T04:35:32.0942540Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.0943011Z tests/test_authorization.py:230: in test_authz_030_double_encoding_handled
+2026-07-28T04:35:32.0943506Z     assert page.is_loaded() or page.wait_for_flutter(), "Double encoding not handled"
+2026-07-28T04:35:32.0943888Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.0944185Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.0945105Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.0945758Z 2026-07-28 04:18:02 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/%252F%252Fadmin
+2026-07-28T04:35:32.0946394Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.0946991Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/%252F%252Fadmin
+2026-07-28T04:35:32.0947617Z ___________ TestAuthorization.test_authz_031_concurrent_route_access ___________
+2026-07-28T04:35:32.0948104Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.0948824Z tests/test_authorization.py:239: in test_authz_031_concurrent_route_access
+2026-07-28T04:35:32.0949487Z     assert page.is_loaded() or page.wait_for_flutter(), "Rapid switching crashed app"
+2026-07-28T04:35:32.0949874Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.0950173Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.0950600Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.0951193Z 2026-07-28 04:18:08 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/
+2026-07-28T04:35:32.0951972Z 2026-07-28 04:18:13 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/role-selection
+2026-07-28T04:35:32.0952778Z 2026-07-28 04:18:18 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/auth
+2026-07-28T04:35:32.0953594Z 2026-07-28 04:18:22 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/hospital/register
+2026-07-28T04:35:32.0954222Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.0955020Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/
+2026-07-28T04:35:32.0955742Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/role-selection
+2026-07-28T04:35:32.0956482Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/auth
+2026-07-28T04:35:32.0957433Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/hospital/register
+2026-07-28T04:35:32.0958209Z _______ TestAuthorization.test_authz_003_bystander_home_requires_context _______
+2026-07-28T04:35:32.0958723Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.0959225Z tests/test_authorization.py:36: in test_authz_003_bystander_home_requires_context
+2026-07-28T04:35:32.0959770Z     assert page.is_loaded() or page.wait_for_flutter(), "App crashed on unauthorized access"
+2026-07-28T04:35:32.0960197Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.0960504Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.0960937Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.0961572Z 2026-07-28 04:18:25 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/home
+2026-07-28T04:35:32.0962207Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.0962810Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/home
+2026-07-28T04:35:32.0963435Z ________ TestAuthorization.test_authz_004_hospital_dashboard_protected _________
+2026-07-28T04:35:32.0963927Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.0964768Z tests/test_authorization.py:43: in test_authz_004_hospital_dashboard_protected
+2026-07-28T04:35:32.0965325Z     assert page.is_loaded() or page.wait_for_flutter(), "App crashed on protected route"
+2026-07-28T04:35:32.0965723Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.0966029Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.0966456Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.0967508Z 2026-07-28 04:18:32 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/hospital/dashboard
+2026-07-28T04:35:32.0968203Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.0968819Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/hospital/dashboard
+2026-07-28T04:35:32.0969454Z ___________ TestAuthorization.test_authz_032_refresh_preserves_route ___________
+2026-07-28T04:35:32.0969937Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.0970419Z tests/test_authorization.py:248: in test_authz_032_refresh_preserves_route
+2026-07-28T04:35:32.0970904Z     assert page.is_loaded() or page.wait_for_flutter(), "Refresh broke routing"
+2026-07-28T04:35:32.0971268Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.0971563Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.0971987Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.0972610Z 2026-07-28 04:18:27 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/role-selection
+2026-07-28T04:35:32.0973238Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.0973816Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/role-selection
+2026-07-28T04:35:32.0974750Z ___________ TestAuthorization.test_authz_033_open_new_tab_same_route ___________
+2026-07-28T04:35:32.0975256Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.0975754Z tests/test_authorization.py:255: in test_authz_033_open_new_tab_same_route
+2026-07-28T04:35:32.0976185Z     assert page.is_loaded(), "Route failed in fresh context"
+2026-07-28T04:35:32.0976495Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.0976982Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.0977404Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.0978145Z 2026-07-28 04:18:40 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/role-selection
+2026-07-28T04:35:32.0978757Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.0979332Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/role-selection
+2026-07-28T04:35:32.0979945Z ________ TestAuthorization.test_authz_005_volunteer_dashboard_protected ________
+2026-07-28T04:35:32.0980424Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.0980912Z tests/test_authorization.py:50: in test_authz_005_volunteer_dashboard_protected
+2026-07-28T04:35:32.0981446Z     assert page.is_loaded() or page.wait_for_flutter(), "App crashed on protected route"
+2026-07-28T04:35:32.0981852Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.0982148Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.0982577Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.0983274Z 2026-07-28 04:18:39 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/volunteer/dashboard
+2026-07-28T04:35:32.0983912Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.0984723Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/volunteer/dashboard
+2026-07-28T04:35:32.0985362Z ____________ TestAuthorization.test_authz_034_case_sensitive_routes ____________
+2026-07-28T04:35:32.0985844Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.0986321Z tests/test_authorization.py:263: in test_authz_034_case_sensitive_routes
+2026-07-28T04:35:32.0986827Z     assert page.is_loaded() or page.wait_for_flutter(), "Case sensitivity not enforced"
+2026-07-28T04:35:32.0987223Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.0987701Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.0988379Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.0989004Z 2026-07-28 04:18:47 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/Role-Selection
+2026-07-28T04:35:32.0989618Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.0990193Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/Role-Selection
+2026-07-28T04:35:32.0990808Z ________ TestAuthorization.test_authz_006_bystander_confirm_needs_data _________
+2026-07-28T04:35:32.0991291Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.0991783Z tests/test_authorization.py:57: in test_authz_006_bystander_confirm_needs_data
+2026-07-28T04:35:32.0992320Z     assert page.is_loaded() or page.wait_for_flutter(), "Confirm page crashed without data"
+2026-07-28T04:35:32.0992732Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.0993025Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.0993451Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.0994081Z 2026-07-28 04:18:47 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/confirm
+2026-07-28T04:35:32.0994877Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.0995467Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/confirm
+2026-07-28T04:35:32.0996093Z ___________ TestAuthorization.test_authz_035_trailing_slash_handled ____________
+2026-07-28T04:35:32.0996847Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.0997436Z tests/test_authorization.py:270: in test_authz_035_trailing_slash_handled
+2026-07-28T04:35:32.0997933Z     assert page.is_loaded() or page.wait_for_flutter(), "Trailing slash broke routing"
+2026-07-28T04:35:32.0998319Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.0998619Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.0999038Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.0999665Z 2026-07-28 04:18:54 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/role-selection/
+2026-07-28T04:35:32.1000285Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1000862Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/role-selection/
+2026-07-28T04:35:32.1001490Z ___________ TestAuthorization.test_authz_007_first_aid_needs_context ___________
+2026-07-28T04:35:32.1001972Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1002440Z tests/test_authorization.py:64: in test_authz_007_first_aid_needs_context
+2026-07-28T04:35:32.1002913Z     assert page.is_loaded() or page.wait_for_flutter(), "First aid page crashed"
+2026-07-28T04:35:32.1003280Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1003573Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1003990Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1004879Z 2026-07-28 04:18:55 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/first-aid
+2026-07-28T04:35:32.1005541Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1006148Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/first-aid
+2026-07-28T04:35:32.1006780Z _____________ TestAuthorization.test_authz_036_empty_hash_handled ______________
+2026-07-28T04:35:32.1007257Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1007716Z tests/test_authorization.py:277: in test_authz_036_empty_hash_handled
+2026-07-28T04:35:32.1008182Z     assert page.is_loaded() or page.wait_for_flutter(), "Empty hash crashed app"
+2026-07-28T04:35:32.1008547Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1008842Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1009260Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1009841Z 2026-07-28 04:19:00 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#
+2026-07-28T04:35:32.1010413Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1010940Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#
+2026-07-28T04:35:32.1011852Z _________ TestAuthorization.test_authz_008_tracking_needs_emergency_id _________
+2026-07-28T04:35:32.1012415Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1012936Z tests/test_authorization.py:71: in test_authz_008_tracking_needs_emergency_id
+2026-07-28T04:35:32.1013437Z     assert page.is_loaded() or page.wait_for_flutter(), "Tracking page crashed"
+2026-07-28T04:35:32.1013810Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1014108Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1014741Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1015386Z 2026-07-28 04:19:03 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/tracking
+2026-07-28T04:35:32.1016319Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1017036Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/tracking
+2026-07-28T04:35:32.1017676Z ________ TestAuthorization.test_authz_009_hospital_alert_needs_context _________
+2026-07-28T04:35:32.1018166Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1018655Z tests/test_authorization.py:78: in test_authz_009_hospital_alert_needs_context
+2026-07-28T04:35:32.1019167Z     assert page.is_loaded() or page.wait_for_flutter(), "Hospital alert page crashed"
+2026-07-28T04:35:32.1031754Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1032341Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1032913Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1033650Z 2026-07-28 04:19:11 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/hospital-alert
+2026-07-28T04:35:32.1034497Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1035156Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/hospital-alert
+2026-07-28T04:35:32.1035831Z _____________ TestAuthorization.test_authz_038_null_bytes_in_route _____________
+2026-07-28T04:35:32.1036324Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1036789Z tests/test_authorization.py:292: in test_authz_038_null_bytes_in_route
+2026-07-28T04:35:32.1037258Z     assert page.is_loaded() or page.wait_for_flutter(), "Null bytes not handled"
+2026-07-28T04:35:32.1037622Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1037924Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1038357Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1038985Z 2026-07-28 04:19:13 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/test%00admin
+2026-07-28T04:35:32.1039605Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1040183Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/test%00admin
+2026-07-28T04:35:32.1040792Z _________ TestAuthorization.test_authz_010_volunteer_alert_needs_data __________
+2026-07-28T04:35:32.1041280Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1041770Z tests/test_authorization.py:85: in test_authz_010_volunteer_alert_needs_data
+2026-07-28T04:35:32.1042261Z     assert page.is_loaded() or page.wait_for_flutter(), "Volunteer alert crashed"
+2026-07-28T04:35:32.1042636Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1042939Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1043361Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1043977Z 2026-07-28 04:19:17 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/volunteer/alert
+2026-07-28T04:35:32.1044872Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1045455Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/volunteer/alert
+2026-07-28T04:35:32.1046065Z _______________ TestAuthorization.test_authz_039_very_long_route _______________
+2026-07-28T04:35:32.1046551Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1047002Z tests/test_authorization.py:300: in test_authz_039_very_long_route
+2026-07-28T04:35:32.1047453Z     assert page.is_loaded() or page.wait_for_flutter(), "Long route crashed app"
+2026-07-28T04:35:32.1048082Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1048407Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1048960Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1062688Z 2026-07-28 04:19:19 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+2026-07-28T04:35:32.1076596Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1090292Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+2026-07-28T04:35:32.1104144Z _________ TestAuthorization.test_authz_011_volunteer_nav_needs_coords __________
+2026-07-28T04:35:32.1104749Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1105230Z tests/test_authorization.py:92: in test_authz_011_volunteer_nav_needs_coords
+2026-07-28T04:35:32.1105740Z     assert page.is_loaded() or page.wait_for_flutter(), "Navigation page crashed"
+2026-07-28T04:35:32.1106130Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1106433Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1106871Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1107537Z 2026-07-28 04:19:25 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/volunteer/navigation
+2026-07-28T04:35:32.1108187Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1108792Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/volunteer/navigation
+2026-07-28T04:35:32.1109422Z ______________ TestAuthorization.test_authz_040_data_uri_blocked _______________
+2026-07-28T04:35:32.1109900Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1110600Z tests/test_authorization.py:307: in test_authz_040_data_uri_blocked
+2026-07-28T04:35:32.1111061Z     assert page.is_loaded() or page.wait_for_flutter(), "Data URI not blocked"
+2026-07-28T04:35:32.1111556Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1111853Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1112273Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1112940Z 2026-07-28 04:19:26 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/data:text/html,<h1>XSS</h1>
+2026-07-28T04:35:32.1113602Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1114226Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/data:text/html,<h1>XSS</h1>
+2026-07-28T04:35:32.1115007Z __________ TestAuthorization.test_authz_012_case_completion_needs_id ___________
+2026-07-28T04:35:32.1115501Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1116037Z tests/test_authorization.py:99: in test_authz_012_case_completion_needs_id
+2026-07-28T04:35:32.1116537Z     assert page.is_loaded() or page.wait_for_flutter(), "Completion page crashed"
+2026-07-28T04:35:32.1116907Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1117199Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1117615Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1118247Z 2026-07-28 04:19:32 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/volunteer/complete
+2026-07-28T04:35:32.1118877Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1119469Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/volunteer/complete
+2026-07-28T04:35:32.1120097Z ___________ TestAuthorization.test_authz_018_hospital_map_accessible ___________
+2026-07-28T04:35:32.1120579Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1121055Z tests/test_authorization.py:136: in test_authz_018_hospital_map_accessible
+2026-07-28T04:35:32.1121542Z     assert page.is_loaded() or page.wait_for_flutter(), "Hospital map crashed"
+2026-07-28T04:35:32.1121903Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1122196Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1122613Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1123247Z 2026-07-28 04:20:13 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/hospitals
+2026-07-28T04:35:32.1123879Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1124786Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/hospitals
+2026-07-28T04:35:32.1125474Z __________ TestAuthorization.test_authz_019_nonexistent_route_handled __________
+2026-07-28T04:35:32.1125967Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1126455Z tests/test_authorization.py:144: in test_authz_019_nonexistent_route_handled
+2026-07-28T04:35:32.1126937Z     assert page.is_loaded() or page.wait_for_flutter(), "App crashed on 404"
+2026-07-28T04:35:32.1127293Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1127588Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1128008Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1128638Z 2026-07-28 04:20:23 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/nonexistent-route
+2026-07-28T04:35:32.1129273Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1130066Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/nonexistent-route
+2026-07-28T04:35:32.1130816Z ___________ TestAuthorization.test_authz_020_admin_route_not_exposed ___________
+2026-07-28T04:35:32.1131294Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1131772Z tests/test_authorization.py:151: in test_authz_020_admin_route_not_exposed
+2026-07-28T04:35:32.1132267Z     assert page.is_loaded() or page.wait_for_flutter(), "Admin route should not exist"
+2026-07-28T04:35:32.1132655Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1132946Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1133368Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1133955Z 2026-07-28 04:20:31 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/admin
+2026-07-28T04:35:32.1134857Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1135440Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/admin
+2026-07-28T04:35:32.1136022Z ____________ TestAuthorization.test_authz_021_api_route_not_exposed ____________
+2026-07-28T04:35:32.1136504Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1136978Z tests/test_authorization.py:158: in test_authz_021_api_route_not_exposed
+2026-07-28T04:35:32.1137454Z     assert page.is_loaded() or page.wait_for_flutter(), "API route exposed"
+2026-07-28T04:35:32.1137814Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1138114Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1138542Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1139159Z 2026-07-28 04:20:39 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/api/users
+2026-07-28T04:35:32.1139765Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1140333Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/api/users
+2026-07-28T04:35:32.1141035Z ___________ TestAuthorization.test_authz_022_debug_route_not_exposed ___________
+2026-07-28T04:35:32.1141531Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1142018Z tests/test_authorization.py:165: in test_authz_022_debug_route_not_exposed
+2026-07-28T04:35:32.1142500Z     assert page.is_loaded() or page.wait_for_flutter(), "Debug route exposed"
+2026-07-28T04:35:32.1142863Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1143160Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1143584Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1144186Z 2026-07-28 04:20:47 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/debug
+2026-07-28T04:35:32.1144951Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1145504Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/debug
+2026-07-28T04:35:32.1146088Z __________ TestAuthorization.test_authz_023_config_route_not_exposed ___________
+2026-07-28T04:35:32.1146567Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1147046Z tests/test_authorization.py:172: in test_authz_023_config_route_not_exposed
+2026-07-28T04:35:32.1147526Z     assert page.is_loaded() or page.wait_for_flutter(), "Config route exposed"
+2026-07-28T04:35:32.1147895Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1148189Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1148787Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1149373Z 2026-07-28 04:20:53 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/config
+2026-07-28T04:35:32.1150080Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1150629Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/config
+2026-07-28T04:35:32.1151214Z ________ TestAuthorization.test_authz_026_multiple_role_routes_isolated ________
+2026-07-28T04:35:32.1151702Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1152187Z tests/test_authorization.py:198: in test_authz_026_multiple_role_routes_isolated
+2026-07-28T04:35:32.1152684Z     assert page.is_loaded() or page.wait_for_flutter(), "Cross-role access issue"
+2026-07-28T04:35:32.1153054Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1153358Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1153775Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1154527Z 2026-07-28 04:21:08 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/home
+2026-07-28T04:35:32.1155386Z 2026-07-28 04:21:13 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/volunteer/dashboard
+2026-07-28T04:35:32.1156030Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1156613Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/home
+2026-07-28T04:35:32.1157361Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/volunteer/dashboard
+2026-07-28T04:35:32.1157988Z __________ TestAuthorization.test_authz_027_back_nav_after_auth_route __________
+2026-07-28T04:35:32.1158480Z [gw2] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1158969Z tests/test_authorization.py:209: in test_authz_027_back_nav_after_auth_route
+2026-07-28T04:35:32.1159469Z     assert page.is_loaded() or page.wait_for_flutter(), "Back nav from auth failed"
+2026-07-28T04:35:32.1159860Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1160162Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1160586Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1161218Z 2026-07-28 04:21:20 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/role-selection
+2026-07-28T04:35:32.1162027Z 2026-07-28 04:21:25 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/auth
+2026-07-28T04:35:32.1162644Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1163237Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/role-selection
+2026-07-28T04:35:32.1163965Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/auth
+2026-07-28T04:35:32.1164912Z ___________ TestErrorHandling.test_err_013_graceful_on_missing_data ____________
+2026-07-28T04:35:32.1165420Z [gw0] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1165896Z tests/test_error_handling.py:79: in test_err_013_graceful_on_missing_data
+2026-07-28T04:35:32.1166311Z     assert page.is_loaded() or page.wait_for_flutter()
+2026-07-28T04:35:32.1166607Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1166902Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1167320Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1168134Z 2026-07-28 04:21:42 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/confirm
+2026-07-28T04:35:32.1168961Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1169549Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/confirm
+2026-07-28T04:35:32.1170177Z _________ TestErrorHandling.test_err_014_graceful_on_null_emergency_id _________
+2026-07-28T04:35:32.1170663Z [gw0] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1171150Z tests/test_error_handling.py:83: in test_err_014_graceful_on_null_emergency_id
+2026-07-28T04:35:32.1171580Z     assert page.is_loaded() or page.wait_for_flutter()
+2026-07-28T04:35:32.1171874Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1172168Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1172593Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1173228Z 2026-07-28 04:21:48 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/tracking
+2026-07-28T04:35:32.1173869Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1174784Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/bystander/tracking
+2026-07-28T04:35:32.1175431Z ____________ TestErrorHandling.test_err_015_graceful_on_null_coords ____________
+2026-07-28T04:35:32.1175914Z [gw0] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1176385Z tests/test_error_handling.py:87: in test_err_015_graceful_on_null_coords
+2026-07-28T04:35:32.1176792Z     assert page.is_loaded() or page.wait_for_flutter()
+2026-07-28T04:35:32.1177081Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1177374Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1177800Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1178447Z 2026-07-28 04:21:55 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/volunteer/navigation
+2026-07-28T04:35:32.1179088Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1179689Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/volunteer/navigation
+2026-07-28T04:35:32.1180323Z _________ TestErrorHandling.test_err_017_recovery_after_refresh_error __________
+2026-07-28T04:35:32.1180801Z [gw0] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1181288Z tests/test_error_handling.py:99: in test_err_017_recovery_after_refresh_error
+2026-07-28T04:35:32.1181701Z     assert page.is_loaded() or page.wait_for_flutter()
+2026-07-28T04:35:32.1182006Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1182294Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1182709Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1183320Z 2026-07-28 04:22:15 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/nonexistent
+2026-07-28T04:35:32.1183927Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1184630Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/nonexistent
+2026-07-28T04:35:32.1185258Z _________ TestInputValidation.test_input_006_html_injection_prevented __________
+2026-07-28T04:35:32.1185756Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1186242Z tests/test_input_validation.py:40: in test_input_006_html_injection_prevented
+2026-07-28T04:35:32.1186808Z     assert page.is_loaded()
+2026-07-28T04:35:32.1187026Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1187319Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1187923Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1188493Z 2026-07-28 04:24:30 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:35:32.1189054Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1189575Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:35:32.1190126Z _______________ TestErrorHandling.test_err_001_404_page_renders ________________
+2026-07-28T04:35:32.1190593Z [gw1] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1191040Z tests/test_error_handling.py:17: in test_err_001_404_page_renders
+2026-07-28T04:35:32.1191419Z     assert page.is_loaded() or page.wait_for_flutter()
+2026-07-28T04:35:32.1191717Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1192002Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1192419Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1193051Z 2026-07-28 04:25:32 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/nonexistent-page
+2026-07-28T04:35:32.1193676Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1194262Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/nonexistent-page
+2026-07-28T04:35:32.1195061Z _______________ TestErrorHandling.test_err_002_deep_404_handled ________________
+2026-07-28T04:35:32.1195529Z [gw1] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1195976Z tests/test_error_handling.py:21: in test_err_002_deep_404_handled
+2026-07-28T04:35:32.1196355Z     assert page.is_loaded() or page.wait_for_flutter()
+2026-07-28T04:35:32.1196641Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1196930Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1197343Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1197948Z 2026-07-28 04:25:39 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/a/b/c/d/e/f
+2026-07-28T04:35:32.1198551Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1199112Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/a/b/c/d/e/f
+2026-07-28T04:35:32.1199709Z ______________ TestErrorHandling.test_err_004_double_slash_route _______________
+2026-07-28T04:35:32.1200203Z [gw1] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1200667Z tests/test_error_handling.py:29: in test_err_004_double_slash_route
+2026-07-28T04:35:32.1201063Z     assert page.is_loaded() or page.wait_for_flutter()
+2026-07-28T04:35:32.1201360Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1201659Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1202083Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1202711Z 2026-07-28 04:25:53 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#//role-selection
+2026-07-28T04:35:32.1203329Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1203908Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#//role-selection
+2026-07-28T04:35:32.1204833Z _____________ TestErrorHandling.test_err_005_unicode_route_handled _____________
+2026-07-28T04:35:32.1205499Z [gw1] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1205966Z tests/test_error_handling.py:33: in test_err_005_unicode_route_handled
+2026-07-28T04:35:32.1206493Z     assert page.is_loaded() or page.wait_for_flutter()
+2026-07-28T04:35:32.1206789Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1207089Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1207514Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1208418Z 2026-07-28 04:26:00 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/页面
+2026-07-28T04:35:32.1209005Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1209627Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/页面
+2026-07-28T04:35:32.1210201Z ______________ TestErrorHandling.test_err_006_emoji_route_handled ______________
+2026-07-28T04:35:32.1210687Z [gw1] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1211142Z tests/test_error_handling.py:37: in test_err_006_emoji_route_handled
+2026-07-28T04:35:32.1211537Z     assert page.is_loaded() or page.wait_for_flutter()
+2026-07-28T04:35:32.1211827Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1212120Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1212540Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1213239Z 2026-07-28 04:26:06 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/🏥
+2026-07-28T04:35:32.1213810Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1214730Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/🏥
+2026-07-28T04:35:32.1215324Z ______________ TestErrorHandling.test_err_007_rapid_error_routes _______________
+2026-07-28T04:35:32.1215847Z [gw1] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:35:32.1216314Z tests/test_error_handling.py:43: in test_err_007_rapid_error_routes
+2026-07-28T04:35:32.1216704Z     assert page.is_loaded() or page.wait_for_flutter()
+2026-07-28T04:35:32.1217017Z            ^^^^^^^^^^^^^^
+2026-07-28T04:35:32.1217304Z E   AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1217720Z ----------------------------- Captured stdout call -----------------------------
+2026-07-28T04:35:32.1218312Z 2026-07-28 04:26:13 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/error-0
+2026-07-28T04:35:32.1219064Z 2026-07-28 04:26:17 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/error-1
+2026-07-28T04:35:32.1219801Z 2026-07-28 04:26:20 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/error-2
+2026-07-28T04:35:32.1220542Z 2026-07-28 04:26:23 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/error-3
+2026-07-28T04:35:32.1221282Z 2026-07-28 04:26:25 | INFO     | BasePage                       | Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/error-4
+2026-07-28T04:35:32.1221868Z ------------------------------ Captured log call -------------------------------
+2026-07-28T04:35:32.1222424Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/error-0
+2026-07-28T04:35:32.1223098Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/error-1
+2026-07-28T04:35:32.1223763Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/error-2
+2026-07-28T04:35:32.1224563Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/error-3
+2026-07-28T04:35:32.1225424Z INFO     BasePage:base_page.py:37 Navigating to: https://ViswanathSaiSandeep.github.io/MediRoute/#/error-4
+2026-07-28T04:35:32.1226065Z =========================== short test summary info ============================
+2026-07-28T04:35:32.1226840Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_028_fragment_injection_handled - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1227906Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_029_query_param_injection - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1228950Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_030_double_encoding_handled - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1229992Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_031_concurrent_route_access - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1231068Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_003_bystander_home_requires_context - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1232173Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_004_hospital_dashboard_protected - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1233241Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_032_refresh_preserves_route - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1234276Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_033_open_new_tab_same_route - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1235469Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_005_volunteer_dashboard_protected - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1236537Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_034_case_sensitive_routes - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1237589Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_006_bystander_confirm_needs_data - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1238640Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_035_trailing_slash_handled - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1239670Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_007_first_aid_needs_context - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1240691Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_036_empty_hash_handled - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1241725Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_008_tracking_needs_emergency_id - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1242797Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_009_hospital_alert_needs_context - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1243841Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_038_null_bytes_in_route - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1278321Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_010_volunteer_alert_needs_data - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1279778Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_039_very_long_route - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1281066Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_011_volunteer_nav_needs_coords - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1282472Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_040_data_uri_blocked - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1283635Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_012_case_completion_needs_id - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1285033Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_018_hospital_map_accessible - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1286105Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_019_nonexistent_route_handled - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1287159Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_020_admin_route_not_exposed - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1288189Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_021_api_route_not_exposed - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1289230Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_022_debug_route_not_exposed - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1290267Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_023_config_route_not_exposed - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1291329Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_026_multiple_role_routes_isolated - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1292394Z FAILED tests/test_authorization.py::TestAuthorization::test_authz_027_back_nav_after_auth_route - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1293425Z FAILED tests/test_error_handling.py::TestErrorHandling::test_err_013_graceful_on_missing_data - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1294756Z FAILED tests/test_error_handling.py::TestErrorHandling::test_err_014_graceful_on_null_emergency_id - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1295812Z FAILED tests/test_error_handling.py::TestErrorHandling::test_err_015_graceful_on_null_coords - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1296844Z FAILED tests/test_error_handling.py::TestErrorHandling::test_err_017_recovery_after_refresh_error - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1297913Z FAILED tests/test_input_validation.py::TestInputValidation::test_input_006_html_injection_prevented - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1298941Z FAILED tests/test_error_handling.py::TestErrorHandling::test_err_001_404_page_renders - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1299909Z FAILED tests/test_error_handling.py::TestErrorHandling::test_err_002_deep_404_handled - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1300899Z FAILED tests/test_error_handling.py::TestErrorHandling::test_err_004_double_slash_route - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1301900Z FAILED tests/test_error_handling.py::TestErrorHandling::test_err_005_unicode_route_handled - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1302903Z FAILED tests/test_error_handling.py::TestErrorHandling::test_err_006_emoji_route_handled - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1303888Z FAILED tests/test_error_handling.py::TestErrorHandling::test_err_007_rapid_error_routes - AttributeError: 'BasePage' object has no attribute 'is_loaded'
+2026-07-28T04:35:32.1304745Z ================= 41 failed, 429 passed in 1071.81s (0:17:51) ==================

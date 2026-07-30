@@ -1,0 +1,1 @@
+{"test_id": "test_reg_033_empty_hash", "module": "regression", "test_name": "test_reg_033_empty_hash", "priority": "Medium", "precondition": "Application loaded", "expected": "Test passes", "actual": "Test passes", "status": "PASSED", "duration": 4.90531380000175, "error": "", "stack_trace": "", "screenshot": "", "console_logs": [], "category": "Selenium Website Tests"}

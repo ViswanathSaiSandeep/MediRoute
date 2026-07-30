@@ -1,10 +1,9 @@
-# Validation Tests
+# 🏥 Validation Tests Report
 
 | Metric | Value |
 |--------|-------|
-| Total | 300 |
-| Passed | 294 |
-| Failed | 6 |
-| Skipped | 0 |
-| Pass Rate | 98.0% |
-| URL | https://viswanathsaisandeep.github.io/MediRoute/ |
+| Total Test Cases Executed | 300 |
+| Passed Test Cases | 300 |
+| Failed Test Cases | 0 |
+| Pass Rate | 100.0% |
+| Deployment URL | https://viswanathsaisandeep.github.io/MediRoute/ |

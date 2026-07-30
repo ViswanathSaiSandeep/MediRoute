@@ -1,0 +1,27 @@
+﻿2026-07-28T04:17:33.5259159Z ##[group]Run nanasess/setup-chromedriver@v2
+2026-07-28T04:17:33.5259487Z with:
+2026-07-28T04:17:33.5259671Z env:
+2026-07-28T04:17:33.5259856Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:33.5260176Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:33.5260597Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:33.5261031Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:33.5261450Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:33.5261826Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:33.5262198Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:33.5262581Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:33.5262901Z ##[endgroup]
+2026-07-28T04:17:33.5935961Z ##setup chromedriver
+2026-07-28T04:17:33.5955256Z [command]/home/runner/work/_actions/nanasess/setup-chromedriver/v2/lib/setup-chromedriver.sh  linux64 
+2026-07-28T04:17:35.5944798Z CHROME_VERSION=150
+2026-07-28T04:17:35.6218596Z VERSION=150.0.7871.128
+2026-07-28T04:17:35.6219901Z Downloading https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json...
+2026-07-28T04:17:35.9108014Z Falling back to latest version of ChromeDriver for linux64
+2026-07-28T04:17:35.9126037Z VERSION3=150.0.7871
+2026-07-28T04:17:36.0866641Z VERSION=150.0.7871.124
+2026-07-28T04:17:36.2529967Z Installing ChromeDriver 150.0.7871.124 for linux64
+2026-07-28T04:17:36.2531561Z Downloading https://storage.googleapis.com/chrome-for-testing-public/150.0.7871.124/linux64/chromedriver-linux64.zip...
+2026-07-28T04:17:36.6376104Z Installing chromedriver to /usr/local/bin
+2026-07-28T04:17:36.6487396Z Chrome version:
+2026-07-28T04:17:36.6750375Z Google Chrome 150.0.7871.128 
+2026-07-28T04:17:36.6755952Z Chromedriver version:
+2026-07-28T04:17:36.6798281Z ChromeDriver 150.0.7871.124 (9261fd0a595ac4964ea84e6bd4a025c1173a2ffa-refs/branch-heads/7871@{#3359})

@@ -1,0 +1,11 @@
+﻿2026-07-28T04:15:37.8082499Z ##[group]Run echo "Waiting 90 seconds for GitHub Pages CDN propagation..."
+2026-07-28T04:15:37.8083071Z [36;1mecho "Waiting 90 seconds for GitHub Pages CDN propagation..."[0m
+2026-07-28T04:15:37.8083445Z [36;1msleep 90[0m
+2026-07-28T04:15:37.8127102Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:15:37.8127359Z env:
+2026-07-28T04:15:37.8127556Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:15:37.8127887Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:15:37.8128359Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.8-x64/flutter
+2026-07-28T04:15:37.8128757Z   PUB_CACHE: /home/runner/.pub-cache
+2026-07-28T04:15:37.8129028Z ##[endgroup]
+2026-07-28T04:15:37.8191184Z Waiting 90 seconds for GitHub Pages CDN propagation...

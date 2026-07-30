@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediRoute Admin Dashboard</title>
+  <meta name="description" content="Central Web Admin Dashboard for MediRoute - Emergency Response & Facility Verification System">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E53935'><path d='M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z'/></svg>">
+</head>
+<body>
+
+  <div id="app-root">
+
+    <!-- ── SIDEBAR NAVIGATION ── -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon-box">
+          <svg viewBox="0 0 24 24">
+            <path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/>
+          </svg>
+        </div>
+        <div class="brand-text-container">
+          <span class="brand-title">MediRoute</span>
+          <span class="brand-subtitle">Admin Portal</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Core Controls</div>
+        
+        <a class="nav-item active" data-tab="overview">
+          <svg viewBox="0 0 24 24"><path d="M3 3h7v9H3zm11 0h7v5h-7zm0 9h7v9h-7zM3 16h7v5H3z"/></svg>
+          <span>Dashboard</span>
+        </a>
+
+        <a class="nav-item" data-tab="users">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Manage All Users</span>
+          <span class="nav-badge" id="total-users-badge">0</span>
+        </a>
+
+        <div class="nav-section-title" style="margin-top: 14px;">Approvals & Verification</div>
+
+        <a class="nav-item" data-tab="volunteers">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span>Approve Volunteers</span>
+          <span class="nav-badge" id="pending-volunteers-badge">0</span>
+        </a>
+
+        <a class="nav-item" data-tab="hospitals">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3M9 9v.01M9 13v.01M9 17v.01"/></svg>
+          <span>Approve Hospitals</span>
+          <span class="nav-badge green" id="pending-hospitals-badge">0</span>
+        </a>
+
+        <div class="nav-section-title" style="margin-top: 14px;">Emergency Ops</div>
+
+        <a class="nav-item" data-tab="emergencies">
+          <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span>Live Emergencies</span>
+          <span class="nav-badge" style="background: var(--sos-red);" id="active-emergencies-badge">0</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="admin-profile-card">
+          <div class="admin-avatar">AD</div>
+          <div class="admin-info">
+            <span class="admin-name">System Administrator</span>
+            <span class="admin-role">Super Admin • Live</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── MAIN WRAPPER ── -->
+    <main class="main-wrapper">
+      
+      <!-- Top Navigation Header -->
+      <header class="top-header">
+        <div class="header-title-container">
+          <h1 class="header-title" id="page-title">Dashboard Overview</h1>
+          <span class="header-subtitle" id="page-subtitle">Real-time system stats & response coordination</span>
+        </div>
+
+        <div class="header-actions">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="global-search" placeholder="Search users, volunteers, hospitals...">
+          </div>
+
+          <div class="live-status-pill">
+            <div class="status-dot"></div>
+            <span>System Active</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Body Container -->
+      <div class="content-body">
+
+        <!-- ===================================================================
+             TAB 1: OVERVIEW DASHBOARD
+             =================================================================== -->
+        <div class="tab-pane active" id="tab-overview">
+          
+          <!-- Key Metrics Row -->
+          <div class="metrics-grid">
+            
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-title">Total Users</span>
+                <div class="metric-icon red">
+                  <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+              </div>
+              <div class="metric-value" id="metric-total-users">0</div>
+              <div class="metric-footer">
+                <span class="metric-change up">↑ 12%</span>
+                <span>across bystanders, volunteers & hospitals</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-title">Pending Approvals</span>
+                <div class="metric-icon amber">
+                  <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+              </div>
+              <div class="metric-value" id="metric-pending-approvals">0</div>
+              <div class="metric-footer">
+                <span class="metric-change neutral">Require Review</span>
+                <span>volunteers & hospital facilities</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-title">Approved Hospitals</span>
+                <div class="metric-icon green">
+                  <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+              </div>
+              <div class="metric-value" id="metric-approved-hospitals">0</div>
+              <div class="metric-footer">
+                <span class="metric-change up">Active Facilities</span>
+                <span>ready for emergency intake</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-title">Active Emergencies</span>
+                <div class="metric-icon red">
+                  <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+              </div>
+              <div class="metric-value" id="metric-active-emergencies">0</div>
+              <div class="metric-footer">
+                <span class="metric-change alert">Real-time SOS</span>
+                <span>volunteers responding</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Charts & Recent Activity Grid -->
+          <div class="grid-2col">
+            
+            <!-- Left: User Role Breakdown -->
+            <div class="card-panel">
+              <div class="panel-header">
+                <div>
+                  <h3 class="panel-title">User Role Distribution</h3>
+                  <span class="panel-subtitle">Total ecosystem breakdown by registered role</span>
+                </div>
+              </div>
+
+              <div class="role-distribution-list">
+                <div class="distribution-item">
+                  <div class="dist-header">
+                    <span>Bystanders (Emergency Requesters)</span>
+                    <span id="dist-bystander-count">0 (0%)</span>
+                  </div>
+                  <div class="dist-bar-bg">
+                    <div class="dist-bar-fill red" id="dist-bystander-bar" style="width: 0%;"></div>
+                  </div>
+                </div>
+
+                <div class="distribution-item">
+                  <div class="dist-header">
+                    <span>First-Responder Volunteers</span>
+                    <span id="dist-volunteer-count">0 (0%)</span>
+                  </div>
+                  <div class="dist-bar-bg">
+                    <div class="dist-bar-fill blue" id="dist-volunteer-bar" style="width: 0%;"></div>
+                  </div>
+                </div>
+
+                <div class="distribution-item">
+                  <div class="dist-header">
+                    <span>Registered Hospital Partners</span>
+                    <span id="dist-hospital-count">0 (0%)</span>
+                  </div>
+                  <div class="dist-bar-bg">
+                    <div class="dist-bar-fill green" id="dist-hospital-bar" style="width: 0%;"></div>
+                  </div>
+                </div>
+
+                <div class="distribution-item">
+                  <div class="dist-header">
+                    <span>System Administrators</span>
+                    <span id="dist-admin-count">0 (0%)</span>
+                  </div>
+                  <div class="dist-bar-bg">
+                    <div class="dist-bar-fill purple" id="dist-admin-bar" style="width: 0%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Activity Feed -->
+            <div class="card-panel">
+              <div class="panel-header">
+                <div>
+                  <h3 class="panel-title">System Audit Timeline</h3>
+                  <span class="panel-subtitle">Latest registration and approval events</span>
+                </div>
+              </div>
+
+              <div class="activity-feed" id="activity-feed-list">
+                <!-- Dynamically rendered activity items -->
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ===================================================================
+             TAB 2: MANAGE ALL USERS
+             =================================================================== -->
+        <div class="tab-pane" id="tab-users">
+          
+          <div class="filter-bar">
+            <div class="filter-group">
+              <span class="info-label" style="font-size: 13px; font-weight: 600;">Filter Role:</span>
+              <div class="filter-chip-group" id="user-role-filter">
+                <button class="filter-chip active" data-filter="all">All Roles</button>
+                <button class="filter-chip" data-filter="bystander">Bystander</button>
+                <button class="filter-chip" data-filter="volunteer">Volunteer</button>
+                <button class="filter-chip" data-filter="hospital">Hospital</button>
+                <button class="filter-chip" data-filter="admin">Admin</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <span class="info-label" style="font-size: 13px; font-weight: 600;">Status:</span>
+              <select class="select-control" id="user-status-select">
+                <option value="all">All Statuses</option>
+                <option value="approved">Approved</option>
+                <option value="pending">Pending</option>
+                <option value="rejected">Rejected</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>User / Name</th>
+                  <th>Role</th>
+                  <th>Contact Info</th>
+                  <th>Approval Status</th>
+                  <th>Date Registered</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="all-users-table-body">
+                <!-- Dynamically rendered user rows -->
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <!-- ===================================================================
+             TAB 3: APPROVE VOLUNTEERS
+             =================================================================== -->
+        <div class="tab-pane" id="tab-volunteers">
+          
+          <div class="filter-bar">
+            <div class="filter-group">
+              <span class="info-label" style="font-size: 13px; font-weight: 600;">Volunteer Status:</span>
+              <div class="filter-chip-group" id="volunteer-status-filter">
+                <button class="filter-chip active" data-vfilter="pending">Pending Approval</button>
+                <button class="filter-chip" data-vfilter="approved">Approved Volunteers</button>
+                <button class="filter-chip" data-vfilter="all">All Volunteers</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="approval-cards-grid" id="volunteers-grid">
+            <!-- Dynamically rendered volunteer cards -->
+          </div>
+
+        </div>
+
+        <!-- ===================================================================
+             TAB 4: APPROVE HOSPITALS
+             =================================================================== -->
+        <div class="tab-pane" id="tab-hospitals">
+          
+          <div class="filter-bar">
+            <div class="filter-group">
+              <span class="info-label" style="font-size: 13px; font-weight: 600;">Hospital Status:</span>
+              <div class="filter-chip-group" id="hospital-status-filter">
+                <button class="filter-chip active" data-hfilter="pending">Pending Verification</button>
+                <button class="filter-chip" data-hfilter="approved">Approved Facilities</button>
+                <button class="filter-chip" data-hfilter="all">All Hospitals</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="approval-cards-grid" id="hospitals-grid">
+            <!-- Dynamically rendered hospital cards -->
+          </div>
+
+        </div>
+
+        <!-- ===================================================================
+             TAB 5: LIVE EMERGENCIES MONITOR
+             =================================================================== -->
+        <div class="tab-pane" id="tab-emergencies">
+          
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Emergency Type</th>
+                  <th>Victim / Bystander</th>
+                  <th>Location (GPS)</th>
+                  <th>Status</th>
+                  <th>Assigned Responder</th>
+                  <th>Timestamp</th>
+                </tr>
+              </thead>
+              <tbody id="emergencies-table-body">
+                <!-- Dynamically rendered emergency logs -->
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Toast Notification Portal -->
+  <div id="toast-container"></div>
+
+  <!-- Firebase JS SDK (v10 Compat) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+  <!-- Application Logic JS Script -->
+  <script src="app.js"></script>
+
+</body>
+</html>

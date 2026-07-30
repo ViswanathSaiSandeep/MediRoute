@@ -1,0 +1,20 @@
+﻿2026-07-28T04:17:54.7137688Z ##[group]Run echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+2026-07-28T04:17:54.7138697Z [36;1mecho 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules[0m
+2026-07-28T04:17:54.7139315Z [36;1msudo udevadm control --reload-rules[0m
+2026-07-28T04:17:54.7139659Z [36;1msudo udevadm trigger --name-match=kvm[0m
+2026-07-28T04:17:54.7185768Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:17:54.7186047Z env:
+2026-07-28T04:17:54.7186267Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:54.7186630Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:54.7187113Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:54.7187613Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:54.7188109Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:54.7188554Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:54.7189036Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:54.7189497Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:54.7190526Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-28T04:17:54.7191115Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-28T04:17:54.7191593Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-07-28T04:17:54.7191939Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-07-28T04:17:54.7192264Z ##[endgroup]
+2026-07-28T04:17:54.7334855Z KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"

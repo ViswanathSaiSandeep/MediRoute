@@ -1,0 +1,29 @@
+﻿2026-07-28T04:17:36.6977846Z ##[group]Run cd automation
+2026-07-28T04:17:36.6978171Z [36;1mcd automation[0m
+2026-07-28T04:17:36.6978406Z [36;1mpython -c "[0m
+2026-07-28T04:17:36.6978653Z [36;1mimport sys; sys.path.insert(0, '.')[0m
+2026-07-28T04:17:36.6979033Z [36;1mfrom utils.verify_deployment import verify_deployment[0m
+2026-07-28T04:17:36.6979553Z [36;1mresult = verify_deployment('https://ViswanathSaiSandeep.github.io/MediRoute/')[0m
+2026-07-28T04:17:36.6980063Z [36;1mprint(f'Deployment Status: {result[\"status\"]}')[0m
+2026-07-28T04:17:36.6980393Z [36;1mfor c in result['checks']:[0m
+2026-07-28T04:17:36.6980732Z [36;1m    print(f'  {c[\"name\"]}: {c[\"status\"]} — {c[\"detail\"]}')[0m
+2026-07-28T04:17:36.6981097Z [36;1mif result['status'] == 'FAIL':[0m
+2026-07-28T04:17:36.6981367Z [36;1m    sys.exit(1)[0m
+2026-07-28T04:17:36.6981584Z [36;1m"[0m
+2026-07-28T04:17:36.7026583Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:17:36.7026838Z env:
+2026-07-28T04:17:36.7027047Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:36.7027400Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:36.7027826Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:36.7028256Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:36.7028677Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:36.7029051Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:36.7029423Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:36.7029795Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:36.7030117Z ##[endgroup]
+2026-07-28T04:17:37.1399423Z Deployment Status: PASS
+2026-07-28T04:17:37.1400220Z   http_200: PASS — Status 200, Content-Length: 1685
+2026-07-28T04:17:37.1400693Z   title_check: PASS — MediRoute title found
+2026-07-28T04:17:37.1401181Z   flutter_js: PASS — Flutter bootstrap loaded (9975 bytes)
+2026-07-28T04:17:37.1402076Z   main_dart_js: PASS — main.dart.js loaded (3413 KB)
+2026-07-28T04:17:37.1402530Z   manifest: PASS — manifest.json loaded

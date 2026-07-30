@@ -1,0 +1,51 @@
+﻿2026-07-28T04:37:17.8954627Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:37:17.8955900Z ##[group]Run actions/download-artifact@v4
+2026-07-28T04:37:17.8956179Z with:
+2026-07-28T04:37:17.8956386Z   path: downloaded-artifacts
+2026-07-28T04:37:17.8956639Z   merge-multiple: false
+2026-07-28T04:37:17.8956894Z   repository: ViswanathSaiSandeep/MediRoute
+2026-07-28T04:37:17.8957195Z   run-id: 30328121407
+2026-07-28T04:37:17.8957404Z env:
+2026-07-28T04:37:17.8957592Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:37:17.8957899Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:37:17.8958310Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:17.8958733Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:37:17.8959190Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:17.8959564Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:17.8959924Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:17.8960285Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:37:17.8960599Z ##[endgroup]
+2026-07-28T04:37:18.0633917Z (node:2292) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-28T04:37:18.0635414Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-28T04:37:18.1384801Z Found 5 artifact(s)
+2026-07-28T04:37:18.1385701Z No input name, artifact-ids or pattern filtered specified, downloading all artifacts
+2026-07-28T04:37:18.1386611Z An extra directory with the artifact name will be created for each download
+2026-07-28T04:37:18.1387240Z Preparing to download the following artifacts:
+2026-07-28T04:37:18.1388314Z - selenium-website-test-reports (ID: 8676737504, Size: 5967891, Expected Digest: sha256:dd402bc25d7da387bbf809f8465c116255afbab40d911f5caa96cffcb110eb52)
+2026-07-28T04:37:18.1389929Z - unit-tests-api-reports (ID: 8676469717, Size: 46148, Expected Digest: sha256:70b9133fe98f6710edbec7c3cbd104923d0f4e28187db0fbbcd537a96a14e30d)
+2026-07-28T04:37:18.1391528Z - load-testing-performance-reports (ID: 8676469165, Size: 31173, Expected Digest: sha256:4ce1cc0ff70c705e96c77c57ec859c2a48565bdaa837fccbc7ff4eca6470de01)
+2026-07-28T04:37:18.1392864Z - validation-tests-reports (ID: 8676468365, Size: 32242, Expected Digest: sha256:5a8e7ed081d421e589cdd35fd70aecbb0485ab3538fb3d9f7b6915f60e745ddc)
+2026-07-28T04:37:18.1394561Z - deployment-status-reports (ID: 8676467574, Size: 40908, Expected Digest: sha256:3e161f2917b5539b36ce4f9c3fd91bf48ff221c2ae8003200cb6b1b21f6954b7)
+2026-07-28T04:37:18.2291894Z Redirecting to blob download url: https://productionresultssa3.blob.core.windows.net/actions-results/0cf5d617-555d-4350-8a6d-af107c2ba883/workflow-job-run-799824bc-9b4c-55ce-81e1-1b488e98cac2/artifacts/a2de71d809d792e9f807797154a7199962cadecda77ea1316eb1766a77002d7c.zip
+2026-07-28T04:37:18.2293432Z Starting download of artifact to: /home/runner/work/MediRoute/MediRoute/downloaded-artifacts/selenium-website-test-reports
+2026-07-28T04:37:18.2485057Z Redirecting to blob download url: https://productionresultssa3.blob.core.windows.net/actions-results/0cf5d617-555d-4350-8a6d-af107c2ba883/workflow-job-run-7f19c601-c4df-51ef-bf42-441c7d0c911c/artifacts/286eef38bdb75f86ed362156eff4a361415a636ae02943bd7bedda08aec6c2e4.zip
+2026-07-28T04:37:18.2486538Z Starting download of artifact to: /home/runner/work/MediRoute/MediRoute/downloaded-artifacts/deployment-status-reports
+2026-07-28T04:37:18.2518509Z Redirecting to blob download url: https://productionresultssa3.blob.core.windows.net/actions-results/0cf5d617-555d-4350-8a6d-af107c2ba883/workflow-job-run-3a398935-c81e-5657-8efe-f6b39ca5a42f/artifacts/274574f764777ca0beb894ea34e47256fcf355eb2b40966e22b14b80375bc612.zip
+2026-07-28T04:37:18.2521526Z Starting download of artifact to: /home/runner/work/MediRoute/MediRoute/downloaded-artifacts/load-testing-performance-reports
+2026-07-28T04:37:18.2619453Z Redirecting to blob download url: https://productionresultssa3.blob.core.windows.net/actions-results/0cf5d617-555d-4350-8a6d-af107c2ba883/workflow-job-run-9f238338-e488-50c5-b9fd-7ffb72c57d75/artifacts/5a982a084f5348b1e2d53fa15e50dba04231cc5a3213acedb6ca5b2e68a9375a.zip
+2026-07-28T04:37:18.2621688Z Starting download of artifact to: /home/runner/work/MediRoute/MediRoute/downloaded-artifacts/validation-tests-reports
+2026-07-28T04:37:18.2637929Z Redirecting to blob download url: https://productionresultssa3.blob.core.windows.net/actions-results/0cf5d617-555d-4350-8a6d-af107c2ba883/workflow-job-run-2ad3aabf-02cd-51e6-ae9e-787919c2cc2d/artifacts/8fece6dc142a570efe4e269aea331b6ac5f985973a62e41ce314e8362a170e02.zip
+2026-07-28T04:37:18.2640443Z Starting download of artifact to: /home/runner/work/MediRoute/MediRoute/downloaded-artifacts/unit-tests-api-reports
+2026-07-28T04:37:18.2950853Z (node:2292) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-07-28T04:37:18.3107373Z SHA256 digest of downloaded artifact is 3e161f2917b5539b36ce4f9c3fd91bf48ff221c2ae8003200cb6b1b21f6954b7
+2026-07-28T04:37:18.3108279Z Artifact download completed successfully.
+2026-07-28T04:37:18.3109936Z SHA256 digest of downloaded artifact is 4ce1cc0ff70c705e96c77c57ec859c2a48565bdaa837fccbc7ff4eca6470de01
+2026-07-28T04:37:18.3112246Z Artifact download completed successfully.
+2026-07-28T04:37:18.3240357Z SHA256 digest of downloaded artifact is 5a8e7ed081d421e589cdd35fd70aecbb0485ab3538fb3d9f7b6915f60e745ddc
+2026-07-28T04:37:18.3241192Z Artifact download completed successfully.
+2026-07-28T04:37:18.3253254Z SHA256 digest of downloaded artifact is 70b9133fe98f6710edbec7c3cbd104923d0f4e28187db0fbbcd537a96a14e30d
+2026-07-28T04:37:18.3254488Z Artifact download completed successfully.
+2026-07-28T04:37:18.4422333Z SHA256 digest of downloaded artifact is dd402bc25d7da387bbf809f8465c116255afbab40d911f5caa96cffcb110eb52
+2026-07-28T04:37:18.4424059Z Artifact download completed successfully.
+2026-07-28T04:37:18.4424816Z Total of 5 artifact(s) downloaded
+2026-07-28T04:37:18.4430834Z Download artifact has finished successfully

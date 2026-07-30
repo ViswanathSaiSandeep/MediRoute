@@ -1,0 +1,39 @@
+﻿2026-07-28T04:35:37.2385140Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:35:37.2386427Z ##[group]Run actions/upload-artifact@v4
+2026-07-28T04:35:37.2386685Z with:
+2026-07-28T04:35:37.2386888Z   name: selenium-website-test-reports
+2026-07-28T04:35:37.2387239Z   path: automation/reports/
+automation/screenshots/
+automation/logs/
+
+2026-07-28T04:35:37.2387617Z   retention-days: 30
+2026-07-28T04:35:37.2387835Z   if-no-files-found: warn
+2026-07-28T04:35:37.2388062Z   compression-level: 6
+2026-07-28T04:35:37.2388268Z   overwrite: false
+2026-07-28T04:35:37.2388474Z   include-hidden-files: false
+2026-07-28T04:35:37.2388695Z env:
+2026-07-28T04:35:37.2388870Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:35:37.2389162Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:35:37.2389583Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:35:37.2389992Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:35:37.2390394Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:35:37.2390753Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:35:37.2391123Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:35:37.2391490Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:35:37.2391804Z ##[endgroup]
+2026-07-28T04:35:37.4013443Z (node:65632) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-28T04:35:37.4015034Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-28T04:35:37.4404081Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-07-28T04:35:37.4406261Z The least common ancestor is /home/runner/work/MediRoute/MediRoute/automation. This will be the root directory of the artifact
+2026-07-28T04:35:37.4407398Z With the provided path, there will be 123 files uploaded
+2026-07-28T04:35:37.4408158Z Artifact name is valid!
+2026-07-28T04:35:37.4408530Z Root directory input is valid!
+2026-07-28T04:35:37.7808521Z Beginning upload of artifact content to blob storage
+2026-07-28T04:35:38.0876307Z (node:65632) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-07-28T04:35:39.0861141Z Uploaded bytes 5967891
+2026-07-28T04:35:39.1691735Z Finished uploading artifact content to blob storage!
+2026-07-28T04:35:39.1693035Z SHA256 digest of uploaded artifact zip is dd402bc25d7da387bbf809f8465c116255afbab40d911f5caa96cffcb110eb52
+2026-07-28T04:35:39.1695332Z Finalizing artifact upload
+2026-07-28T04:35:39.4020219Z Artifact selenium-website-test-reports.zip successfully finalized. Artifact ID 8676737504
+2026-07-28T04:35:39.4021628Z Artifact selenium-website-test-reports has been successfully uploaded! Final size is 5967891 bytes. Artifact ID is 8676737504
+2026-07-28T04:35:39.4023273Z Artifact download URL: https://github.com/ViswanathSaiSandeep/MediRoute/actions/runs/30328121407/artifacts/8676737504

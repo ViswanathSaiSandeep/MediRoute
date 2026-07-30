@@ -1,0 +1,988 @@
+﻿2026-07-28T04:17:22.1683134Z Current runner version: '2.336.0'
+2026-07-28T04:17:22.1708141Z ##[group]Runner Image Provisioner
+2026-07-28T04:17:22.1708997Z Hosted Compute Agent
+2026-07-28T04:17:22.1709986Z Version: 20260707.563
+2026-07-28T04:17:22.1710640Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+2026-07-28T04:17:22.1711412Z Build Date: 2026-07-07T19:33:50Z
+2026-07-28T04:17:22.1712105Z Worker ID: {45d99924-4336-4d93-b03f-fab651fb2a60}
+2026-07-28T04:17:22.1712805Z Azure Region: westus
+2026-07-28T04:17:22.1713445Z ##[endgroup]
+2026-07-28T04:17:22.1714931Z ##[group]Operating System
+2026-07-28T04:17:22.1715569Z Ubuntu
+2026-07-28T04:17:22.1716185Z 24.04.4
+2026-07-28T04:17:22.1716694Z LTS
+2026-07-28T04:17:22.1717237Z ##[endgroup]
+2026-07-28T04:17:22.1717847Z ##[group]Runner Image
+2026-07-28T04:17:22.1718505Z Image: ubuntu-24.04
+2026-07-28T04:17:22.1719131Z Version: 20260720.247.2
+2026-07-28T04:17:22.1720676Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260720.247/images/ubuntu/Ubuntu2404-Readme.md
+2026-07-28T04:17:22.1722712Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260720.247
+2026-07-28T04:17:22.1723677Z ##[endgroup]
+2026-07-28T04:17:22.1724980Z ##[group]GITHUB_TOKEN Permissions
+2026-07-28T04:17:22.1727220Z Actions: read
+2026-07-28T04:17:22.1728002Z Contents: write
+2026-07-28T04:17:22.1728577Z Metadata: read
+2026-07-28T04:17:22.1729108Z Pages: write
+2026-07-28T04:17:22.1729991Z ##[endgroup]
+2026-07-28T04:17:22.1732098Z Secret source: Actions
+2026-07-28T04:17:22.1733261Z Prepare workflow directory
+2026-07-28T04:17:22.2319754Z Prepare all required actions
+2026-07-28T04:17:22.2367872Z Getting action download info
+2026-07-28T04:17:22.6076317Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-07-28T04:17:23.0836210Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-07-28T04:17:23.1645558Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-07-28T04:17:23.3653593Z Complete job name: ✏️ Unit Tests — API (300)
+2026-07-28T04:17:23.4446421Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:17:23.4460352Z ##[group]Run actions/checkout@v4
+2026-07-28T04:17:23.4461600Z with:
+2026-07-28T04:17:23.4462364Z   repository: ViswanathSaiSandeep/MediRoute
+2026-07-28T04:17:23.4469755Z   token: ***
+2026-07-28T04:17:23.4470456Z   ssh-strict: true
+2026-07-28T04:17:23.4471158Z   ssh-user: git
+2026-07-28T04:17:23.4471876Z   persist-credentials: true
+2026-07-28T04:17:23.4472664Z   clean: true
+2026-07-28T04:17:23.4473376Z   sparse-checkout-cone-mode: true
+2026-07-28T04:17:23.4474246Z   fetch-depth: 1
+2026-07-28T04:17:23.4474930Z   fetch-tags: false
+2026-07-28T04:17:23.4475682Z   show-progress: true
+2026-07-28T04:17:23.4476445Z   lfs: false
+2026-07-28T04:17:23.4477208Z   submodules: false
+2026-07-28T04:17:23.4477901Z   set-safe-directory: true
+2026-07-28T04:17:23.4478402Z   allow-unsafe-pr-checkout: false
+2026-07-28T04:17:23.4479313Z env:
+2026-07-28T04:17:23.4479940Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:23.4480539Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:23.4481186Z ##[endgroup]
+2026-07-28T04:17:23.5539924Z Syncing repository: ViswanathSaiSandeep/MediRoute
+2026-07-28T04:17:23.5543471Z ##[group]Getting Git version info
+2026-07-28T04:17:23.5544816Z Working directory is '/home/runner/work/MediRoute/MediRoute'
+2026-07-28T04:17:23.5546768Z [command]/usr/bin/git version
+2026-07-28T04:17:23.5636340Z git version 2.54.0
+2026-07-28T04:17:23.5693837Z ##[endgroup]
+2026-07-28T04:17:23.5709823Z Temporarily overriding HOME='/home/runner/work/_temp/6fad547e-163b-4647-9445-fb712a71ed27' before making global git config changes
+2026-07-28T04:17:23.5712695Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-28T04:17:23.5716224Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MediRoute/MediRoute
+2026-07-28T04:17:23.5772692Z Deleting the contents of '/home/runner/work/MediRoute/MediRoute'
+2026-07-28T04:17:23.5776513Z ##[group]Initializing the repository
+2026-07-28T04:17:23.5780853Z [command]/usr/bin/git init /home/runner/work/MediRoute/MediRoute
+2026-07-28T04:17:23.5931328Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-28T04:17:23.5932908Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-28T04:17:23.5933854Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-28T04:17:23.5934684Z hint: call:
+2026-07-28T04:17:23.5935151Z hint:
+2026-07-28T04:17:23.5935735Z hint: 	git config --global init.defaultBranch <name>
+2026-07-28T04:17:23.5936404Z hint:
+2026-07-28T04:17:23.5937047Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-28T04:17:23.5938117Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-28T04:17:23.5938928Z hint:
+2026-07-28T04:17:23.5939674Z hint: 	git branch -m <name>
+2026-07-28T04:17:23.5940540Z hint:
+2026-07-28T04:17:23.5941481Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-28T04:17:23.5951712Z Initialized empty Git repository in /home/runner/work/MediRoute/MediRoute/.git/
+2026-07-28T04:17:23.5963086Z [command]/usr/bin/git remote add origin https://github.com/ViswanathSaiSandeep/MediRoute
+2026-07-28T04:17:23.6015376Z ##[endgroup]
+2026-07-28T04:17:23.6017266Z ##[group]Disabling automatic garbage collection
+2026-07-28T04:17:23.6020314Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-28T04:17:23.6059812Z ##[endgroup]
+2026-07-28T04:17:23.6061503Z ##[group]Setting up auth
+2026-07-28T04:17:23.6070338Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-28T04:17:23.6112073Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-28T04:17:23.6533770Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-28T04:17:23.6572439Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-28T04:17:23.6807582Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-28T04:17:23.6848537Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-28T04:17:23.7088313Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-28T04:17:23.7131959Z ##[endgroup]
+2026-07-28T04:17:23.7132792Z ##[group]Fetching the repository
+2026-07-28T04:17:23.7142339Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +60a9632ace68e34bfdc31aa22a400ff259dd07f7:refs/remotes/origin/main
+2026-07-28T04:17:24.2363318Z From https://github.com/ViswanathSaiSandeep/MediRoute
+2026-07-28T04:17:24.2365249Z  * [new ref]         60a9632ace68e34bfdc31aa22a400ff259dd07f7 -> origin/main
+2026-07-28T04:17:24.2407137Z ##[endgroup]
+2026-07-28T04:17:24.2408982Z ##[group]Determining the checkout info
+2026-07-28T04:17:24.2416658Z ##[endgroup]
+2026-07-28T04:17:24.2417706Z [command]/usr/bin/git sparse-checkout disable
+2026-07-28T04:17:24.2485945Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-28T04:17:24.2554189Z ##[group]Checking out the ref
+2026-07-28T04:17:24.2559248Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-07-28T04:17:24.2764974Z Switched to a new branch 'main'
+2026-07-28T04:17:24.2769955Z branch 'main' set up to track 'origin/main'.
+2026-07-28T04:17:24.2775731Z ##[endgroup]
+2026-07-28T04:17:24.2823869Z [command]/usr/bin/git log -1 --format=%H
+2026-07-28T04:17:24.2852500Z 60a9632ace68e34bfdc31aa22a400ff259dd07f7
+2026-07-28T04:17:24.3181608Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:17:24.3185051Z ##[group]Run actions/setup-python@v5
+2026-07-28T04:17:24.3185630Z with:
+2026-07-28T04:17:24.3186047Z   python-version: 3.11
+2026-07-28T04:17:24.3186531Z   check-latest: false
+2026-07-28T04:17:24.3190918Z   token: ***
+2026-07-28T04:17:24.3191376Z   update-environment: true
+2026-07-28T04:17:24.3191902Z   allow-prereleases: false
+2026-07-28T04:17:24.3192404Z   freethreaded: false
+2026-07-28T04:17:24.3192879Z env:
+2026-07-28T04:17:24.3193296Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:24.3193953Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:24.3194670Z ##[endgroup]
+2026-07-28T04:17:24.4616217Z ##[group]Installed versions
+2026-07-28T04:17:24.4717844Z (node:2229) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-28T04:17:24.4720859Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-28T04:17:24.4722239Z Successfully set up CPython (3.11.15)
+2026-07-28T04:17:24.4723478Z ##[endgroup]
+2026-07-28T04:17:24.4891644Z ##[group]Run pip install -r automation/requirements.txt
+2026-07-28T04:17:24.4892591Z [36;1mpip install -r automation/requirements.txt[0m
+2026-07-28T04:17:24.4957969Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:17:24.4958551Z env:
+2026-07-28T04:17:24.4959321Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:24.4960673Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:24.4962001Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:24.4963506Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:24.4965009Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:24.4966354Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:24.4967757Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:24.4969160Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:24.4970702Z ##[endgroup]
+2026-07-28T04:17:25.6854586Z Collecting selenium>=4.15.0 (from -r automation/requirements.txt (line 2))
+2026-07-28T04:17:25.7946585Z   Downloading selenium-4.46.0-py3-none-any.whl.metadata (7.4 kB)
+2026-07-28T04:17:25.8544380Z Collecting pytest>=7.4.0 (from -r automation/requirements.txt (line 3))
+2026-07-28T04:17:25.8796674Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-07-28T04:17:25.9211316Z Collecting pytest-html>=4.1.0 (from -r automation/requirements.txt (line 4))
+2026-07-28T04:17:25.9431760Z   Downloading pytest_html-4.2.0-py3-none-any.whl.metadata (4.0 kB)
+2026-07-28T04:17:25.9779863Z Collecting pytest-xdist>=3.5.0 (from -r automation/requirements.txt (line 5))
+2026-07-28T04:17:25.9995166Z   Downloading pytest_xdist-3.8.0-py3-none-any.whl.metadata (3.0 kB)
+2026-07-28T04:17:26.0304940Z Collecting pytest-timeout>=2.3.0 (from -r automation/requirements.txt (line 6))
+2026-07-28T04:17:26.0520932Z   Downloading pytest_timeout-2.4.0-py3-none-any.whl.metadata (20 kB)
+2026-07-28T04:17:26.0928981Z Collecting openpyxl>=3.1.0 (from -r automation/requirements.txt (line 7))
+2026-07-28T04:17:26.1151262Z   Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+2026-07-28T04:17:26.1560404Z Collecting requests>=2.31.0 (from -r automation/requirements.txt (line 8))
+2026-07-28T04:17:26.1799882Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-07-28T04:17:26.2162528Z Collecting certifi>=2026.2.25 (from selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:26.2394361Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+2026-07-28T04:17:26.2756465Z Collecting trio<1.0,>=0.31.0 (from selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:26.2987360Z   Downloading trio-0.33.0-py3-none-any.whl.metadata (8.5 kB)
+2026-07-28T04:17:26.3302612Z Collecting trio-websocket<1.0,>=0.12.2 (from selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:26.3532616Z   Downloading trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+2026-07-28T04:17:26.3877408Z Collecting typing_extensions<5.0,>=4.15.0 (from selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:26.4098706Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-07-28T04:17:26.4483011Z Collecting urllib3<3.0,>=2.6.3 (from urllib3[socks]<3.0,>=2.6.3->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:26.4709765Z   Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+2026-07-28T04:17:26.5091378Z Collecting websocket-client<2.0,>=1.8.0 (from selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:26.5318930Z   Downloading websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+2026-07-28T04:17:26.5664771Z Collecting attrs>=23.2.0 (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:26.5885736Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-07-28T04:17:26.6213964Z Collecting sortedcontainers (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:26.6436272Z   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+2026-07-28T04:17:26.6790525Z Collecting idna (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:26.7010249Z   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+2026-07-28T04:17:26.7307615Z Collecting outcome (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:26.7574416Z   Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+2026-07-28T04:17:26.7865995Z Collecting sniffio>=1.3.0 (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:26.8107488Z   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+2026-07-28T04:17:26.8433715Z Collecting wsproto>=0.14 (from trio-websocket<1.0,>=0.12.2->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:26.8651574Z   Downloading wsproto-1.3.2-py3-none-any.whl.metadata (5.2 kB)
+2026-07-28T04:17:26.8963766Z Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3.0,>=2.6.3->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:26.9188431Z   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+2026-07-28T04:17:26.9518509Z Collecting iniconfig>=1.0.1 (from pytest>=7.4.0->-r automation/requirements.txt (line 3))
+2026-07-28T04:17:26.9738935Z   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+2026-07-28T04:17:27.0066996Z Collecting packaging>=22 (from pytest>=7.4.0->-r automation/requirements.txt (line 3))
+2026-07-28T04:17:27.0300765Z   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+2026-07-28T04:17:27.0604759Z Collecting pluggy<2,>=1.5 (from pytest>=7.4.0->-r automation/requirements.txt (line 3))
+2026-07-28T04:17:27.0833274Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-07-28T04:17:27.1212320Z Collecting pygments>=2.7.2 (from pytest>=7.4.0->-r automation/requirements.txt (line 3))
+2026-07-28T04:17:27.1449699Z   Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+2026-07-28T04:17:27.1785908Z Collecting jinja2>=3 (from pytest-html>=4.1.0->-r automation/requirements.txt (line 4))
+2026-07-28T04:17:27.2033650Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-07-28T04:17:27.2383997Z Collecting pytest-metadata>=2 (from pytest-html>=4.1.0->-r automation/requirements.txt (line 4))
+2026-07-28T04:17:27.2602789Z   Downloading pytest_metadata-3.1.1-py3-none-any.whl.metadata (8.6 kB)
+2026-07-28T04:17:27.2952008Z Collecting execnet>=2.1 (from pytest-xdist>=3.5.0->-r automation/requirements.txt (line 5))
+2026-07-28T04:17:27.3172622Z   Downloading execnet-2.1.2-py3-none-any.whl.metadata (2.9 kB)
+2026-07-28T04:17:27.3480127Z Collecting et-xmlfile (from openpyxl>=3.1.0->-r automation/requirements.txt (line 7))
+2026-07-28T04:17:27.3709301Z   Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+2026-07-28T04:17:27.5178032Z Collecting charset_normalizer<4,>=2 (from requests>=2.31.0->-r automation/requirements.txt (line 8))
+2026-07-28T04:17:27.5400575Z   Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+2026-07-28T04:17:27.6256801Z Collecting MarkupSafe>=2.0 (from jinja2>=3->pytest-html>=4.1.0->-r automation/requirements.txt (line 4))
+2026-07-28T04:17:27.6481857Z   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-07-28T04:17:27.6817337Z Collecting h11<1,>=0.16.0 (from wsproto>=0.14->trio-websocket<1.0,>=0.12.2->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:27.7063767Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-07-28T04:17:27.7365393Z Downloading selenium-4.46.0-py3-none-any.whl (9.4 MB)
+2026-07-28T04:17:27.9807468Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.4/9.4 MB 45.9 MB/s  0:00:00
+2026-07-28T04:17:28.0027264Z Downloading trio-0.33.0-py3-none-any.whl (510 kB)
+2026-07-28T04:17:28.0299251Z Downloading trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+2026-07-28T04:17:28.0553663Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-07-28T04:17:28.0804088Z Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+2026-07-28T04:17:28.1054852Z Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+2026-07-28T04:17:28.1298020Z Downloading websocket_client-1.9.0-py3-none-any.whl (82 kB)
+2026-07-28T04:17:28.1551259Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-07-28T04:17:28.1802839Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-07-28T04:17:28.2045185Z Downloading pytest_html-4.2.0-py3-none-any.whl (23 kB)
+2026-07-28T04:17:28.2284848Z Downloading pytest_xdist-3.8.0-py3-none-any.whl (46 kB)
+2026-07-28T04:17:28.2531726Z Downloading pytest_timeout-2.4.0-py3-none-any.whl (14 kB)
+2026-07-28T04:17:28.2776365Z Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+2026-07-28T04:17:28.3024342Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-07-28T04:17:28.3273835Z Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (221 kB)
+2026-07-28T04:17:28.3520580Z Downloading idna-3.18-py3-none-any.whl (65 kB)
+2026-07-28T04:17:28.3765572Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-07-28T04:17:28.4011930Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+2026-07-28T04:17:28.4255134Z Downloading execnet-2.1.2-py3-none-any.whl (40 kB)
+2026-07-28T04:17:28.4502833Z Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+2026-07-28T04:17:28.4748730Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-07-28T04:17:28.4992193Z Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-07-28T04:17:28.5240346Z Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+2026-07-28T04:17:28.5515059Z Downloading packaging-26.2-py3-none-any.whl (100 kB)
+2026-07-28T04:17:28.5761608Z Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+2026-07-28T04:17:28.5829968Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 212.8 MB/s  0:00:00
+2026-07-28T04:17:28.6048175Z Downloading pytest_metadata-3.1.1-py3-none-any.whl (11 kB)
+2026-07-28T04:17:28.6294003Z Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+2026-07-28T04:17:28.6539148Z Downloading wsproto-1.3.2-py3-none-any.whl (24 kB)
+2026-07-28T04:17:28.6778810Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-07-28T04:17:28.7024639Z Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+2026-07-28T04:17:28.7273356Z Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+2026-07-28T04:17:28.8225086Z Installing collected packages: sortedcontainers, websocket-client, urllib3, typing_extensions, sniffio, pysocks, pygments, pluggy, packaging, MarkupSafe, iniconfig, idna, h11, execnet, et-xmlfile, charset_normalizer, certifi, attrs, wsproto, requests, pytest, outcome, openpyxl, jinja2, trio, pytest-xdist, pytest-timeout, pytest-metadata, trio-websocket, pytest-html, selenium
+2026-07-28T04:17:31.7092887Z 
+2026-07-28T04:17:31.7113594Z Successfully installed MarkupSafe-3.0.3 attrs-26.1.0 certifi-2026.7.22 charset_normalizer-3.4.9 et-xmlfile-2.0.0 execnet-2.1.2 h11-0.16.0 idna-3.18 iniconfig-2.3.0 jinja2-3.1.6 openpyxl-3.1.5 outcome-1.3.0.post0 packaging-26.2 pluggy-1.6.0 pygments-2.20.0 pysocks-1.7.1 pytest-9.1.1 pytest-html-4.2.0 pytest-metadata-3.1.1 pytest-timeout-2.4.0 pytest-xdist-3.8.0 requests-2.34.2 selenium-4.46.0 sniffio-1.3.1 sortedcontainers-2.4.0 trio-0.33.0 trio-websocket-0.12.2 typing_extensions-4.16.0 urllib3-2.7.0 websocket-client-1.9.0 wsproto-1.3.2
+2026-07-28T04:17:31.8002255Z ##[group]Run cd automation
+2026-07-28T04:17:31.8002572Z [36;1mcd automation[0m
+2026-07-28T04:17:31.8002837Z [36;1mpython -m pytest unit/tests/ -n 8 \[0m
+2026-07-28T04:17:31.8003225Z [36;1m  -v --tb=short --no-header --timeout=120 --rootdir=unit \[0m
+2026-07-28T04:17:31.8003616Z [36;1m  2>&1 | tee unit_test_output.log || true[0m
+2026-07-28T04:17:31.8051160Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:17:31.8051416Z env:
+2026-07-28T04:17:31.8051613Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:31.8052029Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:31.8052505Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:31.8052944Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:31.8053405Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:31.8053789Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:31.8054203Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:31.8054582Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:31.8054901Z ##[endgroup]
+2026-07-28T04:17:33.7305242Z ============================= test session starts ==============================
+2026-07-28T04:17:33.7306773Z created: 8/8 workers
+2026-07-28T04:17:33.7307375Z 8 workers [300 items]
+2026-07-28T04:17:33.7307796Z 
+2026-07-28T04:17:33.7308158Z scheduling tests via LoadScheduling
+2026-07-28T04:17:33.7308678Z 
+2026-07-28T04:17:33.7309232Z unit/tests/test_unit_api.py::test_unit_api[UNIT-001] 
+2026-07-28T04:17:33.7310381Z unit/tests/test_unit_api.py::test_unit_api[UNIT-037] 
+2026-07-28T04:17:33.7311283Z unit/tests/test_unit_api.py::test_unit_api[UNIT-010] 
+2026-07-28T04:17:33.7312199Z unit/tests/test_unit_api.py::test_unit_api[UNIT-046] 
+2026-07-28T04:17:33.7313170Z unit/tests/test_unit_api.py::test_unit_api[UNIT-064] 
+2026-07-28T04:17:33.7313967Z unit/tests/test_unit_api.py::test_unit_api[UNIT-019] 
+2026-07-28T04:17:33.7324958Z unit/tests/test_unit_api.py::test_unit_api[UNIT-055] 
+2026-07-28T04:17:33.9274196Z unit/tests/test_unit_api.py::test_unit_api[UNIT-028] 
+2026-07-28T04:17:33.9300971Z [gw7] [  0%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-064] 
+2026-07-28T04:17:33.9302263Z [gw1] [  0%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-001] 
+2026-07-28T04:17:33.9303397Z [gw5] [  1%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-037] 
+2026-07-28T04:17:33.9304605Z [gw4] [  1%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-046] 
+2026-07-28T04:17:33.9305643Z unit/tests/test_unit_api.py::test_unit_api[UNIT-002] 
+2026-07-28T04:17:33.9306314Z unit/tests/test_unit_api.py::test_unit_api[UNIT-065] 
+2026-07-28T04:17:33.9308610Z unit/tests/test_unit_api.py::test_unit_api[UNIT-038] 
+2026-07-28T04:17:33.9330380Z unit/tests/test_unit_api.py::test_unit_api[UNIT-047] 
+2026-07-28T04:17:33.9362317Z [gw5] [  1%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-038] 
+2026-07-28T04:17:33.9363554Z [gw3] [  2%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-019] 
+2026-07-28T04:17:33.9390579Z [gw1] [  2%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-002] 
+2026-07-28T04:17:33.9420316Z unit/tests/test_unit_api.py::test_unit_api[UNIT-003] 
+2026-07-28T04:17:33.9440802Z unit/tests/test_unit_api.py::test_unit_api[UNIT-039] 
+2026-07-28T04:17:33.9441522Z unit/tests/test_unit_api.py::test_unit_api[UNIT-020] 
+2026-07-28T04:17:33.9442425Z [gw7] [  2%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-065] 
+2026-07-28T04:17:33.9443447Z unit/tests/test_unit_api.py::test_unit_api[UNIT-066] 
+2026-07-28T04:17:33.9444472Z [gw5] [  3%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-039] 
+2026-07-28T04:17:33.9445598Z unit/tests/test_unit_api.py::test_unit_api[UNIT-040] 
+2026-07-28T04:17:33.9446636Z [gw4] [  3%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-047] 
+2026-07-28T04:17:33.9451330Z unit/tests/test_unit_api.py::test_unit_api[UNIT-048] 
+2026-07-28T04:17:33.9453570Z [gw3] [  3%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-020] 
+2026-07-28T04:17:33.9480730Z unit/tests/test_unit_api.py::test_unit_api[UNIT-021] 
+2026-07-28T04:17:33.9540534Z [gw1] [  4%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-003] 
+2026-07-28T04:17:33.9564955Z unit/tests/test_unit_api.py::test_unit_api[UNIT-004] 
+2026-07-28T04:17:33.9580656Z [gw5] [  4%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-040] 
+2026-07-28T04:17:33.9581525Z unit/tests/test_unit_api.py::test_unit_api[UNIT-041] 
+2026-07-28T04:17:33.9582514Z [gw3] [  4%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-021] 
+2026-07-28T04:17:33.9601380Z [gw4] [  5%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-048] 
+2026-07-28T04:17:33.9635336Z [gw7] [  5%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-066] 
+2026-07-28T04:17:33.9636464Z unit/tests/test_unit_api.py::test_unit_api[UNIT-067] 
+2026-07-28T04:17:33.9637357Z unit/tests/test_unit_api.py::test_unit_api[UNIT-049] 
+2026-07-28T04:17:33.9638289Z unit/tests/test_unit_api.py::test_unit_api[UNIT-022] 
+2026-07-28T04:17:33.9639249Z [gw7] [  5%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-067] 
+2026-07-28T04:17:33.9640535Z [gw5] [  6%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-041] 
+2026-07-28T04:17:33.9641713Z unit/tests/test_unit_api.py::test_unit_api[UNIT-042] 
+2026-07-28T04:17:33.9642658Z unit/tests/test_unit_api.py::test_unit_api[UNIT-068] 
+2026-07-28T04:17:33.9643560Z [gw4] [  6%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-049] 
+2026-07-28T04:17:33.9644735Z [gw5] [  6%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-042] 
+2026-07-28T04:17:33.9645730Z [gw7] [  7%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-068] 
+2026-07-28T04:17:33.9646934Z unit/tests/test_unit_api.py::test_unit_api[UNIT-069] 
+2026-07-28T04:17:33.9648161Z unit/tests/test_unit_api.py::test_unit_api[UNIT-050] 
+2026-07-28T04:17:33.9659844Z unit/tests/test_unit_api.py::test_unit_api[UNIT-043] 
+2026-07-28T04:17:33.9669898Z [gw7] [  7%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-069] 
+2026-07-28T04:17:33.9678429Z [gw5] [  7%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-043] 
+2026-07-28T04:17:33.9679709Z unit/tests/test_unit_api.py::test_unit_api[UNIT-070] 
+2026-07-28T04:17:33.9851321Z unit/tests/test_unit_api.py::test_unit_api[UNIT-044] 
+2026-07-28T04:17:33.9852547Z [gw0] [  8%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-010] 
+2026-07-28T04:17:33.9853586Z [gw7] [  8%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-070] 
+2026-07-28T04:17:33.9854466Z unit/tests/test_unit_api.py::test_unit_api[UNIT-071] 
+2026-07-28T04:17:33.9855301Z unit/tests/test_unit_api.py::test_unit_api[UNIT-011] 
+2026-07-28T04:17:33.9856176Z [gw7] [  8%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-071] 
+2026-07-28T04:17:33.9857436Z unit/tests/test_unit_api.py::test_unit_api[UNIT-072] 
+2026-07-28T04:17:33.9858279Z [gw4] [  9%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-050] 
+2026-07-28T04:17:33.9859195Z unit/tests/test_unit_api.py::test_unit_api[UNIT-051] 
+2026-07-28T04:17:33.9911034Z [gw4] [  9%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-051] 
+2026-07-28T04:17:34.0031667Z [gw5] [  9%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-044] 
+2026-07-28T04:17:34.0040237Z unit/tests/test_unit_api.py::test_unit_api[UNIT-045] 
+2026-07-28T04:17:34.0041722Z [gw5] [ 10%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-045] 
+2026-07-28T04:17:34.0042633Z unit/tests/test_unit_api.py::test_unit_api[UNIT-073] 
+2026-07-28T04:17:34.0043549Z [gw0] [ 10%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-011] 
+2026-07-28T04:17:34.0044443Z unit/tests/test_unit_api.py::test_unit_api[UNIT-012] 
+2026-07-28T04:17:34.0045032Z [gw6] [ 10%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-055] 
+2026-07-28T04:17:34.0045590Z unit/tests/test_unit_api.py::test_unit_api[UNIT-056] 
+2026-07-28T04:17:34.0046099Z [gw7] [ 11%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-072] 
+2026-07-28T04:17:34.0046953Z unit/tests/test_unit_api.py::test_unit_api[UNIT-081] 
+2026-07-28T04:17:34.0047575Z unit/tests/test_unit_api.py::test_unit_api[UNIT-052] 
+2026-07-28T04:17:34.0048070Z [gw4] [ 11%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-052] 
+2026-07-28T04:17:34.0048612Z [gw6] [ 11%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-056] 
+2026-07-28T04:17:34.0049142Z [gw7] [ 12%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-081] 
+2026-07-28T04:17:34.0050021Z unit/tests/test_unit_api.py::test_unit_api[UNIT-082] 
+2026-07-28T04:17:34.0050423Z [gw5] [ 12%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-073] 
+2026-07-28T04:17:34.0050816Z unit/tests/test_unit_api.py::test_unit_api[UNIT-074] 
+2026-07-28T04:17:34.0110505Z unit/tests/test_unit_api.py::test_unit_api[UNIT-057] 
+2026-07-28T04:17:34.0153914Z [gw0] [ 12%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-012] 
+2026-07-28T04:17:34.0154998Z unit/tests/test_unit_api.py::test_unit_api[UNIT-053] 
+2026-07-28T04:17:34.0155827Z [gw7] [ 13%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-082] 
+2026-07-28T04:17:34.0156436Z unit/tests/test_unit_api.py::test_unit_api[UNIT-013] 
+2026-07-28T04:17:34.0156949Z unit/tests/test_unit_api.py::test_unit_api[UNIT-083] 
+2026-07-28T04:17:34.0157508Z [gw6] [ 13%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-057] 
+2026-07-28T04:17:34.0158152Z [gw5] [ 13%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-074] 
+2026-07-28T04:17:34.0172877Z unit/tests/test_unit_api.py::test_unit_api[UNIT-075] 
+2026-07-28T04:17:34.0174126Z unit/tests/test_unit_api.py::test_unit_api[UNIT-058] 
+2026-07-28T04:17:34.0178790Z [gw7] [ 14%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-083] 
+2026-07-28T04:17:34.0195807Z [gw4] [ 14%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-053] 
+2026-07-28T04:17:34.0213141Z unit/tests/test_unit_api.py::test_unit_api[UNIT-084] 
+2026-07-28T04:17:34.0235675Z unit/tests/test_unit_api.py::test_unit_api[UNIT-054] 
+2026-07-28T04:17:34.0271399Z [gw6] [ 14%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-058] 
+2026-07-28T04:17:34.0273023Z [gw5] [ 15%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-075] 
+2026-07-28T04:17:34.0274188Z unit/tests/test_unit_api.py::test_unit_api[UNIT-059] 
+2026-07-28T04:17:34.0275563Z unit/tests/test_unit_api.py::test_unit_api[UNIT-076] 
+2026-07-28T04:17:34.0276849Z [gw7] [ 15%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-084] 
+2026-07-28T04:17:34.0310859Z [gw4] [ 15%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-054] 
+2026-07-28T04:17:34.0311926Z unit/tests/test_unit_api.py::test_unit_api[UNIT-085] 
+2026-07-28T04:17:34.0313347Z [gw5] [ 16%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-076] 
+2026-07-28T04:17:34.0350018Z unit/tests/test_unit_api.py::test_unit_api[UNIT-077] 
+2026-07-28T04:17:34.0377037Z unit/tests/test_unit_api.py::test_unit_api[UNIT-089] 
+2026-07-28T04:17:34.0409150Z [gw5] [ 16%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-077] 
+2026-07-28T04:17:34.0440296Z unit/tests/test_unit_api.py::test_unit_api[UNIT-078] 
+2026-07-28T04:17:34.0463404Z [gw6] [ 16%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-059] 
+2026-07-28T04:17:34.0516108Z unit/tests/test_unit_api.py::test_unit_api[UNIT-060] 
+2026-07-28T04:17:34.0560455Z [gw5] [ 17%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-078] 
+2026-07-28T04:17:34.0643544Z unit/tests/test_unit_api.py::test_unit_api[UNIT-079] 
+2026-07-28T04:17:34.0689194Z [gw5] [ 17%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-079] 
+2026-07-28T04:17:34.0771363Z unit/tests/test_unit_api.py::test_unit_api[UNIT-080] 
+2026-07-28T04:17:34.0797715Z [gw2] [ 17%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-028] 
+2026-07-28T04:17:34.0854636Z unit/tests/test_unit_api.py::test_unit_api[UNIT-029] 
+2026-07-28T04:17:34.0885695Z [gw6] [ 18%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-060] 
+2026-07-28T04:17:34.0942771Z unit/tests/test_unit_api.py::test_unit_api[UNIT-061] 
+2026-07-28T04:17:34.1051762Z [gw5] [ 18%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-080] 
+2026-07-28T04:17:34.1052801Z unit/tests/test_unit_api.py::test_unit_api[UNIT-104] 
+2026-07-28T04:17:34.1054131Z [gw6] [ 18%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-061] 
+2026-07-28T04:17:34.1055331Z unit/tests/test_unit_api.py::test_unit_api[UNIT-062] 
+2026-07-28T04:17:34.1056422Z [gw6] [ 19%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-062] 
+2026-07-28T04:17:34.1057445Z unit/tests/test_unit_api.py::test_unit_api[UNIT-063] 
+2026-07-28T04:17:34.1058333Z [gw5] [ 19%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-104] 
+2026-07-28T04:17:34.1059217Z unit/tests/test_unit_api.py::test_unit_api[UNIT-105] 
+2026-07-28T04:17:34.1060428Z [gw5] [ 19%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-105] 
+2026-07-28T04:17:34.1061657Z [gw2] [ 20%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-029] 
+2026-07-28T04:17:34.1062587Z unit/tests/test_unit_api.py::test_unit_api[UNIT-030] 
+2026-07-28T04:17:34.1063476Z unit/tests/test_unit_api.py::test_unit_api[UNIT-106] 
+2026-07-28T04:17:34.1064358Z [gw6] [ 20%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-063] 
+2026-07-28T04:17:34.1065374Z unit/tests/test_unit_api.py::test_unit_api[UNIT-111] 
+2026-07-28T04:17:34.1066277Z [gw5] [ 20%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-106] 
+2026-07-28T04:17:34.1067612Z [gw2] [ 21%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-030] 
+2026-07-28T04:17:34.1090395Z unit/tests/test_unit_api.py::test_unit_api[UNIT-031] 
+2026-07-28T04:17:34.1119955Z unit/tests/test_unit_api.py::test_unit_api[UNIT-107] 
+2026-07-28T04:17:34.1121047Z [gw6] [ 21%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-111] 
+2026-07-28T04:17:34.1121980Z unit/tests/test_unit_api.py::test_unit_api[UNIT-112] 
+2026-07-28T04:17:34.1122903Z [gw2] [ 21%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-031] 
+2026-07-28T04:17:34.1123791Z unit/tests/test_unit_api.py::test_unit_api[UNIT-032] 
+2026-07-28T04:17:34.1145274Z [gw6] [ 22%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-112] 
+2026-07-28T04:17:34.1210511Z [gw5] [ 22%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-107] 
+2026-07-28T04:17:34.1240292Z unit/tests/test_unit_api.py::test_unit_api[UNIT-113] 
+2026-07-28T04:17:34.1250622Z unit/tests/test_unit_api.py::test_unit_api[UNIT-108] 
+2026-07-28T04:17:34.1251608Z [gw2] [ 22%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-032] 
+2026-07-28T04:17:34.1252773Z [gw4] [ 23%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-089] 
+2026-07-28T04:17:34.1253769Z [gw6] [ 23%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-113] 
+2026-07-28T04:17:34.1267828Z [gw5] [ 23%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-108] 
+2026-07-28T04:17:34.1300073Z unit/tests/test_unit_api.py::test_unit_api[UNIT-090] 
+2026-07-28T04:17:34.1310263Z unit/tests/test_unit_api.py::test_unit_api[UNIT-114] 
+2026-07-28T04:17:34.1311391Z [gw0] [ 24%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-013] 
+2026-07-28T04:17:34.1312718Z unit/tests/test_unit_api.py::test_unit_api[UNIT-014] 
+2026-07-28T04:17:34.1316082Z unit/tests/test_unit_api.py::test_unit_api[UNIT-033] 
+2026-07-28T04:17:34.1346965Z [gw7] [ 24%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-085] 
+2026-07-28T04:17:34.1370259Z unit/tests/test_unit_api.py::test_unit_api[UNIT-086] 
+2026-07-28T04:17:34.1371679Z unit/tests/test_unit_api.py::test_unit_api[UNIT-109] 
+2026-07-28T04:17:34.1372633Z [gw6] [ 24%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-114] 
+2026-07-28T04:17:34.1373616Z unit/tests/test_unit_api.py::test_unit_api[UNIT-115] 
+2026-07-28T04:17:34.1374531Z [gw2] [ 25%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-033] 
+2026-07-28T04:17:34.1375429Z unit/tests/test_unit_api.py::test_unit_api[UNIT-034] 
+2026-07-28T04:17:34.1376401Z [gw5] [ 25%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-109] 
+2026-07-28T04:17:34.1377363Z unit/tests/test_unit_api.py::test_unit_api[UNIT-110] 
+2026-07-28T04:17:34.1378890Z [gw0] [ 25%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-014] 
+2026-07-28T04:17:34.1380272Z [gw2] [ 26%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-034] 
+2026-07-28T04:17:34.1422634Z unit/tests/test_unit_api.py::test_unit_api[UNIT-035] 
+2026-07-28T04:17:34.1450532Z unit/tests/test_unit_api.py::test_unit_api[UNIT-015] 
+2026-07-28T04:17:34.1451844Z [gw5] [ 26%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-110] 
+2026-07-28T04:17:34.1453245Z unit/tests/test_unit_api.py::test_unit_api[UNIT-118] 
+2026-07-28T04:17:34.1454823Z [gw6] [ 26%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-115] 
+2026-07-28T04:17:34.1456054Z unit/tests/test_unit_api.py::test_unit_api[UNIT-116] 
+2026-07-28T04:17:34.1481299Z [gw2] [ 27%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-035] 
+2026-07-28T04:17:34.1482806Z unit/tests/test_unit_api.py::test_unit_api[UNIT-036] 
+2026-07-28T04:17:34.1484506Z [gw6] [ 27%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-116] 
+2026-07-28T04:17:34.1486160Z unit/tests/test_unit_api.py::test_unit_api[UNIT-117] 
+2026-07-28T04:17:34.1488478Z [gw0] [ 27%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-015] 
+2026-07-28T04:17:34.1577323Z unit/tests/test_unit_api.py::test_unit_api[UNIT-016] 
+2026-07-28T04:17:34.1600694Z [gw3] [ 28%] FAILED unit/tests/test_unit_api.py::test_unit_api[UNIT-022] 
+2026-07-28T04:17:34.1647923Z unit/tests/test_unit_api.py::test_unit_api[UNIT-023] 
+2026-07-28T04:17:34.1681188Z [gw2] [ 28%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-036] 
+2026-07-28T04:17:34.1682482Z unit/tests/test_unit_api.py::test_unit_api[UNIT-125] 
+2026-07-28T04:17:34.1806299Z [gw3] [ 28%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-023] 
+2026-07-28T04:17:34.1951102Z unit/tests/test_unit_api.py::test_unit_api[UNIT-024] 
+2026-07-28T04:17:34.1980559Z [gw2] [ 29%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-125] 
+2026-07-28T04:17:34.2030693Z [gw6] [ 29%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-117] 
+2026-07-28T04:17:34.2060134Z unit/tests/test_unit_api.py::test_unit_api[UNIT-132] 
+2026-07-28T04:17:34.2080850Z [gw3] [ 29%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-024] 
+2026-07-28T04:17:34.2090438Z unit/tests/test_unit_api.py::test_unit_api[UNIT-126] 
+2026-07-28T04:17:34.2117606Z [gw6] [ 30%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-132] 
+2026-07-28T04:17:34.2150147Z unit/tests/test_unit_api.py::test_unit_api[UNIT-133] 
+2026-07-28T04:17:34.2160564Z unit/tests/test_unit_api.py::test_unit_api[UNIT-025] 
+2026-07-28T04:17:34.2193618Z [gw6] [ 30%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-133] 
+2026-07-28T04:17:34.2220979Z unit/tests/test_unit_api.py::test_unit_api[UNIT-134] 
+2026-07-28T04:17:34.2240291Z [gw6] [ 30%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-134] 
+2026-07-28T04:17:34.2241440Z unit/tests/test_unit_api.py::test_unit_api[UNIT-135] 
+2026-07-28T04:17:34.2242134Z [gw2] [ 31%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-126] 
+2026-07-28T04:17:34.2242879Z unit/tests/test_unit_api.py::test_unit_api[UNIT-127] 
+2026-07-28T04:17:34.2243842Z [gw6] [ 31%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-135] 
+2026-07-28T04:17:34.2244669Z unit/tests/test_unit_api.py::test_unit_api[UNIT-136] 
+2026-07-28T04:17:34.2245381Z [gw6] [ 31%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-136] 
+2026-07-28T04:17:34.2256240Z unit/tests/test_unit_api.py::test_unit_api[UNIT-137] 
+2026-07-28T04:17:34.2257311Z [gw6] [ 32%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-137] 
+2026-07-28T04:17:34.2258381Z [gw5] [ 32%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-118] 
+2026-07-28T04:17:34.2259809Z unit/tests/test_unit_api.py::test_unit_api[UNIT-150] 
+2026-07-28T04:17:34.2260681Z unit/tests/test_unit_api.py::test_unit_api[UNIT-119] 
+2026-07-28T04:17:34.2261585Z [gw1] [ 32%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-004] 
+2026-07-28T04:17:34.2262739Z unit/tests/test_unit_api.py::test_unit_api[UNIT-005] 
+2026-07-28T04:17:34.2285412Z [gw6] [ 33%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-150] 
+2026-07-28T04:17:34.2325849Z unit/tests/test_unit_api.py::test_unit_api[UNIT-151] 
+2026-07-28T04:17:34.2339491Z [gw6] [ 33%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-151] 
+2026-07-28T04:17:34.2383587Z unit/tests/test_unit_api.py::test_unit_api[UNIT-152] 
+2026-07-28T04:17:34.2401517Z [gw4] [ 33%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-090] 
+2026-07-28T04:17:34.2410349Z [gw6] [ 34%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-152] 
+2026-07-28T04:17:34.2420342Z unit/tests/test_unit_api.py::test_unit_api[UNIT-153] 
+2026-07-28T04:17:34.2461521Z unit/tests/test_unit_api.py::test_unit_api[UNIT-091] 
+2026-07-28T04:17:34.2482985Z [gw6] [ 34%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-153] 
+2026-07-28T04:17:34.2564839Z unit/tests/test_unit_api.py::test_unit_api[UNIT-154] 
+2026-07-28T04:17:34.2570731Z [gw0] [ 34%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-016] 
+2026-07-28T04:17:34.2571808Z [gw6] [ 35%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-154] 
+2026-07-28T04:17:34.2572723Z unit/tests/test_unit_api.py::test_unit_api[UNIT-155] 
+2026-07-28T04:17:34.2610112Z unit/tests/test_unit_api.py::test_unit_api[UNIT-017] 
+2026-07-28T04:17:34.2615784Z [gw6] [ 35%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-155] 
+2026-07-28T04:17:34.2636777Z unit/tests/test_unit_api.py::test_unit_api[UNIT-156] 
+2026-07-28T04:17:34.2637727Z [gw1] [ 35%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-005] 
+2026-07-28T04:17:34.2638741Z [gw0] [ 36%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-017] 
+2026-07-28T04:17:34.2641988Z unit/tests/test_unit_api.py::test_unit_api[UNIT-018] 
+2026-07-28T04:17:34.2692589Z unit/tests/test_unit_api.py::test_unit_api[UNIT-006] 
+2026-07-28T04:17:34.2724233Z [gw6] [ 36%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-156] 
+2026-07-28T04:17:34.2725360Z [gw0] [ 36%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-018] 
+2026-07-28T04:17:34.2726947Z unit/tests/test_unit_api.py::test_unit_api[UNIT-138] 
+2026-07-28T04:17:34.2780235Z unit/tests/test_unit_api.py::test_unit_api[UNIT-157] 
+2026-07-28T04:17:34.2802609Z [gw6] [ 37%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-157] 
+2026-07-28T04:17:34.2805130Z [gw0] [ 37%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-138] 
+2026-07-28T04:17:34.2805612Z unit/tests/test_unit_api.py::test_unit_api[UNIT-139] 
+2026-07-28T04:17:34.2840364Z unit/tests/test_unit_api.py::test_unit_api[UNIT-158] 
+2026-07-28T04:17:34.2870451Z [gw0] [ 37%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-139] 
+2026-07-28T04:17:34.2880931Z unit/tests/test_unit_api.py::test_unit_api[UNIT-140] 
+2026-07-28T04:17:34.2881970Z [gw6] [ 38%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-158] 
+2026-07-28T04:17:34.2906258Z unit/tests/test_unit_api.py::test_unit_api[UNIT-159] 
+2026-07-28T04:17:34.2910574Z [gw0] [ 38%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-140] 
+2026-07-28T04:17:34.2939289Z unit/tests/test_unit_api.py::test_unit_api[UNIT-141] 
+2026-07-28T04:17:34.2944859Z [gw6] [ 38%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-159] 
+2026-07-28T04:17:34.2963989Z unit/tests/test_unit_api.py::test_unit_api[UNIT-160] 
+2026-07-28T04:17:34.2964911Z [gw0] [ 39%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-141] 
+2026-07-28T04:17:34.3000366Z unit/tests/test_unit_api.py::test_unit_api[UNIT-142] 
+2026-07-28T04:17:34.3020331Z [gw1] [ 39%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-006] 
+2026-07-28T04:17:34.3023227Z unit/tests/test_unit_api.py::test_unit_api[UNIT-007] 
+2026-07-28T04:17:34.3039708Z [gw0] [ 39%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-142] 
+2026-07-28T04:17:34.3040242Z unit/tests/test_unit_api.py::test_unit_api[UNIT-143] 
+2026-07-28T04:17:34.3040706Z [gw6] [ 40%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-160] 
+2026-07-28T04:17:34.3055412Z unit/tests/test_unit_api.py::test_unit_api[UNIT-161] 
+2026-07-28T04:17:34.3090736Z [gw0] [ 40%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-143] 
+2026-07-28T04:17:34.3100402Z unit/tests/test_unit_api.py::test_unit_api[UNIT-167] 
+2026-07-28T04:17:34.3101130Z [gw6] [ 40%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-161] 
+2026-07-28T04:17:34.3150285Z unit/tests/test_unit_api.py::test_unit_api[UNIT-162] 
+2026-07-28T04:17:34.3151207Z [gw6] [ 41%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-162] 
+2026-07-28T04:17:34.3168962Z [gw0] [ 41%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-167] 
+2026-07-28T04:17:34.3175765Z unit/tests/test_unit_api.py::test_unit_api[UNIT-163] 
+2026-07-28T04:17:34.3208379Z unit/tests/test_unit_api.py::test_unit_api[UNIT-168] 
+2026-07-28T04:17:34.3221698Z [gw0] [ 41%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-168] 
+2026-07-28T04:17:34.3223330Z [gw6] [ 42%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-163] 
+2026-07-28T04:17:34.3224028Z unit/tests/test_unit_api.py::test_unit_api[UNIT-169] 
+2026-07-28T04:17:34.3265573Z unit/tests/test_unit_api.py::test_unit_api[UNIT-164] 
+2026-07-28T04:17:34.3270396Z [gw1] [ 42%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-007] 
+2026-07-28T04:17:34.3282897Z unit/tests/test_unit_api.py::test_unit_api[UNIT-008] 
+2026-07-28T04:17:34.3286549Z [gw5] [ 42%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-119] 
+2026-07-28T04:17:34.3287343Z unit/tests/test_unit_api.py::test_unit_api[UNIT-120] 
+2026-07-28T04:17:34.3288519Z [gw6] [ 43%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-164] 
+2026-07-28T04:17:34.3292145Z [gw0] [ 43%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-169] 
+2026-07-28T04:17:34.3306427Z unit/tests/test_unit_api.py::test_unit_api[UNIT-165] 
+2026-07-28T04:17:34.3350547Z [gw1] [ 43%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-008] 
+2026-07-28T04:17:34.3366605Z unit/tests/test_unit_api.py::test_unit_api[UNIT-170] 
+2026-07-28T04:17:34.3367569Z unit/tests/test_unit_api.py::test_unit_api[UNIT-009] 
+2026-07-28T04:17:34.3368573Z [gw5] [ 44%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-120] 
+2026-07-28T04:17:34.3369923Z [gw6] [ 44%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-165] 
+2026-07-28T04:17:34.3370969Z unit/tests/test_unit_api.py::test_unit_api[UNIT-121] 
+2026-07-28T04:17:34.3371654Z unit/tests/test_unit_api.py::test_unit_api[UNIT-166] 
+2026-07-28T04:17:34.3389317Z [gw1] [ 44%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-009] 
+2026-07-28T04:17:34.3400338Z [gw0] [ 45%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-170] 
+2026-07-28T04:17:34.3427564Z unit/tests/test_unit_api.py::test_unit_api[UNIT-171] 
+2026-07-28T04:17:34.3428930Z unit/tests/test_unit_api.py::test_unit_api[UNIT-172] 
+2026-07-28T04:17:34.3429903Z [gw6] [ 45%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-166] 
+2026-07-28T04:17:34.3431535Z unit/tests/test_unit_api.py::test_unit_api[UNIT-177] 
+2026-07-28T04:17:34.3469232Z [gw0] [ 45%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-171] 
+2026-07-28T04:17:34.3481126Z [gw1] [ 46%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-172] 
+2026-07-28T04:17:34.3482082Z unit/tests/test_unit_api.py::test_unit_api[UNIT-182] 
+2026-07-28T04:17:34.3490831Z unit/tests/test_unit_api.py::test_unit_api[UNIT-173] 
+2026-07-28T04:17:34.3500508Z [gw6] [ 46%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-177] 
+2026-07-28T04:17:34.3570546Z unit/tests/test_unit_api.py::test_unit_api[UNIT-178] 
+2026-07-28T04:17:34.3604181Z [gw0] [ 46%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-182] 
+2026-07-28T04:17:34.3680680Z [gw1] [ 47%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-173] 
+2026-07-28T04:17:34.3713085Z unit/tests/test_unit_api.py::test_unit_api[UNIT-183] 
+2026-07-28T04:17:34.3716086Z [gw6] [ 47%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-178] 
+2026-07-28T04:17:34.3720368Z unit/tests/test_unit_api.py::test_unit_api[UNIT-179] 
+2026-07-28T04:17:34.3721208Z unit/tests/test_unit_api.py::test_unit_api[UNIT-174] 
+2026-07-28T04:17:34.3722467Z [gw6] [ 47%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-179] 
+2026-07-28T04:17:34.3726650Z unit/tests/test_unit_api.py::test_unit_api[UNIT-180] 
+2026-07-28T04:17:34.3727647Z [gw1] [ 48%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-174] 
+2026-07-28T04:17:34.3728613Z [gw4] [ 48%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-091] 
+2026-07-28T04:17:34.3729713Z unit/tests/test_unit_api.py::test_unit_api[UNIT-175] 
+2026-07-28T04:17:34.3750435Z unit/tests/test_unit_api.py::test_unit_api[UNIT-092] 
+2026-07-28T04:17:34.3780415Z [gw7] [ 48%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-086] 
+2026-07-28T04:17:34.3800148Z [gw6] [ 49%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-180] 
+2026-07-28T04:17:34.3840115Z unit/tests/test_unit_api.py::test_unit_api[UNIT-087] 
+2026-07-28T04:17:34.3879750Z unit/tests/test_unit_api.py::test_unit_api[UNIT-181] 
+2026-07-28T04:17:34.3910355Z [gw1] [ 49%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-175] 
+2026-07-28T04:17:34.3940426Z [gw0] [ 49%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-183] 
+2026-07-28T04:17:34.3950354Z unit/tests/test_unit_api.py::test_unit_api[UNIT-184] 
+2026-07-28T04:17:34.3953549Z unit/tests/test_unit_api.py::test_unit_api[UNIT-176] 
+2026-07-28T04:17:34.3956116Z [gw5] [ 50%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-121] 
+2026-07-28T04:17:34.3957064Z unit/tests/test_unit_api.py::test_unit_api[UNIT-122] 
+2026-07-28T04:17:34.3957997Z [gw6] [ 50%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-181] 
+2026-07-28T04:17:34.3958966Z unit/tests/test_unit_api.py::test_unit_api[UNIT-187] 
+2026-07-28T04:17:34.3960179Z [gw1] [ 50%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-176] 
+2026-07-28T04:17:34.3961769Z unit/tests/test_unit_api.py::test_unit_api[UNIT-192] 
+2026-07-28T04:17:34.3962737Z [gw3] [ 51%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-025] 
+2026-07-28T04:17:34.3963737Z [gw0] [ 51%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-184] 
+2026-07-28T04:17:34.3964734Z [gw6] [ 51%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-187] 
+2026-07-28T04:17:34.3965711Z [gw1] [ 52%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-192] 
+2026-07-28T04:17:34.3966647Z unit/tests/test_unit_api.py::test_unit_api[UNIT-185] 
+2026-07-28T04:17:34.3967612Z unit/tests/test_unit_api.py::test_unit_api[UNIT-026] 
+2026-07-28T04:17:34.3970917Z unit/tests/test_unit_api.py::test_unit_api[UNIT-188] 
+2026-07-28T04:17:34.3971804Z unit/tests/test_unit_api.py::test_unit_api[UNIT-193] 
+2026-07-28T04:17:34.3973320Z [gw0] [ 52%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-185] 
+2026-07-28T04:17:34.3974263Z unit/tests/test_unit_api.py::test_unit_api[UNIT-186] 
+2026-07-28T04:17:34.3975180Z [gw3] [ 52%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-026] 
+2026-07-28T04:17:34.3976606Z [gw6] [ 53%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-188] 
+2026-07-28T04:17:34.3977554Z unit/tests/test_unit_api.py::test_unit_api[UNIT-189] 
+2026-07-28T04:17:34.3978366Z unit/tests/test_unit_api.py::test_unit_api[UNIT-027] 
+2026-07-28T04:17:34.3986086Z [gw1] [ 53%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-193] 
+2026-07-28T04:17:34.3999126Z [gw0] [ 53%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-186] 
+2026-07-28T04:17:34.4005097Z unit/tests/test_unit_api.py::test_unit_api[UNIT-196] 
+2026-07-28T04:17:34.4036288Z unit/tests/test_unit_api.py::test_unit_api[UNIT-194] 
+2026-07-28T04:17:34.4049962Z [gw6] [ 54%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-189] 
+2026-07-28T04:17:34.4075964Z [gw3] [ 54%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-027] 
+2026-07-28T04:17:34.4081723Z [gw1] [ 54%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-194] 
+2026-07-28T04:17:34.4082692Z unit/tests/test_unit_api.py::test_unit_api[UNIT-190] 
+2026-07-28T04:17:34.4093798Z unit/tests/test_unit_api.py::test_unit_api[UNIT-195] 
+2026-07-28T04:17:34.4100119Z [gw0] [ 55%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-196] 
+2026-07-28T04:17:34.4107870Z unit/tests/test_unit_api.py::test_unit_api[UNIT-144] 
+2026-07-28T04:17:34.4149952Z [gw6] [ 55%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-190] 
+2026-07-28T04:17:34.4167564Z unit/tests/test_unit_api.py::test_unit_api[UNIT-191] 
+2026-07-28T04:17:34.4168521Z unit/tests/test_unit_api.py::test_unit_api[UNIT-197] 
+2026-07-28T04:17:34.4169770Z [gw3] [ 55%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-144] 
+2026-07-28T04:17:34.4170873Z [gw1] [ 56%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-195] 
+2026-07-28T04:17:34.4171880Z unit/tests/test_unit_api.py::test_unit_api[UNIT-200] 
+2026-07-28T04:17:34.4186905Z unit/tests/test_unit_api.py::test_unit_api[UNIT-145] 
+2026-07-28T04:17:34.4197667Z [gw1] [ 56%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-200] 
+2026-07-28T04:17:34.4198302Z unit/tests/test_unit_api.py::test_unit_api[UNIT-201] 
+2026-07-28T04:17:34.4229764Z [gw0] [ 56%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-197] 
+2026-07-28T04:17:34.4264208Z [gw6] [ 57%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-191] 
+2026-07-28T04:17:34.4265193Z unit/tests/test_unit_api.py::test_unit_api[UNIT-198] 
+2026-07-28T04:17:34.4268740Z [gw3] [ 57%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-145] 
+2026-07-28T04:17:34.4269382Z [gw1] [ 57%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-201] 
+2026-07-28T04:17:34.4272694Z unit/tests/test_unit_api.py::test_unit_api[UNIT-202] 
+2026-07-28T04:17:34.4280362Z unit/tests/test_unit_api.py::test_unit_api[UNIT-204] 
+2026-07-28T04:17:34.4289103Z unit/tests/test_unit_api.py::test_unit_api[UNIT-146] 
+2026-07-28T04:17:34.4305930Z [gw1] [ 58%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-202] 
+2026-07-28T04:17:34.4312879Z [gw6] [ 58%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-204] 
+2026-07-28T04:17:34.4335437Z [gw0] [ 58%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-198] 
+2026-07-28T04:17:34.4365180Z unit/tests/test_unit_api.py::test_unit_api[UNIT-199] 
+2026-07-28T04:17:34.4371998Z unit/tests/test_unit_api.py::test_unit_api[UNIT-203] 
+2026-07-28T04:17:34.4373815Z unit/tests/test_unit_api.py::test_unit_api[UNIT-205] 
+2026-07-28T04:17:34.4380821Z [gw3] [ 59%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-146] 
+2026-07-28T04:17:34.4383830Z unit/tests/test_unit_api.py::test_unit_api[UNIT-147] 
+2026-07-28T04:17:34.4403633Z [gw1] [ 59%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-203] 
+2026-07-28T04:17:34.4409067Z unit/tests/test_unit_api.py::test_unit_api[UNIT-208] 
+2026-07-28T04:17:34.4415314Z [gw4] [ 59%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-092] 
+2026-07-28T04:17:34.4462211Z [gw6] [ 60%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-205] 
+2026-07-28T04:17:34.4477709Z [gw0] [ 60%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-199] 
+2026-07-28T04:17:34.4511515Z unit/tests/test_unit_api.py::test_unit_api[UNIT-212] 
+2026-07-28T04:17:34.4541047Z unit/tests/test_unit_api.py::test_unit_api[UNIT-206] 
+2026-07-28T04:17:34.4558545Z unit/tests/test_unit_api.py::test_unit_api[UNIT-093] 
+2026-07-28T04:17:34.4560665Z [gw3] [ 60%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-147] 
+2026-07-28T04:17:34.4561533Z unit/tests/test_unit_api.py::test_unit_api[UNIT-148] 
+2026-07-28T04:17:34.4600379Z [gw1] [ 61%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-208] 
+2026-07-28T04:17:34.4636517Z unit/tests/test_unit_api.py::test_unit_api[UNIT-209] 
+2026-07-28T04:17:34.4637692Z [gw3] [ 61%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-148] 
+2026-07-28T04:17:34.4638681Z [gw0] [ 61%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-212] 
+2026-07-28T04:17:34.4639787Z unit/tests/test_unit_api.py::test_unit_api[UNIT-149] 
+2026-07-28T04:17:34.4640682Z [gw6] [ 62%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-206] 
+2026-07-28T04:17:34.4641612Z [gw3] [ 62%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-149] 
+2026-07-28T04:17:34.4642466Z unit/tests/test_unit_api.py::test_unit_api[UNIT-213] 
+2026-07-28T04:17:34.4643634Z [gw7] [ 62%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-087] 
+2026-07-28T04:17:34.4644593Z unit/tests/test_unit_api.py::test_unit_api[UNIT-088] 
+2026-07-28T04:17:34.4645387Z unit/tests/test_unit_api.py::test_unit_api[UNIT-216] 
+2026-07-28T04:17:34.4646195Z unit/tests/test_unit_api.py::test_unit_api[UNIT-207] 
+2026-07-28T04:17:34.4647028Z [gw1] [ 63%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-209] 
+2026-07-28T04:17:34.4675109Z unit/tests/test_unit_api.py::test_unit_api[UNIT-210] 
+2026-07-28T04:17:34.4703883Z [gw6] [ 63%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-207] 
+2026-07-28T04:17:34.4736666Z [gw0] [ 63%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-213] 
+2026-07-28T04:17:34.4737719Z [gw3] [ 64%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-216] 
+2026-07-28T04:17:34.4738768Z [gw1] [ 64%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-210] 
+2026-07-28T04:17:34.4739961Z unit/tests/test_unit_api.py::test_unit_api[UNIT-214] 
+2026-07-28T04:17:34.4775725Z unit/tests/test_unit_api.py::test_unit_api[UNIT-217] 
+2026-07-28T04:17:34.4790439Z [gw5] [ 64%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-122] 
+2026-07-28T04:17:34.4805856Z [gw3] [ 65%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-217] 
+2026-07-28T04:17:34.4807002Z unit/tests/test_unit_api.py::test_unit_api[UNIT-220] 
+2026-07-28T04:17:34.4808175Z unit/tests/test_unit_api.py::test_unit_api[UNIT-218] 
+2026-07-28T04:17:34.4809153Z [gw0] [ 65%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-214] 
+2026-07-28T04:17:34.4810358Z unit/tests/test_unit_api.py::test_unit_api[UNIT-211] 
+2026-07-28T04:17:34.4813425Z unit/tests/test_unit_api.py::test_unit_api[UNIT-123] 
+2026-07-28T04:17:34.4838282Z unit/tests/test_unit_api.py::test_unit_api[UNIT-215] 
+2026-07-28T04:17:34.4842321Z [gw2] [ 65%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-127] 
+2026-07-28T04:17:34.4862123Z [gw3] [ 66%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-218] 
+2026-07-28T04:17:34.4889644Z unit/tests/test_unit_api.py::test_unit_api[UNIT-219] 
+2026-07-28T04:17:34.4890676Z [gw6] [ 66%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-220] 
+2026-07-28T04:17:34.4891518Z unit/tests/test_unit_api.py::test_unit_api[UNIT-221] 
+2026-07-28T04:17:34.4947860Z [gw0] [ 66%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-215] 
+2026-07-28T04:17:34.4948670Z unit/tests/test_unit_api.py::test_unit_api[UNIT-128] 
+2026-07-28T04:17:34.4949679Z unit/tests/test_unit_api.py::test_unit_api[UNIT-227] 
+2026-07-28T04:17:34.4958429Z [gw1] [ 67%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-211] 
+2026-07-28T04:17:34.4971376Z [gw3] [ 67%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-219] 
+2026-07-28T04:17:34.4974436Z unit/tests/test_unit_api.py::test_unit_api[UNIT-230] 
+2026-07-28T04:17:34.4985869Z unit/tests/test_unit_api.py::test_unit_api[UNIT-224] 
+2026-07-28T04:17:34.4989740Z [gw0] [ 67%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-227] 
+2026-07-28T04:17:34.5000784Z unit/tests/test_unit_api.py::test_unit_api[UNIT-228] 
+2026-07-28T04:17:34.5010605Z [gw6] [ 68%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-221] 
+2026-07-28T04:17:34.5025645Z [gw3] [ 68%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-230] 
+2026-07-28T04:17:34.5051648Z unit/tests/test_unit_api.py::test_unit_api[UNIT-231] 
+2026-07-28T04:17:34.5052665Z unit/tests/test_unit_api.py::test_unit_api[UNIT-222] 
+2026-07-28T04:17:34.5058363Z [gw4] [ 68%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-093] 
+2026-07-28T04:17:34.5063730Z [gw0] [ 69%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-228] 
+2026-07-28T04:17:34.5088282Z unit/tests/test_unit_api.py::test_unit_api[UNIT-094] 
+2026-07-28T04:17:34.5096272Z unit/tests/test_unit_api.py::test_unit_api[UNIT-229] 
+2026-07-28T04:17:34.5120575Z [gw6] [ 69%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-222] 
+2026-07-28T04:17:34.5131693Z [gw3] [ 69%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-231] 
+2026-07-28T04:17:34.5135574Z [gw1] [ 70%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-224] 
+2026-07-28T04:17:34.5138165Z unit/tests/test_unit_api.py::test_unit_api[UNIT-225] 
+2026-07-28T04:17:34.5139104Z unit/tests/test_unit_api.py::test_unit_api[UNIT-223] 
+2026-07-28T04:17:34.5140428Z [gw0] [ 70%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-229] 
+2026-07-28T04:17:34.5141425Z unit/tests/test_unit_api.py::test_unit_api[UNIT-232] 
+2026-07-28T04:17:34.5191488Z unit/tests/test_unit_api.py::test_unit_api[UNIT-233] 
+2026-07-28T04:17:34.5214913Z [gw6] [ 70%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-223] 
+2026-07-28T04:17:34.5215966Z unit/tests/test_unit_api.py::test_unit_api[UNIT-239] 
+2026-07-28T04:17:34.5216937Z [gw3] [ 71%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-232] 
+2026-07-28T04:17:34.5217890Z unit/tests/test_unit_api.py::test_unit_api[UNIT-236] 
+2026-07-28T04:17:34.5241072Z [gw1] [ 71%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-225] 
+2026-07-28T04:17:34.5251736Z [gw0] [ 71%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-233] 
+2026-07-28T04:17:34.5284097Z [gw6] [ 72%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-239] 
+2026-07-28T04:17:34.5285532Z unit/tests/test_unit_api.py::test_unit_api[UNIT-234] 
+2026-07-28T04:17:34.5286534Z unit/tests/test_unit_api.py::test_unit_api[UNIT-226] 
+2026-07-28T04:17:34.5287528Z unit/tests/test_unit_api.py::test_unit_api[UNIT-240] 
+2026-07-28T04:17:34.5293728Z [gw1] [ 72%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-226] 
+2026-07-28T04:17:34.5296155Z [gw3] [ 72%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-236] 
+2026-07-28T04:17:34.5297181Z unit/tests/test_unit_api.py::test_unit_api[UNIT-241] 
+2026-07-28T04:17:34.5309847Z unit/tests/test_unit_api.py::test_unit_api[UNIT-237] 
+2026-07-28T04:17:34.5338112Z [gw6] [ 73%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-240] 
+2026-07-28T04:17:34.5369929Z [gw0] [ 73%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-234] 
+2026-07-28T04:17:34.5373146Z unit/tests/test_unit_api.py::test_unit_api[UNIT-243] 
+2026-07-28T04:17:34.5376836Z unit/tests/test_unit_api.py::test_unit_api[UNIT-235] 
+2026-07-28T04:17:34.5377967Z [gw1] [ 73%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-241] 
+2026-07-28T04:17:34.5403523Z [gw3] [ 74%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-237] 
+2026-07-28T04:17:34.5413825Z [gw0] [ 74%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-235] 
+2026-07-28T04:17:34.5420296Z unit/tests/test_unit_api.py::test_unit_api[UNIT-242] 
+2026-07-28T04:17:34.5427690Z unit/tests/test_unit_api.py::test_unit_api[UNIT-238] 
+2026-07-28T04:17:34.5438527Z [gw6] [ 74%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-243] 
+2026-07-28T04:17:34.5467688Z unit/tests/test_unit_api.py::test_unit_api[UNIT-245] 
+2026-07-28T04:17:34.5472013Z [gw3] [ 75%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-238] 
+2026-07-28T04:17:34.5487096Z unit/tests/test_unit_api.py::test_unit_api[UNIT-247] 
+2026-07-28T04:17:34.5515658Z [gw0] [ 75%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-245] 
+2026-07-28T04:17:34.5540431Z unit/tests/test_unit_api.py::test_unit_api[UNIT-244] 
+2026-07-28T04:17:34.5541964Z [gw1] [ 75%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-242] 
+2026-07-28T04:17:34.5542895Z unit/tests/test_unit_api.py::test_unit_api[UNIT-249] 
+2026-07-28T04:17:34.5600352Z [gw6] [ 76%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-244] 
+2026-07-28T04:17:34.5604646Z [gw3] [ 76%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-247] 
+2026-07-28T04:17:34.5605406Z unit/tests/test_unit_api.py::test_unit_api[UNIT-251] 
+2026-07-28T04:17:34.5605947Z unit/tests/test_unit_api.py::test_unit_api[UNIT-246] 
+2026-07-28T04:17:34.5606392Z [gw1] [ 76%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-249] 
+2026-07-28T04:17:34.5606872Z [gw0] [ 77%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-246] 
+2026-07-28T04:17:34.5607271Z unit/tests/test_unit_api.py::test_unit_api[UNIT-248] 
+2026-07-28T04:17:34.5607855Z unit/tests/test_unit_api.py::test_unit_api[UNIT-250] 
+2026-07-28T04:17:34.5623057Z unit/tests/test_unit_api.py::test_unit_api[UNIT-253] 
+2026-07-28T04:17:34.5664630Z [gw6] [ 77%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-251] 
+2026-07-28T04:17:34.5665432Z [gw0] [ 77%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-253] 
+2026-07-28T04:17:34.5672188Z unit/tests/test_unit_api.py::test_unit_api[UNIT-252] 
+2026-07-28T04:17:34.5674257Z [gw3] [ 78%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-248] 
+2026-07-28T04:17:34.5686948Z unit/tests/test_unit_api.py::test_unit_api[UNIT-254] 
+2026-07-28T04:17:34.5693702Z [gw1] [ 78%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-250] 
+2026-07-28T04:17:34.5704664Z unit/tests/test_unit_api.py::test_unit_api[UNIT-256] 
+2026-07-28T04:17:34.5707655Z [gw4] [ 78%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-094] 
+2026-07-28T04:17:34.5726095Z unit/tests/test_unit_api.py::test_unit_api[UNIT-255] 
+2026-07-28T04:17:34.5757503Z [gw6] [ 79%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-252] 
+2026-07-28T04:17:34.5760467Z unit/tests/test_unit_api.py::test_unit_api[UNIT-257] 
+2026-07-28T04:17:34.5765863Z unit/tests/test_unit_api.py::test_unit_api[UNIT-095] 
+2026-07-28T04:17:34.5794711Z [gw0] [ 79%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-254] 
+2026-07-28T04:17:34.5801968Z [gw5] [ 79%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-123] 
+2026-07-28T04:17:34.5804206Z [gw3] [ 80%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-255] 
+2026-07-28T04:17:34.5805517Z unit/tests/test_unit_api.py::test_unit_api[UNIT-124] 
+2026-07-28T04:17:34.5811166Z unit/tests/test_unit_api.py::test_unit_api[UNIT-258] 
+2026-07-28T04:17:34.5814837Z [gw1] [ 80%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-256] 
+2026-07-28T04:17:34.5843348Z unit/tests/test_unit_api.py::test_unit_api[UNIT-259] 
+2026-07-28T04:17:34.5847466Z [gw0] [ 80%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-258] 
+2026-07-28T04:17:34.5856885Z [gw6] [ 81%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-257] 
+2026-07-28T04:17:34.5881329Z unit/tests/test_unit_api.py::test_unit_api[UNIT-261] 
+2026-07-28T04:17:34.5899945Z unit/tests/test_unit_api.py::test_unit_api[UNIT-260] 
+2026-07-28T04:17:34.5901665Z unit/tests/test_unit_api.py::test_unit_api[UNIT-262] 
+2026-07-28T04:17:34.5912287Z [gw3] [ 81%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-259] 
+2026-07-28T04:17:34.5916809Z [gw6] [ 81%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-261] 
+2026-07-28T04:17:34.5932132Z unit/tests/test_unit_api.py::test_unit_api[UNIT-264] 
+2026-07-28T04:17:34.5970373Z [gw0] [ 82%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-262] 
+2026-07-28T04:17:34.5981680Z unit/tests/test_unit_api.py::test_unit_api[UNIT-266] 
+2026-07-28T04:17:34.5985738Z unit/tests/test_unit_api.py::test_unit_api[UNIT-267] 
+2026-07-28T04:17:34.5996688Z [gw3] [ 82%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-264] 
+2026-07-28T04:17:34.6009995Z [gw1] [ 82%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-260] 
+2026-07-28T04:17:34.6016607Z [gw2] [ 83%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-128] 
+2026-07-28T04:17:34.6026379Z unit/tests/test_unit_api.py::test_unit_api[UNIT-129] 
+2026-07-28T04:17:34.6030587Z [gw0] [ 83%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-267] 
+2026-07-28T04:17:34.6035955Z unit/tests/test_unit_api.py::test_unit_api[UNIT-268] 
+2026-07-28T04:17:34.6060589Z unit/tests/test_unit_api.py::test_unit_api[UNIT-269] 
+2026-07-28T04:17:34.6073818Z unit/tests/test_unit_api.py::test_unit_api[UNIT-265] 
+2026-07-28T04:17:34.6130560Z [gw6] [ 83%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-266] 
+2026-07-28T04:17:34.6147173Z [gw0] [ 84%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-269] 
+2026-07-28T04:17:34.6160416Z unit/tests/test_unit_api.py::test_unit_api[UNIT-270] 
+2026-07-28T04:17:34.6161155Z [gw3] [ 84%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-268] 
+2026-07-28T04:17:34.6163959Z unit/tests/test_unit_api.py::test_unit_api[UNIT-273] 
+2026-07-28T04:17:34.6200781Z unit/tests/test_unit_api.py::test_unit_api[UNIT-271] 
+2026-07-28T04:17:34.6201850Z [gw1] [ 84%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-265] 
+2026-07-28T04:17:34.6209183Z [gw6] [ 85%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-270] 
+2026-07-28T04:17:34.6273544Z [gw0] [ 85%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-273] 
+2026-07-28T04:17:34.6310419Z unit/tests/test_unit_api.py::test_unit_api[UNIT-272] 
+2026-07-28T04:17:34.6345279Z unit/tests/test_unit_api.py::test_unit_api[UNIT-275] 
+2026-07-28T04:17:34.6346057Z unit/tests/test_unit_api.py::test_unit_api[UNIT-274] 
+2026-07-28T04:17:34.6347077Z [gw1] [ 85%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-272] 
+2026-07-28T04:17:34.6348055Z [gw3] [ 86%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-271] 
+2026-07-28T04:17:34.6348797Z unit/tests/test_unit_api.py::test_unit_api[UNIT-277] 
+2026-07-28T04:17:34.6351507Z unit/tests/test_unit_api.py::test_unit_api[UNIT-276] 
+2026-07-28T04:17:34.6387544Z [gw0] [ 86%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-275] 
+2026-07-28T04:17:34.6422513Z [gw6] [ 86%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-274] 
+2026-07-28T04:17:34.6442192Z unit/tests/test_unit_api.py::test_unit_api[UNIT-279] 
+2026-07-28T04:17:34.6490680Z unit/tests/test_unit_api.py::test_unit_api[UNIT-278] 
+2026-07-28T04:17:34.6491740Z [gw4] [ 87%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-095] 
+2026-07-28T04:17:34.6500356Z [gw7] [ 87%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-088] 
+2026-07-28T04:17:34.6515742Z [gw3] [ 87%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-276] 
+2026-07-28T04:17:34.6559073Z unit/tests/test_unit_api.py::test_unit_api[UNIT-281] 
+2026-07-28T04:17:34.6563672Z unit/tests/test_unit_api.py::test_unit_api[UNIT-096] 
+2026-07-28T04:17:34.6564338Z unit/tests/test_unit_api.py::test_unit_api[UNIT-097] 
+2026-07-28T04:17:34.6604143Z [gw6] [ 88%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-279] 
+2026-07-28T04:17:34.6667668Z unit/tests/test_unit_api.py::test_unit_api[UNIT-283] 
+2026-07-28T04:17:34.6726570Z [gw5] [ 88%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-124] 
+2026-07-28T04:17:34.6728314Z unit/tests/test_unit_api.py::test_unit_api[UNIT-263] 
+2026-07-28T04:17:34.6759649Z [gw3] [ 88%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-281] 
+2026-07-28T04:17:34.6765089Z unit/tests/test_unit_api.py::test_unit_api[UNIT-284] 
+2026-07-28T04:17:34.6776893Z [gw5] [ 89%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-263] 
+2026-07-28T04:17:34.6910681Z unit/tests/test_unit_api.py::test_unit_api[UNIT-287] 
+2026-07-28T04:17:34.6940371Z [gw3] [ 89%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-284] 
+2026-07-28T04:17:34.6972321Z unit/tests/test_unit_api.py::test_unit_api[UNIT-288] 
+2026-07-28T04:17:34.7015626Z [gw4] [ 89%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-096] 
+2026-07-28T04:17:34.7050396Z unit/tests/test_unit_api.py::test_unit_api[UNIT-285] 
+2026-07-28T04:17:34.7060778Z [gw7] [ 90%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-097] 
+2026-07-28T04:17:34.7100548Z unit/tests/test_unit_api.py::test_unit_api[UNIT-098] 
+2026-07-28T04:17:34.7130266Z [gw0] [ 90%] FAILED unit/tests/test_unit_api.py::test_unit_api[UNIT-278] 
+2026-07-28T04:17:34.7160059Z unit/tests/test_unit_api.py::test_unit_api[UNIT-282] 
+2026-07-28T04:17:34.7180468Z [gw2] [ 90%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-129] 
+2026-07-28T04:17:34.7181695Z [gw4] [ 91%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-285] 
+2026-07-28T04:17:34.7182654Z unit/tests/test_unit_api.py::test_unit_api[UNIT-130] 
+2026-07-28T04:17:34.7199722Z unit/tests/test_unit_api.py::test_unit_api[UNIT-291] 
+2026-07-28T04:17:34.7226269Z [gw2] [ 91%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-130] 
+2026-07-28T04:17:34.7258483Z [gw3] [ 91%] FAILED unit/tests/test_unit_api.py::test_unit_api[UNIT-288] 
+2026-07-28T04:17:34.7259836Z unit/tests/test_unit_api.py::test_unit_api[UNIT-131] 
+2026-07-28T04:17:34.7320455Z unit/tests/test_unit_api.py::test_unit_api[UNIT-290] 
+2026-07-28T04:17:34.7347885Z [gw4] [ 92%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-291] 
+2026-07-28T04:17:34.7349076Z [gw2] [ 92%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-131] 
+2026-07-28T04:17:34.7362807Z unit/tests/test_unit_api.py::test_unit_api[UNIT-293] 
+2026-07-28T04:17:34.7394291Z unit/tests/test_unit_api.py::test_unit_api[UNIT-294] 
+2026-07-28T04:17:34.7400567Z [gw5] [ 92%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-287] 
+2026-07-28T04:17:34.7401723Z unit/tests/test_unit_api.py::test_unit_api[UNIT-289] 
+2026-07-28T04:17:34.7428447Z [gw1] [ 93%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-277] 
+2026-07-28T04:17:34.7500402Z unit/tests/test_unit_api.py::test_unit_api[UNIT-280] 
+2026-07-28T04:17:34.7515644Z [gw4] [ 93%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-293] 
+2026-07-28T04:17:34.7534982Z unit/tests/test_unit_api.py::test_unit_api[UNIT-296] 
+2026-07-28T04:17:34.7547295Z [gw7] [ 93%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-098] 
+2026-07-28T04:17:34.7652717Z unit/tests/test_unit_api.py::test_unit_api[UNIT-099] 
+2026-07-28T04:17:34.7700854Z [gw4] [ 94%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-296] 
+2026-07-28T04:17:34.7713131Z unit/tests/test_unit_api.py::test_unit_api[UNIT-300] 
+2026-07-28T04:17:34.7721034Z [gw1] [ 94%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-280] 
+2026-07-28T04:17:34.7880304Z unit/tests/test_unit_api.py::test_unit_api[UNIT-299] 
+2026-07-28T04:17:34.7884499Z [gw7] [ 94%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-099] 
+2026-07-28T04:17:34.7941632Z unit/tests/test_unit_api.py::test_unit_api[UNIT-100] 
+2026-07-28T04:17:34.7942732Z [gw7] [ 95%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-100] 
+2026-07-28T04:17:34.7972863Z unit/tests/test_unit_api.py::test_unit_api[UNIT-101] 
+2026-07-28T04:17:34.7979414Z [gw7] [ 95%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-101] 
+2026-07-28T04:17:34.7984256Z unit/tests/test_unit_api.py::test_unit_api[UNIT-102] 
+2026-07-28T04:17:34.8026435Z [gw4] [ 95%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-300] 
+2026-07-28T04:17:34.8032563Z [gw7] [ 96%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-102] 
+2026-07-28T04:17:34.8072227Z unit/tests/test_unit_api.py::test_unit_api[UNIT-103] 
+2026-07-28T04:17:34.8346465Z [gw7] [ 96%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-103] 
+2026-07-28T04:17:34.8387952Z [gw1] [ 96%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-299] 
+2026-07-28T04:17:34.8406873Z [gw5] [ 97%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-289] 
+2026-07-28T04:17:34.8522282Z unit/tests/test_unit_api.py::test_unit_api[UNIT-298] 
+2026-07-28T04:17:34.8540433Z [gw6] [ 97%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-283] 
+2026-07-28T04:17:34.8616297Z unit/tests/test_unit_api.py::test_unit_api[UNIT-286] 
+2026-07-28T04:17:34.8640876Z [gw2] [ 97%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-294] 
+2026-07-28T04:17:34.8755827Z unit/tests/test_unit_api.py::test_unit_api[UNIT-297] 
+2026-07-28T04:17:34.8860698Z [gw6] [ 98%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-286] 
+2026-07-28T04:17:35.0654488Z [gw2] [ 98%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-297] 
+2026-07-28T04:17:35.0730990Z [gw3] [ 98%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-290] 
+2026-07-28T04:17:35.0934249Z unit/tests/test_unit_api.py::test_unit_api[UNIT-295] 
+2026-07-28T04:17:35.1331256Z [gw3] [ 99%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-295] 
+2026-07-28T04:17:35.2764694Z [gw5] [ 99%] FAILED unit/tests/test_unit_api.py::test_unit_api[UNIT-298] 
+2026-07-28T04:17:35.2820565Z [gw0] [ 99%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-282] 
+2026-07-28T04:17:35.3592586Z unit/tests/test_unit_api.py::test_unit_api[UNIT-292] 
+2026-07-28T04:17:35.9407900Z [gw0] [100%] PASSED unit/tests/test_unit_api.py::test_unit_api[UNIT-292] 
+2026-07-28T04:17:35.9408936Z 
+2026-07-28T04:17:35.9409243Z =================================== FAILURES ===================================
+2026-07-28T04:17:35.9410396Z ___________________________ test_unit_api[UNIT-022] ____________________________
+2026-07-28T04:17:35.9411388Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:17:35.9412278Z unit/tests/test_unit_api.py:19: in test_unit_api
+2026-07-28T04:17:35.9412792Z     execute_unit_case(case)
+2026-07-28T04:17:35.9413122Z shared/test_executors.py:31: in execute_unit_case
+2026-07-28T04:17:35.9413655Z     assert resp.status_code == 200, f"{case['asset']} returned {resp.status_code}"
+2026-07-28T04:17:35.9414197Z E   AssertionError: assets/AssetManifest.json returned 404
+2026-07-28T04:17:35.9414587Z E   assert 404 == 200
+2026-07-28T04:17:35.9414862Z E    +  where 404 = <Response [404]>.status_code
+2026-07-28T04:17:35.9415283Z ___________________________ test_unit_api[UNIT-278] ____________________________
+2026-07-28T04:17:35.9415839Z [gw0] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:17:35.9416345Z unit/tests/test_unit_api.py:19: in test_unit_api
+2026-07-28T04:17:35.9416687Z     execute_unit_case(case)
+2026-07-28T04:17:35.9417011Z shared/test_executors.py:148: in execute_unit_case
+2026-07-28T04:17:35.9417377Z     assert resp.status_code == 200, \
+2026-07-28T04:17:35.9417803Z E   AssertionError: assets/AssetManifest.json failed on attempt 1: 404
+2026-07-28T04:17:35.9418232Z E   assert 404 == 200
+2026-07-28T04:17:35.9418493Z E    +  where 404 = <Response [404]>.status_code
+2026-07-28T04:17:35.9418905Z ___________________________ test_unit_api[UNIT-288] ____________________________
+2026-07-28T04:17:35.9419748Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:17:35.9420280Z unit/tests/test_unit_api.py:19: in test_unit_api
+2026-07-28T04:17:35.9420635Z     execute_unit_case(case)
+2026-07-28T04:17:35.9420954Z shared/test_executors.py:148: in execute_unit_case
+2026-07-28T04:17:35.9421317Z     assert resp.status_code == 200, \
+2026-07-28T04:17:35.9421739Z E   AssertionError: assets/AssetManifest.json failed on attempt 1: 404
+2026-07-28T04:17:35.9422174Z E   assert 404 == 200
+2026-07-28T04:17:35.9422448Z E    +  where 404 = <Response [404]>.status_code
+2026-07-28T04:17:35.9422869Z ___________________________ test_unit_api[UNIT-298] ____________________________
+2026-07-28T04:17:35.9423346Z [gw5] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:17:35.9423758Z unit/tests/test_unit_api.py:19: in test_unit_api
+2026-07-28T04:17:35.9424044Z     execute_unit_case(case)
+2026-07-28T04:17:35.9424309Z shared/test_executors.py:148: in execute_unit_case
+2026-07-28T04:17:35.9424798Z     assert resp.status_code == 200, \
+2026-07-28T04:17:35.9425148Z E   AssertionError: assets/AssetManifest.json failed on attempt 1: 404
+2026-07-28T04:17:35.9425508Z E   assert 404 == 200
+2026-07-28T04:17:35.9425742Z E    +  where 404 = <Response [404]>.status_code
+2026-07-28T04:17:35.9426066Z =========================== short test summary info ============================
+2026-07-28T04:17:35.9426690Z FAILED unit/tests/test_unit_api.py::test_unit_api[UNIT-022] - AssertionError: assets/AssetManifest.json returned 404
+2026-07-28T04:17:35.9427211Z assert 404 == 200
+2026-07-28T04:17:35.9427427Z  +  where 404 = <Response [404]>.status_code
+2026-07-28T04:17:35.9427986Z FAILED unit/tests/test_unit_api.py::test_unit_api[UNIT-278] - AssertionError: assets/AssetManifest.json failed on attempt 1: 404
+2026-07-28T04:17:35.9428527Z assert 404 == 200
+2026-07-28T04:17:35.9428740Z  +  where 404 = <Response [404]>.status_code
+2026-07-28T04:17:35.9429293Z FAILED unit/tests/test_unit_api.py::test_unit_api[UNIT-288] - AssertionError: assets/AssetManifest.json failed on attempt 1: 404
+2026-07-28T04:17:35.9429978Z assert 404 == 200
+2026-07-28T04:17:35.9430191Z  +  where 404 = <Response [404]>.status_code
+2026-07-28T04:17:35.9430874Z FAILED unit/tests/test_unit_api.py::test_unit_api[UNIT-298] - AssertionError: assets/AssetManifest.json failed on attempt 1: 404
+2026-07-28T04:17:35.9431411Z assert 404 == 200
+2026-07-28T04:17:35.9431615Z  +  where 404 = <Response [404]>.status_code
+2026-07-28T04:17:35.9431942Z ======================== 4 failed, 296 passed in 3.43s =========================
+2026-07-28T04:17:35.9777411Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:17:35.9778715Z ##[group]Run actions/upload-artifact@v4
+2026-07-28T04:17:35.9778986Z with:
+2026-07-28T04:17:35.9779204Z   name: unit-tests-api-reports
+2026-07-28T04:17:35.9779652Z   path: automation/unit/reports/
+2026-07-28T04:17:35.9779896Z   retention-days: 30
+2026-07-28T04:17:35.9780108Z   if-no-files-found: warn
+2026-07-28T04:17:35.9780331Z   compression-level: 6
+2026-07-28T04:17:35.9780541Z   overwrite: false
+2026-07-28T04:17:35.9780747Z   include-hidden-files: false
+2026-07-28T04:17:35.9780974Z env:
+2026-07-28T04:17:35.9781153Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:35.9781448Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:35.9781882Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:35.9782301Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:35.9782728Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:35.9783107Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:35.9783486Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:35.9783874Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:35.9784197Z ##[endgroup]
+2026-07-28T04:17:36.1519324Z (node:2349) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-28T04:17:36.1520356Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-28T04:17:36.1602129Z With the provided path, there will be 5 files uploaded
+2026-07-28T04:17:36.1608261Z Artifact name is valid!
+2026-07-28T04:17:36.1609200Z Root directory input is valid!
+2026-07-28T04:17:36.4951114Z Beginning upload of artifact content to blob storage
+2026-07-28T04:17:36.5233890Z (node:2349) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-07-28T04:17:36.9420822Z Uploaded bytes 46148
+2026-07-28T04:17:37.0226035Z Finished uploading artifact content to blob storage!
+2026-07-28T04:17:37.0227887Z SHA256 digest of uploaded artifact zip is 70b9133fe98f6710edbec7c3cbd104923d0f4e28187db0fbbcd537a96a14e30d
+2026-07-28T04:17:37.0228967Z Finalizing artifact upload
+2026-07-28T04:17:37.2349840Z Artifact unit-tests-api-reports.zip successfully finalized. Artifact ID 8676469717
+2026-07-28T04:17:37.2351453Z Artifact unit-tests-api-reports has been successfully uploaded! Final size is 46148 bytes. Artifact ID is 8676469717
+2026-07-28T04:17:37.2360674Z Artifact download URL: https://github.com/ViswanathSaiSandeep/MediRoute/actions/runs/30328121407/artifacts/8676469717
+2026-07-28T04:17:37.2480816Z ##[group]Run SUMMARY="automation/unit/reports/summary.md"
+2026-07-28T04:17:37.2481270Z [36;1mSUMMARY="automation/unit/reports/summary.md"[0m
+2026-07-28T04:17:37.2481652Z [36;1mif [ -f "$SUMMARY" ]; then[0m
+2026-07-28T04:17:37.2482018Z [36;1m  echo "## ✏️ Unit Tests — API Results" >> $GITHUB_STEP_SUMMARY[0m
+2026-07-28T04:17:37.2482420Z [36;1m  cat "$SUMMARY" >> $GITHUB_STEP_SUMMARY[0m
+2026-07-28T04:17:37.2482725Z [36;1melse[0m
+2026-07-28T04:17:37.2483022Z [36;1m  echo "## ⚠️ No Unit Test summary available" >> $GITHUB_STEP_SUMMARY[0m
+2026-07-28T04:17:37.2483390Z [36;1mfi[0m
+2026-07-28T04:17:37.2529078Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:17:37.2529333Z env:
+2026-07-28T04:17:37.2529782Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:37.2530121Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:37.2530555Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:37.2531033Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:37.2531461Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:37.2531836Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:37.2532216Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:37.2532596Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:37.2532929Z ##[endgroup]
+2026-07-28T04:17:37.2717713Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:17:37.2718938Z Post job cleanup.
+2026-07-28T04:17:37.3924103Z (node:2363) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-28T04:17:37.3924970Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-28T04:17:37.4105326Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:17:37.4106608Z Post job cleanup.
+2026-07-28T04:17:37.5140334Z [command]/usr/bin/git version
+2026-07-28T04:17:37.5170236Z git version 2.54.0
+2026-07-28T04:17:37.5214184Z Temporarily overriding HOME='/home/runner/work/_temp/b310aab3-4fd6-4490-a156-af2402e069c4' before making global git config changes
+2026-07-28T04:17:37.5215883Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-28T04:17:37.5222443Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MediRoute/MediRoute
+2026-07-28T04:17:37.5272685Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-28T04:17:37.5314629Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-28T04:17:37.5584515Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-28T04:17:37.5616630Z http.https://github.com/.extraheader
+2026-07-28T04:17:37.5642583Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-07-28T04:17:37.5678239Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-28T04:17:37.5942846Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-28T04:17:37.5972966Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-28T04:17:37.6415064Z Cleaning up orphan processes
+2026-07-28T04:17:37.6943140Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

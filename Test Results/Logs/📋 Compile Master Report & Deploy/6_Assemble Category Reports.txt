@@ -1,0 +1,36 @@
+﻿2026-07-28T04:37:18.4597425Z ##[group]Run # Copy each category's reports to the expected directory structure
+2026-07-28T04:37:18.4598100Z [36;1m# Copy each category's reports to the expected directory structure[0m
+2026-07-28T04:37:18.4598741Z [36;1mfor dir_pair in \[0m
+2026-07-28T04:37:18.4599152Z [36;1m  "selenium-website-test-reports/reports:automation/reports" \[0m
+2026-07-28T04:37:18.4599709Z [36;1m  "appium-android-test-reports/reports:automation/appium/reports" \[0m
+2026-07-28T04:37:18.4600202Z [36;1m  "unit-tests-api-reports:automation/unit/reports" \[0m
+2026-07-28T04:37:18.4600680Z [36;1m  "validation-tests-reports:automation/validation/reports" \[0m
+2026-07-28T04:37:18.4601201Z [36;1m  "deployment-status-reports:automation/deployment_tests/reports" \[0m
+2026-07-28T04:37:18.4601951Z [36;1m  "load-testing-performance-reports:automation/load/reports"; do[0m
+2026-07-28T04:37:18.4602586Z [36;1m  SRC="downloaded-artifacts/$(echo $dir_pair | cut -d: -f1)"[0m
+2026-07-28T04:37:18.4603011Z [36;1m  DST="$(echo $dir_pair | cut -d: -f2)"[0m
+2026-07-28T04:37:18.4603390Z [36;1m  if [ -d "$SRC" ]; then[0m
+2026-07-28T04:37:18.4603895Z [36;1m    mkdir -p "$DST"[0m
+2026-07-28T04:37:18.4604237Z [36;1m    cp -r "$SRC"/* "$DST"/ 2>/dev/null || true[0m
+2026-07-28T04:37:18.4604597Z [36;1m    echo "✅ Copied $SRC → $DST"[0m
+2026-07-28T04:37:18.4604905Z [36;1m  else[0m
+2026-07-28T04:37:18.4605167Z [36;1m    echo "⚠️ Missing: $SRC"[0m
+2026-07-28T04:37:18.4605486Z [36;1m  fi[0m
+2026-07-28T04:37:18.4628000Z [36;1mdone[0m
+2026-07-28T04:37:18.4677239Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:37:18.4677545Z env:
+2026-07-28T04:37:18.4677794Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:37:18.4678165Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:37:18.4678621Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:18.4679100Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:37:18.4679563Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:18.4679988Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:18.4680397Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:18.4680807Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:37:18.4681153Z ##[endgroup]
+2026-07-28T04:37:18.4835464Z ✅ Copied downloaded-artifacts/selenium-website-test-reports/reports → automation/reports
+2026-07-28T04:37:18.4869754Z ⚠️ Missing: downloaded-artifacts/appium-android-test-reports/reports
+2026-07-28T04:37:18.4934584Z ✅ Copied downloaded-artifacts/unit-tests-api-reports → automation/unit/reports
+2026-07-28T04:37:18.5000019Z ✅ Copied downloaded-artifacts/validation-tests-reports → automation/validation/reports
+2026-07-28T04:37:18.5064237Z ✅ Copied downloaded-artifacts/deployment-status-reports → automation/deployment_tests/reports
+2026-07-28T04:37:18.5129826Z ✅ Copied downloaded-artifacts/load-testing-performance-reports → automation/load/reports

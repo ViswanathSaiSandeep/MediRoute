@@ -1,0 +1,83 @@
+﻿2026-07-28T04:13:07.2833788Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:13:07.2846434Z ##[group]Run actions/checkout@v4
+2026-07-28T04:13:07.2847788Z with:
+2026-07-28T04:13:07.2848589Z   fetch-depth: 0
+2026-07-28T04:13:07.2849539Z   repository: ViswanathSaiSandeep/MediRoute
+2026-07-28T04:13:07.2858658Z   token: ***
+2026-07-28T04:13:07.2859499Z   ssh-strict: true
+2026-07-28T04:13:07.2860622Z   ssh-user: git
+2026-07-28T04:13:07.2861502Z   persist-credentials: true
+2026-07-28T04:13:07.2862531Z   clean: true
+2026-07-28T04:13:07.2863380Z   sparse-checkout-cone-mode: true
+2026-07-28T04:13:07.2864406Z   fetch-tags: false
+2026-07-28T04:13:07.2865267Z   show-progress: true
+2026-07-28T04:13:07.2866334Z   lfs: false
+2026-07-28T04:13:07.2867137Z   submodules: false
+2026-07-28T04:13:07.2868048Z   set-safe-directory: true
+2026-07-28T04:13:07.2869044Z   allow-unsafe-pr-checkout: false
+2026-07-28T04:13:07.2870382Z env:
+2026-07-28T04:13:07.2871420Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:13:07.2872651Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:13:07.2873948Z ##[endgroup]
+2026-07-28T04:13:07.3927051Z Syncing repository: ViswanathSaiSandeep/MediRoute
+2026-07-28T04:13:07.3931369Z ##[group]Getting Git version info
+2026-07-28T04:13:07.3933512Z Working directory is '/home/runner/work/MediRoute/MediRoute'
+2026-07-28T04:13:07.3936913Z [command]/usr/bin/git version
+2026-07-28T04:13:07.4151255Z git version 2.54.0
+2026-07-28T04:13:07.4160281Z ##[endgroup]
+2026-07-28T04:13:07.4171553Z Temporarily overriding HOME='/home/runner/work/_temp/b8f1ddd4-2982-4ce6-9098-2f2be44ba5f2' before making global git config changes
+2026-07-28T04:13:07.4176682Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-28T04:13:07.4180768Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MediRoute/MediRoute
+2026-07-28T04:13:07.4190370Z Deleting the contents of '/home/runner/work/MediRoute/MediRoute'
+2026-07-28T04:13:07.4194735Z ##[group]Initializing the repository
+2026-07-28T04:13:07.4198907Z [command]/usr/bin/git init /home/runner/work/MediRoute/MediRoute
+2026-07-28T04:13:07.4352601Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-28T04:13:07.4355260Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-28T04:13:07.4357430Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-28T04:13:07.4358837Z hint: call:
+2026-07-28T04:13:07.4359615Z hint:
+2026-07-28T04:13:07.4360692Z hint: 	git config --global init.defaultBranch <name>
+2026-07-28T04:13:07.4362304Z hint:
+2026-07-28T04:13:07.4363400Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-28T04:13:07.4366148Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-28T04:13:07.4368680Z hint:
+2026-07-28T04:13:07.4369852Z hint: 	git branch -m <name>
+2026-07-28T04:13:07.4371179Z hint:
+2026-07-28T04:13:07.4372375Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-28T04:13:07.4374886Z Initialized empty Git repository in /home/runner/work/MediRoute/MediRoute/.git/
+2026-07-28T04:13:07.4382269Z [command]/usr/bin/git remote add origin https://github.com/ViswanathSaiSandeep/MediRoute
+2026-07-28T04:13:07.4437964Z ##[endgroup]
+2026-07-28T04:13:07.4440744Z ##[group]Disabling automatic garbage collection
+2026-07-28T04:13:07.4443071Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-28T04:13:07.4476841Z ##[endgroup]
+2026-07-28T04:13:07.4479660Z ##[group]Setting up auth
+2026-07-28T04:13:07.4484887Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-28T04:13:07.4540520Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-28T04:13:07.4992302Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-28T04:13:07.5031451Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-28T04:13:07.5254466Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-28T04:13:07.5290225Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-28T04:13:07.5517813Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-28T04:13:07.5555249Z ##[endgroup]
+2026-07-28T04:13:07.5565696Z ##[group]Fetching the repository
+2026-07-28T04:13:07.5568587Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-07-28T04:13:08.6670002Z From https://github.com/ViswanathSaiSandeep/MediRoute
+2026-07-28T04:13:08.6672236Z  * [new branch]      gh-pages     -> origin/gh-pages
+2026-07-28T04:13:08.6673561Z  * [new branch]      main         -> origin/main
+2026-07-28T04:13:08.6674804Z  * [new branch]      test-history -> origin/test-history
+2026-07-28T04:13:08.6720233Z [command]/usr/bin/git branch --list --remote origin/main
+2026-07-28T04:13:08.6752865Z   origin/main
+2026-07-28T04:13:08.6774745Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-07-28T04:13:08.6802381Z 60a9632ace68e34bfdc31aa22a400ff259dd07f7
+2026-07-28T04:13:08.6808534Z ##[endgroup]
+2026-07-28T04:13:08.6809382Z ##[group]Determining the checkout info
+2026-07-28T04:13:08.6810294Z ##[endgroup]
+2026-07-28T04:13:08.6814660Z [command]/usr/bin/git sparse-checkout disable
+2026-07-28T04:13:08.6867070Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-28T04:13:08.6900543Z ##[group]Checking out the ref
+2026-07-28T04:13:08.6904903Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-07-28T04:13:08.7107228Z Switched to a new branch 'main'
+2026-07-28T04:13:08.7109657Z branch 'main' set up to track 'origin/main'.
+2026-07-28T04:13:08.7118697Z ##[endgroup]
+2026-07-28T04:13:08.7177777Z [command]/usr/bin/git log -1 --format=%H
+2026-07-28T04:13:08.7209467Z 60a9632ace68e34bfdc31aa22a400ff259dd07f7

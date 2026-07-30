@@ -1,0 +1,24 @@
+﻿2026-07-28T04:36:55.3233832Z ##[group]Run SUMMARY="automation/appium/reports/summary.md"
+2026-07-28T04:36:55.3234305Z [36;1mSUMMARY="automation/appium/reports/summary.md"[0m
+2026-07-28T04:36:55.3234634Z [36;1mif [ -f "$SUMMARY" ]; then[0m
+2026-07-28T04:36:55.3234994Z [36;1m  echo "## 📱 Appium Android Test Results" >> $GITHUB_STEP_SUMMARY[0m
+2026-07-28T04:36:55.3235397Z [36;1m  cat "$SUMMARY" >> $GITHUB_STEP_SUMMARY[0m
+2026-07-28T04:36:55.3235673Z [36;1melse[0m
+2026-07-28T04:36:55.3235967Z [36;1m  echo "## ⚠️ No Appium summary available" >> $GITHUB_STEP_SUMMARY[0m
+2026-07-28T04:36:55.3236301Z [36;1mfi[0m
+2026-07-28T04:36:55.3299876Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:36:55.3300434Z env:
+2026-07-28T04:36:55.3300635Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:36:55.3301089Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:36:55.3301526Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:36:55.3301973Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:36:55.3302467Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:36:55.3302878Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:36:55.3303277Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:36:55.3303670Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:36:55.3304113Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-28T04:36:55.3304838Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-28T04:36:55.3305262Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-07-28T04:36:55.3305573Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-07-28T04:36:55.3305887Z   ANDROID_AVD_HOME: /home/runner/.android/avd
+2026-07-28T04:36:55.3306165Z ##[endgroup]

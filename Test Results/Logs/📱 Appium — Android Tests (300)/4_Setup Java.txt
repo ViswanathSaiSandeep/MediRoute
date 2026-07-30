@@ -1,0 +1,39 @@
+﻿2026-07-28T04:17:16.9835515Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:17:16.9837792Z ##[group]Run actions/setup-java@v4
+2026-07-28T04:17:16.9838274Z with:
+2026-07-28T04:17:16.9838647Z   distribution: temurin
+2026-07-28T04:17:16.9839074Z   java-version: 17
+2026-07-28T04:17:16.9839477Z   java-package: jdk
+2026-07-28T04:17:16.9839886Z   check-latest: false
+2026-07-28T04:17:16.9840520Z   server-id: github
+2026-07-28T04:17:16.9840943Z   server-username: GITHUB_ACTOR
+2026-07-28T04:17:16.9841428Z   server-password: GITHUB_TOKEN
+2026-07-28T04:17:16.9841908Z   overwrite-settings: true
+2026-07-28T04:17:16.9842357Z   job-status: success
+2026-07-28T04:17:16.9846943Z   token: ***
+2026-07-28T04:17:16.9847347Z env:
+2026-07-28T04:17:16.9847712Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:16.9848347Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:16.9849095Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:16.9849900Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:16.9850933Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:16.9851647Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:16.9852432Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:16.9853153Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:16.9853755Z ##[endgroup]
+2026-07-28T04:17:17.1484705Z ##[group]Installed distributions
+2026-07-28T04:17:17.1549155Z Resolved Java 17.0.19+10 from tool-cache
+2026-07-28T04:17:17.1550249Z Setting Java 17.0.19+10 as the default
+2026-07-28T04:17:17.1561013Z (node:2271) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-28T04:17:17.1562615Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-28T04:17:17.1564468Z Creating toolchains.xml for JDK version 17 from temurin
+2026-07-28T04:17:17.1640345Z Writing to /home/runner/.m2/toolchains.xml
+2026-07-28T04:17:17.1641077Z 
+2026-07-28T04:17:17.1641303Z Java configuration:
+2026-07-28T04:17:17.1641892Z   Distribution: temurin
+2026-07-28T04:17:17.1642555Z   Version: 17.0.19+10
+2026-07-28T04:17:17.1643158Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-28T04:17:17.1643672Z 
+2026-07-28T04:17:17.1644179Z ##[endgroup]
+2026-07-28T04:17:17.1657422Z Creating settings.xml with server-id: github
+2026-07-28T04:17:17.1664818Z Writing to /home/runner/.m2/settings.xml

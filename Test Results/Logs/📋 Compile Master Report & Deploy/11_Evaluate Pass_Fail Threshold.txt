@@ -1,0 +1,40 @@
+﻿2026-07-28T04:37:19.9522705Z ##[group]Run RESULTS="Test Results/JSON/execution-results.json"
+2026-07-28T04:37:19.9523235Z [36;1mRESULTS="Test Results/JSON/execution-results.json"[0m
+2026-07-28T04:37:19.9523839Z [36;1mif [ ! -f "$RESULTS" ]; then[0m
+2026-07-28T04:37:19.9524198Z [36;1m  echo "No master results file found."[0m
+2026-07-28T04:37:19.9524528Z [36;1m  exit 0[0m
+2026-07-28T04:37:19.9524758Z [36;1mfi[0m
+2026-07-28T04:37:19.9525001Z [36;1mpython -c "[0m
+2026-07-28T04:37:19.9525274Z [36;1mimport json, sys[0m
+2026-07-28T04:37:19.9525558Z [36;1mwith open('$RESULTS') as f:[0m
+2026-07-28T04:37:19.9525874Z [36;1m    data = json.load(f)[0m
+2026-07-28T04:37:19.9526214Z [36;1ms = data.get('summary', {})[0m
+2026-07-28T04:37:19.9526527Z [36;1mtotal = s.get('grand_total', 0)[0m
+2026-07-28T04:37:19.9526849Z [36;1mpassed = s.get('grand_passed', 0)[0m
+2026-07-28T04:37:19.9527176Z [36;1mfailed = s.get('grand_failed', 0)[0m
+2026-07-28T04:37:19.9527481Z [36;1mif total == 0:[0m
+2026-07-28T04:37:19.9527761Z [36;1m    print('No tests executed.')[0m
+2026-07-28T04:37:19.9528095Z [36;1m    sys.exit(0)[0m
+2026-07-28T04:37:19.9528390Z [36;1mpass_rate = passed / total * 100[0m
+2026-07-28T04:37:19.9528725Z [36;1mfail_rate = failed / total * 100[0m
+2026-07-28T04:37:19.9529178Z [36;1mprint(f'Pass Rate: {pass_rate:.1f}% | Failed: {failed}/{total} ({fail_rate:.1f}%)')[0m
+2026-07-28T04:37:19.9529657Z [36;1mif pass_rate < 95 and fail_rate > 5:[0m
+2026-07-28T04:37:19.9530141Z [36;1m    print('❌ THRESHOLD BREACH: Pass rate < 95% and critical failures > 5%')[0m
+2026-07-28T04:37:19.9530607Z [36;1m    sys.exit(1)[0m
+2026-07-28T04:37:19.9531081Z [36;1melse:[0m
+2026-07-28T04:37:19.9531377Z [36;1m    print('✅ Within acceptable thresholds')[0m
+2026-07-28T04:37:19.9531696Z [36;1m"[0m
+2026-07-28T04:37:19.9575965Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:37:19.9576272Z env:
+2026-07-28T04:37:19.9576520Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:37:19.9576891Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:37:19.9577362Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:19.9577836Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:37:19.9578297Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:19.9578721Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:19.9579140Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:19.9579571Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:37:19.9579934Z ##[endgroup]
+2026-07-28T04:37:19.9842252Z Pass Rate: 89.0% | Failed: 30/272 (11.0%)
+2026-07-28T04:37:19.9843300Z ❌ THRESHOLD BREACH: Pass rate < 95% and critical failures > 5%
+2026-07-28T04:37:19.9886356Z ##[error]Process completed with exit code 1.

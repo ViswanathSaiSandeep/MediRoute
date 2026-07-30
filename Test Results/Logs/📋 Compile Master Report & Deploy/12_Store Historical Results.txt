@@ -1,0 +1,39 @@
+﻿2026-07-28T04:37:19.9937691Z ##[group]Run RESULTS="Test Results/JSON/execution-results.json"
+2026-07-28T04:37:19.9938231Z [36;1mRESULTS="Test Results/JSON/execution-results.json"[0m
+2026-07-28T04:37:19.9938624Z [36;1mif [ -f "$RESULTS" ]; then[0m
+2026-07-28T04:37:19.9938965Z [36;1m  TIMESTAMP=$(date +%Y%m%d_%H%M%S)[0m
+2026-07-28T04:37:19.9939333Z [36;1m  TMP="/tmp/results_${TIMESTAMP}.json"[0m
+2026-07-28T04:37:19.9939679Z [36;1m  cp "$RESULTS" "$TMP"[0m
+2026-07-28T04:37:19.9939963Z [36;1m[0m
+2026-07-28T04:37:19.9940239Z [36;1m  git config user.name "github-actions[bot]"[0m
+2026-07-28T04:37:19.9940708Z [36;1m  git config user.email "github-actions[bot]@users.noreply.github.com"[0m
+2026-07-28T04:37:19.9941172Z [36;1m  git stash --include-untracked || true[0m
+2026-07-28T04:37:19.9941534Z [36;1m  git fetch origin test-history || true[0m
+2026-07-28T04:37:19.9942057Z [36;1m  git checkout test-history 2>/dev/null || git checkout --orphan test-history[0m
+2026-07-28T04:37:19.9942508Z [36;1m  mkdir -p results[0m
+2026-07-28T04:37:19.9942871Z [36;1m  cp "$TMP" "results/results_${TIMESTAMP}.json"[0m
+2026-07-28T04:37:19.9943230Z [36;1m  git add results/ || true[0m
+2026-07-28T04:37:19.9943803Z [36;1m  git commit -m "E2E results ${TIMESTAMP} [ci skip]" || true[0m
+2026-07-28T04:37:19.9944287Z [36;1m  git push origin test-history || true[0m
+2026-07-28T04:37:19.9944616Z [36;1mfi[0m
+2026-07-28T04:37:19.9990268Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:37:19.9990570Z env:
+2026-07-28T04:37:19.9990816Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:37:19.9991197Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:37:19.9991655Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:19.9992132Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:37:19.9992605Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:19.9993019Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:19.9993441Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:19.9994161Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:37:19.9994534Z ##[endgroup]
+2026-07-28T04:37:20.1594181Z Saved working directory and index state WIP on main: 60a9632 fix(ci): fix appium script path and enable parallel workers (-n 4 for Selenium, -n 8 for HTTP tests)
+2026-07-28T04:37:20.4728110Z From https://github.com/ViswanathSaiSandeep/MediRoute
+2026-07-28T04:37:20.4728912Z  * branch            test-history -> FETCH_HEAD
+2026-07-28T04:37:20.4729702Z  * [new branch]      test-history -> origin/test-history
+2026-07-28T04:37:20.4887781Z branch 'test-history' set up to track 'origin/test-history'.
+2026-07-28T04:37:20.5159390Z [test-history 9fd6087] E2E results 20260728_043720 [ci skip]
+2026-07-28T04:37:20.5160141Z  1 file changed, 6283 insertions(+)
+2026-07-28T04:37:20.5160523Z  create mode 100644 results/results_20260728_043720.json
+2026-07-28T04:37:21.4265189Z To https://github.com/ViswanathSaiSandeep/MediRoute
+2026-07-28T04:37:21.4266013Z    b3b0cd2..9fd6087  test-history -> test-history

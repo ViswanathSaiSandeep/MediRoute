@@ -1,0 +1,128 @@
+﻿2026-07-28T04:15:32.4504977Z ##[group]Run peaceiris/actions-gh-pages@v4
+2026-07-28T04:15:32.4505478Z with:
+2026-07-28T04:15:32.4510228Z   github_token: ***
+2026-07-28T04:15:32.4510612Z   publish_dir: ./build/web
+2026-07-28T04:15:32.4511030Z   publish_branch: gh-pages
+2026-07-28T04:15:32.4511410Z   force_orphan: true
+2026-07-28T04:15:32.4511874Z   commit_message: Deploy MediRoute to GitHub Pages [ci skip]
+2026-07-28T04:15:32.4512434Z   allow_empty_commit: false
+2026-07-28T04:15:32.4512809Z   keep_files: false
+2026-07-28T04:15:32.4513145Z   enable_jekyll: false
+2026-07-28T04:15:32.4513501Z   disable_nojekyll: false
+2026-07-28T04:15:32.4513879Z   exclude_assets: .github
+2026-07-28T04:15:32.4514228Z env:
+2026-07-28T04:15:32.4514525Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:15:32.4515021Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:15:32.4515741Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.8-x64/flutter
+2026-07-28T04:15:32.4516512Z   PUB_CACHE: /home/runner/.pub-cache
+2026-07-28T04:15:32.4516944Z ##[endgroup]
+2026-07-28T04:15:32.5504452Z [INFO] Usage https://github.com/peaceiris/actions-gh-pages#readme
+2026-07-28T04:15:32.5511651Z ##[group]Dump inputs
+2026-07-28T04:15:32.5512095Z [INFO] GithubToken: true
+2026-07-28T04:15:32.5512574Z [INFO] PublishBranch: gh-pages
+2026-07-28T04:15:32.5513043Z [INFO] PublishDir: ./build/web
+2026-07-28T04:15:32.5513465Z [INFO] DestinationDir: 
+2026-07-28T04:15:32.5513864Z [INFO] ExternalRepository: 
+2026-07-28T04:15:32.5514286Z [INFO] AllowEmptyCommit: false
+2026-07-28T04:15:32.5514696Z [INFO] KeepFiles: false
+2026-07-28T04:15:32.5515091Z [INFO] ForceOrphan: true
+2026-07-28T04:15:32.5515502Z [INFO] UserName: 
+2026-07-28T04:15:32.5516331Z [INFO] UserEmail: 
+2026-07-28T04:15:32.5516884Z [INFO] CommitMessage: Deploy MediRoute to GitHub Pages [ci skip]
+2026-07-28T04:15:32.5517537Z [INFO] FullCommitMessage: 
+2026-07-28T04:15:32.5517956Z [INFO] TagName: 
+2026-07-28T04:15:32.5518315Z [INFO] TagMessage: 
+2026-07-28T04:15:32.5518728Z [INFO] EnableJekyll (DisableNoJekyll): false
+2026-07-28T04:15:32.5519248Z [INFO] CNAME: 
+2026-07-28T04:15:32.5519609Z [INFO] ExcludeAssets .github
+2026-07-28T04:15:32.5519885Z 
+2026-07-28T04:15:32.5520327Z ##[endgroup]
+2026-07-28T04:15:32.5520940Z ##[group]Setup auth token
+2026-07-28T04:15:32.5528845Z [INFO] setup GITHUB_TOKEN
+2026-07-28T04:15:32.5530604Z ##[endgroup]
+2026-07-28T04:15:32.5531012Z ##[group]Prepare publishing assets
+2026-07-28T04:15:32.5531438Z [INFO] ForceOrphan: true
+2026-07-28T04:15:32.5539589Z [INFO] chdir /home/runner/actions_github_pages_1785212132551
+2026-07-28T04:15:32.5617344Z [command]/usr/bin/git init
+2026-07-28T04:15:32.5725535Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-28T04:15:32.5726832Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-28T04:15:32.5727924Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-28T04:15:32.5728780Z hint: call:
+2026-07-28T04:15:32.5729243Z hint:
+2026-07-28T04:15:32.5729785Z hint: 	git config --global init.defaultBranch <name>
+2026-07-28T04:15:32.5730458Z hint:
+2026-07-28T04:15:32.5731084Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-28T04:15:32.5732064Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-28T04:15:32.5732835Z hint:
+2026-07-28T04:15:32.5733308Z hint: 	git branch -m <name>
+2026-07-28T04:15:32.5733826Z hint:
+2026-07-28T04:15:32.5734490Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-28T04:15:32.5735596Z Initialized empty Git repository in /home/runner/actions_github_pages_1785212132551/.git/
+2026-07-28T04:15:32.5780960Z [command]/usr/bin/git checkout --orphan gh-pages
+2026-07-28T04:15:32.5812407Z Switched to a new branch 'gh-pages'
+2026-07-28T04:15:32.5836394Z [INFO] prepare publishing assets
+2026-07-28T04:15:32.5837557Z [INFO] copy /home/runner/work/MediRoute/MediRoute/build/web to /home/runner/actions_github_pages_1785212132551
+2026-07-28T04:15:32.6415739Z [INFO] delete excluded assets
+2026-07-28T04:15:32.6473165Z [INFO] Created /home/runner/actions_github_pages_1785212132551/.nojekyll
+2026-07-28T04:15:32.6474193Z ##[endgroup]
+2026-07-28T04:15:32.6474843Z ##[group]Setup Git config
+2026-07-28T04:15:32.6488884Z [command]/usr/bin/git remote rm origin
+2026-07-28T04:15:32.6526634Z error: No such remote: 'origin'
+2026-07-28T04:15:32.6536175Z [INFO] The process '/usr/bin/git' failed with exit code 2
+2026-07-28T04:15:32.6557105Z [command]/usr/bin/git remote add origin ***github.com/ViswanathSaiSandeep/MediRoute.git
+2026-07-28T04:15:32.6609761Z [command]/usr/bin/git add --all
+2026-07-28T04:15:33.4524051Z [command]/usr/bin/git config user.name ViswanathSaiSandeep
+2026-07-28T04:15:33.4573327Z [command]/usr/bin/git config user.email ViswanathSaiSandeep@users.noreply.github.com
+2026-07-28T04:15:33.4606237Z ##[endgroup]
+2026-07-28T04:15:33.4606674Z ##[group]Create a commit
+2026-07-28T04:15:33.4622380Z [command]/usr/bin/git commit -m Deploy MediRoute to GitHub Pages [ci skip] 60a9632ace68e34bfdc31aa22a400ff259dd07f7
+2026-07-28T04:15:33.5063417Z [gh-pages (root-commit) 7e91a9f] Deploy MediRoute to GitHub Pages [ci skip] 60a9632ace68e34bfdc31aa22a400ff259dd07f7
+2026-07-28T04:15:33.5064389Z  41 files changed, 228022 insertions(+)
+2026-07-28T04:15:33.5064884Z  create mode 100644 .last_build_id
+2026-07-28T04:15:33.5065312Z  create mode 100644 .nojekyll
+2026-07-28T04:15:33.5065687Z  create mode 100644 404.html
+2026-07-28T04:15:33.5066313Z  create mode 100644 assets/AssetManifest.bin
+2026-07-28T04:15:33.5066674Z  create mode 100644 assets/AssetManifest.bin.json
+2026-07-28T04:15:33.5066995Z  create mode 100644 assets/FontManifest.json
+2026-07-28T04:15:33.5067294Z  create mode 100644 assets/NOTICES
+2026-07-28T04:15:33.5067609Z  create mode 100644 assets/fonts/MaterialIcons-Regular.otf
+2026-07-28T04:15:33.5068064Z  create mode 100644 assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+2026-07-28T04:15:33.5068520Z  create mode 100644 assets/shaders/ink_sparkle.frag
+2026-07-28T04:15:33.5068882Z  create mode 100644 assets/shaders/stretch_effect.frag
+2026-07-28T04:15:33.5069202Z  create mode 100644 canvaskit/canvaskit.js
+2026-07-28T04:15:33.5069514Z  create mode 100644 canvaskit/canvaskit.js.symbols
+2026-07-28T04:15:33.5070566Z  create mode 100644 canvaskit/canvaskit.wasm
+2026-07-28T04:15:33.5071036Z  create mode 100644 canvaskit/chromium/canvaskit.js
+2026-07-28T04:15:33.5071615Z  create mode 100644 canvaskit/chromium/canvaskit.js.symbols
+2026-07-28T04:15:33.5072216Z  create mode 100644 canvaskit/chromium/canvaskit.wasm
+2026-07-28T04:15:33.5072828Z  create mode 100644 canvaskit/experimental_webparagraph/canvaskit.js
+2026-07-28T04:15:33.5073617Z  create mode 100644 canvaskit/experimental_webparagraph/canvaskit.js.symbols
+2026-07-28T04:15:33.5074480Z  create mode 100644 canvaskit/experimental_webparagraph/canvaskit.wasm
+2026-07-28T04:15:33.5075063Z  create mode 100644 canvaskit/skwasm.js
+2026-07-28T04:15:33.5075379Z  create mode 100644 canvaskit/skwasm.js.symbols
+2026-07-28T04:15:33.5075692Z  create mode 100644 canvaskit/skwasm.wasm
+2026-07-28T04:15:33.5076399Z  create mode 100644 canvaskit/skwasm_heavy.js
+2026-07-28T04:15:33.5076751Z  create mode 100644 canvaskit/skwasm_heavy.js.symbols
+2026-07-28T04:15:33.5077231Z  create mode 100644 canvaskit/skwasm_heavy.wasm
+2026-07-28T04:15:33.5077568Z  create mode 100644 canvaskit/wimp.js
+2026-07-28T04:15:33.5077859Z  create mode 100644 canvaskit/wimp.js.symbols
+2026-07-28T04:15:33.5078259Z  create mode 100644 canvaskit/wimp.wasm
+2026-07-28T04:15:33.5078543Z  create mode 100644 favicon.png
+2026-07-28T04:15:33.5078835Z  create mode 100644 flutter.js
+2026-07-28T04:15:33.5079155Z  create mode 100644 flutter_bootstrap.js
+2026-07-28T04:15:33.5079457Z  create mode 100644 flutter_service_worker.js
+2026-07-28T04:15:33.5079758Z  create mode 100644 icons/Icon-192.png
+2026-07-28T04:15:33.5080145Z  create mode 100644 icons/Icon-512.png
+2026-07-28T04:15:33.5080425Z  create mode 100644 icons/Icon-maskable-192.png
+2026-07-28T04:15:33.5080818Z  create mode 100644 icons/Icon-maskable-512.png
+2026-07-28T04:15:33.5081782Z  create mode 100644 index.html
+2026-07-28T04:15:33.5082064Z  create mode 100644 main.dart.js
+2026-07-28T04:15:33.5082324Z  create mode 100644 manifest.json
+2026-07-28T04:15:33.5082732Z  create mode 100644 version.json
+2026-07-28T04:15:33.5083722Z ##[endgroup]
+2026-07-28T04:15:33.5084696Z ##[group]Push the commit or tag
+2026-07-28T04:15:33.5090214Z [command]/usr/bin/git push origin --force gh-pages
+2026-07-28T04:15:37.7930004Z To https://github.com/ViswanathSaiSandeep/MediRoute.git
+2026-07-28T04:15:37.7930749Z  + b822aef...7e91a9f gh-pages -> gh-pages (forced update)
+2026-07-28T04:15:37.7974711Z ##[endgroup]
+2026-07-28T04:15:37.7987515Z [INFO] Action successfully completed

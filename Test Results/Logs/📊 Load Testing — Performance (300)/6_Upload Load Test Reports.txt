@@ -1,0 +1,34 @@
+﻿2026-07-28T04:17:34.4525245Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:17:34.4526255Z ##[group]Run actions/upload-artifact@v4
+2026-07-28T04:17:34.4526599Z with:
+2026-07-28T04:17:34.4526853Z   name: load-testing-performance-reports
+2026-07-28T04:17:34.4527162Z   path: automation/load/reports/
+2026-07-28T04:17:34.4527443Z   retention-days: 30
+2026-07-28T04:17:34.4527711Z   if-no-files-found: warn
+2026-07-28T04:17:34.4528011Z   compression-level: 6
+2026-07-28T04:17:34.4528250Z   overwrite: false
+2026-07-28T04:17:34.4528482Z   include-hidden-files: false
+2026-07-28T04:17:34.4528777Z env:
+2026-07-28T04:17:34.4529022Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:34.4529383Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:34.4530049Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:34.4530462Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:34.4530869Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:34.4531269Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:34.4531636Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:34.4532001Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:34.4532308Z ##[endgroup]
+2026-07-28T04:17:34.5987516Z (node:2692) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-28T04:17:34.5988234Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-28T04:17:34.6056213Z With the provided path, there will be 5 files uploaded
+2026-07-28T04:17:34.6057479Z Artifact name is valid!
+2026-07-28T04:17:34.6058268Z Root directory input is valid!
+2026-07-28T04:17:34.8136704Z Beginning upload of artifact content to blob storage
+2026-07-28T04:17:34.8354372Z (node:2692) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-07-28T04:17:35.0059061Z Uploaded bytes 31173
+2026-07-28T04:17:35.0466923Z Finished uploading artifact content to blob storage!
+2026-07-28T04:17:35.0467874Z SHA256 digest of uploaded artifact zip is 4ce1cc0ff70c705e96c77c57ec859c2a48565bdaa837fccbc7ff4eca6470de01
+2026-07-28T04:17:35.0468701Z Finalizing artifact upload
+2026-07-28T04:17:35.2307972Z Artifact load-testing-performance-reports.zip successfully finalized. Artifact ID 8676469165
+2026-07-28T04:17:35.2308870Z Artifact load-testing-performance-reports has been successfully uploaded! Final size is 31173 bytes. Artifact ID is 8676469165
+2026-07-28T04:17:35.2315182Z Artifact download URL: https://github.com/ViswanathSaiSandeep/MediRoute/actions/runs/30328121407/artifacts/8676469165

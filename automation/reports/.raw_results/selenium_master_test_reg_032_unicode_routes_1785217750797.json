@@ -1,0 +1,1 @@
+{"test_id": "test_reg_032_unicode_routes", "module": "regression", "test_name": "test_reg_032_unicode_routes", "priority": "Medium", "precondition": "Application loaded", "expected": "Test passes", "actual": "Test passes", "status": "PASSED", "duration": 2.953136000011, "error": "", "stack_trace": "", "screenshot": "", "console_logs": [], "category": "Selenium Website Tests"}

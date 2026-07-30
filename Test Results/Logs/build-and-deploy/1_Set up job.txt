@@ -1,0 +1,36 @@
+﻿2026-07-28T04:13:04.9182794Z Current runner version: '2.336.0'
+2026-07-28T04:13:04.9209930Z ##[group]Runner Image Provisioner
+2026-07-28T04:13:04.9210924Z Hosted Compute Agent
+2026-07-28T04:13:04.9211542Z Version: 20260707.563
+2026-07-28T04:13:04.9212207Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+2026-07-28T04:13:04.9213049Z Build Date: 2026-07-07T19:33:50Z
+2026-07-28T04:13:04.9213789Z Worker ID: {48e32f87-9ae0-4583-bfee-5f505fad27aa}
+2026-07-28T04:13:04.9214573Z Azure Region: westus
+2026-07-28T04:13:04.9215160Z ##[endgroup]
+2026-07-28T04:13:04.9217082Z ##[group]Operating System
+2026-07-28T04:13:04.9217878Z Ubuntu
+2026-07-28T04:13:04.9218413Z 24.04.4
+2026-07-28T04:13:04.9219339Z LTS
+2026-07-28T04:13:04.9219990Z ##[endgroup]
+2026-07-28T04:13:04.9220537Z ##[group]Runner Image
+2026-07-28T04:13:04.9221291Z Image: ubuntu-24.04
+2026-07-28T04:13:04.9221871Z Version: 20260720.247.2
+2026-07-28T04:13:04.9222978Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260720.247/images/ubuntu/Ubuntu2404-Readme.md
+2026-07-28T04:13:04.9224759Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260720.247
+2026-07-28T04:13:04.9226008Z ##[endgroup]
+2026-07-28T04:13:04.9227344Z ##[group]GITHUB_TOKEN Permissions
+2026-07-28T04:13:04.9229735Z Actions: read
+2026-07-28T04:13:04.9230395Z Contents: write
+2026-07-28T04:13:04.9231107Z Metadata: read
+2026-07-28T04:13:04.9231689Z Pages: write
+2026-07-28T04:13:04.9232226Z ##[endgroup]
+2026-07-28T04:13:04.9234359Z Secret source: Actions
+2026-07-28T04:13:04.9235496Z Prepare workflow directory
+2026-07-28T04:13:04.9861642Z Prepare all required actions
+2026-07-28T04:13:04.9908733Z Getting action download info
+2026-07-28T04:13:05.3305254Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-07-28T04:13:05.7987371Z Download action repository 'subosito/flutter-action@v2' (SHA:1a449444c387b1966244ae4d4f8c696479add0b2)
+2026-07-28T04:13:06.0430638Z Download action repository 'peaceiris/actions-gh-pages@v4' (SHA:84c30a85c19949d7eee79c4ff27748b70285e453)
+2026-07-28T04:13:06.8365133Z Getting action download info
+2026-07-28T04:13:06.9604749Z Download action repository 'actions/cache@v5' (SHA:caa296126883cff596d87d8935842f9db880ef25)
+2026-07-28T04:13:07.1831504Z Complete job name: build-and-deploy

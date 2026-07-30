@@ -1,0 +1,27 @@
+﻿2026-07-28T04:37:18.5160033Z ##[group]Run cd automation
+2026-07-28T04:37:18.5160371Z [36;1mcd automation[0m
+2026-07-28T04:37:18.5160647Z [36;1mpython -c "[0m
+2026-07-28T04:37:18.5160967Z [36;1mimport sys; sys.path.insert(0, '.')[0m
+2026-07-28T04:37:18.5161414Z [36;1mfrom utils.master_report_compiler import compile_master_report[0m
+2026-07-28T04:37:18.5161881Z [36;1mresult = compile_master_report(base_dir='..')[0m
+2026-07-28T04:37:18.5162231Z [36;1ms = result['summary'][0m
+2026-07-28T04:37:18.5162694Z [36;1mprint(f'Master Report: {s[\"grand_total\"]} tests, {s[\"grand_pass_rate\"]}% pass rate')[0m
+2026-07-28T04:37:18.5163231Z [36;1mprint(f'  Passed: {s[\"grand_passed\"]}')[0m
+2026-07-28T04:37:18.5164196Z [36;1mprint(f'  Failed: {s[\"grand_failed\"]}')[0m
+2026-07-28T04:37:18.5164568Z [36;1mprint(f'  Skipped: {s[\"grand_skipped\"]}')[0m
+2026-07-28T04:37:18.5164905Z [36;1m"[0m
+2026-07-28T04:37:18.5210568Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:37:18.5210871Z env:
+2026-07-28T04:37:18.5211103Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:37:18.5211519Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:37:18.5212075Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:18.5212767Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:37:18.5213231Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:18.5213793Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:18.5214207Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:37:18.5214624Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:37:18.5214983Z ##[endgroup]
+2026-07-28T04:37:18.8046823Z Master Report: 272 tests, 88.97% pass rate
+2026-07-28T04:37:18.8047426Z   Passed: 242
+2026-07-28T04:37:18.8047752Z   Failed: 30
+2026-07-28T04:37:18.8048062Z   Skipped: 0

@@ -1,0 +1,132 @@
+﻿2026-07-28T04:17:35.8511480Z ##[group]Run npm install -g appium
+2026-07-28T04:17:35.8511884Z [36;1mnpm install -g appium[0m
+2026-07-28T04:17:35.8512183Z [36;1mappium driver install uiautomator2[0m
+2026-07-28T04:17:35.8512561Z [36;1mpip install -r automation/appium/requirements.txt[0m
+2026-07-28T04:17:35.8567791Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:17:35.8568090Z env:
+2026-07-28T04:17:35.8568305Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:35.8568874Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:35.8569332Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:35.8569800Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:35.8570473Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:35.8570894Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:35.8571312Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:35.8571732Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:35.8572244Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-28T04:17:35.8572780Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-28T04:17:35.8573223Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-07-28T04:17:35.8573545Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-07-28T04:17:35.8573852Z ##[endgroup]
+2026-07-28T04:17:43.5849521Z 
+2026-07-28T04:17:43.5872866Z added 296 packages in 7s
+2026-07-28T04:17:43.5900680Z 
+2026-07-28T04:17:43.5919081Z 68 packages are looking for funding
+2026-07-28T04:17:43.5919901Z   run `npm fund` for details
+2026-07-28T04:17:44.2455012Z - Checking if 'appium-uiautomator2-driver' is compatible
+2026-07-28T04:17:44.6305440Z ✔ Checking if 'appium-uiautomator2-driver' is compatible
+2026-07-28T04:17:44.6306341Z - Installing 'uiautomator2'
+2026-07-28T04:17:48.8903342Z ✔ Installing 'uiautomator2'
+2026-07-28T04:17:48.8904001Z - Validating 'uiautomator2'
+2026-07-28T04:17:48.8904727Z ✔ Validating 'uiautomator2'
+2026-07-28T04:17:48.8944782Z ℹ Driver uiautomator2@8.2.0 successfully installed
+2026-07-28T04:17:48.8945655Z - automationName: UiAutomator2
+2026-07-28T04:17:48.8946330Z - platformNames: ["Android"]
+2026-07-28T04:17:49.9024887Z Collecting Appium-Python-Client>=3.1.0 (from -r automation/appium/requirements.txt (line 2))
+2026-07-28T04:17:49.9605278Z   Downloading appium_python_client-5.3.1-py3-none-any.whl.metadata (20 kB)
+2026-07-28T04:17:50.0017158Z Collecting selenium>=4.15.0 (from -r automation/appium/requirements.txt (line 3))
+2026-07-28T04:17:50.0063287Z   Downloading selenium-4.46.0-py3-none-any.whl.metadata (7.4 kB)
+2026-07-28T04:17:50.0431191Z Collecting pytest>=7.4.0 (from -r automation/appium/requirements.txt (line 4))
+2026-07-28T04:17:50.0475178Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-07-28T04:17:50.0673493Z Collecting pytest-html>=4.1.0 (from -r automation/appium/requirements.txt (line 5))
+2026-07-28T04:17:50.0717503Z   Downloading pytest_html-4.2.0-py3-none-any.whl.metadata (4.0 kB)
+2026-07-28T04:17:50.0835690Z Collecting pytest-timeout>=2.3.0 (from -r automation/appium/requirements.txt (line 6))
+2026-07-28T04:17:50.0879635Z   Downloading pytest_timeout-2.4.0-py3-none-any.whl.metadata (20 kB)
+2026-07-28T04:17:50.1042843Z Collecting openpyxl>=3.1.0 (from -r automation/appium/requirements.txt (line 7))
+2026-07-28T04:17:50.1086455Z   Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+2026-07-28T04:17:50.1277703Z Collecting requests>=2.31.0 (from -r automation/appium/requirements.txt (line 8))
+2026-07-28T04:17:50.1350961Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-07-28T04:17:50.2886344Z Collecting Pillow>=10.0.0 (from -r automation/appium/requirements.txt (line 9))
+2026-07-28T04:17:50.2931203Z   Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+2026-07-28T04:17:50.3128304Z Collecting typing-extensions~=4.13 (from Appium-Python-Client>=3.1.0->-r automation/appium/requirements.txt (line 2))
+2026-07-28T04:17:50.3168994Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-07-28T04:17:50.3321523Z Collecting certifi>=2026.2.25 (from selenium>=4.15.0->-r automation/appium/requirements.txt (line 3))
+2026-07-28T04:17:50.3361572Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+2026-07-28T04:17:50.3497314Z Collecting trio<1.0,>=0.31.0 (from selenium>=4.15.0->-r automation/appium/requirements.txt (line 3))
+2026-07-28T04:17:50.3538677Z   Downloading trio-0.33.0-py3-none-any.whl.metadata (8.5 kB)
+2026-07-28T04:17:50.3661805Z Collecting trio-websocket<1.0,>=0.12.2 (from selenium>=4.15.0->-r automation/appium/requirements.txt (line 3))
+2026-07-28T04:17:50.3709759Z   Downloading trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+2026-07-28T04:17:50.3903914Z Collecting urllib3<3.0,>=2.6.3 (from urllib3[socks]<3.0,>=2.6.3->selenium>=4.15.0->-r automation/appium/requirements.txt (line 3))
+2026-07-28T04:17:50.3946469Z   Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+2026-07-28T04:17:50.4103156Z Collecting websocket-client<2.0,>=1.8.0 (from selenium>=4.15.0->-r automation/appium/requirements.txt (line 3))
+2026-07-28T04:17:50.4144879Z   Downloading websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+2026-07-28T04:17:50.4278531Z Collecting attrs>=23.2.0 (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/appium/requirements.txt (line 3))
+2026-07-28T04:17:50.4319653Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-07-28T04:17:50.4451468Z Collecting sortedcontainers (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/appium/requirements.txt (line 3))
+2026-07-28T04:17:50.4493247Z   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+2026-07-28T04:17:50.4626064Z Collecting idna (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/appium/requirements.txt (line 3))
+2026-07-28T04:17:50.4671342Z   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+2026-07-28T04:17:50.4774826Z Collecting outcome (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/appium/requirements.txt (line 3))
+2026-07-28T04:17:50.4816892Z   Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+2026-07-28T04:17:50.4911105Z Collecting sniffio>=1.3.0 (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/appium/requirements.txt (line 3))
+2026-07-28T04:17:50.4952403Z   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+2026-07-28T04:17:50.5100905Z Collecting wsproto>=0.14 (from trio-websocket<1.0,>=0.12.2->selenium>=4.15.0->-r automation/appium/requirements.txt (line 3))
+2026-07-28T04:17:50.5143269Z   Downloading wsproto-1.3.2-py3-none-any.whl.metadata (5.2 kB)
+2026-07-28T04:17:50.5309435Z Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3.0,>=2.6.3->selenium>=4.15.0->-r automation/appium/requirements.txt (line 3))
+2026-07-28T04:17:50.5358328Z   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+2026-07-28T04:17:50.5494971Z Collecting iniconfig>=1.0.1 (from pytest>=7.4.0->-r automation/appium/requirements.txt (line 4))
+2026-07-28T04:17:50.5540862Z   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+2026-07-28T04:17:50.5699152Z Collecting packaging>=22 (from pytest>=7.4.0->-r automation/appium/requirements.txt (line 4))
+2026-07-28T04:17:50.5745453Z   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+2026-07-28T04:17:50.5864387Z Collecting pluggy<2,>=1.5 (from pytest>=7.4.0->-r automation/appium/requirements.txt (line 4))
+2026-07-28T04:17:50.5908283Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-07-28T04:17:50.6067815Z Collecting pygments>=2.7.2 (from pytest>=7.4.0->-r automation/appium/requirements.txt (line 4))
+2026-07-28T04:17:50.6110316Z   Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+2026-07-28T04:17:50.6251251Z Collecting jinja2>=3 (from pytest-html>=4.1.0->-r automation/appium/requirements.txt (line 5))
+2026-07-28T04:17:50.6292085Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-07-28T04:17:50.6403000Z Collecting pytest-metadata>=2 (from pytest-html>=4.1.0->-r automation/appium/requirements.txt (line 5))
+2026-07-28T04:17:50.6448267Z   Downloading pytest_metadata-3.1.1-py3-none-any.whl.metadata (8.6 kB)
+2026-07-28T04:17:50.6579763Z Collecting et-xmlfile (from openpyxl>=3.1.0->-r automation/appium/requirements.txt (line 7))
+2026-07-28T04:17:50.6622456Z   Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+2026-07-28T04:17:50.7545640Z Collecting charset_normalizer<4,>=2 (from requests>=2.31.0->-r automation/appium/requirements.txt (line 8))
+2026-07-28T04:17:50.7595137Z   Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+2026-07-28T04:17:50.8108926Z Collecting MarkupSafe>=2.0 (from jinja2>=3->pytest-html>=4.1.0->-r automation/appium/requirements.txt (line 5))
+2026-07-28T04:17:50.8155844Z   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-07-28T04:17:50.8290555Z Collecting h11<1,>=0.16.0 (from wsproto>=0.14->trio-websocket<1.0,>=0.12.2->selenium>=4.15.0->-r automation/appium/requirements.txt (line 3))
+2026-07-28T04:17:50.8329690Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-07-28T04:17:50.8418202Z Downloading appium_python_client-5.3.1-py3-none-any.whl (351 kB)
+2026-07-28T04:17:50.8533168Z Downloading selenium-4.46.0-py3-none-any.whl (9.4 MB)
+2026-07-28T04:17:50.8990585Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.4/9.4 MB 225.6 MB/s  0:00:00
+2026-07-28T04:17:50.9038348Z Downloading trio-0.33.0-py3-none-any.whl (510 kB)
+2026-07-28T04:17:50.9122252Z Downloading trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+2026-07-28T04:17:50.9185048Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-07-28T04:17:50.9245475Z Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+2026-07-28T04:17:50.9313629Z Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+2026-07-28T04:17:50.9375568Z Downloading websocket_client-1.9.0-py3-none-any.whl (82 kB)
+2026-07-28T04:17:50.9465549Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-07-28T04:17:50.9536667Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-07-28T04:17:50.9598764Z Downloading pytest_html-4.2.0-py3-none-any.whl (23 kB)
+2026-07-28T04:17:50.9661081Z Downloading pytest_timeout-2.4.0-py3-none-any.whl (14 kB)
+2026-07-28T04:17:50.9724299Z Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+2026-07-28T04:17:50.9793543Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-07-28T04:17:50.9858384Z Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (221 kB)
+2026-07-28T04:17:50.9926540Z Downloading idna-3.18-py3-none-any.whl (65 kB)
+2026-07-28T04:17:50.9989532Z Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+2026-07-28T04:17:51.0251674Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 287.0 MB/s  0:00:00
+2026-07-28T04:17:51.0295394Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-07-28T04:17:51.0356877Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+2026-07-28T04:17:51.0420121Z Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+2026-07-28T04:17:51.0478602Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-07-28T04:17:51.0571187Z Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-07-28T04:17:51.0854020Z Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+2026-07-28T04:17:51.0960059Z Downloading packaging-26.2-py3-none-any.whl (100 kB)
+2026-07-28T04:17:51.1030710Z Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+2026-07-28T04:17:51.1104001Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 202.7 MB/s  0:00:00
+2026-07-28T04:17:51.1147100Z Downloading pytest_metadata-3.1.1-py3-none-any.whl (11 kB)
+2026-07-28T04:17:51.1206281Z Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+2026-07-28T04:17:51.1266960Z Downloading wsproto-1.3.2-py3-none-any.whl (24 kB)
+2026-07-28T04:17:51.1332809Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-07-28T04:17:51.1395633Z Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+2026-07-28T04:17:51.1459852Z Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+2026-07-28T04:17:51.2623484Z Installing collected packages: sortedcontainers, websocket-client, urllib3, typing-extensions, sniffio, pysocks, pygments, pluggy, Pillow, packaging, MarkupSafe, iniconfig, idna, h11, et-xmlfile, charset_normalizer, certifi, attrs, wsproto, requests, pytest, outcome, openpyxl, jinja2, trio, pytest-timeout, pytest-metadata, trio-websocket, pytest-html, selenium, Appium-Python-Client
+2026-07-28T04:17:54.6204117Z 
+2026-07-28T04:17:54.6226243Z Successfully installed Appium-Python-Client-5.3.1 MarkupSafe-3.0.3 Pillow-12.3.0 attrs-26.1.0 certifi-2026.7.22 charset_normalizer-3.4.9 et-xmlfile-2.0.0 h11-0.16.0 idna-3.18 iniconfig-2.3.0 jinja2-3.1.6 openpyxl-3.1.5 outcome-1.3.0.post0 packaging-26.2 pluggy-1.6.0 pygments-2.20.0 pysocks-1.7.1 pytest-9.1.1 pytest-html-4.2.0 pytest-metadata-3.1.1 pytest-timeout-2.4.0 requests-2.34.2 selenium-4.46.0 sniffio-1.3.1 sortedcontainers-2.4.0 trio-0.33.0 trio-websocket-0.12.2 typing-extensions-4.16.0 urllib3-2.7.0 websocket-client-1.9.0 wsproto-1.3.2

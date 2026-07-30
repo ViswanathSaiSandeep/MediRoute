@@ -1,0 +1,1 @@
+{"test_id": "test_reg_023_favicon_loads", "module": "regression", "test_name": "test_reg_023_favicon_loads", "priority": "Medium", "precondition": "Application loaded", "expected": "Test passes", "actual": "Test passes", "status": "PASSED", "duration": 2.0468008000025293, "error": "", "stack_trace": "", "screenshot": "", "console_logs": [], "category": "Selenium Website Tests"}

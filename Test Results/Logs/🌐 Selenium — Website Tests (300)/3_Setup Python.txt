@@ -1,0 +1,18 @@
+﻿2026-07-28T04:17:17.9887819Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:17:17.9893787Z ##[group]Run actions/setup-python@v5
+2026-07-28T04:17:17.9895281Z with:
+2026-07-28T04:17:17.9896191Z   python-version: 3.11
+2026-07-28T04:17:17.9897203Z   check-latest: false
+2026-07-28T04:17:17.9907627Z   token: ***
+2026-07-28T04:17:17.9908576Z   update-environment: true
+2026-07-28T04:17:17.9909656Z   allow-prereleases: false
+2026-07-28T04:17:17.9910723Z   freethreaded: false
+2026-07-28T04:17:17.9911685Z env:
+2026-07-28T04:17:17.9912549Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:17.9913900Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:17.9915569Z ##[endgroup]
+2026-07-28T04:17:18.1250664Z ##[group]Installed versions
+2026-07-28T04:17:18.1349806Z (node:2249) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-28T04:17:18.1354742Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-28T04:17:18.1357616Z Successfully set up CPython (3.11.15)
+2026-07-28T04:17:18.1360573Z ##[endgroup]

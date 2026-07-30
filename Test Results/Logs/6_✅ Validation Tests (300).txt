@@ -1,0 +1,1940 @@
+﻿2026-07-28T04:17:15.2643751Z Current runner version: '2.336.0'
+2026-07-28T04:17:15.2668569Z ##[group]Runner Image Provisioner
+2026-07-28T04:17:15.2669421Z Hosted Compute Agent
+2026-07-28T04:17:15.2670145Z Version: 20260707.563
+2026-07-28T04:17:15.2670772Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+2026-07-28T04:17:15.2671519Z Build Date: 2026-07-07T19:33:50Z
+2026-07-28T04:17:15.2672217Z Worker ID: {d184fae0-86c9-4f9b-bb15-f16f2c7d0536}
+2026-07-28T04:17:15.2672938Z Azure Region: westcentralus
+2026-07-28T04:17:15.2673574Z ##[endgroup]
+2026-07-28T04:17:15.2675022Z ##[group]Operating System
+2026-07-28T04:17:15.2675874Z Ubuntu
+2026-07-28T04:17:15.2676502Z 24.04.4
+2026-07-28T04:17:15.2677006Z LTS
+2026-07-28T04:17:15.2677543Z ##[endgroup]
+2026-07-28T04:17:15.2678151Z ##[group]Runner Image
+2026-07-28T04:17:15.2678747Z Image: ubuntu-24.04
+2026-07-28T04:17:15.2679365Z Version: 20260720.247.2
+2026-07-28T04:17:15.2680588Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260720.247/images/ubuntu/Ubuntu2404-Readme.md
+2026-07-28T04:17:15.2682513Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260720.247
+2026-07-28T04:17:15.2683522Z ##[endgroup]
+2026-07-28T04:17:15.2684816Z ##[group]GITHUB_TOKEN Permissions
+2026-07-28T04:17:15.2687149Z Actions: read
+2026-07-28T04:17:15.2687889Z Contents: write
+2026-07-28T04:17:15.2688451Z Metadata: read
+2026-07-28T04:17:15.2688982Z Pages: write
+2026-07-28T04:17:15.2689575Z ##[endgroup]
+2026-07-28T04:17:15.2691584Z Secret source: Actions
+2026-07-28T04:17:15.2692758Z Prepare workflow directory
+2026-07-28T04:17:15.3312258Z Prepare all required actions
+2026-07-28T04:17:15.3358825Z Getting action download info
+2026-07-28T04:17:15.6268411Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-07-28T04:17:16.2437975Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-07-28T04:17:16.3604222Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-07-28T04:17:16.6222545Z Complete job name: ✅ Validation Tests (300)
+2026-07-28T04:17:16.6995964Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:17:16.7004830Z ##[group]Run actions/checkout@v4
+2026-07-28T04:17:16.7005787Z with:
+2026-07-28T04:17:16.7006283Z   repository: ViswanathSaiSandeep/MediRoute
+2026-07-28T04:17:16.7010328Z   token: ***
+2026-07-28T04:17:16.7010766Z   ssh-strict: true
+2026-07-28T04:17:16.7011214Z   ssh-user: git
+2026-07-28T04:17:16.7011675Z   persist-credentials: true
+2026-07-28T04:17:16.7012165Z   clean: true
+2026-07-28T04:17:16.7012625Z   sparse-checkout-cone-mode: true
+2026-07-28T04:17:16.7013151Z   fetch-depth: 1
+2026-07-28T04:17:16.7013582Z   fetch-tags: false
+2026-07-28T04:17:16.7014052Z   show-progress: true
+2026-07-28T04:17:16.7014492Z   lfs: false
+2026-07-28T04:17:16.7014940Z   submodules: false
+2026-07-28T04:17:16.7015385Z   set-safe-directory: true
+2026-07-28T04:17:16.7016098Z   allow-unsafe-pr-checkout: false
+2026-07-28T04:17:16.7016884Z env:
+2026-07-28T04:17:16.7017294Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:16.7017898Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:16.7018549Z ##[endgroup]
+2026-07-28T04:17:16.8047037Z Syncing repository: ViswanathSaiSandeep/MediRoute
+2026-07-28T04:17:16.8049105Z ##[group]Getting Git version info
+2026-07-28T04:17:16.8049856Z Working directory is '/home/runner/work/MediRoute/MediRoute'
+2026-07-28T04:17:16.8050854Z [command]/usr/bin/git version
+2026-07-28T04:17:16.8133461Z git version 2.54.0
+2026-07-28T04:17:16.8191703Z ##[endgroup]
+2026-07-28T04:17:16.8209353Z Temporarily overriding HOME='/home/runner/work/_temp/b0ab92c3-cc25-4f83-9330-d9e8e09115d1' before making global git config changes
+2026-07-28T04:17:16.8212288Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-28T04:17:16.8215795Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MediRoute/MediRoute
+2026-07-28T04:17:16.8266630Z Deleting the contents of '/home/runner/work/MediRoute/MediRoute'
+2026-07-28T04:17:16.8271747Z ##[group]Initializing the repository
+2026-07-28T04:17:16.8277398Z [command]/usr/bin/git init /home/runner/work/MediRoute/MediRoute
+2026-07-28T04:17:16.8380668Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-28T04:17:16.8381843Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-28T04:17:16.8382781Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-28T04:17:16.8383531Z hint: call:
+2026-07-28T04:17:16.8383936Z hint:
+2026-07-28T04:17:16.8384463Z hint: 	git config --global init.defaultBranch <name>
+2026-07-28T04:17:16.8385079Z hint:
+2026-07-28T04:17:16.8386276Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-28T04:17:16.8387472Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-28T04:17:16.8388213Z hint:
+2026-07-28T04:17:16.8388632Z hint: 	git branch -m <name>
+2026-07-28T04:17:16.8389220Z hint:
+2026-07-28T04:17:16.8389896Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-28T04:17:16.8397241Z Initialized empty Git repository in /home/runner/work/MediRoute/MediRoute/.git/
+2026-07-28T04:17:16.8411429Z [command]/usr/bin/git remote add origin https://github.com/ViswanathSaiSandeep/MediRoute
+2026-07-28T04:17:16.8454915Z ##[endgroup]
+2026-07-28T04:17:16.8456339Z ##[group]Disabling automatic garbage collection
+2026-07-28T04:17:16.8460454Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-28T04:17:16.8493173Z ##[endgroup]
+2026-07-28T04:17:16.8494694Z ##[group]Setting up auth
+2026-07-28T04:17:16.8501962Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-28T04:17:16.8548551Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-28T04:17:16.8926824Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-28T04:17:16.8968661Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-28T04:17:16.9193042Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-28T04:17:16.9228519Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-28T04:17:16.9454855Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-28T04:17:16.9494416Z ##[endgroup]
+2026-07-28T04:17:16.9495874Z ##[group]Fetching the repository
+2026-07-28T04:17:16.9505107Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +60a9632ace68e34bfdc31aa22a400ff259dd07f7:refs/remotes/origin/main
+2026-07-28T04:17:17.5759580Z From https://github.com/ViswanathSaiSandeep/MediRoute
+2026-07-28T04:17:17.5762129Z  * [new ref]         60a9632ace68e34bfdc31aa22a400ff259dd07f7 -> origin/main
+2026-07-28T04:17:17.5805842Z ##[endgroup]
+2026-07-28T04:17:17.5807400Z ##[group]Determining the checkout info
+2026-07-28T04:17:17.5809396Z ##[endgroup]
+2026-07-28T04:17:17.5817461Z [command]/usr/bin/git sparse-checkout disable
+2026-07-28T04:17:17.5871219Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-28T04:17:17.5906662Z ##[group]Checking out the ref
+2026-07-28T04:17:17.5910358Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-07-28T04:17:17.6104526Z Switched to a new branch 'main'
+2026-07-28T04:17:17.6108667Z branch 'main' set up to track 'origin/main'.
+2026-07-28T04:17:17.6115120Z ##[endgroup]
+2026-07-28T04:17:17.6158995Z [command]/usr/bin/git log -1 --format=%H
+2026-07-28T04:17:17.6184802Z 60a9632ace68e34bfdc31aa22a400ff259dd07f7
+2026-07-28T04:17:17.6454847Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:17:17.6457613Z ##[group]Run actions/setup-python@v5
+2026-07-28T04:17:17.6458125Z with:
+2026-07-28T04:17:17.6458524Z   python-version: 3.11
+2026-07-28T04:17:17.6458969Z   check-latest: false
+2026-07-28T04:17:17.6462804Z   token: ***
+2026-07-28T04:17:17.6463232Z   update-environment: true
+2026-07-28T04:17:17.6463716Z   allow-prereleases: false
+2026-07-28T04:17:17.6464183Z   freethreaded: false
+2026-07-28T04:17:17.6464627Z env:
+2026-07-28T04:17:17.6465009Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:17.6465719Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:17.6466359Z ##[endgroup]
+2026-07-28T04:17:17.7846700Z ##[group]Installed versions
+2026-07-28T04:17:17.7961923Z (node:2376) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-28T04:17:17.7963143Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-28T04:17:17.7964337Z Successfully set up CPython (3.11.15)
+2026-07-28T04:17:17.7965896Z ##[endgroup]
+2026-07-28T04:17:17.8126746Z ##[group]Run pip install -r automation/requirements.txt
+2026-07-28T04:17:17.8127572Z [36;1mpip install -r automation/requirements.txt[0m
+2026-07-28T04:17:17.8318459Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:17:17.8319364Z env:
+2026-07-28T04:17:17.8320075Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:17.8320932Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:17.8321758Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:17.8322564Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:17.8323399Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:17.8324241Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:17.8325953Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:17.8327225Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:17.8327900Z ##[endgroup]
+2026-07-28T04:17:21.2209212Z Collecting selenium>=4.15.0 (from -r automation/requirements.txt (line 2))
+2026-07-28T04:17:21.3186743Z   Downloading selenium-4.46.0-py3-none-any.whl.metadata (7.4 kB)
+2026-07-28T04:17:21.3728996Z Collecting pytest>=7.4.0 (from -r automation/requirements.txt (line 3))
+2026-07-28T04:17:21.3936168Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-07-28T04:17:21.4281137Z Collecting pytest-html>=4.1.0 (from -r automation/requirements.txt (line 4))
+2026-07-28T04:17:21.4535046Z   Downloading pytest_html-4.2.0-py3-none-any.whl.metadata (4.0 kB)
+2026-07-28T04:17:21.4847354Z Collecting pytest-xdist>=3.5.0 (from -r automation/requirements.txt (line 5))
+2026-07-28T04:17:21.5070963Z   Downloading pytest_xdist-3.8.0-py3-none-any.whl.metadata (3.0 kB)
+2026-07-28T04:17:21.5343465Z Collecting pytest-timeout>=2.3.0 (from -r automation/requirements.txt (line 6))
+2026-07-28T04:17:21.5534777Z   Downloading pytest_timeout-2.4.0-py3-none-any.whl.metadata (20 kB)
+2026-07-28T04:17:21.5895995Z Collecting openpyxl>=3.1.0 (from -r automation/requirements.txt (line 7))
+2026-07-28T04:17:21.6112125Z   Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+2026-07-28T04:17:21.6476059Z Collecting requests>=2.31.0 (from -r automation/requirements.txt (line 8))
+2026-07-28T04:17:21.6674131Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-07-28T04:17:21.7010788Z Collecting certifi>=2026.2.25 (from selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:21.7209038Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+2026-07-28T04:17:21.7504890Z Collecting trio<1.0,>=0.31.0 (from selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:21.7699565Z   Downloading trio-0.33.0-py3-none-any.whl.metadata (8.5 kB)
+2026-07-28T04:17:21.7984486Z Collecting trio-websocket<1.0,>=0.12.2 (from selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:21.8178575Z   Downloading trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+2026-07-28T04:17:21.8488067Z Collecting typing_extensions<5.0,>=4.15.0 (from selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:21.8681719Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-07-28T04:17:21.9043681Z Collecting urllib3<3.0,>=2.6.3 (from urllib3[socks]<3.0,>=2.6.3->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:21.9236661Z   Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+2026-07-28T04:17:21.9570320Z Collecting websocket-client<2.0,>=1.8.0 (from selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:21.9763478Z   Downloading websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+2026-07-28T04:17:22.0070152Z Collecting attrs>=23.2.0 (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:22.0263348Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-07-28T04:17:22.0574298Z Collecting sortedcontainers (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:22.0802709Z   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+2026-07-28T04:17:22.1118319Z Collecting idna (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:22.1314619Z   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+2026-07-28T04:17:22.1611689Z Collecting outcome (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:22.1813542Z   Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+2026-07-28T04:17:22.2074737Z Collecting sniffio>=1.3.0 (from trio<1.0,>=0.31.0->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:22.2268891Z   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+2026-07-28T04:17:22.2558652Z Collecting wsproto>=0.14 (from trio-websocket<1.0,>=0.12.2->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:22.2759708Z   Downloading wsproto-1.3.2-py3-none-any.whl.metadata (5.2 kB)
+2026-07-28T04:17:22.3041242Z Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3.0,>=2.6.3->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:22.3235005Z   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+2026-07-28T04:17:22.3543840Z Collecting iniconfig>=1.0.1 (from pytest>=7.4.0->-r automation/requirements.txt (line 3))
+2026-07-28T04:17:22.3741480Z   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+2026-07-28T04:17:22.4040942Z Collecting packaging>=22 (from pytest>=7.4.0->-r automation/requirements.txt (line 3))
+2026-07-28T04:17:22.4235518Z   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+2026-07-28T04:17:22.4508820Z Collecting pluggy<2,>=1.5 (from pytest>=7.4.0->-r automation/requirements.txt (line 3))
+2026-07-28T04:17:22.4703036Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-07-28T04:17:22.5038294Z Collecting pygments>=2.7.2 (from pytest>=7.4.0->-r automation/requirements.txt (line 3))
+2026-07-28T04:17:22.5235895Z   Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+2026-07-28T04:17:22.5541139Z Collecting jinja2>=3 (from pytest-html>=4.1.0->-r automation/requirements.txt (line 4))
+2026-07-28T04:17:22.5734334Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-07-28T04:17:22.6035084Z Collecting pytest-metadata>=2 (from pytest-html>=4.1.0->-r automation/requirements.txt (line 4))
+2026-07-28T04:17:22.6238335Z   Downloading pytest_metadata-3.1.1-py3-none-any.whl.metadata (8.6 kB)
+2026-07-28T04:17:22.6593402Z Collecting execnet>=2.1 (from pytest-xdist>=3.5.0->-r automation/requirements.txt (line 5))
+2026-07-28T04:17:22.6785940Z   Downloading execnet-2.1.2-py3-none-any.whl.metadata (2.9 kB)
+2026-07-28T04:17:22.7045367Z Collecting et-xmlfile (from openpyxl>=3.1.0->-r automation/requirements.txt (line 7))
+2026-07-28T04:17:22.7245339Z   Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+2026-07-28T04:17:22.8612221Z Collecting charset_normalizer<4,>=2 (from requests>=2.31.0->-r automation/requirements.txt (line 8))
+2026-07-28T04:17:22.8807609Z   Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+2026-07-28T04:17:22.9597234Z Collecting MarkupSafe>=2.0 (from jinja2>=3->pytest-html>=4.1.0->-r automation/requirements.txt (line 4))
+2026-07-28T04:17:22.9790908Z   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-07-28T04:17:23.0090552Z Collecting h11<1,>=0.16.0 (from wsproto>=0.14->trio-websocket<1.0,>=0.12.2->selenium>=4.15.0->-r automation/requirements.txt (line 2))
+2026-07-28T04:17:23.0283180Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-07-28T04:17:23.0541144Z Downloading selenium-4.46.0-py3-none-any.whl (9.4 MB)
+2026-07-28T04:17:23.2581650Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.4/9.4 MB 55.4 MB/s  0:00:00
+2026-07-28T04:17:23.2780765Z Downloading trio-0.33.0-py3-none-any.whl (510 kB)
+2026-07-28T04:17:23.3009381Z Downloading trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+2026-07-28T04:17:23.3222144Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-07-28T04:17:23.3439795Z Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+2026-07-28T04:17:23.3658401Z Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+2026-07-28T04:17:23.3868981Z Downloading websocket_client-1.9.0-py3-none-any.whl (82 kB)
+2026-07-28T04:17:23.4084932Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-07-28T04:17:23.4310758Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-07-28T04:17:23.4523975Z Downloading pytest_html-4.2.0-py3-none-any.whl (23 kB)
+2026-07-28T04:17:23.4736000Z Downloading pytest_xdist-3.8.0-py3-none-any.whl (46 kB)
+2026-07-28T04:17:23.4947834Z Downloading pytest_timeout-2.4.0-py3-none-any.whl (14 kB)
+2026-07-28T04:17:23.5164246Z Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+2026-07-28T04:17:23.5393086Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-07-28T04:17:23.5609828Z Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (221 kB)
+2026-07-28T04:17:23.5828698Z Downloading idna-3.18-py3-none-any.whl (65 kB)
+2026-07-28T04:17:23.6043477Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-07-28T04:17:23.6259269Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+2026-07-28T04:17:23.6475012Z Downloading execnet-2.1.2-py3-none-any.whl (40 kB)
+2026-07-28T04:17:23.6689957Z Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+2026-07-28T04:17:23.6930189Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-07-28T04:17:23.7160407Z Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-07-28T04:17:23.7373460Z Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+2026-07-28T04:17:23.7589470Z Downloading packaging-26.2-py3-none-any.whl (100 kB)
+2026-07-28T04:17:23.7802010Z Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+2026-07-28T04:17:23.7869437Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 216.3 MB/s  0:00:00
+2026-07-28T04:17:23.8065237Z Downloading pytest_metadata-3.1.1-py3-none-any.whl (11 kB)
+2026-07-28T04:17:23.8277068Z Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+2026-07-28T04:17:23.8491213Z Downloading wsproto-1.3.2-py3-none-any.whl (24 kB)
+2026-07-28T04:17:23.8706217Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-07-28T04:17:23.8920215Z Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+2026-07-28T04:17:23.9132723Z Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+2026-07-28T04:17:24.0399755Z Installing collected packages: sortedcontainers, websocket-client, urllib3, typing_extensions, sniffio, pysocks, pygments, pluggy, packaging, MarkupSafe, iniconfig, idna, h11, execnet, et-xmlfile, charset_normalizer, certifi, attrs, wsproto, requests, pytest, outcome, openpyxl, jinja2, trio, pytest-xdist, pytest-timeout, pytest-metadata, trio-websocket, pytest-html, selenium
+2026-07-28T04:17:27.9611198Z 
+2026-07-28T04:17:27.9631912Z Successfully installed MarkupSafe-3.0.3 attrs-26.1.0 certifi-2026.7.22 charset_normalizer-3.4.9 et-xmlfile-2.0.0 execnet-2.1.2 h11-0.16.0 idna-3.18 iniconfig-2.3.0 jinja2-3.1.6 openpyxl-3.1.5 outcome-1.3.0.post0 packaging-26.2 pluggy-1.6.0 pygments-2.20.0 pysocks-1.7.1 pytest-9.1.1 pytest-html-4.2.0 pytest-metadata-3.1.1 pytest-timeout-2.4.0 pytest-xdist-3.8.0 requests-2.34.2 selenium-4.46.0 sniffio-1.3.1 sortedcontainers-2.4.0 trio-0.33.0 trio-websocket-0.12.2 typing_extensions-4.16.0 urllib3-2.7.0 websocket-client-1.9.0 wsproto-1.3.2
+2026-07-28T04:17:28.0298952Z ##[group]Run cd automation
+2026-07-28T04:17:28.0299258Z [36;1mcd automation[0m
+2026-07-28T04:17:28.0299542Z [36;1mpython -m pytest validation/tests/ -n 8 \[0m
+2026-07-28T04:17:28.0299973Z [36;1m  -v --tb=short --no-header --timeout=120 --rootdir=validation \[0m
+2026-07-28T04:17:28.0300380Z [36;1m  2>&1 | tee validation_test_output.log || true[0m
+2026-07-28T04:17:28.0345344Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:17:28.0345730Z env:
+2026-07-28T04:17:28.0345924Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:28.0346285Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:28.0346706Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:28.0347130Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:28.0347569Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:28.0347949Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:28.0348362Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:28.0348742Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:28.0349060Z ##[endgroup]
+2026-07-28T04:17:29.6066981Z ============================= test session starts ==============================
+2026-07-28T04:17:29.6093260Z created: 8/8 workers
+2026-07-28T04:17:29.6094167Z 8 workers [300 items]
+2026-07-28T04:17:29.6094631Z 
+2026-07-28T04:17:29.6095305Z scheduling tests via LoadScheduling
+2026-07-28T04:17:29.6095880Z 
+2026-07-28T04:17:29.6096985Z validation/tests/test_validation.py::test_validation[VAL-010] 
+2026-07-28T04:17:29.6098059Z validation/tests/test_validation.py::test_validation[VAL-001] 
+2026-07-28T04:17:29.6099205Z [gw0] [  0%] PASSED validation/tests/test_validation.py::test_validation[VAL-001] 
+2026-07-28T04:17:29.6100404Z validation/tests/test_validation.py::test_validation[VAL-055] 
+2026-07-28T04:17:29.6101495Z [gw7] [  0%] PASSED validation/tests/test_validation.py::test_validation[VAL-055] 
+2026-07-28T04:17:29.6165796Z validation/tests/test_validation.py::test_validation[VAL-019] 
+2026-07-28T04:17:29.6199399Z [gw1] [  1%] PASSED validation/tests/test_validation.py::test_validation[VAL-010] 
+2026-07-28T04:17:29.6232580Z validation/tests/test_validation.py::test_validation[VAL-011] 
+2026-07-28T04:17:29.6233694Z [gw1] [  1%] PASSED validation/tests/test_validation.py::test_validation[VAL-011] 
+2026-07-28T04:17:29.6234698Z validation/tests/test_validation.py::test_validation[VAL-012] 
+2026-07-28T04:17:29.6266993Z [gw1] [  1%] PASSED validation/tests/test_validation.py::test_validation[VAL-012] 
+2026-07-28T04:17:29.6282057Z validation/tests/test_validation.py::test_validation[VAL-013] 
+2026-07-28T04:17:29.6296521Z validation/tests/test_validation.py::test_validation[VAL-064] 
+2026-07-28T04:17:29.6326334Z [gw6] [  2%] PASSED validation/tests/test_validation.py::test_validation[VAL-064] 
+2026-07-28T04:17:29.6351658Z validation/tests/test_validation.py::test_validation[VAL-065] 
+2026-07-28T04:17:29.6378786Z [gw6] [  2%] PASSED validation/tests/test_validation.py::test_validation[VAL-065] 
+2026-07-28T04:17:29.6406070Z validation/tests/test_validation.py::test_validation[VAL-066] 
+2026-07-28T04:17:29.6407225Z [gw6] [  2%] PASSED validation/tests/test_validation.py::test_validation[VAL-066] 
+2026-07-28T04:17:29.6436340Z validation/tests/test_validation.py::test_validation[VAL-067] 
+2026-07-28T04:17:29.6466443Z [gw6] [  3%] PASSED validation/tests/test_validation.py::test_validation[VAL-067] 
+2026-07-28T04:17:29.6478695Z [gw3] [  3%] PASSED validation/tests/test_validation.py::test_validation[VAL-019] 
+2026-07-28T04:17:29.6496133Z validation/tests/test_validation.py::test_validation[VAL-020] 
+2026-07-28T04:17:29.6526691Z [gw3] [  3%] PASSED validation/tests/test_validation.py::test_validation[VAL-020] 
+2026-07-28T04:17:29.6556393Z validation/tests/test_validation.py::test_validation[VAL-021] 
+2026-07-28T04:17:29.6586192Z validation/tests/test_validation.py::test_validation[VAL-056] 
+2026-07-28T04:17:29.6587685Z [gw7] [  4%] PASSED validation/tests/test_validation.py::test_validation[VAL-056] 
+2026-07-28T04:17:29.6616960Z validation/tests/test_validation.py::test_validation[VAL-057] 
+2026-07-28T04:17:29.6638509Z [gw7] [  4%] PASSED validation/tests/test_validation.py::test_validation[VAL-057] 
+2026-07-28T04:17:29.6675929Z validation/tests/test_validation.py::test_validation[VAL-058] 
+2026-07-28T04:17:29.6677327Z validation/tests/test_validation.py::test_validation[VAL-002] 
+2026-07-28T04:17:29.6704120Z [gw0] [  4%] PASSED validation/tests/test_validation.py::test_validation[VAL-002] 
+2026-07-28T04:17:29.6736317Z validation/tests/test_validation.py::test_validation[VAL-003] 
+2026-07-28T04:17:29.6751969Z validation/tests/test_validation.py::test_validation[VAL-028] 
+2026-07-28T04:17:29.6795964Z [gw0] [  5%] PASSED validation/tests/test_validation.py::test_validation[VAL-003] 
+2026-07-28T04:17:29.6797439Z validation/tests/test_validation.py::test_validation[VAL-037] 
+2026-07-28T04:17:29.6818376Z validation/tests/test_validation.py::test_validation[VAL-046] 
+2026-07-28T04:17:29.6846449Z validation/tests/test_validation.py::test_validation[VAL-004] 
+2026-07-28T04:17:29.6876338Z [gw0] [  5%] PASSED validation/tests/test_validation.py::test_validation[VAL-004] 
+2026-07-28T04:17:29.6886539Z validation/tests/test_validation.py::test_validation[VAL-005] 
+2026-07-28T04:17:29.6926165Z validation/tests/test_validation.py::test_validation[VAL-068] 
+2026-07-28T04:17:29.6927452Z [gw6] [  5%] PASSED validation/tests/test_validation.py::test_validation[VAL-068] 
+2026-07-28T04:17:29.6956369Z validation/tests/test_validation.py::test_validation[VAL-069] 
+2026-07-28T04:17:29.6986342Z [gw6] [  6%] PASSED validation/tests/test_validation.py::test_validation[VAL-069] 
+2026-07-28T04:17:29.6991068Z validation/tests/test_validation.py::test_validation[VAL-070] 
+2026-07-28T04:17:29.6992215Z [gw6] [  6%] PASSED validation/tests/test_validation.py::test_validation[VAL-070] 
+2026-07-28T04:17:29.6993353Z validation/tests/test_validation.py::test_validation[VAL-071] 
+2026-07-28T04:17:29.6994453Z [gw6] [  6%] PASSED validation/tests/test_validation.py::test_validation[VAL-071] 
+2026-07-28T04:17:29.6995860Z validation/tests/test_validation.py::test_validation[VAL-072] 
+2026-07-28T04:17:29.6997015Z [gw6] [  7%] PASSED validation/tests/test_validation.py::test_validation[VAL-072] 
+2026-07-28T04:17:29.6998189Z validation/tests/test_validation.py::test_validation[VAL-081] 
+2026-07-28T04:17:29.6999359Z [gw7] [  7%] PASSED validation/tests/test_validation.py::test_validation[VAL-058] 
+2026-07-28T04:17:29.7000544Z validation/tests/test_validation.py::test_validation[VAL-059] 
+2026-07-28T04:17:29.7001665Z [gw7] [  7%] PASSED validation/tests/test_validation.py::test_validation[VAL-059] 
+2026-07-28T04:17:29.7003166Z validation/tests/test_validation.py::test_validation[VAL-060] 
+2026-07-28T04:17:29.7004303Z [gw7] [  8%] PASSED validation/tests/test_validation.py::test_validation[VAL-060] 
+2026-07-28T04:17:29.7005710Z validation/tests/test_validation.py::test_validation[VAL-061] 
+2026-07-28T04:17:29.7006905Z [gw7] [  8%] PASSED validation/tests/test_validation.py::test_validation[VAL-061] 
+2026-07-28T04:17:29.7008078Z validation/tests/test_validation.py::test_validation[VAL-062] 
+2026-07-28T04:17:29.7009218Z [gw7] [  8%] PASSED validation/tests/test_validation.py::test_validation[VAL-062] 
+2026-07-28T04:17:29.7010451Z [gw0] [  9%] PASSED validation/tests/test_validation.py::test_validation[VAL-005] 
+2026-07-28T04:17:29.7011611Z validation/tests/test_validation.py::test_validation[VAL-006] 
+2026-07-28T04:17:29.7012783Z [gw0] [  9%] PASSED validation/tests/test_validation.py::test_validation[VAL-006] 
+2026-07-28T04:17:29.7014084Z validation/tests/test_validation.py::test_validation[VAL-007] 
+2026-07-28T04:17:29.7015250Z [gw6] [  9%] PASSED validation/tests/test_validation.py::test_validation[VAL-081] 
+2026-07-28T04:17:29.7016673Z validation/tests/test_validation.py::test_validation[VAL-082] 
+2026-07-28T04:17:29.7018136Z [gw6] [ 10%] PASSED validation/tests/test_validation.py::test_validation[VAL-082] 
+2026-07-28T04:17:29.7019270Z validation/tests/test_validation.py::test_validation[VAL-083] 
+2026-07-28T04:17:29.7020337Z [gw6] [ 10%] PASSED validation/tests/test_validation.py::test_validation[VAL-083] 
+2026-07-28T04:17:29.7021430Z validation/tests/test_validation.py::test_validation[VAL-084] 
+2026-07-28T04:17:29.7022507Z [gw6] [ 10%] PASSED validation/tests/test_validation.py::test_validation[VAL-084] 
+2026-07-28T04:17:29.7023593Z validation/tests/test_validation.py::test_validation[VAL-063] 
+2026-07-28T04:17:29.7024653Z [gw7] [ 11%] PASSED validation/tests/test_validation.py::test_validation[VAL-063] 
+2026-07-28T04:17:29.7025936Z validation/tests/test_validation.py::test_validation[VAL-097] 
+2026-07-28T04:17:29.7026971Z [gw7] [ 11%] PASSED validation/tests/test_validation.py::test_validation[VAL-097] 
+2026-07-28T04:17:29.7028116Z validation/tests/test_validation.py::test_validation[VAL-085] 
+2026-07-28T04:17:29.7029135Z [gw6] [ 11%] PASSED validation/tests/test_validation.py::test_validation[VAL-085] 
+2026-07-28T04:17:29.7030208Z validation/tests/test_validation.py::test_validation[VAL-086] 
+2026-07-28T04:17:29.7031228Z [gw6] [ 12%] PASSED validation/tests/test_validation.py::test_validation[VAL-086] 
+2026-07-28T04:17:29.7032268Z validation/tests/test_validation.py::test_validation[VAL-098] 
+2026-07-28T04:17:29.7033316Z [gw7] [ 12%] PASSED validation/tests/test_validation.py::test_validation[VAL-098] 
+2026-07-28T04:17:29.7034359Z validation/tests/test_validation.py::test_validation[VAL-099] 
+2026-07-28T04:17:29.7035395Z [gw7] [ 12%] PASSED validation/tests/test_validation.py::test_validation[VAL-099] 
+2026-07-28T04:17:29.7036755Z validation/tests/test_validation.py::test_validation[VAL-087] 
+2026-07-28T04:17:29.7037889Z [gw6] [ 13%] PASSED validation/tests/test_validation.py::test_validation[VAL-087] 
+2026-07-28T04:17:29.7039026Z validation/tests/test_validation.py::test_validation[VAL-088] 
+2026-07-28T04:17:29.7040065Z validation/tests/test_validation.py::test_validation[VAL-100] 
+2026-07-28T04:17:29.7041186Z [gw7] [ 13%] PASSED validation/tests/test_validation.py::test_validation[VAL-100] 
+2026-07-28T04:17:29.7042422Z [gw6] [ 13%] PASSED validation/tests/test_validation.py::test_validation[VAL-088] 
+2026-07-28T04:17:29.7043571Z validation/tests/test_validation.py::test_validation[VAL-101] 
+2026-07-28T04:17:29.7044689Z [gw7] [ 14%] PASSED validation/tests/test_validation.py::test_validation[VAL-101] 
+2026-07-28T04:17:29.7046024Z validation/tests/test_validation.py::test_validation[VAL-104] 
+2026-07-28T04:17:29.7047163Z [gw6] [ 14%] PASSED validation/tests/test_validation.py::test_validation[VAL-104] 
+2026-07-28T04:17:29.7048450Z validation/tests/test_validation.py::test_validation[VAL-102] 
+2026-07-28T04:17:29.7049623Z [gw1] [ 14%] FAILED validation/tests/test_validation.py::test_validation[VAL-013] 
+2026-07-28T04:17:29.7051009Z validation/tests/test_validation.py::test_validation[VAL-014] 
+2026-07-28T04:17:29.7052135Z [gw1] [ 15%] PASSED validation/tests/test_validation.py::test_validation[VAL-014] 
+2026-07-28T04:17:29.7053292Z validation/tests/test_validation.py::test_validation[VAL-015] 
+2026-07-28T04:17:29.7054452Z [gw1] [ 15%] PASSED validation/tests/test_validation.py::test_validation[VAL-015] 
+2026-07-28T04:17:29.7055940Z [gw7] [ 15%] PASSED validation/tests/test_validation.py::test_validation[VAL-102] 
+2026-07-28T04:17:29.7057241Z validation/tests/test_validation.py::test_validation[VAL-103] 
+2026-07-28T04:17:29.7058291Z validation/tests/test_validation.py::test_validation[VAL-105] 
+2026-07-28T04:17:29.7059345Z [gw6] [ 16%] PASSED validation/tests/test_validation.py::test_validation[VAL-105] 
+2026-07-28T04:17:29.7060395Z validation/tests/test_validation.py::test_validation[VAL-106] 
+2026-07-28T04:17:29.7061420Z [gw7] [ 16%] PASSED validation/tests/test_validation.py::test_validation[VAL-103] 
+2026-07-28T04:17:29.7062744Z validation/tests/test_validation.py::test_validation[VAL-111] 
+2026-07-28T04:17:29.7063955Z [gw7] [ 16%] PASSED validation/tests/test_validation.py::test_validation[VAL-111] 
+2026-07-28T04:17:29.7065189Z validation/tests/test_validation.py::test_validation[VAL-112] 
+2026-07-28T04:17:29.7066763Z [gw6] [ 17%] PASSED validation/tests/test_validation.py::test_validation[VAL-106] 
+2026-07-28T04:17:29.7067896Z validation/tests/test_validation.py::test_validation[VAL-107] 
+2026-07-28T04:17:29.7110651Z [gw6] [ 17%] PASSED validation/tests/test_validation.py::test_validation[VAL-107] 
+2026-07-28T04:17:29.7112076Z validation/tests/test_validation.py::test_validation[VAL-108] 
+2026-07-28T04:17:29.7113412Z validation/tests/test_validation.py::test_validation[VAL-016] 
+2026-07-28T04:17:29.7114939Z [gw1] [ 17%] PASSED validation/tests/test_validation.py::test_validation[VAL-016] 
+2026-07-28T04:17:29.7116737Z validation/tests/test_validation.py::test_validation[VAL-017] 
+2026-07-28T04:17:29.7118202Z [gw1] [ 18%] PASSED validation/tests/test_validation.py::test_validation[VAL-017] 
+2026-07-28T04:17:29.7119533Z validation/tests/test_validation.py::test_validation[VAL-018] 
+2026-07-28T04:17:29.7121215Z [gw1] [ 18%] PASSED validation/tests/test_validation.py::test_validation[VAL-018] 
+2026-07-28T04:17:29.7122582Z validation/tests/test_validation.py::test_validation[VAL-073] 
+2026-07-28T04:17:29.7124129Z [gw1] [ 18%] PASSED validation/tests/test_validation.py::test_validation[VAL-073] 
+2026-07-28T04:17:29.7125807Z validation/tests/test_validation.py::test_validation[VAL-074] 
+2026-07-28T04:17:29.7127578Z [gw1] [ 19%] PASSED validation/tests/test_validation.py::test_validation[VAL-074] 
+2026-07-28T04:17:29.7129013Z validation/tests/test_validation.py::test_validation[VAL-075] 
+2026-07-28T04:17:29.7130593Z [gw1] [ 19%] PASSED validation/tests/test_validation.py::test_validation[VAL-075] 
+2026-07-28T04:17:29.7131844Z validation/tests/test_validation.py::test_validation[VAL-076] 
+2026-07-28T04:17:29.7133647Z [gw7] [ 19%] PASSED validation/tests/test_validation.py::test_validation[VAL-112] 
+2026-07-28T04:17:29.7135079Z validation/tests/test_validation.py::test_validation[VAL-113] 
+2026-07-28T04:17:29.7206179Z [gw7] [ 20%] PASSED validation/tests/test_validation.py::test_validation[VAL-113] 
+2026-07-28T04:17:29.7266670Z validation/tests/test_validation.py::test_validation[VAL-114] 
+2026-07-28T04:17:29.7316487Z [gw7] [ 20%] PASSED validation/tests/test_validation.py::test_validation[VAL-114] 
+2026-07-28T04:17:29.7367609Z validation/tests/test_validation.py::test_validation[VAL-115] 
+2026-07-28T04:17:29.7424406Z [gw7] [ 20%] PASSED validation/tests/test_validation.py::test_validation[VAL-115] 
+2026-07-28T04:17:29.7475751Z validation/tests/test_validation.py::test_validation[VAL-116] 
+2026-07-28T04:17:29.7516325Z [gw6] [ 21%] PASSED validation/tests/test_validation.py::test_validation[VAL-108] 
+2026-07-28T04:17:29.7588997Z validation/tests/test_validation.py::test_validation[VAL-109] 
+2026-07-28T04:17:29.7656289Z [gw6] [ 21%] PASSED validation/tests/test_validation.py::test_validation[VAL-109] 
+2026-07-28T04:17:29.7746397Z [gw1] [ 21%] PASSED validation/tests/test_validation.py::test_validation[VAL-076] 
+2026-07-28T04:17:29.7766606Z validation/tests/test_validation.py::test_validation[VAL-077] 
+2026-07-28T04:17:29.7796452Z [gw1] [ 22%] PASSED validation/tests/test_validation.py::test_validation[VAL-077] 
+2026-07-28T04:17:29.7816572Z validation/tests/test_validation.py::test_validation[VAL-078] 
+2026-07-28T04:17:29.7818046Z [gw1] [ 22%] PASSED validation/tests/test_validation.py::test_validation[VAL-078] 
+2026-07-28T04:17:29.7819336Z validation/tests/test_validation.py::test_validation[VAL-079] 
+2026-07-28T04:17:29.7820612Z [gw1] [ 22%] PASSED validation/tests/test_validation.py::test_validation[VAL-079] 
+2026-07-28T04:17:29.7821899Z validation/tests/test_validation.py::test_validation[VAL-110] 
+2026-07-28T04:17:29.7823073Z [gw6] [ 23%] PASSED validation/tests/test_validation.py::test_validation[VAL-110] 
+2026-07-28T04:17:29.7826151Z validation/tests/test_validation.py::test_validation[VAL-118] 
+2026-07-28T04:17:29.7827381Z [gw3] [ 23%] FAILED validation/tests/test_validation.py::test_validation[VAL-021] 
+2026-07-28T04:17:29.7838000Z validation/tests/test_validation.py::test_validation[VAL-022] 
+2026-07-28T04:17:29.7839309Z [gw7] [ 23%] PASSED validation/tests/test_validation.py::test_validation[VAL-116] 
+2026-07-28T04:17:29.7840710Z validation/tests/test_validation.py::test_validation[VAL-117] 
+2026-07-28T04:17:29.7842541Z [gw7] [ 24%] PASSED validation/tests/test_validation.py::test_validation[VAL-117] 
+2026-07-28T04:17:29.7843762Z [gw6] [ 24%] PASSED validation/tests/test_validation.py::test_validation[VAL-118] 
+2026-07-28T04:17:29.7844856Z validation/tests/test_validation.py::test_validation[VAL-119] 
+2026-07-28T04:17:29.7846265Z [gw6] [ 24%] PASSED validation/tests/test_validation.py::test_validation[VAL-119] 
+2026-07-28T04:17:29.7847516Z validation/tests/test_validation.py::test_validation[VAL-120] 
+2026-07-28T04:17:29.7848665Z [gw6] [ 25%] PASSED validation/tests/test_validation.py::test_validation[VAL-120] 
+2026-07-28T04:17:29.7851108Z validation/tests/test_validation.py::test_validation[VAL-080] 
+2026-07-28T04:17:29.7852178Z [gw1] [ 25%] PASSED validation/tests/test_validation.py::test_validation[VAL-080] 
+2026-07-28T04:17:29.7853371Z validation/tests/test_validation.py::test_validation[VAL-132] 
+2026-07-28T04:17:29.7854399Z [gw1] [ 25%] PASSED validation/tests/test_validation.py::test_validation[VAL-132] 
+2026-07-28T04:17:29.7855816Z validation/tests/test_validation.py::test_validation[VAL-121] 
+2026-07-28T04:17:29.7856886Z [gw6] [ 26%] PASSED validation/tests/test_validation.py::test_validation[VAL-121] 
+2026-07-28T04:17:29.7857948Z validation/tests/test_validation.py::test_validation[VAL-133] 
+2026-07-28T04:17:29.7858968Z [gw1] [ 26%] PASSED validation/tests/test_validation.py::test_validation[VAL-133] 
+2026-07-28T04:17:29.7859996Z validation/tests/test_validation.py::test_validation[VAL-134] 
+2026-07-28T04:17:29.7860933Z validation/tests/test_validation.py::test_validation[VAL-125] 
+2026-07-28T04:17:29.7861934Z [gw7] [ 26%] PASSED validation/tests/test_validation.py::test_validation[VAL-125] 
+2026-07-28T04:17:29.7862964Z validation/tests/test_validation.py::test_validation[VAL-122] 
+2026-07-28T04:17:29.7863859Z validation/tests/test_validation.py::test_validation[VAL-126] 
+2026-07-28T04:17:29.7864813Z [gw7] [ 27%] PASSED validation/tests/test_validation.py::test_validation[VAL-126] 
+2026-07-28T04:17:29.7866171Z [gw1] [ 27%] PASSED validation/tests/test_validation.py::test_validation[VAL-134] 
+2026-07-28T04:17:29.7867253Z validation/tests/test_validation.py::test_validation[VAL-135] 
+2026-07-28T04:17:29.7868287Z [gw6] [ 27%] PASSED validation/tests/test_validation.py::test_validation[VAL-122] 
+2026-07-28T04:17:29.7869295Z validation/tests/test_validation.py::test_validation[VAL-123] 
+2026-07-28T04:17:29.7870391Z [gw1] [ 28%] PASSED validation/tests/test_validation.py::test_validation[VAL-135] 
+2026-07-28T04:17:29.7871905Z [gw6] [ 28%] PASSED validation/tests/test_validation.py::test_validation[VAL-123] 
+2026-07-28T04:17:29.7873069Z validation/tests/test_validation.py::test_validation[VAL-136] 
+2026-07-28T04:17:29.7874206Z validation/tests/test_validation.py::test_validation[VAL-127] 
+2026-07-28T04:17:29.7875321Z [gw1] [ 28%] PASSED validation/tests/test_validation.py::test_validation[VAL-136] 
+2026-07-28T04:17:29.7876821Z [gw7] [ 29%] PASSED validation/tests/test_validation.py::test_validation[VAL-127] 
+2026-07-28T04:17:29.7877949Z validation/tests/test_validation.py::test_validation[VAL-128] 
+2026-07-28T04:17:29.7879049Z [gw7] [ 29%] PASSED validation/tests/test_validation.py::test_validation[VAL-128] 
+2026-07-28T04:17:29.7880199Z validation/tests/test_validation.py::test_validation[VAL-124] 
+2026-07-28T04:17:29.7881320Z validation/tests/test_validation.py::test_validation[VAL-137] 
+2026-07-28T04:17:29.7882441Z [gw6] [ 29%] PASSED validation/tests/test_validation.py::test_validation[VAL-124] 
+2026-07-28T04:17:29.7883577Z validation/tests/test_validation.py::test_validation[VAL-138] 
+2026-07-28T04:17:29.7884715Z [gw1] [ 30%] PASSED validation/tests/test_validation.py::test_validation[VAL-137] 
+2026-07-28T04:17:29.7886328Z validation/tests/test_validation.py::test_validation[VAL-144] 
+2026-07-28T04:17:29.7887384Z validation/tests/test_validation.py::test_validation[VAL-129] 
+2026-07-28T04:17:29.7888485Z [gw7] [ 30%] PASSED validation/tests/test_validation.py::test_validation[VAL-129] 
+2026-07-28T04:17:29.7889770Z [gw1] [ 30%] PASSED validation/tests/test_validation.py::test_validation[VAL-144] 
+2026-07-28T04:17:29.7890920Z validation/tests/test_validation.py::test_validation[VAL-130] 
+2026-07-28T04:17:29.7892032Z [gw6] [ 31%] PASSED validation/tests/test_validation.py::test_validation[VAL-138] 
+2026-07-28T04:17:29.7893217Z validation/tests/test_validation.py::test_validation[VAL-145] 
+2026-07-28T04:17:29.7894239Z validation/tests/test_validation.py::test_validation[VAL-139] 
+2026-07-28T04:17:29.7895347Z [gw6] [ 31%] PASSED validation/tests/test_validation.py::test_validation[VAL-139] 
+2026-07-28T04:17:29.7897019Z [gw1] [ 31%] PASSED validation/tests/test_validation.py::test_validation[VAL-145] 
+2026-07-28T04:17:29.7898153Z validation/tests/test_validation.py::test_validation[VAL-146] 
+2026-07-28T04:17:29.7899276Z [gw7] [ 32%] PASSED validation/tests/test_validation.py::test_validation[VAL-130] 
+2026-07-28T04:17:29.7900480Z [gw1] [ 32%] PASSED validation/tests/test_validation.py::test_validation[VAL-146] 
+2026-07-28T04:17:29.7901603Z validation/tests/test_validation.py::test_validation[VAL-147] 
+2026-07-28T04:17:29.7902756Z validation/tests/test_validation.py::test_validation[VAL-131] 
+2026-07-28T04:17:29.7903862Z [gw1] [ 32%] PASSED validation/tests/test_validation.py::test_validation[VAL-147] 
+2026-07-28T04:17:29.7913825Z [gw7] [ 33%] PASSED validation/tests/test_validation.py::test_validation[VAL-131] 
+2026-07-28T04:17:29.7915047Z validation/tests/test_validation.py::test_validation[VAL-148] 
+2026-07-28T04:17:29.7916341Z validation/tests/test_validation.py::test_validation[VAL-150] 
+2026-07-28T04:17:29.7917467Z [gw1] [ 33%] PASSED validation/tests/test_validation.py::test_validation[VAL-148] 
+2026-07-28T04:17:29.7918774Z validation/tests/test_validation.py::test_validation[VAL-149] 
+2026-07-28T04:17:29.7919962Z [gw1] [ 33%] PASSED validation/tests/test_validation.py::test_validation[VAL-149] 
+2026-07-28T04:17:29.7921195Z validation/tests/test_validation.py::test_validation[VAL-156] 
+2026-07-28T04:17:29.7948482Z [gw1] [ 34%] PASSED validation/tests/test_validation.py::test_validation[VAL-156] 
+2026-07-28T04:17:29.7951747Z validation/tests/test_validation.py::test_validation[VAL-157] 
+2026-07-28T04:17:29.7956646Z validation/tests/test_validation.py::test_validation[VAL-140] 
+2026-07-28T04:17:29.7957811Z [gw6] [ 34%] PASSED validation/tests/test_validation.py::test_validation[VAL-140] 
+2026-07-28T04:17:29.7958973Z validation/tests/test_validation.py::test_validation[VAL-141] 
+2026-07-28T04:17:29.7961867Z [gw7] [ 34%] PASSED validation/tests/test_validation.py::test_validation[VAL-150] 
+2026-07-28T04:17:29.7965344Z validation/tests/test_validation.py::test_validation[VAL-151] 
+2026-07-28T04:17:29.7966737Z [gw7] [ 35%] PASSED validation/tests/test_validation.py::test_validation[VAL-151] 
+2026-07-28T04:17:29.7967980Z validation/tests/test_validation.py::test_validation[VAL-152] 
+2026-07-28T04:17:29.7969195Z [gw1] [ 35%] PASSED validation/tests/test_validation.py::test_validation[VAL-157] 
+2026-07-28T04:17:29.7972198Z validation/tests/test_validation.py::test_validation[VAL-158] 
+2026-07-28T04:17:29.7974689Z [gw1] [ 35%] PASSED validation/tests/test_validation.py::test_validation[VAL-158] 
+2026-07-28T04:17:29.7977470Z validation/tests/test_validation.py::test_validation[VAL-159] 
+2026-07-28T04:17:29.7978914Z [gw6] [ 36%] PASSED validation/tests/test_validation.py::test_validation[VAL-141] 
+2026-07-28T04:17:29.7980219Z validation/tests/test_validation.py::test_validation[VAL-142] 
+2026-07-28T04:17:29.7983523Z [gw6] [ 36%] PASSED validation/tests/test_validation.py::test_validation[VAL-142] 
+2026-07-28T04:17:29.7984839Z [gw0] [ 36%] FAILED validation/tests/test_validation.py::test_validation[VAL-007] 
+2026-07-28T04:17:29.7986453Z validation/tests/test_validation.py::test_validation[VAL-008] 
+2026-07-28T04:17:29.7987622Z [gw0] [ 37%] PASSED validation/tests/test_validation.py::test_validation[VAL-008] 
+2026-07-28T04:17:29.7988765Z validation/tests/test_validation.py::test_validation[VAL-009] 
+2026-07-28T04:17:29.7989896Z [gw0] [ 37%] PASSED validation/tests/test_validation.py::test_validation[VAL-009] 
+2026-07-28T04:17:29.7991105Z [gw1] [ 37%] PASSED validation/tests/test_validation.py::test_validation[VAL-159] 
+2026-07-28T04:17:29.7992249Z validation/tests/test_validation.py::test_validation[VAL-160] 
+2026-07-28T04:17:29.7993368Z [gw1] [ 38%] PASSED validation/tests/test_validation.py::test_validation[VAL-160] 
+2026-07-28T04:17:29.7994511Z validation/tests/test_validation.py::test_validation[VAL-143] 
+2026-07-28T04:17:29.7995853Z [gw6] [ 38%] PASSED validation/tests/test_validation.py::test_validation[VAL-143] 
+2026-07-28T04:17:29.7997023Z validation/tests/test_validation.py::test_validation[VAL-162] 
+2026-07-28T04:17:29.7998063Z validation/tests/test_validation.py::test_validation[VAL-161] 
+2026-07-28T04:17:29.7999207Z [gw7] [ 38%] PASSED validation/tests/test_validation.py::test_validation[VAL-152] 
+2026-07-28T04:17:29.8000335Z validation/tests/test_validation.py::test_validation[VAL-153] 
+2026-07-28T04:17:29.8001364Z validation/tests/test_validation.py::test_validation[VAL-089] 
+2026-07-28T04:17:29.8002484Z [gw0] [ 39%] PASSED validation/tests/test_validation.py::test_validation[VAL-089] 
+2026-07-28T04:17:29.8003619Z validation/tests/test_validation.py::test_validation[VAL-090] 
+2026-07-28T04:17:29.8004734Z [gw0] [ 39%] PASSED validation/tests/test_validation.py::test_validation[VAL-090] 
+2026-07-28T04:17:29.8006098Z validation/tests/test_validation.py::test_validation[VAL-091] 
+2026-07-28T04:17:29.8007408Z [gw0] [ 39%] PASSED validation/tests/test_validation.py::test_validation[VAL-091] 
+2026-07-28T04:17:29.8016506Z validation/tests/test_validation.py::test_validation[VAL-092] 
+2026-07-28T04:17:29.8017642Z [gw0] [ 40%] PASSED validation/tests/test_validation.py::test_validation[VAL-092] 
+2026-07-28T04:17:29.8018833Z [gw1] [ 40%] PASSED validation/tests/test_validation.py::test_validation[VAL-161] 
+2026-07-28T04:17:29.8020045Z validation/tests/test_validation.py::test_validation[VAL-167] 
+2026-07-28T04:17:29.8021147Z [gw1] [ 40%] PASSED validation/tests/test_validation.py::test_validation[VAL-167] 
+2026-07-28T04:17:29.8022250Z validation/tests/test_validation.py::test_validation[VAL-168] 
+2026-07-28T04:17:29.8023310Z [gw1] [ 41%] PASSED validation/tests/test_validation.py::test_validation[VAL-168] 
+2026-07-28T04:17:29.8024580Z validation/tests/test_validation.py::test_validation[VAL-169] 
+2026-07-28T04:17:29.8026055Z [gw6] [ 41%] PASSED validation/tests/test_validation.py::test_validation[VAL-162] 
+2026-07-28T04:17:29.8030380Z validation/tests/test_validation.py::test_validation[VAL-163] 
+2026-07-28T04:17:29.8036110Z [gw6] [ 41%] PASSED validation/tests/test_validation.py::test_validation[VAL-163] 
+2026-07-28T04:17:29.8040542Z validation/tests/test_validation.py::test_validation[VAL-093] 
+2026-07-28T04:17:29.8045092Z [gw0] [ 42%] PASSED validation/tests/test_validation.py::test_validation[VAL-093] 
+2026-07-28T04:17:29.8046504Z validation/tests/test_validation.py::test_validation[VAL-094] 
+2026-07-28T04:17:29.8047607Z [gw0] [ 42%] PASSED validation/tests/test_validation.py::test_validation[VAL-094] 
+2026-07-28T04:17:29.8052095Z [gw7] [ 42%] PASSED validation/tests/test_validation.py::test_validation[VAL-153] 
+2026-07-28T04:17:29.8053281Z validation/tests/test_validation.py::test_validation[VAL-154] 
+2026-07-28T04:17:29.8054381Z [gw7] [ 43%] PASSED validation/tests/test_validation.py::test_validation[VAL-154] 
+2026-07-28T04:17:29.8055716Z validation/tests/test_validation.py::test_validation[VAL-155] 
+2026-07-28T04:17:29.8056852Z [gw1] [ 43%] PASSED validation/tests/test_validation.py::test_validation[VAL-169] 
+2026-07-28T04:17:29.8057935Z validation/tests/test_validation.py::test_validation[VAL-170] 
+2026-07-28T04:17:29.8059218Z [gw1] [ 43%] PASSED validation/tests/test_validation.py::test_validation[VAL-170] 
+2026-07-28T04:17:29.8060443Z [gw7] [ 44%] PASSED validation/tests/test_validation.py::test_validation[VAL-155] 
+2026-07-28T04:17:29.8061530Z validation/tests/test_validation.py::test_validation[VAL-095] 
+2026-07-28T04:17:29.8062591Z [gw0] [ 44%] PASSED validation/tests/test_validation.py::test_validation[VAL-095] 
+2026-07-28T04:17:29.8063692Z validation/tests/test_validation.py::test_validation[VAL-164] 
+2026-07-28T04:17:29.8064679Z validation/tests/test_validation.py::test_validation[VAL-172] 
+2026-07-28T04:17:29.8065990Z [gw7] [ 44%] PASSED validation/tests/test_validation.py::test_validation[VAL-172] 
+2026-07-28T04:17:29.8067116Z validation/tests/test_validation.py::test_validation[VAL-173] 
+2026-07-28T04:17:29.8068191Z [gw6] [ 45%] PASSED validation/tests/test_validation.py::test_validation[VAL-164] 
+2026-07-28T04:17:29.8069281Z validation/tests/test_validation.py::test_validation[VAL-165] 
+2026-07-28T04:17:29.8070343Z [gw7] [ 45%] PASSED validation/tests/test_validation.py::test_validation[VAL-173] 
+2026-07-28T04:17:29.8071445Z validation/tests/test_validation.py::test_validation[VAL-174] 
+2026-07-28T04:17:29.8072502Z [gw7] [ 45%] PASSED validation/tests/test_validation.py::test_validation[VAL-174] 
+2026-07-28T04:17:29.8073554Z validation/tests/test_validation.py::test_validation[VAL-175] 
+2026-07-28T04:17:29.8074614Z [gw7] [ 46%] PASSED validation/tests/test_validation.py::test_validation[VAL-175] 
+2026-07-28T04:17:29.8076366Z [gw6] [ 46%] PASSED validation/tests/test_validation.py::test_validation[VAL-165] 
+2026-07-28T04:17:29.8077559Z validation/tests/test_validation.py::test_validation[VAL-171] 
+2026-07-28T04:17:29.8078613Z [gw1] [ 46%] PASSED validation/tests/test_validation.py::test_validation[VAL-171] 
+2026-07-28T04:17:29.8079689Z validation/tests/test_validation.py::test_validation[VAL-177] 
+2026-07-28T04:17:29.8080675Z validation/tests/test_validation.py::test_validation[VAL-096] 
+2026-07-28T04:17:29.8081754Z [gw0] [ 47%] PASSED validation/tests/test_validation.py::test_validation[VAL-096] 
+2026-07-28T04:17:29.8082814Z validation/tests/test_validation.py::test_validation[VAL-182] 
+2026-07-28T04:17:29.8083849Z [gw0] [ 47%] PASSED validation/tests/test_validation.py::test_validation[VAL-182] 
+2026-07-28T04:17:29.8084852Z validation/tests/test_validation.py::test_validation[VAL-183] 
+2026-07-28T04:17:29.8085925Z [gw0] [ 47%] PASSED validation/tests/test_validation.py::test_validation[VAL-183] 
+2026-07-28T04:17:29.8086462Z validation/tests/test_validation.py::test_validation[VAL-184] 
+2026-07-28T04:17:29.8086931Z [gw1] [ 48%] PASSED validation/tests/test_validation.py::test_validation[VAL-177] 
+2026-07-28T04:17:29.8087390Z validation/tests/test_validation.py::test_validation[VAL-178] 
+2026-07-28T04:17:29.8088050Z [gw0] [ 48%] PASSED validation/tests/test_validation.py::test_validation[VAL-184] 
+2026-07-28T04:17:29.8088507Z validation/tests/test_validation.py::test_validation[VAL-185] 
+2026-07-28T04:17:29.8088975Z [gw1] [ 48%] PASSED validation/tests/test_validation.py::test_validation[VAL-178] 
+2026-07-28T04:17:29.8089469Z [gw0] [ 49%] PASSED validation/tests/test_validation.py::test_validation[VAL-185] 
+2026-07-28T04:17:29.8089920Z validation/tests/test_validation.py::test_validation[VAL-179] 
+2026-07-28T04:17:29.8090365Z [gw1] [ 49%] PASSED validation/tests/test_validation.py::test_validation[VAL-179] 
+2026-07-28T04:17:29.8090816Z validation/tests/test_validation.py::test_validation[VAL-180] 
+2026-07-28T04:17:29.8091222Z validation/tests/test_validation.py::test_validation[VAL-176] 
+2026-07-28T04:17:29.8091675Z [gw7] [ 49%] PASSED validation/tests/test_validation.py::test_validation[VAL-176] 
+2026-07-28T04:17:29.8092129Z validation/tests/test_validation.py::test_validation[VAL-192] 
+2026-07-28T04:17:29.8109329Z validation/tests/test_validation.py::test_validation[VAL-166] 
+2026-07-28T04:17:29.8110386Z [gw6] [ 50%] PASSED validation/tests/test_validation.py::test_validation[VAL-166] 
+2026-07-28T04:17:29.8111727Z validation/tests/test_validation.py::test_validation[VAL-187] 
+2026-07-28T04:17:29.8112820Z [gw6] [ 50%] PASSED validation/tests/test_validation.py::test_validation[VAL-187] 
+2026-07-28T04:17:29.8133320Z validation/tests/test_validation.py::test_validation[VAL-186] 
+2026-07-28T04:17:29.8134404Z [gw0] [ 50%] PASSED validation/tests/test_validation.py::test_validation[VAL-186] 
+2026-07-28T04:17:29.8135701Z validation/tests/test_validation.py::test_validation[VAL-196] 
+2026-07-28T04:17:29.8136696Z validation/tests/test_validation.py::test_validation[VAL-188] 
+2026-07-28T04:17:29.8137767Z [gw0] [ 51%] PASSED validation/tests/test_validation.py::test_validation[VAL-196] 
+2026-07-28T04:17:29.8155455Z [gw1] [ 51%] PASSED validation/tests/test_validation.py::test_validation[VAL-180] 
+2026-07-28T04:17:29.8165377Z validation/tests/test_validation.py::test_validation[VAL-181] 
+2026-07-28T04:17:29.8244497Z [gw1] [ 51%] PASSED validation/tests/test_validation.py::test_validation[VAL-181] 
+2026-07-28T04:17:29.8286163Z validation/tests/test_validation.py::test_validation[VAL-200] 
+2026-07-28T04:17:29.8287119Z [gw1] [ 52%] PASSED validation/tests/test_validation.py::test_validation[VAL-200] 
+2026-07-28T04:17:29.8288060Z validation/tests/test_validation.py::test_validation[VAL-201] 
+2026-07-28T04:17:29.8288986Z [gw7] [ 52%] PASSED validation/tests/test_validation.py::test_validation[VAL-192] 
+2026-07-28T04:17:29.8304366Z validation/tests/test_validation.py::test_validation[VAL-193] 
+2026-07-28T04:17:29.8331375Z [gw7] [ 52%] PASSED validation/tests/test_validation.py::test_validation[VAL-193] 
+2026-07-28T04:17:29.8332548Z validation/tests/test_validation.py::test_validation[VAL-194] 
+2026-07-28T04:17:29.8333609Z [gw7] [ 53%] PASSED validation/tests/test_validation.py::test_validation[VAL-194] 
+2026-07-28T04:17:29.8334707Z validation/tests/test_validation.py::test_validation[VAL-197] 
+2026-07-28T04:17:29.8335996Z [gw0] [ 53%] PASSED validation/tests/test_validation.py::test_validation[VAL-197] 
+2026-07-28T04:17:29.8337094Z validation/tests/test_validation.py::test_validation[VAL-198] 
+2026-07-28T04:17:29.8338148Z [gw0] [ 53%] PASSED validation/tests/test_validation.py::test_validation[VAL-198] 
+2026-07-28T04:17:29.8339165Z validation/tests/test_validation.py::test_validation[VAL-195] 
+2026-07-28T04:17:29.8340241Z [gw7] [ 54%] PASSED validation/tests/test_validation.py::test_validation[VAL-195] 
+2026-07-28T04:17:29.8341304Z [gw6] [ 54%] PASSED validation/tests/test_validation.py::test_validation[VAL-188] 
+2026-07-28T04:17:29.8341950Z validation/tests/test_validation.py::test_validation[VAL-189] 
+2026-07-28T04:17:29.8342543Z [gw6] [ 54%] PASSED validation/tests/test_validation.py::test_validation[VAL-189] 
+2026-07-28T04:17:29.8343123Z validation/tests/test_validation.py::test_validation[VAL-190] 
+2026-07-28T04:17:29.8382733Z [gw6] [ 55%] PASSED validation/tests/test_validation.py::test_validation[VAL-190] 
+2026-07-28T04:17:29.8383866Z [gw1] [ 55%] PASSED validation/tests/test_validation.py::test_validation[VAL-201] 
+2026-07-28T04:17:29.8390788Z validation/tests/test_validation.py::test_validation[VAL-202] 
+2026-07-28T04:17:29.8392452Z [gw1] [ 55%] PASSED validation/tests/test_validation.py::test_validation[VAL-202] 
+2026-07-28T04:17:29.8393836Z validation/tests/test_validation.py::test_validation[VAL-204] 
+2026-07-28T04:17:29.8395675Z [gw7] [ 56%] PASSED validation/tests/test_validation.py::test_validation[VAL-204] 
+2026-07-28T04:17:29.8397341Z validation/tests/test_validation.py::test_validation[VAL-205] 
+2026-07-28T04:17:29.8398775Z [gw5] [ 56%] PASSED validation/tests/test_validation.py::test_validation[VAL-046] 
+2026-07-28T04:17:29.8400275Z [gw7] [ 56%] PASSED validation/tests/test_validation.py::test_validation[VAL-205] 
+2026-07-28T04:17:29.8401462Z validation/tests/test_validation.py::test_validation[VAL-206] 
+2026-07-28T04:17:29.8403140Z [gw4] [ 57%] PASSED validation/tests/test_validation.py::test_validation[VAL-037] 
+2026-07-28T04:17:29.8404316Z validation/tests/test_validation.py::test_validation[VAL-038] 
+2026-07-28T04:17:29.8406099Z validation/tests/test_validation.py::test_validation[VAL-199] 
+2026-07-28T04:17:29.8407462Z [gw0] [ 57%] PASSED validation/tests/test_validation.py::test_validation[VAL-199] 
+2026-07-28T04:17:29.8409018Z validation/tests/test_validation.py::test_validation[VAL-208] 
+2026-07-28T04:17:29.8426491Z [gw0] [ 57%] PASSED validation/tests/test_validation.py::test_validation[VAL-208] 
+2026-07-28T04:17:29.8439097Z validation/tests/test_validation.py::test_validation[VAL-209] 
+2026-07-28T04:17:29.8440284Z [gw0] [ 58%] PASSED validation/tests/test_validation.py::test_validation[VAL-209] 
+2026-07-28T04:17:29.8441645Z validation/tests/test_validation.py::test_validation[VAL-210] 
+2026-07-28T04:17:29.8456503Z [gw0] [ 58%] PASSED validation/tests/test_validation.py::test_validation[VAL-210] 
+2026-07-28T04:17:29.8470517Z [gw2] [ 58%] PASSED validation/tests/test_validation.py::test_validation[VAL-028] 
+2026-07-28T04:17:29.8494385Z validation/tests/test_validation.py::test_validation[VAL-029] 
+2026-07-28T04:17:29.8495781Z validation/tests/test_validation.py::test_validation[VAL-191] 
+2026-07-28T04:17:29.8496930Z [gw6] [ 59%] PASSED validation/tests/test_validation.py::test_validation[VAL-191] 
+2026-07-28T04:17:29.8498056Z validation/tests/test_validation.py::test_validation[VAL-212] 
+2026-07-28T04:17:29.8515267Z [gw6] [ 59%] PASSED validation/tests/test_validation.py::test_validation[VAL-212] 
+2026-07-28T04:17:29.8516925Z validation/tests/test_validation.py::test_validation[VAL-213] 
+2026-07-28T04:17:29.8518823Z [gw7] [ 59%] PASSED validation/tests/test_validation.py::test_validation[VAL-206] 
+2026-07-28T04:17:29.8520429Z validation/tests/test_validation.py::test_validation[VAL-047] 
+2026-07-28T04:17:29.8522124Z [gw6] [ 60%] PASSED validation/tests/test_validation.py::test_validation[VAL-213] 
+2026-07-28T04:17:29.8523472Z validation/tests/test_validation.py::test_validation[VAL-214] 
+2026-07-28T04:17:29.8548081Z [gw6] [ 60%] PASSED validation/tests/test_validation.py::test_validation[VAL-214] 
+2026-07-28T04:17:29.8600421Z validation/tests/test_validation.py::test_validation[VAL-203] 
+2026-07-28T04:17:29.8628978Z [gw1] [ 60%] PASSED validation/tests/test_validation.py::test_validation[VAL-203] 
+2026-07-28T04:17:29.8633390Z validation/tests/test_validation.py::test_validation[VAL-216] 
+2026-07-28T04:17:29.8634286Z [gw1] [ 61%] PASSED validation/tests/test_validation.py::test_validation[VAL-216] 
+2026-07-28T04:17:29.8635160Z validation/tests/test_validation.py::test_validation[VAL-217] 
+2026-07-28T04:17:29.8636074Z validation/tests/test_validation.py::test_validation[VAL-211] 
+2026-07-28T04:17:29.8636593Z [gw0] [ 61%] PASSED validation/tests/test_validation.py::test_validation[VAL-211] 
+2026-07-28T04:17:29.8637087Z validation/tests/test_validation.py::test_validation[VAL-220] 
+2026-07-28T04:17:29.8637578Z [gw0] [ 61%] PASSED validation/tests/test_validation.py::test_validation[VAL-220] 
+2026-07-28T04:17:29.8638289Z validation/tests/test_validation.py::test_validation[VAL-221] 
+2026-07-28T04:17:29.8638774Z [gw0] [ 62%] PASSED validation/tests/test_validation.py::test_validation[VAL-221] 
+2026-07-28T04:17:29.8639294Z [gw1] [ 62%] PASSED validation/tests/test_validation.py::test_validation[VAL-217] 
+2026-07-28T04:17:29.8639767Z validation/tests/test_validation.py::test_validation[VAL-218] 
+2026-07-28T04:17:29.8640230Z [gw1] [ 62%] PASSED validation/tests/test_validation.py::test_validation[VAL-218] 
+2026-07-28T04:17:29.8640925Z validation/tests/test_validation.py::test_validation[VAL-222] 
+2026-07-28T04:17:29.8641817Z [gw0] [ 63%] PASSED validation/tests/test_validation.py::test_validation[VAL-222] 
+2026-07-28T04:17:29.8642775Z validation/tests/test_validation.py::test_validation[VAL-207] 
+2026-07-28T04:17:29.8643661Z [gw7] [ 63%] PASSED validation/tests/test_validation.py::test_validation[VAL-207] 
+2026-07-28T04:17:29.8644621Z validation/tests/test_validation.py::test_validation[VAL-224] 
+2026-07-28T04:17:29.8645676Z validation/tests/test_validation.py::test_validation[VAL-215] 
+2026-07-28T04:17:29.8646855Z [gw6] [ 63%] PASSED validation/tests/test_validation.py::test_validation[VAL-215] 
+2026-07-28T04:17:29.8647805Z validation/tests/test_validation.py::test_validation[VAL-219] 
+2026-07-28T04:17:29.8648708Z [gw1] [ 64%] PASSED validation/tests/test_validation.py::test_validation[VAL-219] 
+2026-07-28T04:17:29.8649630Z validation/tests/test_validation.py::test_validation[VAL-223] 
+2026-07-28T04:17:29.8651579Z [gw7] [ 64%] PASSED validation/tests/test_validation.py::test_validation[VAL-224] 
+2026-07-28T04:17:29.8652641Z [gw0] [ 64%] PASSED validation/tests/test_validation.py::test_validation[VAL-223] 
+2026-07-28T04:17:29.8653579Z validation/tests/test_validation.py::test_validation[VAL-233] 
+2026-07-28T04:17:29.8654424Z validation/tests/test_validation.py::test_validation[VAL-230] 
+2026-07-28T04:17:29.8655367Z [gw0] [ 65%] PASSED validation/tests/test_validation.py::test_validation[VAL-233] 
+2026-07-28T04:17:29.8656552Z validation/tests/test_validation.py::test_validation[VAL-225] 
+2026-07-28T04:17:29.8657390Z validation/tests/test_validation.py::test_validation[VAL-227] 
+2026-07-28T04:17:29.8658317Z [gw6] [ 65%] PASSED validation/tests/test_validation.py::test_validation[VAL-227] 
+2026-07-28T04:17:29.8659252Z validation/tests/test_validation.py::test_validation[VAL-228] 
+2026-07-28T04:17:29.8661194Z [gw6] [ 65%] PASSED validation/tests/test_validation.py::test_validation[VAL-228] 
+2026-07-28T04:17:29.8663707Z [gw7] [ 66%] PASSED validation/tests/test_validation.py::test_validation[VAL-225] 
+2026-07-28T04:17:29.8665135Z [gw1] [ 66%] PASSED validation/tests/test_validation.py::test_validation[VAL-230] 
+2026-07-28T04:17:29.8666832Z validation/tests/test_validation.py::test_validation[VAL-234] 
+2026-07-28T04:17:29.8670296Z [gw0] [ 66%] PASSED validation/tests/test_validation.py::test_validation[VAL-234] 
+2026-07-28T04:17:29.8696214Z validation/tests/test_validation.py::test_validation[VAL-231] 
+2026-07-28T04:17:29.8706513Z [gw1] [ 67%] PASSED validation/tests/test_validation.py::test_validation[VAL-231] 
+2026-07-28T04:17:29.8712357Z validation/tests/test_validation.py::test_validation[VAL-226] 
+2026-07-28T04:17:29.8725729Z validation/tests/test_validation.py::test_validation[VAL-229] 
+2026-07-28T04:17:29.8726978Z [gw7] [ 67%] PASSED validation/tests/test_validation.py::test_validation[VAL-226] 
+2026-07-28T04:17:29.8728229Z validation/tests/test_validation.py::test_validation[VAL-232] 
+2026-07-28T04:17:29.8729554Z validation/tests/test_validation.py::test_validation[VAL-239] 
+2026-07-28T04:17:29.8733066Z validation/tests/test_validation.py::test_validation[VAL-235] 
+2026-07-28T04:17:29.8739172Z [gw0] [ 67%] PASSED validation/tests/test_validation.py::test_validation[VAL-235] 
+2026-07-28T04:17:29.8740251Z validation/tests/test_validation.py::test_validation[VAL-241] 
+2026-07-28T04:17:29.8741222Z [gw6] [ 68%] PASSED validation/tests/test_validation.py::test_validation[VAL-229] 
+2026-07-28T04:17:29.8743108Z validation/tests/test_validation.py::test_validation[VAL-236] 
+2026-07-28T04:17:29.8744467Z [gw6] [ 68%] PASSED validation/tests/test_validation.py::test_validation[VAL-236] 
+2026-07-28T04:17:29.8745857Z validation/tests/test_validation.py::test_validation[VAL-237] 
+2026-07-28T04:17:29.8748339Z [gw7] [ 68%] PASSED validation/tests/test_validation.py::test_validation[VAL-239] 
+2026-07-28T04:17:29.8749665Z [gw1] [ 69%] PASSED validation/tests/test_validation.py::test_validation[VAL-232] 
+2026-07-28T04:17:29.8750991Z validation/tests/test_validation.py::test_validation[VAL-243] 
+2026-07-28T04:17:29.8779741Z [gw1] [ 69%] PASSED validation/tests/test_validation.py::test_validation[VAL-243] 
+2026-07-28T04:17:29.8796455Z [gw0] [ 69%] PASSED validation/tests/test_validation.py::test_validation[VAL-241] 
+2026-07-28T04:17:29.8827549Z [gw6] [ 70%] PASSED validation/tests/test_validation.py::test_validation[VAL-237] 
+2026-07-28T04:17:29.8828548Z validation/tests/test_validation.py::test_validation[VAL-242] 
+2026-07-28T04:17:29.8829574Z [gw0] [ 70%] PASSED validation/tests/test_validation.py::test_validation[VAL-242] 
+2026-07-28T04:17:29.8831030Z validation/tests/test_validation.py::test_validation[VAL-244] 
+2026-07-28T04:17:29.8832845Z [gw1] [ 70%] PASSED validation/tests/test_validation.py::test_validation[VAL-244] 
+2026-07-28T04:17:29.8833845Z validation/tests/test_validation.py::test_validation[VAL-247] 
+2026-07-28T04:17:29.8835340Z validation/tests/test_validation.py::test_validation[VAL-240] 
+2026-07-28T04:17:29.8837158Z [gw7] [ 71%] PASSED validation/tests/test_validation.py::test_validation[VAL-240] 
+2026-07-28T04:17:29.8838571Z validation/tests/test_validation.py::test_validation[VAL-245] 
+2026-07-28T04:17:29.8842546Z [gw7] [ 71%] PASSED validation/tests/test_validation.py::test_validation[VAL-245] 
+2026-07-28T04:17:29.8843562Z [gw3] [ 71%] PASSED validation/tests/test_validation.py::test_validation[VAL-022] 
+2026-07-28T04:17:29.8844604Z validation/tests/test_validation.py::test_validation[VAL-023] 
+2026-07-28T04:17:29.8863008Z [gw1] [ 72%] PASSED validation/tests/test_validation.py::test_validation[VAL-247] 
+2026-07-28T04:17:29.8881966Z validation/tests/test_validation.py::test_validation[VAL-249] 
+2026-07-28T04:17:29.8928679Z [gw0] [ 72%] PASSED validation/tests/test_validation.py::test_validation[VAL-249] 
+2026-07-28T04:17:29.8929926Z validation/tests/test_validation.py::test_validation[VAL-246] 
+2026-07-28T04:17:29.8931538Z [gw7] [ 72%] PASSED validation/tests/test_validation.py::test_validation[VAL-246] 
+2026-07-28T04:17:29.8933081Z validation/tests/test_validation.py::test_validation[VAL-253] 
+2026-07-28T04:17:29.8934239Z [gw7] [ 73%] PASSED validation/tests/test_validation.py::test_validation[VAL-253] 
+2026-07-28T04:17:29.8935879Z validation/tests/test_validation.py::test_validation[VAL-238] 
+2026-07-28T04:17:29.8937713Z [gw6] [ 73%] PASSED validation/tests/test_validation.py::test_validation[VAL-238] 
+2026-07-28T04:17:29.8939370Z validation/tests/test_validation.py::test_validation[VAL-251] 
+2026-07-28T04:17:29.8941639Z [gw6] [ 73%] PASSED validation/tests/test_validation.py::test_validation[VAL-251] 
+2026-07-28T04:17:29.8943122Z validation/tests/test_validation.py::test_validation[VAL-248] 
+2026-07-28T04:17:29.8962832Z [gw1] [ 74%] PASSED validation/tests/test_validation.py::test_validation[VAL-248] 
+2026-07-28T04:17:29.8975941Z [gw4] [ 74%] PASSED validation/tests/test_validation.py::test_validation[VAL-038] 
+2026-07-28T04:17:29.8977372Z [gw5] [ 74%] PASSED validation/tests/test_validation.py::test_validation[VAL-047] 
+2026-07-28T04:17:29.8978368Z validation/tests/test_validation.py::test_validation[VAL-048] 
+2026-07-28T04:17:29.8980964Z [gw2] [ 75%] PASSED validation/tests/test_validation.py::test_validation[VAL-029] 
+2026-07-28T04:17:29.8981905Z validation/tests/test_validation.py::test_validation[VAL-030] 
+2026-07-28T04:17:29.8982723Z validation/tests/test_validation.py::test_validation[VAL-039] 
+2026-07-28T04:17:29.8983544Z validation/tests/test_validation.py::test_validation[VAL-250] 
+2026-07-28T04:17:29.8984744Z [gw0] [ 75%] PASSED validation/tests/test_validation.py::test_validation[VAL-250] 
+2026-07-28T04:17:29.8985938Z validation/tests/test_validation.py::test_validation[VAL-252] 
+2026-07-28T04:17:29.8994938Z [gw6] [ 75%] PASSED validation/tests/test_validation.py::test_validation[VAL-252] 
+2026-07-28T04:17:29.8996170Z validation/tests/test_validation.py::test_validation[VAL-255] 
+2026-07-28T04:17:29.9010973Z [gw1] [ 76%] PASSED validation/tests/test_validation.py::test_validation[VAL-255] 
+2026-07-28T04:17:29.9011650Z validation/tests/test_validation.py::test_validation[VAL-256] 
+2026-07-28T04:17:29.9036635Z [gw0] [ 76%] PASSED validation/tests/test_validation.py::test_validation[VAL-256] 
+2026-07-28T04:17:29.9038289Z validation/tests/test_validation.py::test_validation[VAL-254] 
+2026-07-28T04:17:29.9039126Z [gw7] [ 76%] PASSED validation/tests/test_validation.py::test_validation[VAL-254] 
+2026-07-28T04:17:29.9043746Z validation/tests/test_validation.py::test_validation[VAL-258] 
+2026-07-28T04:17:29.9076215Z [gw1] [ 77%] PASSED validation/tests/test_validation.py::test_validation[VAL-258] 
+2026-07-28T04:17:29.9076773Z validation/tests/test_validation.py::test_validation[VAL-260] 
+2026-07-28T04:17:29.9077724Z [gw0] [ 77%] PASSED validation/tests/test_validation.py::test_validation[VAL-260] 
+2026-07-28T04:17:29.9078528Z validation/tests/test_validation.py::test_validation[VAL-259] 
+2026-07-28T04:17:29.9088163Z [gw7] [ 77%] PASSED validation/tests/test_validation.py::test_validation[VAL-259] 
+2026-07-28T04:17:29.9130391Z validation/tests/test_validation.py::test_validation[VAL-257] 
+2026-07-28T04:17:29.9136212Z [gw6] [ 78%] PASSED validation/tests/test_validation.py::test_validation[VAL-257] 
+2026-07-28T04:17:29.9136823Z [gw3] [ 78%] PASSED validation/tests/test_validation.py::test_validation[VAL-023] 
+2026-07-28T04:17:29.9137618Z validation/tests/test_validation.py::test_validation[VAL-262] 
+2026-07-28T04:17:29.9138383Z validation/tests/test_validation.py::test_validation[VAL-261] 
+2026-07-28T04:17:29.9139098Z [gw1] [ 78%] PASSED validation/tests/test_validation.py::test_validation[VAL-261] 
+2026-07-28T04:17:29.9139619Z validation/tests/test_validation.py::test_validation[VAL-024] 
+2026-07-28T04:17:29.9140111Z [gw0] [ 79%] PASSED validation/tests/test_validation.py::test_validation[VAL-262] 
+2026-07-28T04:17:29.9141487Z validation/tests/test_validation.py::test_validation[VAL-263] 
+2026-07-28T04:17:29.9142416Z [gw6] [ 79%] PASSED validation/tests/test_validation.py::test_validation[VAL-263] 
+2026-07-28T04:17:29.9143361Z validation/tests/test_validation.py::test_validation[VAL-264] 
+2026-07-28T04:17:29.9144289Z [gw7] [ 79%] PASSED validation/tests/test_validation.py::test_validation[VAL-264] 
+2026-07-28T04:17:29.9145223Z validation/tests/test_validation.py::test_validation[VAL-266] 
+2026-07-28T04:17:29.9156543Z [gw0] [ 80%] PASSED validation/tests/test_validation.py::test_validation[VAL-266] 
+2026-07-28T04:17:29.9174435Z validation/tests/test_validation.py::test_validation[VAL-265] 
+2026-07-28T04:17:29.9175010Z [gw1] [ 80%] PASSED validation/tests/test_validation.py::test_validation[VAL-265] 
+2026-07-28T04:17:29.9175994Z validation/tests/test_validation.py::test_validation[VAL-268] 
+2026-07-28T04:17:29.9176933Z [gw6] [ 80%] PASSED validation/tests/test_validation.py::test_validation[VAL-268] 
+2026-07-28T04:17:29.9177609Z validation/tests/test_validation.py::test_validation[VAL-267] 
+2026-07-28T04:17:29.9178090Z [gw7] [ 81%] PASSED validation/tests/test_validation.py::test_validation[VAL-267] 
+2026-07-28T04:17:29.9179663Z validation/tests/test_validation.py::test_validation[VAL-270] 
+2026-07-28T04:17:29.9187035Z [gw0] [ 81%] PASSED validation/tests/test_validation.py::test_validation[VAL-270] 
+2026-07-28T04:17:29.9188347Z validation/tests/test_validation.py::test_validation[VAL-269] 
+2026-07-28T04:17:29.9189488Z [gw1] [ 81%] PASSED validation/tests/test_validation.py::test_validation[VAL-269] 
+2026-07-28T04:17:29.9190637Z validation/tests/test_validation.py::test_validation[VAL-272] 
+2026-07-28T04:17:29.9192052Z [gw7] [ 82%] PASSED validation/tests/test_validation.py::test_validation[VAL-272] 
+2026-07-28T04:17:29.9193338Z validation/tests/test_validation.py::test_validation[VAL-271] 
+2026-07-28T04:17:29.9194475Z [gw6] [ 82%] PASSED validation/tests/test_validation.py::test_validation[VAL-271] 
+2026-07-28T04:17:29.9221423Z validation/tests/test_validation.py::test_validation[VAL-274] 
+2026-07-28T04:17:29.9222309Z [gw1] [ 82%] PASSED validation/tests/test_validation.py::test_validation[VAL-274] 
+2026-07-28T04:17:29.9223470Z validation/tests/test_validation.py::test_validation[VAL-275] 
+2026-07-28T04:17:29.9224610Z [gw6] [ 83%] PASSED validation/tests/test_validation.py::test_validation[VAL-275] 
+2026-07-28T04:17:29.9225711Z validation/tests/test_validation.py::test_validation[VAL-276] 
+2026-07-28T04:17:29.9229354Z [gw7] [ 83%] PASSED validation/tests/test_validation.py::test_validation[VAL-276] 
+2026-07-28T04:17:29.9231029Z validation/tests/test_validation.py::test_validation[VAL-273] 
+2026-07-28T04:17:29.9255156Z [gw0] [ 83%] PASSED validation/tests/test_validation.py::test_validation[VAL-273] 
+2026-07-28T04:17:29.9256923Z validation/tests/test_validation.py::test_validation[VAL-279] 
+2026-07-28T04:17:29.9258673Z [gw6] [ 84%] PASSED validation/tests/test_validation.py::test_validation[VAL-279] 
+2026-07-28T04:17:29.9259982Z validation/tests/test_validation.py::test_validation[VAL-280] 
+2026-07-28T04:17:29.9261212Z [gw7] [ 84%] PASSED validation/tests/test_validation.py::test_validation[VAL-280] 
+2026-07-28T04:17:29.9262385Z validation/tests/test_validation.py::test_validation[VAL-278] 
+2026-07-28T04:17:29.9288855Z [gw1] [ 84%] PASSED validation/tests/test_validation.py::test_validation[VAL-278] 
+2026-07-28T04:17:29.9289714Z validation/tests/test_validation.py::test_validation[VAL-277] 
+2026-07-28T04:17:29.9291395Z [gw0] [ 85%] PASSED validation/tests/test_validation.py::test_validation[VAL-277] 
+2026-07-28T04:17:29.9292707Z validation/tests/test_validation.py::test_validation[VAL-283] 
+2026-07-28T04:17:29.9311814Z [gw6] [ 85%] PASSED validation/tests/test_validation.py::test_validation[VAL-283] 
+2026-07-28T04:17:29.9312983Z validation/tests/test_validation.py::test_validation[VAL-282] 
+2026-07-28T04:17:29.9314098Z [gw1] [ 85%] PASSED validation/tests/test_validation.py::test_validation[VAL-282] 
+2026-07-28T04:17:29.9315229Z validation/tests/test_validation.py::test_validation[VAL-281] 
+2026-07-28T04:17:29.9320524Z [gw7] [ 86%] PASSED validation/tests/test_validation.py::test_validation[VAL-281] 
+2026-07-28T04:17:29.9324209Z validation/tests/test_validation.py::test_validation[VAL-285] 
+2026-07-28T04:17:29.9325988Z validation/tests/test_validation.py::test_validation[VAL-284] 
+2026-07-28T04:17:29.9328540Z [gw6] [ 86%] PASSED validation/tests/test_validation.py::test_validation[VAL-285] 
+2026-07-28T04:17:29.9348102Z [gw0] [ 86%] PASSED validation/tests/test_validation.py::test_validation[VAL-284] 
+2026-07-28T04:17:29.9349379Z validation/tests/test_validation.py::test_validation[VAL-287] 
+2026-07-28T04:17:29.9350485Z [gw1] [ 87%] PASSED validation/tests/test_validation.py::test_validation[VAL-287] 
+2026-07-28T04:17:29.9351563Z validation/tests/test_validation.py::test_validation[VAL-286] 
+2026-07-28T04:17:29.9352625Z [gw7] [ 87%] PASSED validation/tests/test_validation.py::test_validation[VAL-286] 
+2026-07-28T04:17:29.9358504Z validation/tests/test_validation.py::test_validation[VAL-288] 
+2026-07-28T04:17:29.9359021Z validation/tests/test_validation.py::test_validation[VAL-289] 
+2026-07-28T04:17:29.9368345Z validation/tests/test_validation.py::test_validation[VAL-290] 
+2026-07-28T04:17:29.9398002Z [gw0] [ 87%] PASSED validation/tests/test_validation.py::test_validation[VAL-288] 
+2026-07-28T04:17:29.9398663Z [gw6] [ 88%] PASSED validation/tests/test_validation.py::test_validation[VAL-289] 
+2026-07-28T04:17:29.9399333Z validation/tests/test_validation.py::test_validation[VAL-291] 
+2026-07-28T04:17:29.9399816Z [gw7] [ 88%] PASSED validation/tests/test_validation.py::test_validation[VAL-291] 
+2026-07-28T04:17:29.9400538Z [gw1] [ 88%] PASSED validation/tests/test_validation.py::test_validation[VAL-290] 
+2026-07-28T04:17:29.9402554Z validation/tests/test_validation.py::test_validation[VAL-294] 
+2026-07-28T04:17:29.9403792Z validation/tests/test_validation.py::test_validation[VAL-293] 
+2026-07-28T04:17:29.9404964Z [gw0] [ 89%] PASSED validation/tests/test_validation.py::test_validation[VAL-293] 
+2026-07-28T04:17:29.9406381Z validation/tests/test_validation.py::test_validation[VAL-292] 
+2026-07-28T04:17:29.9418244Z [gw1] [ 89%] PASSED validation/tests/test_validation.py::test_validation[VAL-294] 
+2026-07-28T04:17:29.9419749Z validation/tests/test_validation.py::test_validation[VAL-295] 
+2026-07-28T04:17:29.9448298Z [gw7] [ 89%] PASSED validation/tests/test_validation.py::test_validation[VAL-295] 
+2026-07-28T04:17:29.9452888Z validation/tests/test_validation.py::test_validation[VAL-296] 
+2026-07-28T04:17:29.9481788Z [gw0] [ 90%] PASSED validation/tests/test_validation.py::test_validation[VAL-296] 
+2026-07-28T04:17:29.9482850Z [gw6] [ 90%] PASSED validation/tests/test_validation.py::test_validation[VAL-292] 
+2026-07-28T04:17:29.9506208Z validation/tests/test_validation.py::test_validation[VAL-299] 
+2026-07-28T04:17:29.9536529Z [gw1] [ 90%] PASSED validation/tests/test_validation.py::test_validation[VAL-299] 
+2026-07-28T04:17:29.9626218Z validation/tests/test_validation.py::test_validation[VAL-298] 
+2026-07-28T04:17:29.9656428Z [gw7] [ 91%] PASSED validation/tests/test_validation.py::test_validation[VAL-298] 
+2026-07-28T04:17:29.9716211Z validation/tests/test_validation.py::test_validation[VAL-300] 
+2026-07-28T04:17:29.9746443Z [gw0] [ 91%] PASSED validation/tests/test_validation.py::test_validation[VAL-300] 
+2026-07-28T04:17:29.9776189Z validation/tests/test_validation.py::test_validation[VAL-297] 
+2026-07-28T04:17:29.9806293Z [gw6] [ 91%] PASSED validation/tests/test_validation.py::test_validation[VAL-297] 
+2026-07-28T04:17:29.9836272Z [gw4] [ 92%] PASSED validation/tests/test_validation.py::test_validation[VAL-039] 
+2026-07-28T04:17:29.9866183Z validation/tests/test_validation.py::test_validation[VAL-040] 
+2026-07-28T04:17:29.9956305Z [gw5] [ 92%] PASSED validation/tests/test_validation.py::test_validation[VAL-048] 
+2026-07-28T04:17:29.9986300Z validation/tests/test_validation.py::test_validation[VAL-049] 
+2026-07-28T04:17:29.9987251Z [gw3] [ 92%] PASSED validation/tests/test_validation.py::test_validation[VAL-024] 
+2026-07-28T04:17:29.9988142Z validation/tests/test_validation.py::test_validation[VAL-025] 
+2026-07-28T04:17:29.9989101Z [gw2] [ 93%] PASSED validation/tests/test_validation.py::test_validation[VAL-030] 
+2026-07-28T04:17:30.0046199Z validation/tests/test_validation.py::test_validation[VAL-031] 
+2026-07-28T04:17:30.0076348Z [gw5] [ 93%] PASSED validation/tests/test_validation.py::test_validation[VAL-049] 
+2026-07-28T04:17:30.0106180Z validation/tests/test_validation.py::test_validation[VAL-050] 
+2026-07-28T04:17:30.0166279Z [gw3] [ 93%] PASSED validation/tests/test_validation.py::test_validation[VAL-025] 
+2026-07-28T04:17:30.0196223Z [gw2] [ 94%] PASSED validation/tests/test_validation.py::test_validation[VAL-031] 
+2026-07-28T04:17:30.0226193Z validation/tests/test_validation.py::test_validation[VAL-026] 
+2026-07-28T04:17:30.0256228Z validation/tests/test_validation.py::test_validation[VAL-032] 
+2026-07-28T04:17:30.0316389Z [gw5] [ 94%] PASSED validation/tests/test_validation.py::test_validation[VAL-050] 
+2026-07-28T04:17:30.0346260Z [gw3] [ 94%] PASSED validation/tests/test_validation.py::test_validation[VAL-026] 
+2026-07-28T04:17:30.0376147Z validation/tests/test_validation.py::test_validation[VAL-027] 
+2026-07-28T04:17:30.0376921Z validation/tests/test_validation.py::test_validation[VAL-051] 
+2026-07-28T04:17:30.0396316Z [gw2] [ 95%] PASSED validation/tests/test_validation.py::test_validation[VAL-032] 
+2026-07-28T04:17:30.0426257Z validation/tests/test_validation.py::test_validation[VAL-033] 
+2026-07-28T04:17:30.0496341Z [gw3] [ 95%] PASSED validation/tests/test_validation.py::test_validation[VAL-027] 
+2026-07-28T04:17:30.0536459Z [gw5] [ 95%] PASSED validation/tests/test_validation.py::test_validation[VAL-051] 
+2026-07-28T04:17:30.0616282Z validation/tests/test_validation.py::test_validation[VAL-052] 
+2026-07-28T04:17:30.0617247Z [gw5] [ 96%] PASSED validation/tests/test_validation.py::test_validation[VAL-052] 
+2026-07-28T04:17:30.0666584Z [gw2] [ 96%] PASSED validation/tests/test_validation.py::test_validation[VAL-033] 
+2026-07-28T04:17:30.0736216Z validation/tests/test_validation.py::test_validation[VAL-034] 
+2026-07-28T04:17:30.0806109Z validation/tests/test_validation.py::test_validation[VAL-053] 
+2026-07-28T04:17:30.0836207Z [gw5] [ 96%] PASSED validation/tests/test_validation.py::test_validation[VAL-053] 
+2026-07-28T04:17:30.0837029Z validation/tests/test_validation.py::test_validation[VAL-054] 
+2026-07-28T04:17:30.0896296Z [gw5] [ 97%] PASSED validation/tests/test_validation.py::test_validation[VAL-054] 
+2026-07-28T04:17:30.0916237Z [gw2] [ 97%] PASSED validation/tests/test_validation.py::test_validation[VAL-034] 
+2026-07-28T04:17:30.1187485Z validation/tests/test_validation.py::test_validation[VAL-035] 
+2026-07-28T04:17:30.1257763Z [gw2] [ 97%] PASSED validation/tests/test_validation.py::test_validation[VAL-035] 
+2026-07-28T04:17:30.1496824Z validation/tests/test_validation.py::test_validation[VAL-036] 
+2026-07-28T04:17:30.1736681Z [gw2] [ 98%] PASSED validation/tests/test_validation.py::test_validation[VAL-036] 
+2026-07-28T04:17:30.1766352Z [gw4] [ 98%] FAILED validation/tests/test_validation.py::test_validation[VAL-040] 
+2026-07-28T04:17:30.3266269Z validation/tests/test_validation.py::test_validation[VAL-041] 
+2026-07-28T04:17:30.3296331Z [gw4] [ 98%] FAILED validation/tests/test_validation.py::test_validation[VAL-041] 
+2026-07-28T04:17:30.3956680Z validation/tests/test_validation.py::test_validation[VAL-042] 
+2026-07-28T04:17:30.3966496Z [gw4] [ 99%] FAILED validation/tests/test_validation.py::test_validation[VAL-042] 
+2026-07-28T04:17:30.4726763Z validation/tests/test_validation.py::test_validation[VAL-043] 
+2026-07-28T04:17:30.4756578Z [gw4] [ 99%] FAILED validation/tests/test_validation.py::test_validation[VAL-043] 
+2026-07-28T04:17:30.5221531Z validation/tests/test_validation.py::test_validation[VAL-044] 
+2026-07-28T04:17:30.5236924Z [gw4] [ 99%] FAILED validation/tests/test_validation.py::test_validation[VAL-044] 
+2026-07-28T04:17:30.5560750Z validation/tests/test_validation.py::test_validation[VAL-045] 
+2026-07-28T04:17:30.8554139Z [gw4] [100%] FAILED validation/tests/test_validation.py::test_validation[VAL-045] 
+2026-07-28T04:17:30.8554764Z 
+2026-07-28T04:17:30.8555019Z =================================== FAILURES ===================================
+2026-07-28T04:17:30.8556100Z ___________________________ test_validation[VAL-013] ___________________________
+2026-07-28T04:17:30.8557013Z [gw1] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:17:30.8557861Z validation/tests/test_validation.py:19: in test_validation
+2026-07-28T04:17:30.8558537Z     execute_validation_case(case)
+2026-07-28T04:17:30.8559150Z shared/test_executors.py:172: in execute_validation_case
+2026-07-28T04:17:30.8559979Z     assert len(digits) < 10 or pattern == "", f"Should be invalid: {pattern}"
+2026-07-28T04:17:30.8560781Z E   AssertionError: Should be invalid: 0000000000
+2026-07-28T04:17:30.8561558Z E   assert (10 < 10 or '0000000000' == ''
+2026-07-28T04:17:30.8562057Z E    +  where 10 = len('0000000000')
+2026-07-28T04:17:30.8562513Z E     
+2026-07-28T04:17:30.8562849Z E     + 0000000000)
+2026-07-28T04:17:30.8563397Z ___________________________ test_validation[VAL-021] ___________________________
+2026-07-28T04:17:30.8564247Z [gw3] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:17:30.8565042Z validation/tests/test_validation.py:19: in test_validation
+2026-07-28T04:17:30.8567416Z     execute_validation_case(case)
+2026-07-28T04:17:30.8567985Z shared/test_executors.py:177: in execute_validation_case
+2026-07-28T04:17:30.8568699Z     assert len(pattern) < 8 or not re.search(r"[A-Z@#]", pattern), \
+2026-07-28T04:17:30.8569637Z E   AssertionError: Password should be weak: noSpecial1
+2026-07-28T04:17:30.8570307Z E   assert (10 < 8 or not <re.Match object; span=(2, 3), match='S'>)
+2026-07-28T04:17:30.8570934Z E    +  where 10 = len('noSpecial1')
+2026-07-28T04:17:30.8571762Z E    +  and   <re.Match object; span=(2, 3), match='S'> = <function search at 0x7fecfd0762a0>('[A-Z@#]', 'noSpecial1')
+2026-07-28T04:17:30.8572562Z E    +    where <function search at 0x7fecfd0762a0> = re.search
+2026-07-28T04:17:30.8573003Z ___________________________ test_validation[VAL-007] ___________________________
+2026-07-28T04:17:30.8573502Z [gw0] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:17:30.8573991Z validation/tests/test_validation.py:19: in test_validation
+2026-07-28T04:17:30.8574348Z     execute_validation_case(case)
+2026-07-28T04:17:30.8574673Z shared/test_executors.py:166: in execute_validation_case
+2026-07-28T04:17:30.8575203Z     assert not re.match(r"^[^@]+@[^@]+\.[^@]+$", pattern), f"Should be invalid: {pattern}"
+2026-07-28T04:17:30.8576153Z E   AssertionError: Should be invalid: user..double@test.com
+2026-07-28T04:17:30.8577003Z E   assert not <re.Match object; span=(0, 21), match='user..double@test.com'>
+2026-07-28T04:17:30.8577758Z E    +  where <re.Match object; span=(0, 21), match='user..double@test.com'> = <function match at 0x7f92cd53cfe0>('^[^@]+@[^@]+\\.[^@]+$', 'user..double@test.com')
+2026-07-28T04:17:30.8578439Z E    +    where <function match at 0x7f92cd53cfe0> = re.match
+2026-07-28T04:17:30.8578853Z ___________________________ test_validation[VAL-040] ___________________________
+2026-07-28T04:17:30.8579331Z [gw4] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:17:30.8579793Z validation/tests/test_validation.py:19: in test_validation
+2026-07-28T04:17:30.8580142Z     execute_validation_case(case)
+2026-07-28T04:17:30.8580470Z shared/test_executors.py:198: in execute_validation_case
+2026-07-28T04:17:30.8580893Z     assert "AIzaSy" not in text, "Real Google API key found in HTML"
+2026-07-28T04:17:30.8581296Z E   AssertionError: Real Google API key found in HTML
+2026-07-28T04:17:30.8589877Z E   assert 'AIzaSy' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.8596045Z E     
+2026-07-28T04:17:30.8596438Z E     'AIzaSy' is contained here:
+2026-07-28T04:17:30.8596711Z E       <!DOCTYPE html>
+2026-07-28T04:17:30.8596935Z E       <html>
+2026-07-28T04:17:30.8597132Z E       <head>
+2026-07-28T04:17:30.8597321Z E         <!--
+2026-07-28T04:17:30.8597643Z E           If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.8598136Z E           href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.8598494Z E       
+2026-07-28T04:17:30.8598811Z E           The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.8599215Z E           it to work correctly.
+2026-07-28T04:17:30.8599456Z E       
+2026-07-28T04:17:30.8599654Z E           For more details:
+2026-07-28T04:17:30.8600014Z E           * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.8600386Z E       
+2026-07-28T04:17:30.8600696Z E           This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.8601158Z E           the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.8601488Z E         -->
+2026-07-28T04:17:30.8601700Z E         <base href="/MediRoute/">
+2026-07-28T04:17:30.8601942Z E       
+2026-07-28T04:17:30.8602280Z E         <meta charset="UTF-8">
+2026-07-28T04:17:30.8602609Z E         <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.8603027Z E         <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.8603360Z E       
+2026-07-28T04:17:30.8603562Z E         <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.8603891Z E         <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.8604339Z E         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.8604809Z E         <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.8605232Z E         <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.8605824Z E       
+2026-07-28T04:17:30.8606027Z E         <!-- Favicon -->
+2026-07-28T04:17:30.8606322Z E         <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.8606640Z E       
+2026-07-28T04:17:30.8606841Z E         <title>MediRoute</title>
+2026-07-28T04:17:30.8607137Z E         <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.8607941Z E         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.8608737Z E     ?                                                            ++++++
+2026-07-28T04:17:30.8609048Z E       </head>
+2026-07-28T04:17:30.8609251Z E       <body>
+2026-07-28T04:17:30.8609451Z E         <!--
+2026-07-28T04:17:30.8609717Z E           You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.8610157Z E           This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.8610629Z E           or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.8610989Z E       
+2026-07-28T04:17:30.8611195Z E           For more details:
+2026-07-28T04:17:30.8611562Z E           * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.8611950Z E         -->
+2026-07-28T04:17:30.8612223Z E         <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.8612539Z E       </body>
+2026-07-28T04:17:30.8612737Z E       </html>
+2026-07-28T04:17:30.8613036Z ___________________________ test_validation[VAL-041] ___________________________
+2026-07-28T04:17:30.8613515Z [gw4] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:17:30.8613969Z validation/tests/test_validation.py:19: in test_validation
+2026-07-28T04:17:30.8614322Z     execute_validation_case(case)
+2026-07-28T04:17:30.8614642Z shared/test_executors.py:198: in execute_validation_case
+2026-07-28T04:17:30.8615060Z     assert "AIzaSy" not in text, "Real Google API key found in HTML"
+2026-07-28T04:17:30.8615884Z E   AssertionError: Real Google API key found in HTML
+2026-07-28T04:17:30.8621781Z E   assert 'AIzaSy' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.8627824Z E     
+2026-07-28T04:17:30.8628038Z E     'AIzaSy' is contained here:
+2026-07-28T04:17:30.8628302Z E       <!DOCTYPE html>
+2026-07-28T04:17:30.8628526Z E       <html>
+2026-07-28T04:17:30.8628723Z E       <head>
+2026-07-28T04:17:30.8628918Z E         <!--
+2026-07-28T04:17:30.8629239Z E           If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.8629731Z E           href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.8630090Z E       
+2026-07-28T04:17:30.8630410Z E           The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.8630817Z E           it to work correctly.
+2026-07-28T04:17:30.8631062Z E       
+2026-07-28T04:17:30.8631262Z E           For more details:
+2026-07-28T04:17:30.8631617Z E           * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.8631992Z E       
+2026-07-28T04:17:30.8632299Z E           This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.8632759Z E           the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.8633100Z E         -->
+2026-07-28T04:17:30.8633318Z E         <base href="/MediRoute/">
+2026-07-28T04:17:30.8633569Z E       
+2026-07-28T04:17:30.8633771Z E         <meta charset="UTF-8">
+2026-07-28T04:17:30.8634098Z E         <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.8634516Z E         <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.8634855Z E       
+2026-07-28T04:17:30.8635067Z E         <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.8635601Z E         <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.8636083Z E         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.8636561Z E         <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.8636991Z E         <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.8637317Z E       
+2026-07-28T04:17:30.8637513Z E         <!-- Favicon -->
+2026-07-28T04:17:30.8637989Z E         <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.8638308Z E       
+2026-07-28T04:17:30.8638510Z E         <title>MediRoute</title>
+2026-07-28T04:17:30.8638801Z E         <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.8639587Z E         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.8640368Z E     ?                                                            ++++++
+2026-07-28T04:17:30.8640671Z E       </head>
+2026-07-28T04:17:30.8640867Z E       <body>
+2026-07-28T04:17:30.8641061Z E         <!--
+2026-07-28T04:17:30.8641322Z E           You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.8641765Z E           This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.8642240Z E           or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.8642597Z E       
+2026-07-28T04:17:30.8642796Z E           For more details:
+2026-07-28T04:17:30.8643155Z E           * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.8643533Z E         -->
+2026-07-28T04:17:30.8643909Z E         <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.8644225Z E       </body>
+2026-07-28T04:17:30.8644418Z E       </html>
+2026-07-28T04:17:30.8644705Z ___________________________ test_validation[VAL-042] ___________________________
+2026-07-28T04:17:30.8645178Z [gw4] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:17:30.8645871Z validation/tests/test_validation.py:19: in test_validation
+2026-07-28T04:17:30.8646227Z     execute_validation_case(case)
+2026-07-28T04:17:30.8646552Z shared/test_executors.py:198: in execute_validation_case
+2026-07-28T04:17:30.8646958Z     assert "AIzaSy" not in text, "Real Google API key found in HTML"
+2026-07-28T04:17:30.8647357Z E   AssertionError: Real Google API key found in HTML
+2026-07-28T04:17:30.8653114Z E   assert 'AIzaSy' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.8659187Z E     
+2026-07-28T04:17:30.8659398Z E     'AIzaSy' is contained here:
+2026-07-28T04:17:30.8659658Z E       <!DOCTYPE html>
+2026-07-28T04:17:30.8659881Z E       <html>
+2026-07-28T04:17:30.8660073Z E       <head>
+2026-07-28T04:17:30.8660405Z E         <!--
+2026-07-28T04:17:30.8660724Z E           If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.8661217Z E           href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.8661578Z E       
+2026-07-28T04:17:30.8661890Z E           The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.8662313Z E           it to work correctly.
+2026-07-28T04:17:30.8662560Z E       
+2026-07-28T04:17:30.8662759Z E           For more details:
+2026-07-28T04:17:30.8663106Z E           * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.8663474Z E       
+2026-07-28T04:17:30.8663786Z E           This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.8664243Z E           the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.8664573Z E         -->
+2026-07-28T04:17:30.8664788Z E         <base href="/MediRoute/">
+2026-07-28T04:17:30.8665036Z E       
+2026-07-28T04:17:30.8665238Z E         <meta charset="UTF-8">
+2026-07-28T04:17:30.8665780Z E         <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.8666310Z E         <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.8666646Z E       
+2026-07-28T04:17:30.8666848Z E         <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.8667175Z E         <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.8667614Z E         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.8668083Z E         <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.8668505Z E         <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.8668829Z E       
+2026-07-28T04:17:30.8669022Z E         <!-- Favicon -->
+2026-07-28T04:17:30.8669312Z E         <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.8669635Z E       
+2026-07-28T04:17:30.8669835Z E         <title>MediRoute</title>
+2026-07-28T04:17:30.8670127Z E         <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.8670918Z E         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.8671697Z E     ?                                                            ++++++
+2026-07-28T04:17:30.8671996Z E       </head>
+2026-07-28T04:17:30.8672194Z E       <body>
+2026-07-28T04:17:30.8672387Z E         <!--
+2026-07-28T04:17:30.8672649Z E           You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.8673081Z E           This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.8673559Z E           or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.8673911Z E       
+2026-07-28T04:17:30.8674109Z E           For more details:
+2026-07-28T04:17:30.8674471Z E           * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.8674850Z E         -->
+2026-07-28T04:17:30.8675106Z E         <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.8675648Z E       </body>
+2026-07-28T04:17:30.8675913Z E       </html>
+2026-07-28T04:17:30.8676204Z ___________________________ test_validation[VAL-043] ___________________________
+2026-07-28T04:17:30.8676685Z [gw4] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:17:30.8677141Z validation/tests/test_validation.py:19: in test_validation
+2026-07-28T04:17:30.8677494Z     execute_validation_case(case)
+2026-07-28T04:17:30.8677817Z shared/test_executors.py:200: in execute_validation_case
+2026-07-28T04:17:30.8678262Z     assert "sk-" not in text and "AIzaSy" not in text, "Hardcoded API key detected"
+2026-07-28T04:17:30.8678690Z E   AssertionError: Hardcoded API key detected
+2026-07-28T04:17:30.8684573Z E   assert ('sk-' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.8690940Z E     
+2026-07-28T04:17:30.8691156Z E     'sk-' is contained here:
+2026-07-28T04:17:30.8691405Z E       <!DOCTYPE html>
+2026-07-28T04:17:30.8691629Z E       <html>
+2026-07-28T04:17:30.8691823Z E       <head>
+2026-07-28T04:17:30.8692016Z E         <!--
+2026-07-28T04:17:30.8692333Z E           If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.8692822Z E           href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.8693174Z E       
+2026-07-28T04:17:30.8693492Z E           The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.8693897Z E           it to work correctly.
+2026-07-28T04:17:30.8694139Z E       
+2026-07-28T04:17:30.8694331Z E           For more details:
+2026-07-28T04:17:30.8694679Z E           * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.8695043Z E       
+2026-07-28T04:17:30.8695351Z E           This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.8696036Z E           the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.8696368Z E         -->
+2026-07-28T04:17:30.8696584Z E         <base href="/MediRoute/">
+2026-07-28T04:17:30.8696833Z E       
+2026-07-28T04:17:30.8697036Z E         <meta charset="UTF-8">
+2026-07-28T04:17:30.8697351Z E         <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.8697758Z E         <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.8698092Z E       
+2026-07-28T04:17:30.8698297Z E         <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.8698628Z E         <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.8699059Z E         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.8699534Z E         <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.8699960Z E         <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.8700289Z E       
+2026-07-28T04:17:30.8700485Z E         <!-- Favicon -->
+2026-07-28T04:17:30.8700781Z E         <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.8701100Z E       
+2026-07-28T04:17:30.8701303Z E         <title>MediRoute</title>
+2026-07-28T04:17:30.8701733Z E         <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.8702516Z E         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.8703254Z E       </head>
+2026-07-28T04:17:30.8703456Z E       <body>
+2026-07-28T04:17:30.8703655Z E         <!--
+2026-07-28T04:17:30.8703921Z E           You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.8704364Z E           This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.8704841Z E           or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.8705195Z E       
+2026-07-28T04:17:30.8705585Z E           For more details:
+2026-07-28T04:17:30.8706043Z E           * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.8706426Z E         -->
+2026-07-28T04:17:30.8706688Z E         <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.8707003Z E       </body>
+2026-07-28T04:17:30.8713623Z E       </html> and 'AIzaSy' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.8719869Z E     
+2026-07-28T04:17:30.8720078Z E     'AIzaSy' is contained here:
+2026-07-28T04:17:30.8720339Z E       <!DOCTYPE html>
+2026-07-28T04:17:30.8720564Z E       <html>
+2026-07-28T04:17:30.8720758Z E       <head>
+2026-07-28T04:17:30.8720953Z E         <!--
+2026-07-28T04:17:30.8721271Z E           If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.8721763Z E           href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.8722120Z E       
+2026-07-28T04:17:30.8722441Z E           The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.8722847Z E           it to work correctly.
+2026-07-28T04:17:30.8723084Z E       
+2026-07-28T04:17:30.8723279Z E           For more details:
+2026-07-28T04:17:30.8723635Z E           * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.8724008Z E       
+2026-07-28T04:17:30.8724315Z E           This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.8724774Z E           the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.8725243Z E         -->
+2026-07-28T04:17:30.8725683Z E         <base href="/MediRoute/">
+2026-07-28T04:17:30.8726052Z E       
+2026-07-28T04:17:30.8726260Z E         <meta charset="UTF-8">
+2026-07-28T04:17:30.8726580Z E         <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.8726983Z E         <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.8727313Z E       
+2026-07-28T04:17:30.8727516Z E         <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.8727848Z E         <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.8728285Z E         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.8728756Z E         <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.8729181Z E         <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.8729511Z E       
+2026-07-28T04:17:30.8729708Z E         <!-- Favicon -->
+2026-07-28T04:17:30.8730003Z E         <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.8730332Z E       
+2026-07-28T04:17:30.8730536Z E         <title>MediRoute</title>
+2026-07-28T04:17:30.8730833Z E         <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.8731745Z E         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.8732528Z E     ?                                                            ++++++
+2026-07-28T04:17:30.8732830Z E       </head>
+2026-07-28T04:17:30.8733027Z E       <body>
+2026-07-28T04:17:30.8733219Z E         <!--
+2026-07-28T04:17:30.8733478Z E           You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.8733916Z E           This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.8734385Z E           or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.8734734Z E       
+2026-07-28T04:17:30.8734934Z E           For more details:
+2026-07-28T04:17:30.8735285Z E           * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.8735930Z E         -->
+2026-07-28T04:17:30.8736196Z E         <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.8736503Z E       </body>
+2026-07-28T04:17:30.8736697Z E       </html>)
+2026-07-28T04:17:30.8736989Z ___________________________ test_validation[VAL-044] ___________________________
+2026-07-28T04:17:30.8737464Z [gw4] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:17:30.8737949Z validation/tests/test_validation.py:19: in test_validation
+2026-07-28T04:17:30.8738296Z     execute_validation_case(case)
+2026-07-28T04:17:30.8738614Z shared/test_executors.py:200: in execute_validation_case
+2026-07-28T04:17:30.8739057Z     assert "sk-" not in text and "AIzaSy" not in text, "Hardcoded API key detected"
+2026-07-28T04:17:30.8739482Z E   AssertionError: Hardcoded API key detected
+2026-07-28T04:17:30.8745226Z E   assert ('sk-' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.8751563Z E     
+2026-07-28T04:17:30.8751772Z E     'sk-' is contained here:
+2026-07-28T04:17:30.8752026Z E       <!DOCTYPE html>
+2026-07-28T04:17:30.8752251Z E       <html>
+2026-07-28T04:17:30.8752447Z E       <head>
+2026-07-28T04:17:30.8752646Z E         <!--
+2026-07-28T04:17:30.8752963Z E           If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.8753448Z E           href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.8753936Z E       
+2026-07-28T04:17:30.8754259Z E           The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.8754667Z E           it to work correctly.
+2026-07-28T04:17:30.8754975Z E       
+2026-07-28T04:17:30.8755271Z E           For more details:
+2026-07-28T04:17:30.8756025Z E           * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.8756637Z E       
+2026-07-28T04:17:30.8757090Z E           This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.8757628Z E           the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.8758121Z E         -->
+2026-07-28T04:17:30.8758427Z E         <base href="/MediRoute/">
+2026-07-28T04:17:30.8758802Z E       
+2026-07-28T04:17:30.8759143Z E         <meta charset="UTF-8">
+2026-07-28T04:17:30.8759547Z E         <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.8760097Z E         <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.8813293Z E       
+2026-07-28T04:17:30.8813548Z E         <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.8813922Z E         <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.8814388Z E         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.8814867Z E         <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.8815292Z E         <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.8815848Z E       
+2026-07-28T04:17:30.8816057Z E         <!-- Favicon -->
+2026-07-28T04:17:30.8816365Z E         <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.8816703Z E       
+2026-07-28T04:17:30.8816931Z E         <title>MediRoute</title>
+2026-07-28T04:17:30.8817233Z E         <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.8818052Z E         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.8818809Z E       </head>
+2026-07-28T04:17:30.8819017Z E       <body>
+2026-07-28T04:17:30.8819227Z E         <!--
+2026-07-28T04:17:30.8819510Z E           You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.8819958Z E           This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.8820435Z E           or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.8820786Z E       
+2026-07-28T04:17:30.8820986Z E           For more details:
+2026-07-28T04:17:30.8821351Z E           * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.8821996Z E         -->
+2026-07-28T04:17:30.8822263Z E         <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.8822575Z E       </body>
+2026-07-28T04:17:30.8828627Z E       </html> and 'AIzaSy' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.8834541Z E     
+2026-07-28T04:17:30.8834754Z E     'AIzaSy' is contained here:
+2026-07-28T04:17:30.8835025Z E       <!DOCTYPE html>
+2026-07-28T04:17:30.8835248Z E       <html>
+2026-07-28T04:17:30.8835647Z E       <head>
+2026-07-28T04:17:30.8835893Z E         <!--
+2026-07-28T04:17:30.8836235Z E           If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.8836732Z E           href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.8837094Z E       
+2026-07-28T04:17:30.8837414Z E           The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.8837862Z E           it to work correctly.
+2026-07-28T04:17:30.8838111Z E       
+2026-07-28T04:17:30.8838311Z E           For more details:
+2026-07-28T04:17:30.8838668Z E           * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.8839039Z E       
+2026-07-28T04:17:30.8839346Z E           This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.8839806Z E           the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.8840148Z E         -->
+2026-07-28T04:17:30.8840365Z E         <base href="/MediRoute/">
+2026-07-28T04:17:30.8840612Z E       
+2026-07-28T04:17:30.8840815Z E         <meta charset="UTF-8">
+2026-07-28T04:17:30.8841134Z E         <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.8841548Z E         <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.8841889Z E       
+2026-07-28T04:17:30.8842096Z E         <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.8842427Z E         <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.8842872Z E         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.8843354Z E         <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.8843779Z E         <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.8844105Z E       
+2026-07-28T04:17:30.8844450Z E         <!-- Favicon -->
+2026-07-28T04:17:30.8844745Z E         <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.8845065Z E       
+2026-07-28T04:17:30.8845270Z E         <title>MediRoute</title>
+2026-07-28T04:17:30.8845882Z E         <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.8846683Z E         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.8847468Z E     ?                                                            ++++++
+2026-07-28T04:17:30.8847775Z E       </head>
+2026-07-28T04:17:30.8847976Z E       <body>
+2026-07-28T04:17:30.8848174Z E         <!--
+2026-07-28T04:17:30.8848433Z E           You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.8848878Z E           This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.8849351Z E           or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.8849706Z E       
+2026-07-28T04:17:30.8849907Z E           For more details:
+2026-07-28T04:17:30.8850266Z E           * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.8850818Z E         -->
+2026-07-28T04:17:30.8851081Z E         <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.8851395Z E       </body>
+2026-07-28T04:17:30.8851592Z E       </html>)
+2026-07-28T04:17:30.8851884Z ___________________________ test_validation[VAL-045] ___________________________
+2026-07-28T04:17:30.8852358Z [gw4] linux -- Python 3.11.15 /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+2026-07-28T04:17:30.8852811Z validation/tests/test_validation.py:19: in test_validation
+2026-07-28T04:17:30.8853165Z     execute_validation_case(case)
+2026-07-28T04:17:30.8853487Z shared/test_executors.py:200: in execute_validation_case
+2026-07-28T04:17:30.8853930Z     assert "sk-" not in text and "AIzaSy" not in text, "Hardcoded API key detected"
+2026-07-28T04:17:30.8854359Z E   AssertionError: Hardcoded API key detected
+2026-07-28T04:17:30.8860429Z E   assert ('sk-' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.8866485Z E     
+2026-07-28T04:17:30.8866693Z E     'sk-' is contained here:
+2026-07-28T04:17:30.8866944Z E       <!DOCTYPE html>
+2026-07-28T04:17:30.8867304Z E       <html>
+2026-07-28T04:17:30.8867502Z E       <head>
+2026-07-28T04:17:30.8867700Z E         <!--
+2026-07-28T04:17:30.8868026Z E           If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.8868526Z E           href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.8868883Z E       
+2026-07-28T04:17:30.8869200Z E           The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.8869610Z E           it to work correctly.
+2026-07-28T04:17:30.8869854Z E       
+2026-07-28T04:17:30.8870060Z E           For more details:
+2026-07-28T04:17:30.8870418Z E           * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.8870792Z E       
+2026-07-28T04:17:30.8871113Z E           This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.8871577Z E           the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.8871917Z E         -->
+2026-07-28T04:17:30.8872133Z E         <base href="/MediRoute/">
+2026-07-28T04:17:30.8872383Z E       
+2026-07-28T04:17:30.8872588Z E         <meta charset="UTF-8">
+2026-07-28T04:17:30.8873014Z E         <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.8873426Z E         <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.8873765Z E       
+2026-07-28T04:17:30.8873969Z E         <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.8874299Z E         <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.8874739Z E         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.8875214Z E         <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.8875883Z E         <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.8876212Z E       
+2026-07-28T04:17:30.8876411Z E         <!-- Favicon -->
+2026-07-28T04:17:30.8876709Z E         <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.8877034Z E       
+2026-07-28T04:17:30.8877238Z E         <title>MediRoute</title>
+2026-07-28T04:17:30.8877534Z E         <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.8878322Z E         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.8879070Z E       </head>
+2026-07-28T04:17:30.8879265Z E       <body>
+2026-07-28T04:17:30.8879460Z E         <!--
+2026-07-28T04:17:30.8879721Z E           You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.8880168Z E           This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.8880645Z E           or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.8880993Z E       
+2026-07-28T04:17:30.8881195Z E           For more details:
+2026-07-28T04:17:30.8881575Z E           * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.8881958Z E         -->
+2026-07-28T04:17:30.8882220Z E         <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.8882534Z E       </body>
+2026-07-28T04:17:30.8888523Z E       </html> and 'AIzaSy' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.8894561Z E     
+2026-07-28T04:17:30.8894765Z E     'AIzaSy' is contained here:
+2026-07-28T04:17:30.8895028Z E       <!DOCTYPE html>
+2026-07-28T04:17:30.8895255Z E       <html>
+2026-07-28T04:17:30.8895611Z E       <head>
+2026-07-28T04:17:30.8895814Z E         <!--
+2026-07-28T04:17:30.8896250Z E           If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.8896745Z E           href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.8897105Z E       
+2026-07-28T04:17:30.8897425Z E           The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.8897832Z E           it to work correctly.
+2026-07-28T04:17:30.8898077Z E       
+2026-07-28T04:17:30.8898283Z E           For more details:
+2026-07-28T04:17:30.8898639Z E           * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.8899007Z E       
+2026-07-28T04:17:30.8899314Z E           This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.8899777Z E           the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.8900109Z E         -->
+2026-07-28T04:17:30.8900324Z E         <base href="/MediRoute/">
+2026-07-28T04:17:30.8900576Z E       
+2026-07-28T04:17:30.8900782Z E         <meta charset="UTF-8">
+2026-07-28T04:17:30.8901100Z E         <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.8901509Z E         <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.8901846Z E       
+2026-07-28T04:17:30.8902048Z E         <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.8902376Z E         <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.8902809Z E         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.8903275Z E         <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.8903696Z E         <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.8904033Z E       
+2026-07-28T04:17:30.8904232Z E         <!-- Favicon -->
+2026-07-28T04:17:30.8904526Z E         <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.8904843Z E       
+2026-07-28T04:17:30.8905054Z E         <title>MediRoute</title>
+2026-07-28T04:17:30.8905612Z E         <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.8906460Z E         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.8907241Z E     ?                                                            ++++++
+2026-07-28T04:17:30.8907553Z E       </head>
+2026-07-28T04:17:30.8907755Z E       <body>
+2026-07-28T04:17:30.8907953Z E         <!--
+2026-07-28T04:17:30.8908221Z E           You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.8908655Z E           This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.8909266Z E           or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.8909617Z E       
+2026-07-28T04:17:30.8909818Z E           For more details:
+2026-07-28T04:17:30.8910183Z E           * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.8910565Z E         -->
+2026-07-28T04:17:30.8910827Z E         <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.8911133Z E       </body>
+2026-07-28T04:17:30.8911332Z E       </html>)
+2026-07-28T04:17:30.8911604Z =========================== short test summary info ============================
+2026-07-28T04:17:30.8912266Z FAILED validation/tests/test_validation.py::test_validation[VAL-013] - AssertionError: Should be invalid: 0000000000
+2026-07-28T04:17:30.8912810Z assert (10 < 10 or '0000000000' == ''
+2026-07-28T04:17:30.8913079Z  +  where 10 = len('0000000000')
+2026-07-28T04:17:30.8913321Z   
+2026-07-28T04:17:30.8913502Z   + 0000000000)
+2026-07-28T04:17:30.8913998Z FAILED validation/tests/test_validation.py::test_validation[VAL-021] - AssertionError: Password should be weak: noSpecial1
+2026-07-28T04:17:30.8914621Z assert (10 < 8 or not <re.Match object; span=(2, 3), match='S'>)
+2026-07-28T04:17:30.8915083Z  +  where 10 = len('noSpecial1')
+2026-07-28T04:17:30.8915770Z  +  and   <re.Match object; span=(2, 3), match='S'> = <function search at 0x7fecfd0762a0>('[A-Z@#]', 'noSpecial1')
+2026-07-28T04:17:30.8916317Z  +    where <function search at 0x7fecfd0762a0> = re.search
+2026-07-28T04:17:30.8916944Z FAILED validation/tests/test_validation.py::test_validation[VAL-007] - AssertionError: Should be invalid: user..double@test.com
+2026-07-28T04:17:30.8917612Z assert not <re.Match object; span=(0, 21), match='user..double@test.com'>
+2026-07-28T04:17:30.8918330Z  +  where <re.Match object; span=(0, 21), match='user..double@test.com'> = <function match at 0x7f92cd53cfe0>('^[^@]+@[^@]+\\.[^@]+$', 'user..double@test.com')
+2026-07-28T04:17:30.8918990Z  +    where <function match at 0x7f92cd53cfe0> = re.match
+2026-07-28T04:17:30.8919581Z FAILED validation/tests/test_validation.py::test_validation[VAL-040] - AssertionError: Real Google API key found in HTML
+2026-07-28T04:17:30.8925672Z assert 'AIzaSy' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.8931564Z   
+2026-07-28T04:17:30.8931770Z   'AIzaSy' is contained here:
+2026-07-28T04:17:30.8932151Z     <!DOCTYPE html>
+2026-07-28T04:17:30.8932356Z     <html>
+2026-07-28T04:17:30.8932535Z     <head>
+2026-07-28T04:17:30.8932718Z       <!--
+2026-07-28T04:17:30.8933032Z         If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.8933512Z         href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.8933863Z     
+2026-07-28T04:17:30.8934175Z         The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.8934570Z         it to work correctly.
+2026-07-28T04:17:30.8934808Z     
+2026-07-28T04:17:30.8935006Z         For more details:
+2026-07-28T04:17:30.8935338Z         * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.8935828Z     
+2026-07-28T04:17:30.8936136Z         This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.8936586Z         the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.8936912Z       -->
+2026-07-28T04:17:30.8937120Z       <base href="/MediRoute/">
+2026-07-28T04:17:30.8937384Z     
+2026-07-28T04:17:30.8937581Z       <meta charset="UTF-8">
+2026-07-28T04:17:30.8937994Z       <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.8938397Z       <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.8938724Z     
+2026-07-28T04:17:30.8938919Z       <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.8939235Z       <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.8939658Z       <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.8940116Z       <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.8940528Z       <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.8940882Z     
+2026-07-28T04:17:30.8941079Z       <!-- Favicon -->
+2026-07-28T04:17:30.8941357Z       <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.8941673Z     
+2026-07-28T04:17:30.8941875Z       <title>MediRoute</title>
+2026-07-28T04:17:30.8942154Z       <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.8942958Z       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.8943754Z   ?                                                            ++++++
+2026-07-28T04:17:30.8944069Z     </head>
+2026-07-28T04:17:30.8944260Z     <body>
+2026-07-28T04:17:30.8944447Z       <!--
+2026-07-28T04:17:30.8944698Z         You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.8945129Z         This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.8945948Z         or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.8946302Z     
+2026-07-28T04:17:30.8946497Z         For more details:
+2026-07-28T04:17:30.8946838Z         * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.8947238Z       -->
+2026-07-28T04:17:30.8947489Z       <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.8947799Z     </body>
+2026-07-28T04:17:30.8947990Z     </html>
+2026-07-28T04:17:30.8948469Z FAILED validation/tests/test_validation.py::test_validation[VAL-041] - AssertionError: Real Google API key found in HTML
+2026-07-28T04:17:30.8954486Z assert 'AIzaSy' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.8960694Z   
+2026-07-28T04:17:30.8960901Z   'AIzaSy' is contained here:
+2026-07-28T04:17:30.8961271Z     <!DOCTYPE html>
+2026-07-28T04:17:30.8961487Z     <html>
+2026-07-28T04:17:30.8961673Z     <head>
+2026-07-28T04:17:30.8961852Z       <!--
+2026-07-28T04:17:30.8962160Z         If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.8962630Z         href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.8962978Z     
+2026-07-28T04:17:30.8963289Z         The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.8963687Z         it to work correctly.
+2026-07-28T04:17:30.8963919Z     
+2026-07-28T04:17:30.8964108Z         For more details:
+2026-07-28T04:17:30.8964438Z         * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.8964799Z     
+2026-07-28T04:17:30.8965106Z         This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.8965688Z         the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.8966020Z       -->
+2026-07-28T04:17:30.8966227Z       <base href="/MediRoute/">
+2026-07-28T04:17:30.8966462Z     
+2026-07-28T04:17:30.8966662Z       <meta charset="UTF-8">
+2026-07-28T04:17:30.8966959Z       <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.8967352Z       <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.8967676Z     
+2026-07-28T04:17:30.8967873Z       <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.8968189Z       <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.8968620Z       <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.8969083Z       <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.8969503Z       <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.8969828Z     
+2026-07-28T04:17:30.8970016Z       <!-- Favicon -->
+2026-07-28T04:17:30.8970292Z       <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.8970606Z     
+2026-07-28T04:17:30.8970801Z       <title>MediRoute</title>
+2026-07-28T04:17:30.8971085Z       <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.8971861Z       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.8972630Z   ?                                                            ++++++
+2026-07-28T04:17:30.8972932Z     </head>
+2026-07-28T04:17:30.8973126Z     <body>
+2026-07-28T04:17:30.8973316Z       <!--
+2026-07-28T04:17:30.8973568Z         You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.8974001Z         This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.8974622Z         or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.8974969Z     
+2026-07-28T04:17:30.8975161Z         For more details:
+2026-07-28T04:17:30.8975823Z         * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.8976340Z       -->
+2026-07-28T04:17:30.8976693Z       <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.8977036Z     </body>
+2026-07-28T04:17:30.8977278Z     </html>
+2026-07-28T04:17:30.8978059Z FAILED validation/tests/test_validation.py::test_validation[VAL-042] - AssertionError: Real Google API key found in HTML
+2026-07-28T04:17:30.8986246Z assert 'AIzaSy' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.8992165Z   
+2026-07-28T04:17:30.8992373Z   'AIzaSy' is contained here:
+2026-07-28T04:17:30.8992627Z     <!DOCTYPE html>
+2026-07-28T04:17:30.8992838Z     <html>
+2026-07-28T04:17:30.8993026Z     <head>
+2026-07-28T04:17:30.8993213Z       <!--
+2026-07-28T04:17:30.8993524Z         If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.8994008Z         href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.8994358Z     
+2026-07-28T04:17:30.8994666Z         The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.8995074Z         it to work correctly.
+2026-07-28T04:17:30.8995314Z     
+2026-07-28T04:17:30.8995775Z         For more details:
+2026-07-28T04:17:30.8996125Z         * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.8996499Z     
+2026-07-28T04:17:30.8996807Z         This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.8997255Z         the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.8997584Z       -->
+2026-07-28T04:17:30.8997790Z       <base href="/MediRoute/">
+2026-07-28T04:17:30.8998027Z     
+2026-07-28T04:17:30.8998224Z       <meta charset="UTF-8">
+2026-07-28T04:17:30.8998534Z       <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.8998950Z       <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.8999283Z     
+2026-07-28T04:17:30.8999497Z       <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.8999818Z       <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.9000396Z       <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.9000866Z       <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.9001287Z       <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.9001611Z     
+2026-07-28T04:17:30.9001803Z       <!-- Favicon -->
+2026-07-28T04:17:30.9002086Z       <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.9002403Z     
+2026-07-28T04:17:30.9002599Z       <title>MediRoute</title>
+2026-07-28T04:17:30.9002875Z       <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.9003653Z       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.9004426Z   ?                                                            ++++++
+2026-07-28T04:17:30.9004725Z     </head>
+2026-07-28T04:17:30.9004919Z     <body>
+2026-07-28T04:17:30.9005103Z       <!--
+2026-07-28T04:17:30.9005359Z         You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.9006010Z         This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.9006602Z         or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.9006951Z     
+2026-07-28T04:17:30.9007148Z         For more details:
+2026-07-28T04:17:30.9007493Z         * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.9007867Z       -->
+2026-07-28T04:17:30.9008117Z       <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.9008423Z     </body>
+2026-07-28T04:17:30.9008609Z     </html>
+2026-07-28T04:17:30.9009065Z FAILED validation/tests/test_validation.py::test_validation[VAL-043] - AssertionError: Hardcoded API key detected
+2026-07-28T04:17:30.9015038Z assert ('sk-' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.9021058Z   
+2026-07-28T04:17:30.9021258Z   'sk-' is contained here:
+2026-07-28T04:17:30.9021492Z     <!DOCTYPE html>
+2026-07-28T04:17:30.9021702Z     <html>
+2026-07-28T04:17:30.9021887Z     <head>
+2026-07-28T04:17:30.9022070Z       <!--
+2026-07-28T04:17:30.9022385Z         If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.9023037Z         href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.9023385Z     
+2026-07-28T04:17:30.9023694Z         The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.9024098Z         it to work correctly.
+2026-07-28T04:17:30.9024341Z     
+2026-07-28T04:17:30.9024533Z         For more details:
+2026-07-28T04:17:30.9024871Z         * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.9025235Z     
+2026-07-28T04:17:30.9025894Z         This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.9026379Z         the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.9026712Z       -->
+2026-07-28T04:17:30.9026922Z       <base href="/MediRoute/">
+2026-07-28T04:17:30.9027160Z     
+2026-07-28T04:17:30.9027363Z       <meta charset="UTF-8">
+2026-07-28T04:17:30.9027670Z       <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.9028075Z       <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.9028405Z     
+2026-07-28T04:17:30.9028607Z       <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.9028929Z       <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.9029488Z       <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.9029968Z       <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.9030385Z       <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.9030704Z     
+2026-07-28T04:17:30.9030897Z       <!-- Favicon -->
+2026-07-28T04:17:30.9031180Z       <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.9031494Z     
+2026-07-28T04:17:30.9031688Z       <title>MediRoute</title>
+2026-07-28T04:17:30.9031969Z       <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.9032746Z       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.9033486Z     </head>
+2026-07-28T04:17:30.9033681Z     <body>
+2026-07-28T04:17:30.9033867Z       <!--
+2026-07-28T04:17:30.9034122Z         You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.9034555Z         This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.9035024Z         or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.9035382Z     
+2026-07-28T04:17:30.9035868Z         For more details:
+2026-07-28T04:17:30.9036227Z         * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.9036604Z       -->
+2026-07-28T04:17:30.9036853Z       <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.9037187Z     </body>
+2026-07-28T04:17:30.9042869Z     </html> and 'AIzaSy' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.9049209Z   
+2026-07-28T04:17:30.9049417Z   'AIzaSy' is contained here:
+2026-07-28T04:17:30.9049678Z     <!DOCTYPE html>
+2026-07-28T04:17:30.9049889Z     <html>
+2026-07-28T04:17:30.9050078Z     <head>
+2026-07-28T04:17:30.9050261Z       <!--
+2026-07-28T04:17:30.9050574Z         If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.9051055Z         href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.9051412Z     
+2026-07-28T04:17:30.9051728Z         The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.9052126Z         it to work correctly.
+2026-07-28T04:17:30.9052493Z     
+2026-07-28T04:17:30.9052698Z         For more details:
+2026-07-28T04:17:30.9053037Z         * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.9053397Z     
+2026-07-28T04:17:30.9053706Z         This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.9054156Z         the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.9054482Z       -->
+2026-07-28T04:17:30.9054687Z       <base href="/MediRoute/">
+2026-07-28T04:17:30.9054923Z     
+2026-07-28T04:17:30.9055117Z       <meta charset="UTF-8">
+2026-07-28T04:17:30.9055644Z       <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.9056062Z       <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.9056394Z     
+2026-07-28T04:17:30.9056592Z       <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.9056908Z       <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.9057344Z       <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.9057809Z       <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.9058222Z       <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.9058537Z     
+2026-07-28T04:17:30.9058725Z       <!-- Favicon -->
+2026-07-28T04:17:30.9059005Z       <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.9059319Z     
+2026-07-28T04:17:30.9059516Z       <title>MediRoute</title>
+2026-07-28T04:17:30.9059792Z       <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.9060564Z       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.9061344Z   ?                                                            ++++++
+2026-07-28T04:17:30.9061643Z     </head>
+2026-07-28T04:17:30.9061834Z     <body>
+2026-07-28T04:17:30.9062020Z       <!--
+2026-07-28T04:17:30.9062273Z         You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.9062704Z         This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.9063174Z         or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.9063518Z     
+2026-07-28T04:17:30.9063711Z         For more details:
+2026-07-28T04:17:30.9064052Z         * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.9064423Z       -->
+2026-07-28T04:17:30.9064672Z       <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.9064985Z     </body>
+2026-07-28T04:17:30.9065177Z     </html>)
+2026-07-28T04:17:30.9065874Z FAILED validation/tests/test_validation.py::test_validation[VAL-044] - AssertionError: Hardcoded API key detected
+2026-07-28T04:17:30.9072105Z assert ('sk-' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.9078359Z   
+2026-07-28T04:17:30.9078565Z   'sk-' is contained here:
+2026-07-28T04:17:30.9078807Z     <!DOCTYPE html>
+2026-07-28T04:17:30.9079017Z     <html>
+2026-07-28T04:17:30.9079215Z     <head>
+2026-07-28T04:17:30.9079402Z       <!--
+2026-07-28T04:17:30.9079709Z         If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.9080194Z         href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.9080547Z     
+2026-07-28T04:17:30.9080858Z         The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.9081251Z         it to work correctly.
+2026-07-28T04:17:30.9081486Z     
+2026-07-28T04:17:30.9081677Z         For more details:
+2026-07-28T04:17:30.9082017Z         * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.9082376Z     
+2026-07-28T04:17:30.9082679Z         This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.9083129Z         the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.9083452Z       -->
+2026-07-28T04:17:30.9083660Z       <base href="/MediRoute/">
+2026-07-28T04:17:30.9083897Z     
+2026-07-28T04:17:30.9084093Z       <meta charset="UTF-8">
+2026-07-28T04:17:30.9084398Z       <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.9084800Z       <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.9085136Z     
+2026-07-28T04:17:30.9085336Z       <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.9085956Z       <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.9086393Z       <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.9086854Z       <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.9087268Z       <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.9087588Z     
+2026-07-28T04:17:30.9087779Z       <!-- Favicon -->
+2026-07-28T04:17:30.9088063Z       <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.9088379Z     
+2026-07-28T04:17:30.9088578Z       <title>MediRoute</title>
+2026-07-28T04:17:30.9089008Z       <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.9089786Z       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.9090519Z     </head>
+2026-07-28T04:17:30.9090711Z     <body>
+2026-07-28T04:17:30.9090906Z       <!--
+2026-07-28T04:17:30.9091156Z         You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.9091594Z         This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.9092064Z         or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.9092409Z     
+2026-07-28T04:17:30.9092605Z         For more details:
+2026-07-28T04:17:30.9092946Z         * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.9093323Z       -->
+2026-07-28T04:17:30.9093566Z       <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.9093876Z     </body>
+2026-07-28T04:17:30.9099964Z     </html> and 'AIzaSy' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.9106113Z   
+2026-07-28T04:17:30.9106318Z   'AIzaSy' is contained here:
+2026-07-28T04:17:30.9106567Z     <!DOCTYPE html>
+2026-07-28T04:17:30.9106776Z     <html>
+2026-07-28T04:17:30.9106961Z     <head>
+2026-07-28T04:17:30.9107148Z       <!--
+2026-07-28T04:17:30.9107456Z         If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.9107933Z         href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.9108285Z     
+2026-07-28T04:17:30.9108595Z         The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.9108997Z         it to work correctly.
+2026-07-28T04:17:30.9109235Z     
+2026-07-28T04:17:30.9109424Z         For more details:
+2026-07-28T04:17:30.9109760Z         * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.9110123Z     
+2026-07-28T04:17:30.9110426Z         This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.9110876Z         the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.9111203Z       -->
+2026-07-28T04:17:30.9111415Z       <base href="/MediRoute/">
+2026-07-28T04:17:30.9111658Z     
+2026-07-28T04:17:30.9111984Z       <meta charset="UTF-8">
+2026-07-28T04:17:30.9112285Z       <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.9112680Z       <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.9113007Z     
+2026-07-28T04:17:30.9113212Z       <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.9113532Z       <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.9113965Z       <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.9114776Z       <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.9115230Z       <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.9115811Z     
+2026-07-28T04:17:30.9116009Z       <!-- Favicon -->
+2026-07-28T04:17:30.9116299Z       <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.9116615Z     
+2026-07-28T04:17:30.9116814Z       <title>MediRoute</title>
+2026-07-28T04:17:30.9117100Z       <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.9117886Z       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.9118809Z   ?                                                            ++++++
+2026-07-28T04:17:30.9119122Z     </head>
+2026-07-28T04:17:30.9119314Z     <body>
+2026-07-28T04:17:30.9119507Z       <!--
+2026-07-28T04:17:30.9119762Z         You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.9120195Z         This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.9120666Z         or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.9121010Z     
+2026-07-28T04:17:30.9121207Z         For more details:
+2026-07-28T04:17:30.9121549Z         * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.9121920Z       -->
+2026-07-28T04:17:30.9122166Z       <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.9122483Z     </body>
+2026-07-28T04:17:30.9122674Z     </html>)
+2026-07-28T04:17:30.9123134Z FAILED validation/tests/test_validation.py::test_validation[VAL-045] - AssertionError: Hardcoded API key detected
+2026-07-28T04:17:30.9129411Z assert ('sk-' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.9135632Z   
+2026-07-28T04:17:30.9135854Z   'sk-' is contained here:
+2026-07-28T04:17:30.9136095Z     <!DOCTYPE html>
+2026-07-28T04:17:30.9136303Z     <html>
+2026-07-28T04:17:30.9136493Z     <head>
+2026-07-28T04:17:30.9136676Z       <!--
+2026-07-28T04:17:30.9137020Z         If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.9137501Z         href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.9137850Z     
+2026-07-28T04:17:30.9138166Z         The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.9138562Z         it to work correctly.
+2026-07-28T04:17:30.9138801Z     
+2026-07-28T04:17:30.9138996Z         For more details:
+2026-07-28T04:17:30.9139332Z         * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.9139691Z     
+2026-07-28T04:17:30.9139996Z         This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.9140451Z         the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.9140780Z       -->
+2026-07-28T04:17:30.9140988Z       <base href="/MediRoute/">
+2026-07-28T04:17:30.9141227Z     
+2026-07-28T04:17:30.9141549Z       <meta charset="UTF-8">
+2026-07-28T04:17:30.9141855Z       <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.9142251Z       <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.9142580Z     
+2026-07-28T04:17:30.9142779Z       <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.9143099Z       <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.9143525Z       <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.9143991Z       <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.9144410Z       <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.9144731Z     
+2026-07-28T04:17:30.9144923Z       <!-- Favicon -->
+2026-07-28T04:17:30.9145206Z       <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.9145813Z     
+2026-07-28T04:17:30.9146019Z       <title>MediRoute</title>
+2026-07-28T04:17:30.9146296Z       <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.9147079Z       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.9147810Z     </head>
+2026-07-28T04:17:30.9148000Z     <body>
+2026-07-28T04:17:30.9148187Z       <!--
+2026-07-28T04:17:30.9148437Z         You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.9148866Z         This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.9149334Z         or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.9149678Z     
+2026-07-28T04:17:30.9149868Z         For more details:
+2026-07-28T04:17:30.9150208Z         * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.9150592Z       -->
+2026-07-28T04:17:30.9150841Z       <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.9151148Z     </body>
+2026-07-28T04:17:30.9157043Z     </html> and 'AIzaSy' not in '<!DOCTYPE html>\n<html>\n<head>\n  <!--\n    If you are serving your web app in a path other than the root, change the\n    href value below to reflect the base path you are serving from.\n\n    The path provided below has to start and end with a slash "/" in order for\n    it to work correctly.\n\n    For more details:\n    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base\n\n    This is a placeholder for base href that will be replaced by the value of\n    the `--base-href` argument provided to `flutter build`.\n  -->\n  <base href="/MediRoute/">\n\n  <meta charset="UTF-8">\n  <meta content="IE=Edge" http-equiv="X-UA-Compatible">\n  <meta name="description" content="A new Flutter project.">\n\n  <!-- iOS meta tags & icons -->\n  <meta name="mobile-web-app-capable" content="yes">\n  <meta name="apple-mobile-web-app-status-bar-style" content="black">\n  <meta name="apple-mobile-web-app-title" content="mediroute">\n  <link rel="apple-touch-icon" href="icons/Icon-192.png">\n\n  <!-- Favicon -->\n  <link rel="icon" type="image/png" href="favicon.png"/>\n\n  <title>MediRoute</title>\n  <link rel="manifest" href="manifest.json">\n  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>\n</head>\n<body>\n  <!--\n    You can customize the "flutter_bootstrap.js" script.\n    This is useful to provide a custom configuration to the Flutter loader\n    or to give the user feedback during the initialization process.\n\n    For more details:\n    * https://docs.flutter.dev/platform-integration/web/initialization\n  -->\n  <script src="flutter_bootstrap.js" async></script>\n</body>\n</html>\n'
+2026-07-28T04:17:30.9163061Z   
+2026-07-28T04:17:30.9163269Z   'AIzaSy' is contained here:
+2026-07-28T04:17:30.9163521Z     <!DOCTYPE html>
+2026-07-28T04:17:30.9163732Z     <html>
+2026-07-28T04:17:30.9163919Z     <head>
+2026-07-28T04:17:30.9164107Z       <!--
+2026-07-28T04:17:30.9164525Z         If you are serving your web app in a path other than the root, change the
+2026-07-28T04:17:30.9165006Z         href value below to reflect the base path you are serving from.
+2026-07-28T04:17:30.9165352Z     
+2026-07-28T04:17:30.9165959Z         The path provided below has to start and end with a slash "/" in order for
+2026-07-28T04:17:30.9166364Z         it to work correctly.
+2026-07-28T04:17:30.9166603Z     
+2026-07-28T04:17:30.9166796Z         For more details:
+2026-07-28T04:17:30.9167141Z         * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+2026-07-28T04:17:30.9167506Z     
+2026-07-28T04:17:30.9167816Z         This is a placeholder for base href that will be replaced by the value of
+2026-07-28T04:17:30.9168268Z         the `--base-href` argument provided to `flutter build`.
+2026-07-28T04:17:30.9168602Z       -->
+2026-07-28T04:17:30.9168812Z       <base href="/MediRoute/">
+2026-07-28T04:17:30.9169054Z     
+2026-07-28T04:17:30.9169249Z       <meta charset="UTF-8">
+2026-07-28T04:17:30.9169561Z       <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+2026-07-28T04:17:30.9169960Z       <meta name="description" content="A new Flutter project.">
+2026-07-28T04:17:30.9170289Z     
+2026-07-28T04:17:30.9170484Z       <!-- iOS meta tags & icons -->
+2026-07-28T04:17:30.9170800Z       <meta name="mobile-web-app-capable" content="yes">
+2026-07-28T04:17:30.9171227Z       <meta name="apple-mobile-web-app-status-bar-style" content="black">
+2026-07-28T04:17:30.9171686Z       <meta name="apple-mobile-web-app-title" content="mediroute">
+2026-07-28T04:17:30.9172101Z       <link rel="apple-touch-icon" href="icons/Icon-192.png">
+2026-07-28T04:17:30.9172420Z     
+2026-07-28T04:17:30.9172607Z       <!-- Favicon -->
+2026-07-28T04:17:30.9172885Z       <link rel="icon" type="image/png" href="favicon.png"/>
+2026-07-28T04:17:30.9173195Z     
+2026-07-28T04:17:30.9173391Z       <title>MediRoute</title>
+2026-07-28T04:17:30.9173667Z       <link rel="manifest" href="manifest.json">
+2026-07-28T04:17:30.9174443Z       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50LXyG-4cAoXfyBwNxNjxhxDkGnvHe_c&libraries=places&loading=async&callback=Function.prototype"></script>
+2026-07-28T04:17:30.9175212Z   ?                                                            ++++++
+2026-07-28T04:17:30.9175756Z     </head>
+2026-07-28T04:17:30.9175951Z     <body>
+2026-07-28T04:17:30.9176134Z       <!--
+2026-07-28T04:17:30.9176385Z         You can customize the "flutter_bootstrap.js" script.
+2026-07-28T04:17:30.9176816Z         This is useful to provide a custom configuration to the Flutter loader
+2026-07-28T04:17:30.9177278Z         or to give the user feedback during the initialization process.
+2026-07-28T04:17:30.9177617Z     
+2026-07-28T04:17:30.9177809Z         For more details:
+2026-07-28T04:17:30.9178302Z         * https://docs.flutter.dev/platform-integration/web/initialization
+2026-07-28T04:17:30.9178675Z       -->
+2026-07-28T04:17:30.9178919Z       <script src="flutter_bootstrap.js" async></script>
+2026-07-28T04:17:30.9179228Z     </body>
+2026-07-28T04:17:30.9179416Z     </html>)
+2026-07-28T04:17:30.9179686Z ======================== 9 failed, 291 passed in 2.23s =========================
+2026-07-28T04:17:30.9255126Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:17:30.9256627Z ##[group]Run actions/upload-artifact@v4
+2026-07-28T04:17:30.9256914Z with:
+2026-07-28T04:17:30.9257136Z   name: validation-tests-reports
+2026-07-28T04:17:30.9257424Z   path: automation/validation/reports/
+2026-07-28T04:17:30.9257712Z   retention-days: 30
+2026-07-28T04:17:30.9257946Z   if-no-files-found: warn
+2026-07-28T04:17:30.9258188Z   compression-level: 6
+2026-07-28T04:17:30.9258418Z   overwrite: false
+2026-07-28T04:17:30.9258642Z   include-hidden-files: false
+2026-07-28T04:17:30.9258886Z env:
+2026-07-28T04:17:30.9259081Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:30.9259435Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:30.9259858Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:30.9260309Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:30.9260755Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:30.9261144Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:30.9261541Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:30.9261934Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:30.9262267Z ##[endgroup]
+2026-07-28T04:17:31.0868460Z (node:2473) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-28T04:17:31.0869321Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-28T04:17:31.0937307Z With the provided path, there will be 5 files uploaded
+2026-07-28T04:17:31.0943826Z Artifact name is valid!
+2026-07-28T04:17:31.0944467Z Root directory input is valid!
+2026-07-28T04:17:31.3685069Z Beginning upload of artifact content to blob storage
+2026-07-28T04:17:31.3961168Z (node:2473) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-07-28T04:17:31.6655988Z Uploaded bytes 32242
+2026-07-28T04:17:31.7285723Z Finished uploading artifact content to blob storage!
+2026-07-28T04:17:31.7287252Z SHA256 digest of uploaded artifact zip is 5a8e7ed081d421e589cdd35fd70aecbb0485ab3538fb3d9f7b6915f60e745ddc
+2026-07-28T04:17:31.7289624Z Finalizing artifact upload
+2026-07-28T04:17:31.9254730Z Artifact validation-tests-reports.zip successfully finalized. Artifact ID 8676468365
+2026-07-28T04:17:31.9256214Z Artifact validation-tests-reports has been successfully uploaded! Final size is 32242 bytes. Artifact ID is 8676468365
+2026-07-28T04:17:31.9261751Z Artifact download URL: https://github.com/ViswanathSaiSandeep/MediRoute/actions/runs/30328121407/artifacts/8676468365
+2026-07-28T04:17:31.9378190Z ##[group]Run SUMMARY="automation/validation/reports/summary.md"
+2026-07-28T04:17:31.9378674Z [36;1mSUMMARY="automation/validation/reports/summary.md"[0m
+2026-07-28T04:17:31.9379032Z [36;1mif [ -f "$SUMMARY" ]; then[0m
+2026-07-28T04:17:31.9379407Z [36;1m  echo "## ✅ Validation Test Results" >> $GITHUB_STEP_SUMMARY[0m
+2026-07-28T04:17:31.9379806Z [36;1m  cat "$SUMMARY" >> $GITHUB_STEP_SUMMARY[0m
+2026-07-28T04:17:31.9380097Z [36;1melse[0m
+2026-07-28T04:17:31.9380421Z [36;1m  echo "## ⚠️ No Validation summary available" >> $GITHUB_STEP_SUMMARY[0m
+2026-07-28T04:17:31.9380973Z [36;1mfi[0m
+2026-07-28T04:17:31.9427877Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:17:31.9428131Z env:
+2026-07-28T04:17:31.9428326Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:31.9428656Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:31.9429074Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:31.9429554Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:31.9429984Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:31.9430365Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:31.9430743Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:31.9431128Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:31.9431447Z ##[endgroup]
+2026-07-28T04:17:31.9616723Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:17:31.9618053Z Post job cleanup.
+2026-07-28T04:17:32.0825025Z (node:2487) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-28T04:17:32.0826191Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-28T04:17:32.1092706Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:17:32.1095000Z Post job cleanup.
+2026-07-28T04:17:32.2040164Z [command]/usr/bin/git version
+2026-07-28T04:17:32.2081090Z git version 2.54.0
+2026-07-28T04:17:32.2119890Z Temporarily overriding HOME='/home/runner/work/_temp/4f1a6140-a51d-4c39-a50e-dbe6ef3facfd' before making global git config changes
+2026-07-28T04:17:32.2121564Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-28T04:17:32.2126114Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MediRoute/MediRoute
+2026-07-28T04:17:32.2163082Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-28T04:17:32.2198627Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-28T04:17:32.2452984Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-28T04:17:32.2482569Z http.https://github.com/.extraheader
+2026-07-28T04:17:32.2499618Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-07-28T04:17:32.2529751Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-28T04:17:32.2791368Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-28T04:17:32.2832213Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-28T04:17:32.3316584Z Cleaning up orphan processes
+2026-07-28T04:17:32.3665932Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

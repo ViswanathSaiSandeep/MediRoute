@@ -1,0 +1,19 @@
+﻿2026-07-28T04:17:37.2480803Z ##[group]Run SUMMARY="automation/unit/reports/summary.md"
+2026-07-28T04:17:37.2481267Z [36;1mSUMMARY="automation/unit/reports/summary.md"[0m
+2026-07-28T04:17:37.2481649Z [36;1mif [ -f "$SUMMARY" ]; then[0m
+2026-07-28T04:17:37.2482014Z [36;1m  echo "## ✏️ Unit Tests — API Results" >> $GITHUB_STEP_SUMMARY[0m
+2026-07-28T04:17:37.2482417Z [36;1m  cat "$SUMMARY" >> $GITHUB_STEP_SUMMARY[0m
+2026-07-28T04:17:37.2482722Z [36;1melse[0m
+2026-07-28T04:17:37.2483019Z [36;1m  echo "## ⚠️ No Unit Test summary available" >> $GITHUB_STEP_SUMMARY[0m
+2026-07-28T04:17:37.2483388Z [36;1mfi[0m
+2026-07-28T04:17:37.2529070Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:17:37.2529331Z env:
+2026-07-28T04:17:37.2529779Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:37.2530117Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:37.2530552Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:37.2530985Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:37.2531458Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:37.2531834Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:37.2532214Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:37.2532594Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:37.2532927Z ##[endgroup]

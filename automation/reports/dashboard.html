@@ -22,7 +22,7 @@
   .module-row { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
   .module-name { width: 180px; font-size: 13px; text-align: right; }
   .bar-container { flex: 1; display: flex; gap: 2px; }
-  .donut { width: 200px; height: 200px; border-radius: 50%; background: conic-gradient(#00e676 0% 97.44680851063829%, #ff5252 97.44680851063829% 98.29787234042553%, #ffab40 98.29787234042553% 100%); margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+  .donut { width: 200px; height: 200px; border-radius: 50%; background: conic-gradient(#00e676 0% 72.23404255319149%, #ff5252 72.23404255319149% 100.0%, #ffab40 100.0% 100%); margin: 0 auto; display: flex; align-items: center; justify-content: center; }
   .donut-hole { width: 120px; height: 120px; border-radius: 50%; background: #1a1a3e; display: flex; align-items: center; justify-content: center; flex-direction: column; }
   .donut-label { font-size: 28px; font-weight: bold; color: #00d4ff; }
 </style>
@@ -30,20 +30,20 @@
 <body>
 <div class="dashboard-header">
   <h1>🏥 MediRoute Test Dashboard</h1>
-  <p style="color:#8888aa;">Live E2E Execution Results | 2026-07-27 11:22:16 UTC</p>
+  <p style="color:#8888aa;">Live E2E Execution Results | 2026-07-30 13:07:11 UTC</p>
 </div>
 
 <div class="summary-grid">
-  <div class="summary-card"><div class="number green">458</div><div>Passed</div></div>
-  <div class="summary-card"><div class="number red">4</div><div>Failed</div></div>
-  <div class="summary-card"><div class="number orange">8</div><div>Skipped</div></div>
+  <div class="summary-card"><div class="number green">679</div><div>Passed</div></div>
+  <div class="summary-card"><div class="number red">261</div><div>Failed</div></div>
+  <div class="summary-card"><div class="number orange">0</div><div>Skipped</div></div>
 </div>
 
 <div class="chart-section">
   <h2>Pass/Fail Distribution</h2>
   <div class="donut">
     <div class="donut-hole">
-      <div class="donut-label">97%</div>
+      <div class="donut-label">72%</div>
       <div style="font-size:12px;color:#8888aa;">Pass Rate</div>
     </div>
   </div>
@@ -52,103 +52,103 @@
 <div class="chart-section">
   <h2>Results by Module</h2>
   <div class="module-row">
-    <div class="module-name">Authentication</div>
+    <div class="module-name">accessibility</div>
     <div class="bar-container">
-      <div class="bar bar-pass" style="width:312px;" title="39 passed"></div>
+      <div class="bar bar-pass" style="width:320px;" title="40 passed"></div>
       <div class="bar bar-fail" style="width:0px;" title="0 failed"></div>
     </div>
-    <div style="font-size:12px;color:#8888aa;">39/40</div>
+    <div style="font-size:12px;color:#8888aa;">40/40</div>
   </div><div class="module-row">
-    <div class="module-name">Authorization</div>
-    <div class="bar-container">
-      <div class="bar bar-pass" style="width:312px;" title="39 passed"></div>
-      <div class="bar bar-fail" style="width:0px;" title="0 failed"></div>
-    </div>
-    <div style="font-size:12px;color:#8888aa;">39/40</div>
-  </div><div class="module-row">
-    <div class="module-name">Navigation</div>
-    <div class="bar-container">
-      <div class="bar bar-pass" style="width:232px;" title="29 passed"></div>
-      <div class="bar bar-fail" style="width:0px;" title="0 failed"></div>
-    </div>
-    <div style="font-size:12px;color:#8888aa;">29/30</div>
-  </div><div class="module-row">
-    <div class="module-name">UI Validation</div>
-    <div class="bar-container">
-      <div class="bar bar-pass" style="width:384px;" title="48 passed"></div>
-      <div class="bar bar-fail" style="width:8px;" title="1 failed"></div>
-    </div>
-    <div style="font-size:12px;color:#8888aa;">48/50</div>
-  </div><div class="module-row">
-    <div class="module-name">Forms</div>
-    <div class="bar-container">
-      <div class="bar bar-pass" style="width:384px;" title="48 passed"></div>
-      <div class="bar bar-fail" style="width:8px;" title="1 failed"></div>
-    </div>
-    <div style="font-size:12px;color:#8888aa;">48/50</div>
-  </div><div class="module-row">
-    <div class="module-name">CRUD Operations</div>
-    <div class="bar-container">
-      <div class="bar bar-pass" style="width:384px;" title="48 passed"></div>
-      <div class="bar bar-fail" style="width:8px;" title="1 failed"></div>
-    </div>
-    <div style="font-size:12px;color:#8888aa;">48/50</div>
-  </div><div class="module-row">
-    <div class="module-name">Input Validation</div>
-    <div class="bar-container">
-      <div class="bar bar-pass" style="width:312px;" title="39 passed"></div>
-      <div class="bar bar-fail" style="width:0px;" title="0 failed"></div>
-    </div>
-    <div style="font-size:12px;color:#8888aa;">39/40</div>
-  </div><div class="module-row">
-    <div class="module-name">Error Handling</div>
+    <div class="module-name">authorization</div>
     <div class="bar-container">
       <div class="bar bar-pass" style="width:160px;" title="20 passed"></div>
+      <div class="bar bar-fail" style="width:480px;" title="60 failed"></div>
+    </div>
+    <div style="font-size:12px;color:#8888aa;">20/80</div>
+  </div><div class="module-row">
+    <div class="module-name">authentication</div>
+    <div class="bar-container">
+      <div class="bar bar-pass" style="width:608px;" title="76 passed"></div>
+      <div class="bar bar-fail" style="width:32px;" title="4 failed"></div>
+    </div>
+    <div style="font-size:12px;color:#8888aa;">76/80</div>
+  </div><div class="module-row">
+    <div class="module-name">crud_operations</div>
+    <div class="bar-container">
+      <div class="bar bar-pass" style="width:752px;" title="94 passed"></div>
+      <div class="bar bar-fail" style="width:48px;" title="6 failed"></div>
+    </div>
+    <div style="font-size:12px;color:#8888aa;">94/100</div>
+  </div><div class="module-row">
+    <div class="module-name">error_handling</div>
+    <div class="bar-container">
+      <div class="bar bar-pass" style="width:144px;" title="18 passed"></div>
+      <div class="bar bar-fail" style="width:176px;" title="22 failed"></div>
+    </div>
+    <div style="font-size:12px;color:#8888aa;">18/40</div>
+  </div><div class="module-row">
+    <div class="module-name">forms</div>
+    <div class="bar-container">
+      <div class="bar bar-pass" style="width:752px;" title="94 passed"></div>
+      <div class="bar bar-fail" style="width:48px;" title="6 failed"></div>
+    </div>
+    <div style="font-size:12px;color:#8888aa;">94/100</div>
+  </div><div class="module-row">
+    <div class="module-name">input_validation</div>
+    <div class="bar-container">
+      <div class="bar bar-pass" style="width:624px;" title="78 passed"></div>
+      <div class="bar bar-fail" style="width:16px;" title="2 failed"></div>
+    </div>
+    <div style="font-size:12px;color:#8888aa;">78/80</div>
+  </div><div class="module-row">
+    <div class="module-name">navigation</div>
+    <div class="bar-container">
+      <div class="bar bar-pass" style="width:480px;" title="60 passed"></div>
       <div class="bar bar-fail" style="width:0px;" title="0 failed"></div>
     </div>
-    <div style="font-size:12px;color:#8888aa;">20/20</div>
+    <div style="font-size:12px;color:#8888aa;">60/60</div>
   </div><div class="module-row">
-    <div class="module-name">Session Management</div>
+    <div class="module-name">performance_smoke</div>
     <div class="bar-container">
-      <div class="bar bar-pass" style="width:160px;" title="20 passed"></div>
-      <div class="bar bar-fail" style="width:0px;" title="0 failed"></div>
+      <div class="bar bar-pass" style="width:272px;" title="34 passed"></div>
+      <div class="bar bar-fail" style="width:48px;" title="6 failed"></div>
     </div>
-    <div style="font-size:12px;color:#8888aa;">20/20</div>
+    <div style="font-size:12px;color:#8888aa;">34/40</div>
   </div><div class="module-row">
-    <div class="module-name">File Upload</div>
+    <div class="module-name">regression</div>
     <div class="bar-container">
-      <div class="bar bar-pass" style="width:160px;" title="20 passed"></div>
-      <div class="bar bar-fail" style="width:0px;" title="0 failed"></div>
+      <div class="bar bar-pass" style="width:632px;" title="79 passed"></div>
+      <div class="bar bar-fail" style="width:168px;" title="21 failed"></div>
     </div>
-    <div style="font-size:12px;color:#8888aa;">20/20</div>
+    <div style="font-size:12px;color:#8888aa;">79/100</div>
   </div><div class="module-row">
-    <div class="module-name">Accessibility</div>
+    <div class="module-name">responsive_design</div>
     <div class="bar-container">
-      <div class="bar bar-pass" style="width:160px;" title="20 passed"></div>
-      <div class="bar bar-fail" style="width:0px;" title="0 failed"></div>
+      <div class="bar bar-pass" style="width:0px;" title="0 passed"></div>
+      <div class="bar bar-fail" style="width:320px;" title="40 failed"></div>
     </div>
-    <div style="font-size:12px;color:#8888aa;">20/20</div>
+    <div style="font-size:12px;color:#8888aa;">0/40</div>
   </div><div class="module-row">
-    <div class="module-name">Responsive Design</div>
+    <div class="module-name">session_management</div>
     <div class="bar-container">
-      <div class="bar bar-pass" style="width:160px;" title="20 passed"></div>
-      <div class="bar bar-fail" style="width:0px;" title="0 failed"></div>
+      <div class="bar bar-pass" style="width:48px;" title="6 passed"></div>
+      <div class="bar bar-fail" style="width:272px;" title="34 failed"></div>
     </div>
-    <div style="font-size:12px;color:#8888aa;">20/20</div>
+    <div style="font-size:12px;color:#8888aa;">6/40</div>
   </div><div class="module-row">
-    <div class="module-name">Performance Smoke Tests</div>
+    <div class="module-name">ui_validation</div>
     <div class="bar-container">
-      <div class="bar bar-pass" style="width:160px;" title="20 passed"></div>
-      <div class="bar bar-fail" style="width:0px;" title="0 failed"></div>
+      <div class="bar bar-pass" style="width:336px;" title="42 passed"></div>
+      <div class="bar bar-fail" style="width:464px;" title="58 failed"></div>
     </div>
-    <div style="font-size:12px;color:#8888aa;">20/20</div>
+    <div style="font-size:12px;color:#8888aa;">42/100</div>
   </div><div class="module-row">
-    <div class="module-name">Regression</div>
+    <div class="module-name">file_upload</div>
     <div class="bar-container">
-      <div class="bar bar-pass" style="width:384px;" title="48 passed"></div>
-      <div class="bar bar-fail" style="width:8px;" title="1 failed"></div>
+      <div class="bar bar-pass" style="width:304px;" title="38 passed"></div>
+      <div class="bar bar-fail" style="width:16px;" title="2 failed"></div>
     </div>
-    <div style="font-size:12px;color:#8888aa;">48/50</div>
+    <div style="font-size:12px;color:#8888aa;">38/40</div>
   </div>
 </div>
 

@@ -1,0 +1,14 @@
+﻿2026-07-28T04:15:20.5162519Z ##[group]Run flutter analyze --no-fatal-infos || true
+2026-07-28T04:15:20.5162944Z [36;1mflutter analyze --no-fatal-infos || true[0m
+2026-07-28T04:15:20.5207460Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:15:20.5207729Z env:
+2026-07-28T04:15:20.5207925Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:15:20.5208262Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:15:20.5208722Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.8-x64/flutter
+2026-07-28T04:15:20.5209100Z   PUB_CACHE: /home/runner/.pub-cache
+2026-07-28T04:15:20.5209385Z ##[endgroup]
+2026-07-28T04:15:32.4174211Z Analyzing MediRoute...                                          
+2026-07-28T04:15:32.4180747Z 
+2026-07-28T04:15:32.4214208Z warning • The asset directory 'assets/lottie/' doesn't exist. Try creating the directory or fixing the path to the directory • pubspec.yaml:66:7 • asset_directory_does_not_exist
+2026-07-28T04:15:32.4222044Z 
+2026-07-28T04:15:32.4331733Z 1 issue found. (ran in 11.0s)

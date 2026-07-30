@@ -1,0 +1,52 @@
+﻿2026-07-28T04:14:28.0894495Z ##[group]Run REPO_NAME="MediRoute"
+2026-07-28T04:14:28.0895040Z [36;1mREPO_NAME="MediRoute"[0m
+2026-07-28T04:14:28.0895310Z [36;1mif [ -n "$MAPS_API_KEY" ]; then[0m
+2026-07-28T04:14:28.0895710Z [36;1m  sed -i "s/YOUR_GOOGLE_MAPS_API_KEY/${MAPS_API_KEY}/g" web/index.html[0m
+2026-07-28T04:14:28.0896402Z [36;1mfi[0m
+2026-07-28T04:14:28.0896711Z [36;1mflutter build web --release --base-href "/${REPO_NAME}/" \[0m
+2026-07-28T04:14:28.0897144Z [36;1m  --dart-define=GEMINI_API_KEY="${GEMINI_API_KEY}"[0m
+2026-07-28T04:14:28.0897518Z [36;1mcp build/web/index.html build/web/404.html[0m
+2026-07-28T04:14:28.0897839Z [36;1mecho "Build output:"[0m
+2026-07-28T04:14:28.0898091Z [36;1mls -la build/web/[0m
+2026-07-28T04:14:28.0942469Z shell: /usr/bin/bash -e {0}
+2026-07-28T04:14:28.0942733Z env:
+2026-07-28T04:14:28.0942935Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:14:28.0943275Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:14:28.0943742Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.8-x64/flutter
+2026-07-28T04:14:28.0944185Z   PUB_CACHE: /home/runner/.pub-cache
+2026-07-28T04:14:28.0944696Z   MAPS_API_KEY: ***
+2026-07-28T04:14:28.0945044Z   GEMINI_API_KEY: ***
+2026-07-28T04:14:28.0945259Z ##[endgroup]
+2026-07-28T04:15:18.2048595Z Compiling lib/main.dart for the Web...                          
+2026-07-28T04:15:18.2057213Z Wasm dry run findings:
+2026-07-28T04:15:18.2058075Z Found incompatibilities with WebAssembly.
+2026-07-28T04:15:18.2058461Z 
+2026-07-28T04:15:18.2059997Z file:///home/runner/.pub-cache/hosted/pub.dev/flutter_tts-4.2.5/lib/flutter_tts_web.dart 104:23 - invalid_runtime_check_with_js_interop_types lint violation: Cast from 'JSAny?' to 'int' casts a JS interop value to a Dart type, which might not be platform-consistent. (8)
+2026-07-28T04:15:18.2063098Z file:///home/runner/.pub-cache/hosted/pub.dev/flutter_tts-4.2.5/lib/flutter_tts_web.dart 105:21 - invalid_runtime_check_with_js_interop_types lint violation: Cast from 'JSAny?' to 'String' casts a JS interop value to a Dart type, which might not be platform-consistent. (8)
+2026-07-28T04:15:18.2066607Z file:///home/runner/.pub-cache/hosted/pub.dev/flutter_tts-4.2.5/lib/flutter_tts_web.dart 107:21 - invalid_runtime_check_with_js_interop_types lint violation: Cast from 'JSAny?' to 'String' casts a JS interop value to a Dart type, which might not be platform-consistent. (8)
+2026-07-28T04:15:18.2068320Z 
+2026-07-28T04:15:18.2069257Z Consider addressing these issues to enable wasm builds. See docs for more info: https://docs.flutter.dev/platform-integration/web/wasm
+2026-07-28T04:15:18.2070083Z 
+2026-07-28T04:15:18.2110874Z Use --no-wasm-dry-run to disable these warnings.
+2026-07-28T04:15:18.2274998Z Error: unable to find directory entry in pubspec.yaml: /home/runner/work/MediRoute/MediRoute/assets/lottie/
+2026-07-28T04:15:20.1670695Z Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+2026-07-28T04:15:20.1686583Z Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 13412 bytes (99.2% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+2026-07-28T04:15:20.4926256Z Compiling lib/main.dart for the Web...                             51.8s
+2026-07-28T04:15:20.4934909Z ✓ Built build/web
+2026-07-28T04:15:20.5112587Z Build output:
+2026-07-28T04:15:20.5127052Z total 3488
+2026-07-28T04:15:20.5127493Z drwxr-xr-x 5 runner runner    4096 Jul 28 04:15 .
+2026-07-28T04:15:20.5128080Z drwxr-xr-x 3 runner runner    4096 Jul 28 04:14 ..
+2026-07-28T04:15:20.5128686Z -rw-r--r-- 1 runner runner      32 Jul 28 04:15 .last_build_id
+2026-07-28T04:15:20.5129349Z -rw-r--r-- 1 runner runner    1685 Jul 28 04:15 404.html
+2026-07-28T04:15:20.5129951Z drwxr-xr-x 5 runner runner    4096 Jul 28 04:15 assets
+2026-07-28T04:15:20.5130567Z drwxr-xr-x 4 runner runner    4096 Jul 28 04:14 canvaskit
+2026-07-28T04:15:20.5131144Z -rw-r--r-- 1 runner runner     917 Jul 28 04:15 favicon.png
+2026-07-28T04:15:20.5132254Z -rw-r--r-- 1 runner runner    9553 Jul 28 04:14 flutter.js
+2026-07-28T04:15:20.5132688Z -rw-r--r-- 1 runner runner    9975 Jul 28 04:14 flutter_bootstrap.js
+2026-07-28T04:15:20.5133182Z -rw-r--r-- 1 runner runner     784 Jul 28 04:15 flutter_service_worker.js
+2026-07-28T04:15:20.5133612Z drwxr-xr-x 2 runner runner    4096 Jul 28 04:15 icons
+2026-07-28T04:15:20.5133972Z -rw-r--r-- 1 runner runner    1685 Jul 28 04:14 index.html
+2026-07-28T04:15:20.5134345Z -rw-r--r-- 1 runner runner 3494447 Jul 28 04:15 main.dart.js
+2026-07-28T04:15:20.5134724Z -rw-r--r-- 1 runner runner     914 Jul 28 04:15 manifest.json
+2026-07-28T04:15:20.5135100Z -rw-r--r-- 1 runner runner      88 Jul 28 04:15 version.json

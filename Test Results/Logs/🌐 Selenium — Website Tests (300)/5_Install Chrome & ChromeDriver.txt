@@ -1,0 +1,28 @@
+﻿2026-07-28T04:17:24.1229870Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-28T04:17:24.1231172Z ##[group]Run browser-actions/setup-chrome@v1
+2026-07-28T04:17:24.1231450Z with:
+2026-07-28T04:17:24.1231658Z   chrome-version: stable
+2026-07-28T04:17:24.1231899Z   install-dependencies: false
+2026-07-28T04:17:24.1232152Z   install-chromedriver: false
+2026-07-28T04:17:24.1232386Z   no-sudo: false
+2026-07-28T04:17:24.1232576Z env:
+2026-07-28T04:17:24.1232754Z   FLUTTER_VERSION: 3.32.0
+2026-07-28T04:17:24.1233061Z   BASE_URL: https://ViswanathSaiSandeep.github.io/MediRoute/
+2026-07-28T04:17:24.1233473Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:24.1233909Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-28T04:17:24.1234538Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:24.1234917Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:24.1235292Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-28T04:17:24.1235668Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-28T04:17:24.1235979Z ##[endgroup]
+2026-07-28T04:17:24.1960454Z Setup chrome stable
+2026-07-28T04:17:24.1971410Z Attempting to download chrome stable...
+2026-07-28T04:17:24.1972935Z Acquiring chrome stable from https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+2026-07-28T04:17:24.8930360Z Installing chrome...
+2026-07-28T04:17:24.8975208Z [command]/usr/bin/ar x /home/runner/work/_temp/de7216ae-2493-46cb-8c46-d419050fd3bd
+2026-07-28T04:17:25.0724262Z [command]/usr/bin/tar -xf /tmp/deb-ZXmRvx/data.tar.xz --directory /tmp/chrome-NfVqzX --strip-components 4 ./opt/google
+2026-07-28T04:17:33.2255411Z Successfully Installed chromium to /opt/hostedtoolcache/setup-chrome/chromium/stable/x64
+2026-07-28T04:17:33.2264982Z [command]/opt/hostedtoolcache/setup-chrome/chromium/stable/x64/chrome --version
+2026-07-28T04:17:33.4854117Z [0728/041733.484586:WARNING:chrome/app/chrome_main_linux.cc:84] Read channel stable from /opt/hostedtoolcache/setup-chrome/chromium/stable/x64/CHROME_VERSION_EXTRA
+2026-07-28T04:17:33.4859040Z Google Chrome 150.0.7871.186 
+2026-07-28T04:17:33.5109287Z Successfully setup chromium 150.0.7871.186
